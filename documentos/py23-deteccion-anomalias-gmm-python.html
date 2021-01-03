@@ -13471,7 +13471,7 @@ $( document ).ready(function(){
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Predicci&#243;n">Predicci&#243;n<a class="anchor-link" href="#Predicci&#243;n">&#182;</a></h3><p><br></p>
-<p>Los modelos <code>GaussianMixture</code> tienen varios métodos de predicción. Para utilizarlos como detectores de anomalía nos interesa conocer la probabilidad que tiene cada observación acorde al modelo. Este valor puede obtenerse con el método <code>score_samples()</code> (los valores están en logaritmo).</p>
+<p>Los modelos <code>GaussianMixture</code> tienen varios métodos de predicción. Para utilizarlos como detectores de anomalía nos interesa conocer la probabilidad que tiene cada observación acorde al modelo. Este valor puede obtenerse con el método <code>score_samples()</code>. Estrictamente hablando, no se trata de probabilidades si no del log likelihood, pero puede interpretarse de forma similar en cuanto a que, a menor valor, menor probabilidad.</p>
 
 </div>
 </div>
