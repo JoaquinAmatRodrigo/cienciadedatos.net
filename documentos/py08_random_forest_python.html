@@ -1,5 +1,10 @@
 <!DOCTYPE html>
 <html>
+
+<!-- anuncio_themoneytizer_FOOTER O SLIDE-IN -->
+<div id="73746-6"><script src="//ads.themoneytizer.com/s/gen.js?type=6"></script><script src="//ads.themoneytizer.com/s/requestform.js?siteId=73746&formatId=6"></script></div>
+<!-- anuncio_themoneytizer_FOOTER O SLIDE-IN -->
+
 <head><meta charset="utf-8" />
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -18,7 +23,167 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
-
+<!-- Quantcast Choice. Consent Manager Tag v2.0 (for TCF 2.0) -->
+<script type="text/javascript" async="true">
+  (function() {
+    var host = 'www.themoneytizer.com';
+    var element = document.createElement('script');
+    var firstScript = document.getElementsByTagName('script')[0];
+    var url = 'https://quantcast.mgr.consensu.org'
+      .concat('/choice/', '6Fv0cGNfc_bw8', '/', host, '/choice.js')
+    var uspTries = 0;
+    var uspTriesLimit = 3;
+    element.async = true;
+    element.type = 'text/javascript';
+    element.src = url;
+  
+    firstScript.parentNode.insertBefore(element, firstScript);
+  
+    function makeStub() {
+      var TCF_LOCATOR_NAME = '__tcfapiLocator';
+      var queue = [];
+      var win = window;
+      var cmpFrame;
+  
+      function addFrame() {
+        var doc = win.document;
+        var otherCMP = !!(win.frames[TCF_LOCATOR_NAME]);
+  
+        if (!otherCMP) {
+          if (doc.body) {
+            var iframe = doc.createElement('iframe');
+  
+            iframe.style.cssText = 'display:none';
+            iframe.name = TCF_LOCATOR_NAME;
+            doc.body.appendChild(iframe);
+          } else {
+            setTimeout(addFrame, 5);
+          }
+        }
+        return !otherCMP;
+      }
+  
+      function tcfAPIHandler() {
+        var gdprApplies;
+        var args = arguments;
+  
+        if (!args.length) {
+          return queue;
+        } else if (args[0] === 'setGdprApplies') {
+          if (
+            args.length > 3 &&
+            args[2] === 2 &&
+            typeof args[3] === 'boolean'
+          ) {
+            gdprApplies = args[3];
+            if (typeof args[2] === 'function') {
+              args[2]('set', true);
+            }
+          }
+        } else if (args[0] === 'ping') {
+          var retr = {
+            gdprApplies: gdprApplies,
+            cmpLoaded: false,
+            cmpStatus: 'stub'
+          };
+  
+          if (typeof args[2] === 'function') {
+            args[2](retr);
+          }
+        } else {
+          queue.push(args);
+        }
+      }
+  
+      function postMessageEventHandler(event) {
+        var msgIsString = typeof event.data === 'string';
+        var json = {};
+  
+        try {
+          if (msgIsString) {
+            json = JSON.parse(event.data);
+          } else {
+            json = event.data;
+          }
+        } catch (ignore) {}
+  
+        var payload = json.__tcfapiCall;
+  
+        if (payload) {
+          window.__tcfapi(
+            payload.command,
+            payload.version,
+            function(retValue, success) {
+              var returnMsg = {
+                __tcfapiReturn: {
+                  returnValue: retValue,
+                  success: success,
+                  callId: payload.callId
+                }
+              };
+              if (msgIsString) {
+                returnMsg = JSON.stringify(returnMsg);
+              }
+              event.source.postMessage(returnMsg, '*');
+            },
+            payload.parameter
+          );
+        }
+      }
+  
+      while (win) {
+        try {
+          if (win.frames[TCF_LOCATOR_NAME]) {
+            cmpFrame = win;
+            break;
+          }
+        } catch (ignore) {}
+  
+        if (win === window.top) {
+          break;
+        }
+        win = win.parent;
+      }
+      if (!cmpFrame) {
+        addFrame();
+        win.__tcfapi = tcfAPIHandler;
+        win.addEventListener('message', postMessageEventHandler, false);
+      }
+    };
+  
+    if (typeof module !== 'undefined') {
+      module.exports = makeStub;
+    } else {
+      makeStub();
+    }
+  
+    var uspStubFunction = function() {
+      var arg = arguments;
+      if (typeof window.__uspapi !== uspStubFunction) {
+        setTimeout(function() {
+          if (typeof window.__uspapi !== 'undefined') {
+            window.__uspapi.apply(window.__uspapi, arg);
+          }
+        }, 500);
+      }
+    };
+  
+    var checkIfUspIsReady = function() {
+      uspTries++;
+      if (window.__uspapi === uspStubFunction && uspTries < uspTriesLimit) {
+        console.warn('USP is not accessible');
+      } else {
+        clearInterval(uspInterval);
+      }
+    };
+  
+    if (typeof window.__uspapi === 'undefined') {
+      window.__uspapi = uspStubFunction;
+      var uspInterval = setInterval(checkIfUspIsReady, 6000);
+    }
+  })();
+  </script>
+<!-- End Quantcast Choice. Consent Manager Tag v2.0 (for TCF 2.0) -->
 
 <style type="text/css">
     /*!
@@ -13196,19 +13361,11 @@ $( document ).ready(function(){
 
 <p><br></p>
 
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- anuncio_horizontal -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-6921116043457070"
-     data-ad-slot="2738463967"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-
+<!-- anuncio_themoneytizer_MEGABANNER -->
+<div id="73746-1"><script src="//ads.themoneytizer.com/s/gen.js?type=1"></script><script src="//ads.themoneytizer.com/s/requestform.js?siteId=73746&formatId=1"></script></div>
 <p><br><br></p>
+<!-- anuncio_themoneytizer_MEGABANNER -->
+
 
 </div>
 </div>
@@ -13455,6 +13612,11 @@ $$\text{%Incremento}_j = (error-j - error_0)/ error_0 * 100%$$<hr>
 <br></p>
 <p>Cuantifica el incremento total en la pureza de los nodos debido a divisiones en las que participa el predictor (promedio de todos los árboles). La forma de calcularlo es la siguiente: en cada división de los árboles, se registra el descenso conseguido en la medida empleada como criterio de división (índice Gini, <em>mse</em> entropía, ...). Para cada uno de los predictores, se calcula el descenso medio conseguido en el conjunto de árboles que forman el <em>ensemble</em>. Cuanto mayor sea este valor medio, mayor la contribución del predictor en el modelo.
 <br><br></p>
+
+<!-- anuncio_themoneytizer_ROBAPÁGINAS -->
+<div id="73746-2"><script src="//ads.themoneytizer.com/s/gen.js?type=2"></script><script src="//ads.themoneytizer.com/s/requestform.js?siteId=73746&formatId=2"></script></div>
+<p><br><br></p>
+<!-- anuncio_themoneytizer_ROBAPÁGINAS -->
 
 </div>
 </div>
@@ -15262,6 +15424,11 @@ el modelo resultante se encuentra almacenado en <code>.best_estimator_</code>.</
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Ambas estrategias identifican <code>LSTAT</code> y <code>RM</code> como los predictores más influyentes, acorde a los datos de entrenamiento.
 <br><br></p>
+
+<!-- anuncio_themoneytizer_ROBAPÁGINAS INFERIOR  -->
+<div id="73746-19"><script src="//ads.themoneytizer.com/s/gen.js?type=19"></script><script src="//ads.themoneytizer.com/s/requestform.js?siteId=73746&formatId=19"></script></div>
+<p><br><br></p>
+<!-- anuncio_themoneytizer_ROBAPÁGINAS INFERIOR  -->
 
 </div>
 </div>
@@ -17438,17 +17605,9 @@ Mantener un sitio web tiene unos costes elevados, tu contribución me ayudará a
 
 <p><br><br></p>
 
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- anuncio_horizontal -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-6921116043457070"
-     data-ad-slot="2738463967"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+<!-- anuncio_themoneytizer_MEGABANNER_INFERIOR -->
+<div id="73746-28"><script src="//ads.themoneytizer.com/s/gen.js?type=28"></script><script src="//ads.themoneytizer.com/s/requestform.js?siteId=73746&formatId=28"></script></div>
+<!-- anuncio_themoneytizer_MEGABANNER_INFERIOR -->
 
 </div>
 </div>
