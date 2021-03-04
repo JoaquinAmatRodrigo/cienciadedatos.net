@@ -13434,8 +13434,7 @@ en un matriz en la que, cada valor, está asociado a la ventana temporal (lags) 
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Además de las anteriores, se utiliza <a href="https://github.com/JoaquinAmatRodrigo/skforecast"><strong>skforecast</strong></a>, una librería sencilla (en construcción) que contiene las clases y funciones necesarias para adaptar cualquier modelo de regresón de <strong>Scikit learn</strong> a problemas de <em>forecasting</em>.</p>
 <p>Puede instalarse directamente desde Github con el comando:</p>
-<p><code>!pip install git+https://github.com/JoaquinAmatRodrigo/skforecast@v0.1.4</code></p>
-<p>En caso de encontrar problemas con la instalación, se puede encontrar el código al final del documento.</p>
+<p><code>!pip install git+https://github.com/JoaquinAmatRodrigo/skforecast@v0.1.5</code></p>
 
 </div>
 </div>
@@ -13447,7 +13446,7 @@ en un matriz en la que, cada valor, está asociado a la ventana temporal (lags) 
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Modelado y Forecasting</span>
 <span class="c1"># ==============================================================================</span>
-<span class="c1">#!pip install git+https://github.com/JoaquinAmatRodrigo/skforecast@v0.1.4 --upgrade</span>
+<span class="c1">#!pip install git+https://github.com/JoaquinAmatRodrigo/skforecast@v0.1.5</span>
 
 <span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">LinearRegression</span>
 <span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">Lasso</span>
@@ -13481,8 +13480,7 @@ en un matriz en la que, cada valor, está asociado a la ventana temporal (lags) 
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Descarga de datos</span>
 <span class="c1"># ==============================================================================</span>
-<span class="n">url</span> <span class="o">=</span> <span class="s1">&#39;https://raw.githubusercontent.com/JoaquinAmatRodrigo/&#39;</span> \
-      <span class="o">+</span> <span class="s1">&#39;Estadistica-machine-learning-python/master/data/h2o.csv&#39;</span>
+<span class="n">url</span> <span class="o">=</span> <span class="s1">&#39;https://raw.githubusercontent.com/JoaquinAmatRodrigo/skforecast/master/data/h2o.csv&#39;</span>
 <span class="n">datos</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
 </pre></div>
 
@@ -13618,7 +13616,7 @@ en un matriz en la que, cada valor, está asociado a la ventana temporal (lags) 
 <div class="output_text output_subarea output_execute_result">
 <pre>=======================ForecasterAutoreg=======================
 Regressor: RandomForestRegressor(random_state=123)
-Lags: [ 0  1  2  3  4  5  6  7  8  9 10 11]
+Lags: [ 1  2  3  4  5  6  7  8  9 10 11 12]
 Exogenous variable: False
 Parameters: {&#39;bootstrap&#39;: True, &#39;ccp_alpha&#39;: 0.0, &#39;criterion&#39;: &#39;mse&#39;, &#39;max_depth&#39;: None, &#39;max_features&#39;: &#39;auto&#39;, &#39;max_leaf_nodes&#39;: None, &#39;max_samples&#39;: None, &#39;min_impurity_decrease&#39;: 0.0, &#39;min_impurity_split&#39;: None, &#39;min_samples_leaf&#39;: 1, &#39;min_samples_split&#39;: 2, &#39;min_weight_fraction_leaf&#39;: 0.0, &#39;n_estimators&#39;: 100, &#39;n_jobs&#39;: None, &#39;oob_score&#39;: False, &#39;random_state&#39;: 123, &#39;verbose&#39;: 0, &#39;warm_start&#39;: False}</pre>
 </div>
@@ -13828,39 +13826,39 @@ Freq: MS, dtype: float64</pre>
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>loop lags_grid:   0%|          | 0/3 [00:00&lt;?, ?it/s]
 loop param_grid:   0%|          | 0/9 [00:00&lt;?, ?it/s]
-loop param_grid:  11%|█         | 1/9 [00:01&lt;00:10,  1.36s/it]
-loop param_grid:  22%|██▏       | 2/9 [00:08&lt;00:32,  4.59s/it]
-loop param_grid:  33%|███▎      | 3/9 [00:21&lt;00:51,  8.54s/it]
-loop param_grid:  44%|████▍     | 4/9 [00:22&lt;00:28,  5.75s/it]
+loop param_grid:  11%|█         | 1/9 [00:01&lt;00:10,  1.37s/it]
+loop param_grid:  22%|██▏       | 2/9 [00:08&lt;00:32,  4.62s/it]
+loop param_grid:  33%|███▎      | 3/9 [00:21&lt;00:51,  8.59s/it]
+loop param_grid:  44%|████▍     | 4/9 [00:22&lt;00:28,  5.76s/it]
 loop param_grid:  56%|█████▌    | 5/9 [00:29&lt;00:24,  6.18s/it]
-loop param_grid:  67%|██████▋   | 6/9 [00:43&lt;00:26,  8.73s/it]
-loop param_grid:  78%|███████▊  | 7/9 [00:45&lt;00:12,  6.36s/it]
-loop param_grid:  89%|████████▉ | 8/9 [00:52&lt;00:06,  6.62s/it]
-loop param_grid: 100%|██████████| 9/9 [01:06&lt;00:00,  9.03s/it]
-loop lags_grid:  33%|███▎      | 1/3 [01:06&lt;02:13, 66.54s/it] 
+loop param_grid:  67%|██████▋   | 6/9 [00:43&lt;00:26,  8.76s/it]
+loop param_grid:  78%|███████▊  | 7/9 [00:45&lt;00:12,  6.38s/it]
+loop param_grid:  89%|████████▉ | 8/9 [00:52&lt;00:06,  6.67s/it]
+loop param_grid: 100%|██████████| 9/9 [01:06&lt;00:00,  9.04s/it]
+loop lags_grid:  33%|███▎      | 1/3 [01:06&lt;02:13, 66.73s/it] 
 loop param_grid:   0%|          | 0/9 [00:00&lt;?, ?it/s]
-loop param_grid:  11%|█         | 1/9 [00:01&lt;00:11,  1.42s/it]
-loop param_grid:  22%|██▏       | 2/9 [00:08&lt;00:32,  4.63s/it]
-loop param_grid:  33%|███▎      | 3/9 [00:22&lt;00:54,  9.04s/it]
-loop param_grid:  44%|████▍     | 4/9 [00:24&lt;00:30,  6.06s/it]
-loop param_grid:  56%|█████▌    | 5/9 [00:31&lt;00:26,  6.52s/it]
-loop param_grid:  67%|██████▋   | 6/9 [00:45&lt;00:27,  9.23s/it]
-loop param_grid:  78%|███████▊  | 7/9 [00:47&lt;00:13,  6.73s/it]
-loop param_grid:  89%|████████▉ | 8/9 [00:55&lt;00:07,  7.04s/it]
-loop param_grid: 100%|██████████| 9/9 [01:10&lt;00:00,  9.63s/it]
-loop lags_grid:  67%|██████▋   | 2/3 [02:17&lt;01:08, 68.89s/it] 
+loop param_grid:  11%|█         | 1/9 [00:01&lt;00:11,  1.40s/it]
+loop param_grid:  22%|██▏       | 2/9 [00:08&lt;00:32,  4.58s/it]
+loop param_grid:  33%|███▎      | 3/9 [00:21&lt;00:52,  8.71s/it]
+loop param_grid:  44%|████▍     | 4/9 [00:23&lt;00:29,  5.85s/it]
+loop param_grid:  56%|█████▌    | 5/9 [00:30&lt;00:25,  6.33s/it]
+loop param_grid:  67%|██████▋   | 6/9 [00:45&lt;00:27,  9.15s/it]
+loop param_grid:  78%|███████▊  | 7/9 [00:46&lt;00:13,  6.68s/it]
+loop param_grid:  89%|████████▉ | 8/9 [00:54&lt;00:07,  7.00s/it]
+loop param_grid: 100%|██████████| 9/9 [01:10&lt;00:00,  9.80s/it]
+loop lags_grid:  67%|██████▋   | 2/3 [02:17&lt;01:08, 68.85s/it] 
 loop param_grid:   0%|          | 0/9 [00:00&lt;?, ?it/s]
-loop param_grid:  11%|█         | 1/9 [00:01&lt;00:12,  1.51s/it]
+loop param_grid:  11%|█         | 1/9 [00:01&lt;00:12,  1.52s/it]
 loop param_grid:  22%|██▏       | 2/9 [00:08&lt;00:34,  4.95s/it]
 loop param_grid:  33%|███▎      | 3/9 [00:23&lt;00:56,  9.42s/it]
-loop param_grid:  44%|████▍     | 4/9 [00:25&lt;00:31,  6.33s/it]
-loop param_grid:  56%|█████▌    | 5/9 [00:33&lt;00:27,  6.89s/it]
-loop param_grid:  67%|██████▋   | 6/9 [00:48&lt;00:29,  9.91s/it]
-loop param_grid:  78%|███████▊  | 7/9 [00:50&lt;00:14,  7.23s/it]
-loop param_grid:  89%|████████▉ | 8/9 [00:59&lt;00:07,  7.61s/it]
-loop param_grid: 100%|██████████| 9/9 [01:15&lt;00:00, 10.47s/it]
-loop lags_grid: 100%|██████████| 3/3 [03:32&lt;00:00, 70.95s/it] 
-2021-02-22 08:53:02,814 root       INFO  Refitting `forecaster` using the best found parameters: 
+loop param_grid:  44%|████▍     | 4/9 [00:25&lt;00:31,  6.35s/it]
+loop param_grid:  56%|█████▌    | 5/9 [00:33&lt;00:27,  6.96s/it]
+loop param_grid:  67%|██████▋   | 6/9 [00:49&lt;00:29,  9.99s/it]
+loop param_grid:  78%|███████▊  | 7/9 [00:50&lt;00:14,  7.29s/it]
+loop param_grid:  89%|████████▉ | 8/9 [00:59&lt;00:07,  7.66s/it]
+loop param_grid: 100%|██████████| 9/9 [01:16&lt;00:00, 10.54s/it]
+loop lags_grid: 100%|██████████| 3/3 [03:33&lt;00:00, 71.10s/it] 
+2021-03-04 11:22:53,369 root       INFO  Refitting `forecaster` using the best found parameters: 
 lags: [ 1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20] 
 params: {&#39;max_depth&#39;: 10, &#39;n_estimators&#39;: 1000}
 
@@ -14240,6 +14238,53 @@ params: {&#39;max_depth&#39;: 10, &#39;n_estimators&#39;: 1000}
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Importancia-predictores">Importancia predictores<a class="anchor-link" href="#Importancia-predictores">&#182;</a></h3><p><br></p>
+<p>Dado que el objeto <code>ForecasterAutoreg</code> utiliza modelos <em>scikit-learn</em>, una vez entrenado, se puede acceder a la importancia de los predictores. Cuando el regresor empleado es un <code>LinearRegression()</code>, la importancia queda reflejada en los <a href="https://www.cienciadedatos.net/documentos/py10-regresion-lineal-python.html#Interpretaci%C3%B3n-del-modelo">coeficientes</a> del modelo, que se obtienen con el método <code>get_coef()</code>. En regresores  <code>GradientBoostingRegressor()</code> o <code>RandomForestRegressor()</code>, la importancia de los predictores está basada en la <a href="https://www.cienciadedatos.net/documentos/py08_random_forest_python.html#Importancia-de-los-predictores">reducción de impureza</a> y es accesible mediante el método <code>get_feature_importances()</code>. En ambos casos, el orden devuelto se corresponde con el de los lags.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Importancia predictores</span>
+<span class="c1"># ==============================================================================</span>
+<span class="n">forecaster_rf</span><span class="o">.</span><span class="n">get_feature_importances</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[18]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array([0.0125165 , 0.08806848, 0.01308735, 0.00256821, 0.00205141,
+       0.0023702 , 0.0025255 , 0.0077796 , 0.01074783, 0.02727043,
+       0.01617349, 0.77366687, 0.00318491, 0.01503788, 0.00788009,
+       0.00373427, 0.00286677, 0.00210517, 0.00173184, 0.00463321])</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Comparaci&#243;n-con-statsmodels">Comparaci&#243;n con statsmodels<a class="anchor-link" href="#Comparaci&#243;n-con-statsmodels">&#182;</a></h3><p><br></p>
 <p>La librería <a href="https://www.statsmodels.org/stable/examples/index.html#time-series-analysis"><strong>statsmodels</strong></a> dispone de algunos de los principales modelos de <em>forecasting</em> (<em>AutoReg</em>, <em>AR</em>, <em>ARMA</em>, <em>ARIMA</em>). Se verifica que se obtienen los mismos resultados con <em>AutoReg</em> que con la clase <code>ForecasterAutoreg</code> si se utiliza un regresor lineal.</p>
 
@@ -14248,7 +14293,7 @@ params: {&#39;max_depth&#39;: 10, &#39;n_estimators&#39;: 1000}
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Modelo autorregresivo lineal statsmodels</span>
@@ -14282,7 +14327,7 @@ params: {&#39;max_depth&#39;: 10, &#39;n_estimators&#39;: 1000}
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[18]:</div>
+    <div class="prompt output_prompt">Out[19]:</div>
 
 
 
@@ -14324,7 +14369,7 @@ params: {&#39;max_depth&#39;: 10, &#39;n_estimators&#39;: 1000}
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Descarga de datos</span>
@@ -14350,7 +14395,7 @@ params: {&#39;max_depth&#39;: 10, &#39;n_estimators&#39;: 1000}
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Datos</span>
@@ -14394,7 +14439,7 @@ params: {&#39;max_depth&#39;: 10, &#39;n_estimators&#39;: 1000}
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Separación datos train-test</span>
@@ -14421,7 +14466,7 @@ params: {&#39;max_depth&#39;: 10, &#39;n_estimators&#39;: 1000}
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Crear y entrenar forecaster</span>
@@ -14450,7 +14495,7 @@ params: {&#39;max_depth&#39;: 10, &#39;n_estimators&#39;: 1000}
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Predicciones</span>
@@ -14467,7 +14512,7 @@ params: {&#39;max_depth&#39;: 10, &#39;n_estimators&#39;: 1000}
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Gráfico</span>
@@ -14515,7 +14560,7 @@ params: {&#39;max_depth&#39;: 10, &#39;n_estimators&#39;: 1000}
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Error</span>
@@ -14559,7 +14604,7 @@ params: {&#39;max_depth&#39;: 10, &#39;n_estimators&#39;: 1000}
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Grid search de hiperparámetros</span>
@@ -14604,39 +14649,39 @@ params: {&#39;max_depth&#39;: 10, &#39;n_estimators&#39;: 1000}
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>loop lags_grid:   0%|          | 0/3 [00:00&lt;?, ?it/s]
 loop param_grid:   0%|          | 0/9 [00:00&lt;?, ?it/s]
-loop param_grid:  11%|█         | 1/9 [00:00&lt;00:05,  1.56it/s]
-loop param_grid:  22%|██▏       | 2/9 [00:01&lt;00:06,  1.01it/s]
-loop param_grid:  33%|███▎      | 3/9 [00:07&lt;00:19,  3.32s/it]
-loop param_grid:  44%|████▍     | 4/9 [00:08&lt;00:11,  2.28s/it]
-loop param_grid:  56%|█████▌    | 5/9 [00:09&lt;00:07,  1.92s/it]
-loop param_grid:  67%|██████▋   | 6/9 [00:16&lt;00:10,  3.39s/it]
-loop param_grid:  78%|███████▊  | 7/9 [00:16&lt;00:05,  2.51s/it]
-loop param_grid:  89%|████████▉ | 8/9 [00:18&lt;00:02,  2.13s/it]
-loop param_grid: 100%|██████████| 9/9 [00:24&lt;00:00,  3.51s/it]
-loop lags_grid:  33%|███▎      | 1/3 [00:24&lt;00:49, 24.76s/it] 
+loop param_grid:  11%|█         | 1/9 [00:00&lt;00:05,  1.54it/s]
+loop param_grid:  22%|██▏       | 2/9 [00:01&lt;00:07,  1.01s/it]
+loop param_grid:  33%|███▎      | 3/9 [00:07&lt;00:19,  3.31s/it]
+loop param_grid:  44%|████▍     | 4/9 [00:08&lt;00:11,  2.27s/it]
+loop param_grid:  56%|█████▌    | 5/9 [00:09&lt;00:07,  1.91s/it]
+loop param_grid:  67%|██████▋   | 6/9 [00:16&lt;00:10,  3.42s/it]
+loop param_grid:  78%|███████▊  | 7/9 [00:16&lt;00:05,  2.53s/it]
+loop param_grid:  89%|████████▉ | 8/9 [00:18&lt;00:02,  2.15s/it]
+loop param_grid: 100%|██████████| 9/9 [00:24&lt;00:00,  3.52s/it]
+loop lags_grid:  33%|███▎      | 1/3 [00:24&lt;00:49, 24.85s/it] 
 loop param_grid:   0%|          | 0/9 [00:00&lt;?, ?it/s]
-loop param_grid:  11%|█         | 1/9 [00:00&lt;00:05,  1.49it/s]
+loop param_grid:  11%|█         | 1/9 [00:00&lt;00:05,  1.48it/s]
 loop param_grid:  22%|██▏       | 2/9 [00:01&lt;00:07,  1.04s/it]
-loop param_grid:  33%|███▎      | 3/9 [00:08&lt;00:20,  3.45s/it]
+loop param_grid:  33%|███▎      | 3/9 [00:08&lt;00:20,  3.49s/it]
 loop param_grid:  44%|████▍     | 4/9 [00:09&lt;00:11,  2.39s/it]
-loop param_grid:  56%|█████▌    | 5/9 [00:10&lt;00:08,  2.02s/it]
+loop param_grid:  56%|█████▌    | 5/9 [00:10&lt;00:08,  2.03s/it]
 loop param_grid:  67%|██████▋   | 6/9 [00:17&lt;00:10,  3.61s/it]
-loop param_grid:  78%|███████▊  | 7/9 [00:17&lt;00:05,  2.67s/it]
+loop param_grid:  78%|███████▊  | 7/9 [00:17&lt;00:05,  2.68s/it]
 loop param_grid:  89%|████████▉ | 8/9 [00:19&lt;00:02,  2.28s/it]
-loop param_grid: 100%|██████████| 9/9 [00:26&lt;00:00,  3.78s/it]
-loop lags_grid:  67%|██████▋   | 2/3 [00:51&lt;00:25, 25.72s/it] 
+loop param_grid: 100%|██████████| 9/9 [00:26&lt;00:00,  3.79s/it]
+loop lags_grid:  67%|██████▋   | 2/3 [00:51&lt;00:25, 25.80s/it] 
 loop param_grid:   0%|          | 0/9 [00:00&lt;?, ?it/s]
-loop param_grid:  11%|█         | 1/9 [00:00&lt;00:05,  1.40it/s]
+loop param_grid:  11%|█         | 1/9 [00:00&lt;00:05,  1.43it/s]
 loop param_grid:  22%|██▏       | 2/9 [00:02&lt;00:07,  1.09s/it]
-loop param_grid:  33%|███▎      | 3/9 [00:08&lt;00:21,  3.59s/it]
-loop param_grid:  44%|████▍     | 4/9 [00:09&lt;00:12,  2.47s/it]
-loop param_grid:  56%|█████▌    | 5/9 [00:10&lt;00:08,  2.10s/it]
-loop param_grid:  67%|██████▋   | 6/9 [00:17&lt;00:11,  3.80s/it]
-loop param_grid:  78%|███████▊  | 7/9 [00:18&lt;00:05,  2.82s/it]
-loop param_grid:  89%|████████▉ | 8/9 [00:20&lt;00:02,  2.40s/it]
-loop param_grid: 100%|██████████| 9/9 [00:27&lt;00:00,  3.97s/it]
-loop lags_grid: 100%|██████████| 3/3 [01:18&lt;00:00, 26.28s/it] 
-2021-02-22 08:54:28,793 root       INFO  Refitting `forecaster` using the best found parameters: 
+loop param_grid:  33%|███▎      | 3/9 [00:08&lt;00:21,  3.61s/it]
+loop param_grid:  44%|████▍     | 4/9 [00:09&lt;00:12,  2.48s/it]
+loop param_grid:  56%|█████▌    | 5/9 [00:10&lt;00:08,  2.12s/it]
+loop param_grid:  67%|██████▋   | 6/9 [00:18&lt;00:11,  3.85s/it]
+loop param_grid:  78%|███████▊  | 7/9 [00:18&lt;00:05,  2.85s/it]
+loop param_grid:  89%|████████▉ | 8/9 [00:20&lt;00:02,  2.43s/it]
+loop param_grid: 100%|██████████| 9/9 [00:27&lt;00:00,  4.00s/it]
+loop lags_grid: 100%|██████████| 3/3 [01:19&lt;00:00, 26.40s/it] 
+2021-03-04 11:24:19,383 root       INFO  Refitting `forecaster` using the best found parameters: 
 lags: [ 1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20] 
 params: {&#39;max_depth&#39;: 3, &#39;n_estimators&#39;: 50}
 
@@ -14650,7 +14695,7 @@ params: {&#39;max_depth&#39;: 3, &#39;n_estimators&#39;: 50}
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[27]:</div>
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Resultados Grid Search</span>
@@ -14668,7 +14713,7 @@ params: {&#39;max_depth&#39;: 3, &#39;n_estimators&#39;: 50}
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[27]:</div>
+    <div class="prompt output_prompt">Out[28]:</div>
 
 
 
@@ -14757,7 +14802,7 @@ params: {&#39;max_depth&#39;: 3, &#39;n_estimators&#39;: 50}
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[28]:</div>
+<div class="prompt input_prompt">In&nbsp;[29]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Predicciones</span>
@@ -14804,7 +14849,7 @@ params: {&#39;max_depth&#39;: 3, &#39;n_estimators&#39;: 50}
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[29]:</div>
+<div class="prompt input_prompt">In&nbsp;[30]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Error</span>
@@ -14839,806 +14884,13 @@ params: {&#39;max_depth&#39;: 3, &#39;n_estimators&#39;: 50}
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="skforecast">skforecast<a class="anchor-link" href="#skforecast">&#182;</a></h2><p><br></p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[30]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">################################################################################</span>
-<span class="c1">#                               skforecast                                     #</span>
-<span class="c1">#                                                                              #</span>
-<span class="c1"># This work by Joaquín Amat Rodrigo is licensed under a Creative Commons       #</span>
-<span class="c1"># Attribution 4.0 International License.                                       #</span>
-<span class="c1">################################################################################</span>
-<span class="c1"># coding=utf-8</span>
-
-<span class="kn">import</span> <span class="nn">typing</span>
-<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Union</span><span class="p">,</span> <span class="n">Dict</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="kn">import</span> <span class="nn">logging</span>
-<span class="kn">import</span> <span class="nn">tqdm</span>
-
-
-<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">mean_squared_error</span>
-<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">mean_absolute_error</span>
-<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">mean_absolute_percentage_error</span>
-
-
-<span class="n">logging</span><span class="o">.</span><span class="n">basicConfig</span><span class="p">(</span>
-    <span class="nb">format</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="si">%(asctime)-5s</span><span class="s1"> </span><span class="si">%(name)-10s</span><span class="s1"> </span><span class="si">%(levelname)-5s</span><span class="s1"> </span><span class="si">%(message)s</span><span class="s1">&#39;</span><span class="p">,</span> 
-    <span class="n">level</span>  <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">INFO</span><span class="p">,</span>
-<span class="p">)</span>
-
-
-<span class="c1">################################################################################</span>
-<span class="c1">#                             ForecasterAutoreg                                #</span>
-<span class="c1">################################################################################</span>
-
-<span class="k">class</span> <span class="nc">ForecasterAutoreg</span><span class="p">():</span>
-    <span class="sd">&#39;&#39;&#39;</span>
-<span class="sd">    This class turns a scikit-learn regressor into a recursive autoregressive</span>
-<span class="sd">    (multi-step) forecaster.</span>
-<span class="sd">    </span>
-<span class="sd">    Parameters</span>
-<span class="sd">    ----------</span>
-<span class="sd">    regressor : scikit-learn regressor</span>
-<span class="sd">        An instance of a scikit-learn regressor.</span>
-<span class="sd">        </span>
-<span class="sd">    lags : int, list, 1D np.array, range</span>
-<span class="sd">        Lags used as predictors. Index starts at 1, so lag 1 is equal to t-1.</span>
-<span class="sd">            `int`: include lags from 1 to `lags` (included).</span>
-<span class="sd">            `list` or `np.array`: include only lags present in `lags`.</span>
-
-<span class="sd">    </span>
-<span class="sd">    Attributes</span>
-<span class="sd">    ----------</span>
-<span class="sd">    regressor : scikit-learn regressor</span>
-<span class="sd">        An instance of a scikit-learn regressor.</span>
-<span class="sd">        </span>
-<span class="sd">    lags : 1D np.array</span>
-<span class="sd">        Lags used as predictors.</span>
-<span class="sd">        </span>
-<span class="sd">    max_lag : int</span>
-<span class="sd">        Maximum value of lag included in lags.</span>
-<span class="sd">        </span>
-<span class="sd">    last_window : 1D np.ndarray</span>
-<span class="sd">        Last time window the forecaster has seen when trained. It stores the</span>
-<span class="sd">        values needed to calculate the lags used to predict the next `step`</span>
-<span class="sd">        after the training data.</span>
-<span class="sd">        </span>
-<span class="sd">    included_exog : bool</span>
-<span class="sd">        If the forecaster has been trained using exogenous variable/s.</span>
-<span class="sd">        </span>
-<span class="sd">    exog_type : type</span>
-<span class="sd">        Type used for the exogenous variable/s.</span>
-<span class="sd">            </span>
-<span class="sd">    exog_shape : tuple</span>
-<span class="sd">        Shape of exog used in training.</span>
-<span class="sd">     </span>
-<span class="sd">    &#39;&#39;&#39;</span>
-    
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">regressor</span><span class="p">,</span> <span class="n">lags</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="nb">list</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        
-        <span class="bp">self</span><span class="o">.</span><span class="n">regressor</span>     <span class="o">=</span> <span class="n">regressor</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">last_window</span>   <span class="o">=</span> <span class="kc">None</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">included_exog</span> <span class="o">=</span> <span class="kc">False</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">exog_type</span>     <span class="o">=</span> <span class="kc">False</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">exog_shape</span>    <span class="o">=</span> <span class="kc">None</span>
-        
-        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">lags</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">lags</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">lags</span><span class="p">)</span>
-        <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">lags</span><span class="p">,</span> <span class="p">(</span><span class="nb">list</span><span class="p">,</span> <span class="nb">range</span><span class="p">)):</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">lags</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">lags</span><span class="p">)</span> <span class="o">-</span><span class="mi">1</span>
-        <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">lags</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">):</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">lags</span> <span class="o">=</span> <span class="n">lags</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span>
-                <span class="sa">f</span><span class="s2">&quot;`lags` argument must be `int`, `1D np.ndarray`, `range` or `list`. &quot;</span>
-                <span class="sa">f</span><span class="s2">&quot;Got </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">lags</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span>
-            <span class="p">)</span>
-            
-        <span class="bp">self</span><span class="o">.</span><span class="n">max_lag</span>  <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">lags</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span>
-                
-        
-    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
-        <span class="sd">&#39;&#39;&#39;</span>
-<span class="sd">        Information displayed when a ForecasterAutoreg object is printed.</span>
-<span class="sd">        &#39;&#39;&#39;</span>
-
-        <span class="n">info</span> <span class="o">=</span>    <span class="s2">&quot;=======================&quot;</span> \
-                <span class="o">+</span> <span class="s2">&quot;ForecasterAutoreg&quot;</span> \
-                <span class="o">+</span> <span class="s2">&quot;=======================&quot;</span> \
-                <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span> \
-                <span class="o">+</span> <span class="s2">&quot;Regressor: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">regressor</span><span class="p">)</span> \
-                <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span> \
-                <span class="o">+</span> <span class="s2">&quot;Lags: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">lags</span><span class="p">)</span> \
-                <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span> \
-                <span class="o">+</span> <span class="s2">&quot;Exogenous variable: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">included_exog</span><span class="p">)</span> \
-                <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span> \
-                <span class="o">+</span> <span class="s2">&quot;Parameters: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">regressor</span><span class="o">.</span><span class="n">get_params</span><span class="p">())</span>
-
-        <span class="k">return</span> <span class="n">info</span>
-
-    
-    
-    <span class="k">def</span> <span class="nf">create_lags</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">]:</span>
-        <span class="sd">&#39;&#39;&#39;       </span>
-<span class="sd">        Transforms a time series into a 2D array and a 1D array where each value</span>
-<span class="sd">        of `y` is associated with the lags that precede it.</span>
-<span class="sd">        </span>
-<span class="sd">        Parameters</span>
-<span class="sd">        ----------        </span>
-<span class="sd">        y : 1D np.ndarray, pd.Series</span>
-<span class="sd">            Training time series.</span>
-
-<span class="sd">        Returns </span>
-<span class="sd">        -------</span>
-<span class="sd">        X_data : 2D np.ndarray, shape (samples, len(self.lags))</span>
-<span class="sd">            2D array with the lag values (predictors).</span>
-<span class="sd">        </span>
-<span class="sd">        y_data : 1D np.ndarray, shape (nº observaciones - max(seld.lags),)</span>
-<span class="sd">            Values of the time series related to each row of `X_data`.</span>
-<span class="sd">            </span>
-<span class="sd">        &#39;&#39;&#39;</span>
-        
-        <span class="bp">self</span><span class="o">.</span><span class="n">_check_y</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="n">y</span><span class="p">)</span>
-        <span class="n">y</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_preproces_y</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="n">y</span><span class="p">)</span>        
-        
-        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">max_lag</span> <span class="o">&gt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">y</span><span class="p">):</span>
-            <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span>
-                <span class="sa">f</span><span class="s2">&quot;Maximum lag can&#39;t be higer than `y` length. &quot;</span>
-                <span class="sa">f</span><span class="s2">&quot;Got maximum lag=</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">max_lag</span><span class="si">}</span><span class="s2"> and `y` length=</span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">y</span><span class="p">)</span><span class="si">}</span><span class="s2">.&quot;</span>
-            <span class="p">)</span>
-            
-        <span class="n">n_splits</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">y</span><span class="p">)</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">max_lag</span>
-        <span class="n">X_data</span>  <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">full</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="n">n_splits</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">max_lag</span><span class="p">),</span> <span class="n">fill_value</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">float</span><span class="p">)</span>
-        <span class="n">y_data</span>  <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">full</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="n">n_splits</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">fill_value</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span> <span class="nb">float</span><span class="p">)</span>
-
-        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_splits</span><span class="p">):</span>
-            <span class="n">train_index</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">max_lag</span> <span class="o">+</span> <span class="n">i</span><span class="p">)</span>
-            <span class="n">test_index</span>  <span class="o">=</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">max_lag</span> <span class="o">+</span> <span class="n">i</span><span class="p">]</span>
-
-            <span class="n">X_data</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="p">:]</span> <span class="o">=</span> <span class="n">y</span><span class="p">[</span><span class="n">train_index</span><span class="p">]</span>
-            <span class="n">y_data</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>    <span class="o">=</span> <span class="n">y</span><span class="p">[</span><span class="n">test_index</span><span class="p">]</span>
-            
-        <span class="n">X_data</span> <span class="o">=</span> <span class="n">X_data</span><span class="p">[:,</span> <span class="bp">self</span><span class="o">.</span><span class="n">lags</span><span class="p">]</span>
-        <span class="n">y_data</span> <span class="o">=</span> <span class="n">y_data</span><span class="o">.</span><span class="n">ravel</span><span class="p">()</span>
-            
-        <span class="k">return</span> <span class="n">X_data</span><span class="p">,</span> <span class="n">y_data</span>
-
-        
-    <span class="k">def</span> <span class="nf">fit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">],</span> <span class="n">exog</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">]</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="sd">&#39;&#39;&#39;</span>
-<span class="sd">        Training ForecasterAutoreg</span>
-<span class="sd">        </span>
-<span class="sd">        Parameters</span>
-<span class="sd">        ----------        </span>
-<span class="sd">        y : 1D np.ndarray, pd.Series</span>
-<span class="sd">            Training time series.</span>
-<span class="sd">            </span>
-<span class="sd">        exog : np.ndarray, pd.Series, default `None`</span>
-<span class="sd">            Exogenous variable/s included as predictor/s. Must have the same</span>
-<span class="sd">            number of observations as `y` and should be aligned so that y[i] is</span>
-<span class="sd">            regressed on exog[i].</span>
-
-
-<span class="sd">        Returns </span>
-<span class="sd">        -------</span>
-<span class="sd">        self : ForecasterAutoreg</span>
-<span class="sd">            Trained ForecasterAutoreg</span>
-<span class="sd">        </span>
-<span class="sd">        &#39;&#39;&#39;</span>
-        
-        <span class="c1"># Reset values in case the forecaster has already been fitted before.</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">included_exog</span> <span class="o">=</span> <span class="kc">False</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">exog_type</span>     <span class="o">=</span> <span class="kc">None</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">exog_shape</span>    <span class="o">=</span> <span class="kc">None</span>
-        
-        <span class="bp">self</span><span class="o">.</span><span class="n">_check_y</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="n">y</span><span class="p">)</span>
-        <span class="n">y</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_preproces_y</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="n">y</span><span class="p">)</span>
-        
-        <span class="k">if</span> <span class="n">exog</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">_check_exog</span><span class="p">(</span><span class="n">exog</span><span class="o">=</span><span class="n">exog</span><span class="p">)</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">exog_type</span> <span class="o">=</span> <span class="nb">type</span><span class="p">(</span><span class="n">exog</span><span class="p">)</span>
-            <span class="n">exog</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_preproces_exog</span><span class="p">(</span><span class="n">exog</span><span class="o">=</span><span class="n">exog</span><span class="p">)</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">included_exog</span> <span class="o">=</span> <span class="kc">True</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">exog_shape</span> <span class="o">=</span> <span class="n">exog</span><span class="o">.</span><span class="n">shape</span>
-            
-            <span class="k">if</span> <span class="n">exog</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">!=</span> <span class="nb">len</span><span class="p">(</span><span class="n">y</span><span class="p">):</span>
-                <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span>
-                    <span class="sa">f</span><span class="s2">&quot;`exog` must have same number of samples as `y`&quot;</span>
-                <span class="p">)</span>
-                
-        
-        <span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_lags</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="n">y</span><span class="p">)</span>
-        
-        <span class="k">if</span> <span class="n">exog</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">regressor</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span>
-                <span class="c1"># The first `self.max_lag` positions have to be removed from exog</span>
-                <span class="c1"># since they are not in X_train.</span>
-                <span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">column_stack</span><span class="p">((</span><span class="n">X_train</span><span class="p">,</span> <span class="n">exog</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">max_lag</span><span class="p">:,])),</span>
-                <span class="n">y</span> <span class="o">=</span> <span class="n">y_train</span>
-            <span class="p">)</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">regressor</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="o">=</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">y_train</span><span class="p">)</span>
-        
-        <span class="c1"># The last time window of training data is stored so that lags needed as</span>
-        <span class="c1"># predictors in the first iteration of `predict()` can be calculated.</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">last_window</span> <span class="o">=</span> <span class="n">y_train</span><span class="p">[</span><span class="o">-</span><span class="bp">self</span><span class="o">.</span><span class="n">max_lag</span><span class="p">:]</span>
-        
-            
-    <span class="k">def</span> <span class="nf">predict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">steps</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">X</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">exog</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">:</span>
-        <span class="sd">&#39;&#39;&#39;</span>
-<span class="sd">        Iterative process in which, each prediction, is used as a predictor</span>
-<span class="sd">        for the next step.</span>
-<span class="sd">        </span>
-<span class="sd">        Parameters</span>
-<span class="sd">        ----------</span>
-<span class="sd">               </span>
-<span class="sd">        steps : int</span>
-<span class="sd">            Number of future steps predicted.</span>
-<span class="sd">            </span>
-<span class="sd">        X : 2D np.ndarray, shape (1, len(lags)), default `None`</span>
-<span class="sd">            Value of predictors to start the prediction process. That is, the</span>
-<span class="sd">            value of the lags at t + 1.</span>
-<span class="sd">    </span>
-<span class="sd">            If `X = None`, the values stored in` self.last_window` are used to</span>
-<span class="sd">            calculate the initial predictors, and the predictions start after</span>
-<span class="sd">            training data.</span>
-<span class="sd">            </span>
-<span class="sd">        exog : np.ndarray, pd.Series, default `None`</span>
-<span class="sd">            Exogenous variable/s included as predictor/s.</span>
-
-<span class="sd">        Returns </span>
-<span class="sd">        -------</span>
-<span class="sd">        predicciones : 1D np.array, shape (steps,)</span>
-<span class="sd">            Values predicted by the forecaster.</span>
-<span class="sd">            </span>
-<span class="sd">        &#39;&#39;&#39;</span>
-        
-        <span class="k">if</span> <span class="n">exog</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">included_exog</span><span class="p">:</span>
-            <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span>
-                <span class="sa">f</span><span class="s2">&quot;Forecaster trained with exogenous variable/s. &quot;</span>
-                <span class="sa">f</span><span class="s2">&quot;Same variable/s must be provided in `predict()`.&quot;</span>
-            <span class="p">)</span>
-            
-        <span class="k">if</span> <span class="n">exog</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">included_exog</span><span class="p">:</span>
-            <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span>
-                <span class="sa">f</span><span class="s2">&quot;Forecaster trained without exogenous variable/s. &quot;</span>
-                <span class="sa">f</span><span class="s2">&quot;`exog` must be `None` in `predict()`.&quot;</span>
-            <span class="p">)</span>
-        
-        <span class="k">if</span> <span class="n">exog</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">_check_exog</span><span class="p">(</span>
-                <span class="n">exog</span><span class="o">=</span><span class="n">exog</span><span class="p">,</span> <span class="n">ref_type</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">exog_type</span><span class="p">,</span> <span class="n">ref_shape</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">exog_shape</span>
-            <span class="p">)</span>
-            <span class="n">exog</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_preproces_exog</span><span class="p">(</span><span class="n">exog</span><span class="o">=</span><span class="n">exog</span><span class="p">)</span>
-            <span class="k">if</span> <span class="n">exog</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">!=</span> <span class="n">steps</span><span class="p">:</span>
-                <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span>
-                    <span class="sa">f</span><span class="s2">&quot;`exog` must have as many values as `steps` predicted.&quot;</span>
-                <span class="p">)</span>
-     
-        <span class="k">if</span> <span class="n">X</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="n">X</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">last_window</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">lags</span><span class="p">]</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
-            
-        <span class="n">predictions</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">full</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="n">steps</span><span class="p">,</span> <span class="n">fill_value</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">)</span>
-
-        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">steps</span><span class="p">):</span>
-            <span class="k">if</span> <span class="n">exog</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-                <span class="n">prediction</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">regressor</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X</span><span class="o">=</span><span class="n">X</span><span class="p">)</span>
-            <span class="k">else</span><span class="p">:</span>
-                <span class="n">prediction</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">regressor</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span>
-                                <span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">column_stack</span><span class="p">((</span><span class="n">X</span><span class="p">,</span> <span class="n">exog</span><span class="p">[</span><span class="n">i</span><span class="p">,]</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)))</span>
-                             <span class="p">)</span>
-            <span class="n">predictions</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">prediction</span><span class="o">.</span><span class="n">ravel</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>
-
-            <span class="c1"># Update `X` values. The first position is discarded and the new</span>
-            <span class="c1"># prediction is added at the end.</span>
-            <span class="n">X</span> <span class="o">=</span> <span class="n">X</span><span class="o">.</span><span class="n">flatten</span><span class="p">()</span>
-            <span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">X</span><span class="p">[</span><span class="mi">1</span><span class="p">:],</span> <span class="n">prediction</span><span class="p">)</span>
-            <span class="n">X</span> <span class="o">=</span> <span class="n">X</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
-
-        <span class="k">return</span> <span class="n">predictions</span>
-    
-    
-    <span class="k">def</span> <span class="nf">_check_y</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="sd">&#39;&#39;&#39;</span>
-<span class="sd">        Raise Exception if `y` is not 1D `np.ndarray` or `pd.Series`.</span>
-<span class="sd">        </span>
-<span class="sd">        Parameters</span>
-<span class="sd">        ----------        </span>
-<span class="sd">        y : np.ndarray, pd.Series</span>
-<span class="sd">            Time series values</span>
-
-<span class="sd">        &#39;&#39;&#39;</span>
-        
-        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">)):</span>
-            <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;`y` must be `1D np.ndarray` or `pd.Series`.&#39;</span><span class="p">)</span>
-        <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">)</span> <span class="ow">and</span> <span class="n">y</span><span class="o">.</span><span class="n">ndim</span> <span class="o">!=</span> <span class="mi">1</span><span class="p">:</span>
-            <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span>
-                <span class="sa">f</span><span class="s2">&quot;`y` must be `1D np.ndarray` o `pd.Series`, &quot;</span>
-                <span class="sa">f</span><span class="s2">&quot;got `np.ndarray` with </span><span class="si">{</span><span class="n">y</span><span class="o">.</span><span class="n">ndim</span><span class="si">}</span><span class="s2"> dimensions.&quot;</span>
-            <span class="p">)</span>
-            
-        <span class="k">return</span>
-        
-        
-    <span class="k">def</span> <span class="nf">_check_exog</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">exog</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">],</span> 
-                    <span class="n">ref_type</span><span class="p">:</span> <span class="nb">type</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">ref_shape</span><span class="p">:</span> <span class="nb">tuple</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="sd">&#39;&#39;&#39;</span>
-<span class="sd">        Raise Exception if `exog` is not `np.ndarray` or `pd.Series`.</span>
-<span class="sd">        If `ref_shape` is provided, raise Exception if `ref_shape[1]` do not match</span>
-<span class="sd">        `exog.shape[1]` (number of columns).</span>
-<span class="sd">        </span>
-<span class="sd">        Parameters</span>
-<span class="sd">        ----------        </span>
-<span class="sd">        exog : np.ndarray, pd.Series</span>
-<span class="sd">            Time series values</span>
-
-<span class="sd">        &#39;&#39;&#39;</span>
-            
-        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">exog</span><span class="p">,</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">)):</span>
-            <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;`exog` must be `np.ndarray` or `pd.Series`.&#39;</span><span class="p">)</span>
-            
-        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">exog</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">)</span> <span class="ow">and</span> <span class="n">exog</span><span class="o">.</span><span class="n">ndim</span> <span class="o">&gt;</span> <span class="mi">2</span><span class="p">:</span>
-            <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span>
-                    <span class="sa">f</span><span class="s2">&quot; If `exog` is `np.ndarray`, maximum allowed dim=2. &quot;</span>
-                    <span class="sa">f</span><span class="s2">&quot;Got </span><span class="si">{</span><span class="n">exog</span><span class="o">.</span><span class="n">ndim</span><span class="si">}</span><span class="s2">.&quot;</span>
-                <span class="p">)</span>
-            
-        <span class="k">if</span> <span class="n">ref_type</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-            
-            <span class="k">if</span> <span class="n">ref_type</span> <span class="o">==</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">:</span>
-                <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">exog</span><span class="p">,</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">):</span>
-                    <span class="k">return</span>
-                <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">exog</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">)</span> <span class="ow">and</span> <span class="n">exog</span><span class="o">.</span><span class="n">ndim</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
-                    <span class="k">return</span>
-                <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">exog</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">)</span> <span class="ow">and</span> <span class="n">exog</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
-                    <span class="k">return</span>
-                <span class="k">else</span><span class="p">:</span>
-                    <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span>
-                        <span class="sa">f</span><span class="s2">&quot;`exog` must be: `pd.Series`, `np.ndarray` with 1 dimension&quot;</span>
-                        <span class="sa">f</span><span class="s2">&quot;or `np.ndarray` with 1 column in the second dimension. &quot;</span>
-                        <span class="sa">f</span><span class="s2">&quot;Got `np.ndarray` with </span><span class="si">{</span><span class="n">exog</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s2"> columns.&quot;</span>
-                    <span class="p">)</span>
-                    
-            <span class="k">if</span> <span class="n">ref_type</span> <span class="o">==</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">:</span>
-                <span class="k">if</span> <span class="n">exog</span><span class="o">.</span><span class="n">ndim</span> <span class="o">==</span> <span class="mi">1</span> <span class="ow">and</span> <span class="n">ref_shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
-                    <span class="k">return</span>
-                <span class="k">elif</span> <span class="n">exog</span><span class="o">.</span><span class="n">ndim</span> <span class="o">==</span> <span class="mi">1</span> <span class="ow">and</span> <span class="n">ref_shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
-                    <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span>
-                        <span class="sa">f</span><span class="s2">&quot;`exog` must have </span><span class="si">{</span><span class="n">ref_shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s2"> columns. &quot;</span>
-                        <span class="sa">f</span><span class="s2">&quot;Got `np.ndarray` with 1 dimension or `pd.Series`.&quot;</span>
-                    <span class="p">)</span>
-                <span class="k">elif</span> <span class="n">ref_shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">!=</span> <span class="n">exog</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]:</span>
-                    <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span>
-                        <span class="sa">f</span><span class="s2">&quot;`exog` must have </span><span class="si">{</span><span class="n">ref_shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s2"> columns. &quot;</span>
-                        <span class="sa">f</span><span class="s2">&quot;Got `np.ndarray` with </span><span class="si">{</span><span class="n">exog</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s2"> columns.&quot;</span>
-                    <span class="p">)</span>     
-        <span class="k">return</span>
-    
-        
-    <span class="k">def</span> <span class="nf">_preproces_y</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">:</span>
-        
-        <span class="sd">&#39;&#39;&#39;</span>
-<span class="sd">        Transforms `y` to 1D `np.ndarray` it is `pd.Series`.</span>
-<span class="sd">        </span>
-<span class="sd">        Parameters</span>
-<span class="sd">        ----------        </span>
-<span class="sd">        y :1D np.ndarray, pd.Series</span>
-<span class="sd">            Time series values</span>
-
-<span class="sd">        Returns </span>
-<span class="sd">        -------</span>
-<span class="sd">        y: 1D np.ndarray, shape(samples,)</span>
-<span class="sd">        &#39;&#39;&#39;</span>
-        
-        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">):</span>
-            <span class="k">return</span> <span class="n">y</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">()</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="k">return</span> <span class="n">y</span>
-        
-        
-    <span class="k">def</span> <span class="nf">_preproces_exog</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">exog</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">:</span>
-        
-        <span class="sd">&#39;&#39;&#39;</span>
-<span class="sd">        Transforms `exog` to `np.ndarray` it is `pd.Series`.</span>
-<span class="sd">        If 1D `np.ndarray` reshape it to (n_samples, 1)</span>
-<span class="sd">        </span>
-<span class="sd">        Parameters</span>
-<span class="sd">        ----------        </span>
-<span class="sd">        exog : np.ndarray, pd.Series</span>
-<span class="sd">            Time series values</span>
-
-<span class="sd">        Returns </span>
-<span class="sd">        -------</span>
-<span class="sd">        exog: np.ndarray, shape(samples,)</span>
-<span class="sd">        &#39;&#39;&#39;</span>
-        
-        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">exog</span><span class="p">,</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">):</span>
-            <span class="n">exog</span> <span class="o">=</span> <span class="n">exog</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">()</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
-        <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">exog</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">)</span> <span class="ow">and</span> <span class="n">exog</span><span class="o">.</span><span class="n">ndim</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
-            <span class="n">exog</span> <span class="o">=</span> <span class="n">exog</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
-            
-        <span class="k">return</span> <span class="n">exog</span>
-    
-    
-    <span class="k">def</span> <span class="nf">set_params</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">params</span><span class="p">:</span> <span class="nb">dict</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="sd">&#39;&#39;&#39;</span>
-<span class="sd">        Set new values to the parameters of the scikit learn model stored in the</span>
-<span class="sd">        ForecasterAutoreg.</span>
-<span class="sd">        </span>
-<span class="sd">        Parameters</span>
-<span class="sd">        ----------</span>
-<span class="sd">        params : dict</span>
-<span class="sd">            Parameters values.</span>
-
-<span class="sd">        Returns </span>
-<span class="sd">        -------</span>
-<span class="sd">        self</span>
-<span class="sd">        </span>
-<span class="sd">        &#39;&#39;&#39;</span>
-        
-        <span class="bp">self</span><span class="o">.</span><span class="n">regressor</span><span class="o">.</span><span class="n">set_params</span><span class="p">(</span><span class="o">**</span><span class="n">params</span><span class="p">)</span>
-        
-        
-    <span class="k">def</span> <span class="nf">set_lags</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">lags</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="sd">&#39;&#39;&#39;      </span>
-<span class="sd">        Set new value to the attribute `lags`.</span>
-<span class="sd">        Attribute `max_lag` is also updated.</span>
-<span class="sd">        </span>
-<span class="sd">        Parameters</span>
-<span class="sd">        ----------</span>
-<span class="sd">        lags : int, list, 1D np.array, range</span>
-<span class="sd">        Lags used as predictors. Index starts at 1, so lag 1 is equal to t-1.</span>
-<span class="sd">            `int`: include lags from 1 to `lags`.</span>
-<span class="sd">            `list` or `np.array`: include only lags present in `lags`.</span>
-
-<span class="sd">        Returns </span>
-<span class="sd">        -------</span>
-<span class="sd">        self</span>
-<span class="sd">        </span>
-<span class="sd">        &#39;&#39;&#39;</span>
-        
-        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">lags</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">lags</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">lags</span><span class="p">)</span>
-        <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">lags</span><span class="p">,</span> <span class="p">(</span><span class="nb">list</span><span class="p">,</span> <span class="nb">range</span><span class="p">)):</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">lags</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">lags</span><span class="p">)</span> <span class="o">-</span><span class="mi">1</span>
-        <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">lags</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">):</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">lags</span> <span class="o">=</span> <span class="n">lags</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span>
-                <span class="sa">f</span><span class="s2">&quot;`lags` must be `int`, `1D np.ndarray`, `range` or `list`.&quot;</span>
-                <span class="sa">f</span><span class="s2">&quot;Got </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">lags</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span>
-            <span class="p">)</span>
-            
-        <span class="bp">self</span><span class="o">.</span><span class="n">max_lag</span>  <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">lags</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[31]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">################################################################################</span>
-<span class="c1">#                        skforecast.model_selection                            #</span>
-<span class="c1">#                                                                              #</span>
-<span class="c1"># This work by Joaquín Amat Rodrigo is licensed under a Creative Commons       #</span>
-<span class="c1"># Attribution 4.0 International License.                                       #</span>
-<span class="c1">################################################################################</span>
-<span class="c1"># coding=utf-8</span>
-
-
-<span class="kn">import</span> <span class="nn">typing</span>
-<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Union</span><span class="p">,</span> <span class="n">Dict</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="kn">import</span> <span class="nn">logging</span>
-<span class="kn">import</span> <span class="nn">tqdm</span>
-<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">mean_squared_error</span>
-<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">mean_absolute_error</span>
-<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">mean_absolute_percentage_error</span>
-<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">ParameterGrid</span>
-
-<span class="n">logging</span><span class="o">.</span><span class="n">basicConfig</span><span class="p">(</span>
-    <span class="nb">format</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="si">%(asctime)-5s</span><span class="s1"> </span><span class="si">%(name)-10s</span><span class="s1"> </span><span class="si">%(levelname)-5s</span><span class="s1"> </span><span class="si">%(message)s</span><span class="s1">&#39;</span><span class="p">,</span> 
-    <span class="n">level</span>  <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">INFO</span><span class="p">,</span>
-<span class="p">)</span>
-
-<span class="k">def</span> <span class="nf">time_series_spliter</span><span class="p">(</span><span class="n">y</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">],</span>
-                        <span class="n">initial_train_size</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">steps</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
-                        <span class="n">allow_incomplete_fold</span><span class="p">:</span> <span class="nb">bool</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">]:</span>
-    <span class="sd">&#39;&#39;&#39;</span>
-<span class="sd">    </span>
-<span class="sd">    Split indices of a time series into multiple train-test pairs. The order of</span>
-<span class="sd">    is maintained and the training set increases in each iteration.</span>
-<span class="sd">    </span>
-<span class="sd">    Parameters</span>
-<span class="sd">    ----------        </span>
-<span class="sd">    y : 1D np.ndarray, pd.Series</span>
-<span class="sd">        Training time series values. </span>
-<span class="sd">    </span>
-<span class="sd">    initial_train_size: int </span>
-<span class="sd">        Number of samples in the initial train split.</span>
-<span class="sd">        </span>
-<span class="sd">    steps : int</span>
-<span class="sd">        Number of steps to predict.</span>
-<span class="sd">        </span>
-<span class="sd">    allow_incomplete_fold : bool, default `True`</span>
-<span class="sd">        The last test set is allowed to be incomplete if it does not reach `steps`</span>
-<span class="sd">        observations. Otherwise, the latest observations are discarded.</span>
-
-<span class="sd">    Yields</span>
-<span class="sd">    ------</span>
-<span class="sd">    train : 1D np.ndarray</span>
-<span class="sd">        Training indices.</span>
-<span class="sd">        </span>
-<span class="sd">    test : 1D np.ndarray</span>
-<span class="sd">        Test indices.</span>
-<span class="sd">        </span>
-<span class="sd">    &#39;&#39;&#39;</span>
-    
-    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">)):</span>
-
-        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;`y` must be `1D np.ndarray` o `pd.Series`.&#39;</span><span class="p">)</span>
-
-    <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">)</span> <span class="ow">and</span> <span class="n">y</span><span class="o">.</span><span class="n">ndim</span> <span class="o">!=</span> <span class="mi">1</span><span class="p">:</span>
-
-        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span>
-            <span class="sa">f</span><span class="s2">&quot;`y` must be `1D np.ndarray` o `pd.Series`, &quot;</span>
-            <span class="sa">f</span><span class="s2">&quot;got `np.ndarray` with </span><span class="si">{</span><span class="n">y</span><span class="o">.</span><span class="n">ndim</span><span class="si">}</span><span class="s2"> dimensions.&quot;</span>
-        <span class="p">)</span>
-        
-    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">):</span>
-        <span class="n">y</span> <span class="o">=</span> <span class="n">y</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">()</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
-    
-  
-    <span class="n">folds</span>     <span class="o">=</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">y</span><span class="p">)</span> <span class="o">-</span> <span class="n">initial_train_size</span><span class="p">)</span> <span class="o">//</span> <span class="n">steps</span>  <span class="o">+</span> <span class="mi">1</span>
-    <span class="n">remainder</span> <span class="o">=</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">y</span><span class="p">)</span> <span class="o">-</span> <span class="n">initial_train_size</span><span class="p">)</span> <span class="o">%</span> <span class="n">steps</span>    
-    
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">folds</span><span class="p">):</span>
-          
-        <span class="k">if</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">folds</span> <span class="o">-</span> <span class="mi">1</span><span class="p">:</span>
-            <span class="n">train_end</span>     <span class="o">=</span> <span class="n">initial_train_size</span> <span class="o">+</span> <span class="n">i</span> <span class="o">*</span> <span class="n">steps</span>    
-            <span class="n">train_indices</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="n">train_end</span><span class="p">)</span>
-            <span class="n">test_indices</span>  <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="n">train_end</span><span class="p">,</span> <span class="n">train_end</span> <span class="o">+</span> <span class="n">steps</span><span class="p">)</span>
-            
-        <span class="k">else</span><span class="p">:</span>
-            <span class="k">if</span> <span class="n">remainder</span> <span class="o">!=</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">allow_incomplete_fold</span><span class="p">:</span>
-                <span class="n">train_end</span>     <span class="o">=</span> <span class="n">initial_train_size</span> <span class="o">+</span> <span class="n">i</span> <span class="o">*</span> <span class="n">steps</span>  
-                <span class="n">train_indices</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="n">train_end</span><span class="p">)</span>
-                <span class="n">test_indices</span>  <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="n">train_end</span><span class="p">,</span> <span class="n">train_end</span> <span class="o">+</span> <span class="n">remainder</span><span class="p">)</span>
-            <span class="k">else</span><span class="p">:</span>
-                <span class="k">break</span>
-        
-        <span class="k">yield</span> <span class="n">train_indices</span><span class="p">,</span> <span class="n">test_indices</span>
-        
-
-<span class="k">def</span> <span class="nf">ts_cv_forecaster</span><span class="p">(</span><span class="n">forecaster</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">],</span>
-                     <span class="n">initial_train_size</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">steps</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
-                     <span class="n">metric</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">exog</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">]</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-                     <span class="n">allow_incomplete_fold</span><span class="p">:</span> <span class="nb">bool</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
-    <span class="sd">&#39;&#39;&#39;</span>
-<span class="sd">    Cross-validation of ForecasterAutoreg object. The order of is maintained and </span>
-<span class="sd">    the training set increases in each iteration.</span>
-<span class="sd">    </span>
-<span class="sd">    Parameters</span>
-<span class="sd">    ----------</span>
-<span class="sd">    forecaster : ForecasterAutoreg </span>
-<span class="sd">        ForecasterAutoreg object.</span>
-<span class="sd">        </span>
-<span class="sd">    y : 1D np.ndarray, pd.Series</span>
-<span class="sd">        Training time series values. </span>
-<span class="sd">    </span>
-<span class="sd">    initial_train_size: int </span>
-<span class="sd">        Number of samples in the initial train split.</span>
-<span class="sd">        </span>
-<span class="sd">    steps : int</span>
-<span class="sd">        Number of steps to predict.</span>
-<span class="sd">        </span>
-<span class="sd">    metric : {&#39;neg_mean_squared_error&#39;, &#39;neg_mean_absolute_error&#39;, &#39;neg_mean_absolute_percentage_error&#39;}</span>
-<span class="sd">        Metric used to quantify the goodness of fit of the model.</span>
-<span class="sd">        </span>
-<span class="sd">    exog : np.ndarray, pd.Series, default `None`</span>
-<span class="sd">            Exogenous variable/s included as predictor/s. Must have the same</span>
-<span class="sd">            number of observations as `y` and should be aligned so that y[i] is</span>
-<span class="sd">            regressed on exog[i].</span>
-<span class="sd">            </span>
-<span class="sd">    allow_incomplete_fold : bool, default `True`</span>
-<span class="sd">        The last test set is allowed to be incomplete if it does not reach `steps`</span>
-<span class="sd">        observations. Otherwise, the latest observations are discarded.</span>
-
-<span class="sd">    Returns </span>
-<span class="sd">    -------</span>
-<span class="sd">    ts_cv_results: 1D np.ndarray</span>
-<span class="sd">        Value of the metric for each partition.</span>
-
-<span class="sd">    &#39;&#39;&#39;</span>
-    
-    <span class="n">forecaster</span><span class="o">.</span><span class="n">_check_y</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="n">y</span><span class="p">)</span>
-    <span class="n">y</span> <span class="o">=</span> <span class="n">forecaster</span><span class="o">.</span><span class="n">_preproces_y</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="n">y</span><span class="p">)</span>
-    
-    <span class="k">if</span> <span class="n">exog</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="n">forecaster</span><span class="o">.</span><span class="n">_check_exog</span><span class="p">(</span><span class="n">exog</span><span class="o">=</span><span class="n">exog</span><span class="p">)</span>
-        <span class="n">exog</span> <span class="o">=</span> <span class="n">forecaster</span><span class="o">.</span><span class="n">_preproces_exog</span><span class="p">(</span><span class="n">exog</span><span class="o">=</span><span class="n">exog</span><span class="p">)</span>
-    
-    <span class="n">ts_cv_results</span> <span class="o">=</span> <span class="p">[]</span>
-    
-    <span class="n">metrics</span> <span class="o">=</span> <span class="p">{</span>
-        <span class="s1">&#39;neg_mean_squared_error&#39;</span><span class="p">:</span> <span class="n">mean_squared_error</span><span class="p">,</span>
-        <span class="s1">&#39;neg_mean_absolute_error&#39;</span><span class="p">:</span> <span class="n">mean_absolute_error</span><span class="p">,</span>
-        <span class="s1">&#39;neg_mean_absolute_percentage_error&#39;</span><span class="p">:</span> <span class="n">mean_absolute_percentage_error</span>
-    <span class="p">}</span>
-    
-    <span class="n">metric</span> <span class="o">=</span> <span class="n">metrics</span><span class="p">[</span><span class="n">metric</span><span class="p">]</span>
-    
-    <span class="n">splits</span> <span class="o">=</span> <span class="n">time_series_spliter</span><span class="p">(</span>
-                <span class="n">y</span>                     <span class="o">=</span> <span class="n">y</span><span class="p">,</span>
-                <span class="n">initial_train_size</span>    <span class="o">=</span> <span class="n">initial_train_size</span><span class="p">,</span>
-                <span class="n">steps</span>                 <span class="o">=</span> <span class="n">steps</span><span class="p">,</span>
-                <span class="n">allow_incomplete_fold</span> <span class="o">=</span> <span class="n">allow_incomplete_fold</span>
-             <span class="p">)</span>
-    
-    <span class="k">for</span> <span class="n">train_index</span><span class="p">,</span> <span class="n">test_index</span> <span class="ow">in</span> <span class="n">splits</span><span class="p">:</span>
-        
-        <span class="k">if</span> <span class="n">exog</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-            
-            <span class="n">forecaster</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="n">y</span><span class="p">[</span><span class="n">train_index</span><span class="p">])</span>      
-            <span class="n">pred</span> <span class="o">=</span> <span class="n">forecaster</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">steps</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">test_index</span><span class="p">))</span>
-            
-        <span class="k">else</span><span class="p">:</span>
-            
-            <span class="n">forecaster</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="n">y</span><span class="p">[</span><span class="n">train_index</span><span class="p">],</span> <span class="n">exog</span><span class="o">=</span><span class="n">exog</span><span class="p">[</span><span class="n">train_index</span><span class="p">])</span>      
-            <span class="n">pred</span> <span class="o">=</span> <span class="n">forecaster</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">steps</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">test_index</span><span class="p">),</span> <span class="n">exog</span><span class="o">=</span><span class="n">exog</span><span class="p">[</span><span class="n">test_index</span><span class="p">])</span>
-               
-        <span class="n">metric_value</span> <span class="o">=</span> <span class="n">metric</span><span class="p">(</span>
-                            <span class="n">y_true</span> <span class="o">=</span> <span class="n">y</span><span class="p">[</span><span class="n">test_index</span><span class="p">],</span>
-                            <span class="n">y_pred</span> <span class="o">=</span> <span class="n">pred</span>
-                       <span class="p">)</span>
-        
-        <span class="n">ts_cv_results</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">metric_value</span><span class="p">)</span>
-                          
-    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">ts_cv_results</span><span class="p">)</span>
-
-
-<span class="k">def</span> <span class="nf">grid_search_forecaster</span><span class="p">(</span><span class="n">forecaster</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">],</span>
-                           <span class="n">param_grid</span><span class="p">:</span> <span class="nb">dict</span><span class="p">,</span> <span class="n">initial_train_size</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">steps</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>
-                           <span class="n">metric</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">exog</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">]</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-                           <span class="n">lags_grid</span><span class="p">:</span> <span class="nb">list</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">allow_incomplete_fold</span><span class="p">:</span> <span class="nb">bool</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
-                           <span class="n">return_best</span><span class="p">:</span> <span class="nb">bool</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
-    <span class="sd">&#39;&#39;&#39;</span>
-<span class="sd">    Exhaustive search over specified parameter values for a ForecasterAutoreg object.</span>
-<span class="sd">    </span>
-<span class="sd">    Parameters</span>
-<span class="sd">    ----------</span>
-<span class="sd">    </span>
-<span class="sd">    forecaster : ForecasterAutoreg </span>
-<span class="sd">        ForecasterAutoreg object.</span>
-<span class="sd">        </span>
-<span class="sd">    y : 1D np.ndarray, pd.Series</span>
-<span class="sd">        Training time series values. </span>
-<span class="sd">        </span>
-<span class="sd">    param_grid : dict</span>
-<span class="sd">        Dictionary with parameters names (`str`) as keys and lists of parameter</span>
-<span class="sd">        settings to try as values.</span>
-<span class="sd">    </span>
-<span class="sd">    initial_train_size: int </span>
-<span class="sd">        Number of samples in the initial train split.</span>
-<span class="sd">        </span>
-<span class="sd">    steps : int</span>
-<span class="sd">        Number of steps to predict.</span>
-<span class="sd">        </span>
-<span class="sd">    metric : {&#39;neg_mean_squared_error&#39;, &#39;neg_mean_absolute_error&#39;, &#39;neg_mean_absolute_percentage_error&#39;}</span>
-<span class="sd">        Metric used to quantify the goodness of fit of the model.</span>
-<span class="sd">        </span>
-<span class="sd">    exog : np.ndarray, pd.Series, default `None`</span>
-<span class="sd">            Exogenous variable/s included as predictor/s. Must have the same</span>
-<span class="sd">            number of observations as `y` and should be aligned so that y[i] is</span>
-<span class="sd">            regressed on exog[i].</span>
-<span class="sd">           </span>
-<span class="sd">    lags_grid : list of int, lists, np.narray or range. </span>
-<span class="sd">        Lists of `lags` to try.</span>
-<span class="sd">        </span>
-<span class="sd">    allow_incomplete_fold : bool, default `True`</span>
-<span class="sd">        The last test set is allowed to be incomplete if it does not reach `steps`</span>
-<span class="sd">        observations. Otherwise, the latest observations are discarded.</span>
-<span class="sd">        </span>
-<span class="sd">    return_best : bool</span>
-<span class="sd">        Refit the `forecaster` using the best found parameters on the whole data.</span>
-
-<span class="sd">    Returns </span>
-<span class="sd">    -------</span>
-<span class="sd">    results: pandas.DataFrame</span>
-<span class="sd">        Metric value estimated for each combination of parameters.</span>
-
-<span class="sd">    &#39;&#39;&#39;</span>
-    
-    <span class="n">forecaster</span><span class="o">.</span><span class="n">_check_y</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="n">y</span><span class="p">)</span>
-    <span class="n">y</span> <span class="o">=</span> <span class="n">forecaster</span><span class="o">.</span><span class="n">_preproces_y</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="n">y</span><span class="p">)</span>
-    
-    <span class="k">if</span> <span class="n">exog</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="n">forecaster</span><span class="o">.</span><span class="n">_check_exog</span><span class="p">(</span><span class="n">exog</span><span class="o">=</span><span class="n">exog</span><span class="p">)</span>
-        <span class="n">exog</span> <span class="o">=</span> <span class="n">forecaster</span><span class="o">.</span><span class="n">_preproces_exog</span><span class="p">(</span><span class="n">exog</span><span class="o">=</span><span class="n">exog</span><span class="p">)</span>
-        
-    <span class="k">if</span> <span class="n">lags_grid</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="n">lags_grid</span> <span class="o">=</span> <span class="p">[</span><span class="n">forecaster</span><span class="o">.</span><span class="n">lags</span><span class="p">]</span>
-        
-    <span class="n">lags_list</span> <span class="o">=</span> <span class="p">[]</span>
-    <span class="n">params_list</span> <span class="o">=</span> <span class="p">[]</span>
-    <span class="n">metric_list</span> <span class="o">=</span> <span class="p">[]</span>
-    
-    <span class="n">param_grid</span> <span class="o">=</span>  <span class="nb">list</span><span class="p">(</span><span class="n">ParameterGrid</span><span class="p">(</span><span class="n">param_grid</span><span class="p">))</span>
-    
-    <span class="k">for</span> <span class="n">lags</span> <span class="ow">in</span> <span class="n">tqdm</span><span class="o">.</span><span class="n">tqdm</span><span class="p">(</span><span class="n">lags_grid</span><span class="p">,</span> <span class="n">desc</span><span class="o">=</span><span class="s1">&#39;loop lags_grid&#39;</span><span class="p">,</span> <span class="n">position</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
-        
-        <span class="n">forecaster</span><span class="o">.</span><span class="n">set_lags</span><span class="p">(</span><span class="n">lags</span><span class="p">)</span>
-        
-        <span class="k">for</span> <span class="n">params</span> <span class="ow">in</span> <span class="n">tqdm</span><span class="o">.</span><span class="n">tqdm</span><span class="p">(</span><span class="n">param_grid</span><span class="p">,</span> <span class="n">desc</span><span class="o">=</span><span class="s1">&#39;loop param_grid&#39;</span><span class="p">,</span> <span class="n">position</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">leave</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
-
-            <span class="n">forecaster</span><span class="o">.</span><span class="n">set_params</span><span class="p">(</span><span class="o">**</span><span class="n">params</span><span class="p">)</span>
-
-            <span class="n">cv_metrics</span> <span class="o">=</span> <span class="n">ts_cv_forecaster</span><span class="p">(</span>
-                            <span class="n">forecaster</span> <span class="o">=</span> <span class="n">forecaster</span><span class="p">,</span>
-                            <span class="n">y</span>          <span class="o">=</span> <span class="n">y</span><span class="p">,</span>
-                            <span class="n">exog</span>       <span class="o">=</span> <span class="n">exog</span><span class="p">,</span>
-                            <span class="n">initial_train_size</span> <span class="o">=</span> <span class="n">initial_train_size</span><span class="p">,</span>
-                            <span class="n">steps</span>  <span class="o">=</span> <span class="n">steps</span><span class="p">,</span>
-                            <span class="n">metric</span> <span class="o">=</span> <span class="n">metric</span>
-                         <span class="p">)</span>
-            
-            <span class="n">lags_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">forecaster</span><span class="o">.</span><span class="n">lags</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
-            <span class="n">params_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">params</span><span class="p">)</span>
-            <span class="n">metric_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">cv_metrics</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span>
-            
-    <span class="n">results</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
-                <span class="s1">&#39;lags&#39;</span>  <span class="p">:</span> <span class="n">lags_list</span><span class="p">,</span>
-                <span class="s1">&#39;params&#39;</span><span class="p">:</span> <span class="n">params_list</span><span class="p">,</span>
-                <span class="s1">&#39;metric&#39;</span><span class="p">:</span> <span class="n">metric_list</span><span class="p">})</span>
-    
-    <span class="n">results</span> <span class="o">=</span> <span class="n">results</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s1">&#39;metric&#39;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-    
-    <span class="k">if</span> <span class="n">return_best</span><span class="p">:</span>
-        
-        <span class="n">best_lags</span> <span class="o">=</span> <span class="n">results</span><span class="p">[</span><span class="s1">&#39;lags&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-        <span class="n">best_params</span> <span class="o">=</span> <span class="n">results</span><span class="p">[</span><span class="s1">&#39;params&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-        <span class="n">logging</span><span class="o">.</span><span class="n">info</span><span class="p">(</span>
-            <span class="sa">f</span><span class="s2">&quot;Refitting `forecaster` using the best found parameters: </span><span class="se">\n</span><span class="s2">&quot;</span>
-            <span class="sa">f</span><span class="s2">&quot;lags: </span><span class="si">{</span><span class="n">best_lags</span><span class="si">}</span><span class="s2"> </span><span class="se">\n</span><span class="s2">&quot;</span>
-            <span class="sa">f</span><span class="s2">&quot;params: </span><span class="si">{</span><span class="n">best_params</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span>
-        <span class="p">)</span>
-        <span class="n">forecaster</span><span class="o">.</span><span class="n">set_lags</span><span class="p">(</span><span class="n">best_lags</span><span class="p">)</span>
-        <span class="n">forecaster</span><span class="o">.</span><span class="n">set_params</span><span class="p">(</span><span class="o">**</span><span class="n">best_params</span><span class="p">)</span>
-        <span class="n">forecaster</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="n">y</span><span class="p">,</span> <span class="n">exog</span><span class="o">=</span><span class="n">exog</span><span class="p">)</span>
-            
-    <span class="k">return</span> <span class="n">results</span> 
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Informaci&#243;n-de-sesi&#243;n">Informaci&#243;n de sesi&#243;n<a class="anchor-link" href="#Informaci&#243;n-de-sesi&#243;n">&#182;</a></h2>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[32]:</div>
+<div class="prompt input_prompt">In&nbsp;[31]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sinfo</span> <span class="kn">import</span> <span class="n">sinfo</span>
@@ -15666,10 +14918,9 @@ matplotlib  3.3.2
 numpy       1.20.1
 pandas      1.2.2
 sinfo       0.3.1
-skforecast  NA
+skforecast  0.1.5
 sklearn     0.24.1
 statsmodels 0.11.1
-tqdm        4.57.0
 -----
 IPython             7.20.0
 jupyter_client      6.1.11
@@ -15677,10 +14928,10 @@ jupyter_core        4.7.1
 notebook            6.2.0
 -----
 Python 3.7.9 (default, Aug 31 2020, 12:42:55) [GCC 7.3.0]
-Linux-5.4.0-1037-aws-x86_64-with-debian-buster-sid
+Linux-5.4.0-1038-aws-x86_64-with-debian-buster-sid
 2 logical CPU cores, x86_64
 -----
-Session information updated at 2021-02-22 08:54
+Session information updated at 2021-03-04 11:24
 </pre>
 </div>
 </div>
@@ -15698,6 +14949,7 @@ Session information updated at 2021-02-22 08:54
 <p>Python for Finance: Mastering Data-Driven Finance <a href="https://www.amazon.es/gp/product/1492024333/ref=as_li_qf_asin_il_tl?ie=UTF8&amp;tag=cienciadedato-21&amp;creative=24630&amp;linkCode=as2&amp;creativeASIN=1492024333&amp;linkId=70c3175ad015970cd1c2328b7a40a055">libro</a></p>
 <p><a href="http://learningsys.org/neurips19/assets/papers/sktime_ml_systems_neurips2019.pdf">Markus Löning, Anthony Bagnall, Sajaysurya Ganesh, Viktor Kazakov, Jason Lines, Franz Király (2019): “sktime: A Unified Interface for Machine Learning with Time Series”</a></p>
 <p><a href="https://github.com/alan-turing-institute/sktime">Markus Löning, Tony Bagnall, Sajaysurya Ganesh, George Oastler, Jason Lines, ViktorKaz, …, Aadesh Deshmukh (2020). alan-turing-institute/sktime. Zenodo. http://doi.org/10.5281/zenodo.3749000</a></p>
+<p><a href="https://github.com/JoaquinAmatRodrigo/skforecast"><strong>skforecast</strong></a></p>
 
 </div>
 </div>
