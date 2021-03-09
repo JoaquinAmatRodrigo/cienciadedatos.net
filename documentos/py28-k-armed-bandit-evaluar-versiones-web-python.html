@@ -17,8 +17,8 @@
   gtag('config', 'UA-170033283-1');
 </script>
 
-<title>K-Armed bandit para la elección del landing page</title>
-<meta name="description" content="Ejemplo de cómo utilizar K-Armed bandit como estrategia A/B testing para elegir entre varias versiones de una página web." />
+<title>Multi-armed bandit para la elección del landing page</title>
+<meta name="description" content="Ejemplo de cómo utilizar Multi-armed bandit como estrategia A/B testing para elegir entre varias versiones de una página web." />
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -13287,7 +13287,7 @@ $( document ).ready(function(){
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1><center><font size="25">K-Armed bandit para la elección del landing page</font></center></h1>
+<h1><center><font size="25">Multi-armed bandit para la elección del landing page</font></center></h1>
 </div>
 </div>
 </div>
@@ -13309,7 +13309,7 @@ $( document ).ready(function(){
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>En este artículo exploraremos cómo el uso de técnicas de aprendizaje reforzado, concretamente el <em>K-Armed bandit</em> nos permite reducir el tiempo necesario para valorar si una nueva versión de nuestra página web es más eficaz a la hora de aumentar nuestro número de clientes.</p>
+<p>En este artículo exploraremos cómo el uso de técnicas de aprendizaje reforzado, concretamente el <em>Multi-armed bandit</em> nos permite reducir el tiempo necesario para valorar si una nueva versión de nuestra página web es más eficaz a la hora de aumentar nuestro número de clientes.</p>
 
 </div>
 </div>
@@ -13341,12 +13341,12 @@ $( document ).ready(function(){
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="K-Armed-Bandit">K-Armed Bandit<a class="anchor-link" href="#K-Armed-Bandit">&#182;</a></h2><p><br></p>
+<h2 id="Multi-armed-Bandit">Multi-armed Bandit<a class="anchor-link" href="#Multi-armed-Bandit">&#182;</a></h2><p><br></p>
 <p>En el aprendizaje reforzado, el agente genera sus propios datos de entrenamiento interactuando con el entorno. El agente debe aprender las consecuencias de sus acciones mediante ensayo y error, en lugar de con un conocimiento a priori de la acción correcta.</p>
-<p>En el caso concreto del <em>k-armed bandit</em>, nos encontramos con k opciones diferentes o acciones. Tras efectuar una acción, obtenemos una recompensa numérica escogida de una distribución de probabilidad, que tendrá que ser estacionaria y dependerá de dicha acción seleccionada. Nuestro objetivo será el de maximizar la recompensa total para un periodo de tiempo, por ejemplo, 1000 acciones o pasos temporales.</p>
+<p>En el caso concreto del <em>Multi-armed bandit</em>, nos encontramos con k opciones diferentes o acciones. Tras efectuar una acción, obtenemos una recompensa numérica escogida de una distribución de probabilidad, que tendrá que ser estacionaria y dependerá de dicha acción seleccionada. Nuestro objetivo será el de maximizar la recompensa total para un periodo de tiempo, por ejemplo, 1000 acciones o pasos temporales.</p>
 <p>En nuestro problema, cada acción tiene una recompensa media esperada al ser seleccionada, denominada <strong>valor de la acción</strong>. Para cualquier acción, tendremos:</p>
-$$q_*(a) \doteq \mathbf{E}[R_t|A_t=a]$$<p>Si supiésemos el verdadero valor de cada acción, entonces resolver el problema del <em>k-armed bandit</em> sería trivial, ya que siempre seleccionaríamos aquella acción con un mayor valor esperado. Asumimos que no lo conocemos con certeza, aunque sí podemos tener estimaciones, las cuales denotamos como $Q_t(a)$, la recompensa esperada en el paso de tiempo $t$ al tomar la acción $a$ y trataremos que sea lo más cercana posible a $q_*(a)$.</p>
-<p>Para un mayor detalle en cuanto a los conceptos detrás del <em>k-armed bandit</em> y el pseudocódigo necesario para su implementación, se recomienda la lectura de <em>Reinforcement Learning: An Introduction, páginas 25-36</em>.</p>
+$$q_*(a) \doteq \mathbf{E}[R_t|A_t=a]$$<p>Si supiésemos el verdadero valor de cada acción, entonces resolver el problema del <em>Multi-armed bandit</em> sería trivial, ya que siempre seleccionaríamos aquella acción con un mayor valor esperado. Asumimos que no lo conocemos con certeza, aunque sí podemos tener estimaciones, las cuales denotamos como $Q_t(a)$, la recompensa esperada en el paso de tiempo $t$ al tomar la acción $a$ y trataremos que sea lo más cercana posible a $q_*(a)$.</p>
+<p>Para un mayor detalle en cuanto a los conceptos detrás del <em>Multi-armed bandit</em> y el pseudocódigo necesario para su implementación, se recomienda la lectura de <em>Reinforcement Learning: An Introduction, páginas 25-36</em>.</p>
 <p>En cada instante de tiempo, el agente escogerá entre explorar, con probabilidad $p$, seleccionando aleatoriamente de entre las distintas acciones o bien explotar, con probabilidad $1-p$, escogiendo hasta ese momento la acción con un valor esperado estimado mayor. En aprendizaje reforzado, denominamos a este tipo de agentes como <em>Epsilon greedy</em>.
 <br></p>
 
@@ -14239,7 +14239,7 @@ acción 3:0.246
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Conclusiones-y-&#225;mbito-de-aplicaci&#243;n">Conclusiones y &#225;mbito de aplicaci&#243;n<a class="anchor-link" href="#Conclusiones-y-&#225;mbito-de-aplicaci&#243;n">&#182;</a></h2><p><br></p>
 <p>En este artículo hemos explorado cómo el aprendizaje reforzado nos puede servir a la hora de evaluar distintas opciones recogiendo feedback en línea de los usuarios.</p>
-<p>Con el caso del <em>k-armed bandit</em> , hemos visto el impacto de balancear correctamente la exploración y la explotación de las acciones con un mayor valor estimado y el uso del conocimiento a priori para obtener unas estimaciones mejores y más rápidas de esos $q_*(a)$ de cada acción.</p>
+<p>Con el caso del <em>Multi-armed bandit</em> , hemos visto el impacto de balancear correctamente la exploración y la explotación de las acciones con un mayor valor estimado y el uso del conocimiento a priori para obtener unas estimaciones mejores y más rápidas de esos $q_*(a)$ de cada acción.</p>
 
 </div>
 </div>
@@ -14339,7 +14339,7 @@ div.inner_cell {
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>¿Cómo citar este documento?</strong></p>
 <p style="text-align:left"><font size="3" color="#555">
-K-Armed bandit para la elección del landing page by Francisco Espiga, available under a Attribution 4.0 International (CC BY 4.0) at https://www.cienciadedatos.net/documentos/py28-k-armed-bandit-evaluar-versiones-web-python.html
+Multi-armed bandit para la elección del landing page by Francisco Espiga, available under a Attribution 4.0 International (CC BY 4.0) at https://www.cienciadedatos.net/documentos/py28-k-armed-bandit-evaluar-versiones-web-python.html
 
 
 </font></p>
