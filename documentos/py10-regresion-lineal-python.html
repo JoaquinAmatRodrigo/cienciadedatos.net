@@ -13308,8 +13308,9 @@ $( document ).ready(function(){
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Más sobre ciencia de datos: <a href="https://cienciadedatos.net"><strong>cienciadedatos.net</strong></a></p>
 <ul>
-<li><a href="https://www.cienciadedatos.net/documentos/py06_machine_learning_python_scikitlearn.html"><strong>Machine learning con Python y Scikit-learn</strong></a>
-<br><br></li>
+<li><a href="https://www.cienciadedatos.net/documentos/pystats05-correlacion-lineal-python.html"><strong>Correlación lineal con Python</strong></a></li>
+<li><a href="https://www.cienciadedatos.net/documentos/py06_machine_learning_python_scikitlearn.html"><strong>Machine learning con Python y Scikit-learn</strong></a></li>
+<li><a href="https://www.cienciadedatos.net/documentos/py08_random_forest_python.html"><strong>Random Forest con Python</strong></a></li>
 </ul>
 
 </div>
@@ -16477,7 +16478,7 @@ Notes:
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>El método empleado por <code>statsmodels</code> y <code>scikitlearn</code> para calcular los intervalos de confianza de los coeficientes de regresión de un modelo lineal se basa en la distribución <em>t-student</em> y siguen la estructura:</p>
 $$\hat{\beta}_j \pm t_{n-p}^{\alpha/2} se(\hat{\beta})$$<p>Para que los intervalos basados en esta distribución teórica sean válidos, es necesario que los residuos del modelo se distribuyan de forma normal. Sí esto no ocurre, el método de <em>bootstrapping</em> ofrece una alternativa que no requiere de esta condición.</p>
-<p>A continuación, se muestra un ejemplo de cómo aplicar este método para estimar los <em>CI 95%</em> del modelo <code>Species ~ Area + Elevation + Nearest + Scruz + Adjacent</code>. Para una descripción más detallada del <em>bootstrapping</em> consultar <a href="https://www.cienciadedatos.net/documentos/23_resampling_test_permutacion_simulacion_de_monte_carlo_bootstrapping">Resampling: Test de permutación, Simulación de Monte Carlo y  Bootstrapping</a>.</p>
+<p>A continuación, se muestra un ejemplo de cómo aplicar este método para estimar los <em>CI 95%</em> del modelo <code>Species ~ Area + Elevation + Nearest + Scruz + Adjacent</code>. Para una descripción más detallada del <em>bootstrapping</em> consultar <a href="https://www.cienciadedatos.net/documentos/pystats04-bootstrapping-python.html">Bootstrapping para intervalos de confianza y contraste de hipótesis con Python</a>.</p>
 <p><em>En el libro Linear Models with R by Julian J. Faraway se hace resampling sobre los residuos del modelo. A mi parecer es más intuitivo hacer el resampling sobre los pares (respuesta, predictores). Las estimaciones de los intervalos que se obtienen no son exactamente iguales, por lo que no puedo garantizar la validez de esta aproximación</em>.</p>
 
 </div>
