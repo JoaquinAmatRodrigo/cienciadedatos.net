@@ -14029,7 +14029,10 @@ p-value con corrección: 0.1074107410741074
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Conclusi&#243;n">Conclusi&#243;n<a class="anchor-link" href="#Conclusi&#243;n">&#182;</a></h3><p><br></p>
-<p>Los 356 sujetos del estudio fueron asignados de forma aleatoria a un grupo control (n=187) o a un grupo tratamiento (n=169) que asistió a clases extraescolares. Se emplea un test de permutación  para determinar si existe una diferencia significativa entre la capacidad empática promedio de ambos grupos. El <em>p-value</em> calculado mediante una simulación de Monte Carlo con 9999 permutaciones y con la corrección de continuidad sugerida por <em>Davison and Hikley(1997)</em>, muestra una evidencia muy débil en contra de la hipótesis nula de que el tratamiento no tiene efecto. Esto sugiere que, asistir a clases extraescolares, no mejora la capacidad empática para los estudiantes que formaron parte del experimento. Siendo estadísticamente estrictos, no se puede extrapolar a la población de estudiantes ya que la selección de sujetos no fue aleatoria.
+<p>Los 356 sujetos del estudio fueron asignados de forma aleatoria a un grupo control (n=187) que no asistió a clases de repaso o a un grupo tratamiento (n=169) que sí asistió. Se emplea un test de permutación para determinar si existe una diferencia significativa en la varianza de la capacidad empática entre ambos grupos. El <em>p-value</em> calculado mediante una simulación de Monte Carlo y con la corrección de continuidad sugerida por <em>Davison and Hikley(1997)</em>, muestra una evidencia muy débil en contra de la hipótesis nula de que ambos grupos son iguales (que el tratamiento no tiene efecto). Así pues, no hay evidencias para afirmar que asistir a clases extraescolares altera la variabilidad en la capacidad empática. Siendo estadísticamente estrictos, no se puede extrapolar a la población de estudiantes ya que la selección de sujetos no fue aleatoria.</p>
+
+<p>
+<em>Nota: es importante recordar que, no rechazar la hipótesis nula, no equivale a afirmarla. En otras palabras, no tener evidencias suficientes para rechazar que ambos grupos son iguales, no equivale a poder afirmar que lo son.</em>
 <br><br></p>
 
 </div>
@@ -14307,7 +14310,10 @@ p-value con corrección: 0.24212421242124213
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Conclusi&#243;n">Conclusi&#243;n<a class="anchor-link" href="#Conclusi&#243;n">&#182;</a></h3><p><br></p>
-<p>Los 356 sujetos del estudio fueron asignados de forma aleatoria a un grupo control (n=187) o a un grupo tratamiento (n=169) que asistió a actividades extra escolares. Se emplea un test de permutación  para determinar si existe una diferencia significativa en la varianza de la capacidad empática entre ambos grupos. El <em>p-value</em> calculado mediante una simulación de Monte Carlo con 9999 permutaciones y con la corrección de continuidad sugerida por <em>Davison and Hikley(1997)</em>, muestra una evidencia muy débil en contra de la hipótesis nula de que el tratamiento no tiene efecto. Esto sugiere que, asistir a clases extra escolares, no altera la variabilidad en la capacidad empática de los estudiantes que formaron parte del experimento. Siendo estadísticamente estrictos, no se puede extrapolar a la población de estudiantes ya que la selección de sujetos no fue aleatoria.
+<p>Los 356 sujetos del estudio fueron asignados de forma aleatoria a un grupo control (n=187) que no asistió a clases de repaso o a un grupo tratamiento (n=169) que sí asistió. Se emplea un test de permutación para determinar si existe una diferencia significativa entre la capacidad empática promedio de ambos grupos. El <em>p-value</em> calculado mediante una simulación de Monte Carlo y con la corrección de continuidad sugerida por <em>Davison and Hikley(1997)</em>, muestra una evidencia muy débil en contra de la hipótesis nula de que ambos grupos son iguales (que el tratamiento no tiene efecto). Así pues, no hay evidencias para afirmar que asistir a clases extraescolares mejore la capacidad empática. Siendo estadísticamente estrictos, no se puede extrapolar a la población de estudiantes ya que la selección de sujetos no fue aleatoria.</p>
+
+<p>
+<em>Nota: es importante recordar que, no rechazar la hipótesis nula, no equivale a afirmarla. En otras palabras, no tener evidencias suficientes para rechazar que ambos grupos son iguales, no equivale a poder afirmar que lo son.</em>
 <br><br></p>
 
 </div>
@@ -14651,7 +14657,7 @@ p-value con corrección: 0.1639163916391639
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Comparaci&#243;n-permutaciones-y-bootstrapping">Comparaci&#243;n permutaciones y bootstrapping<a class="anchor-link" href="#Comparaci&#243;n-permutaciones-y-bootstrapping">&#182;</a></h2><p><br></p>
-<p><a href="https://www.cienciadedatos.net/documentos/pystats04-bootstrapping-python.html">Bootstrapping*</a> es otra estrategia basada en muestreo repetido, muy utilizada para el contraste de hipótesis.</p>
+<p><a href="https://www.cienciadedatos.net/documentos/pystats04-bootstrapping-python.html">Bootstrapping</a> es otra estrategia basada en muestreo repetido, muy utilizada para el contraste de hipótesis.</p>
 <p>Tanto los test de permutación como los test de <em>bootstrapping</em> se pueden emplear para estudiar diferencias entre grupos. Existe una lista muy extensa de referencias en las que se debate cuál de los dos métodos es el más adecuado. En general, todas ellas coinciden en que el método más adecuado depende del objetivo de la inferencia, y a su vez, los posibles objetivos están acotados por el diseño de estudio seguido. La siguiente tabla contiene los diferentes tipos de diseños que se pueden emplear para comparar dos grupos y el tipo de inferencia (conclusiones) que se puede realizar en cada uno:
 <br></p>
 <table>
