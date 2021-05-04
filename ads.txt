@@ -1,3 +1,4 @@
+google.com, pub-6921116043457070, DIRECT, f08c47fec0942fa0
 smartadserver.com,1097,DIRECT
 contextweb.com,560288,RESELLER,89ff185a4c4e857c
 pubmatic.com,156439,RESELLER
