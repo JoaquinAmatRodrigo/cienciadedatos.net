@@ -13338,8 +13338,20 @@ $( document ).ready(function(){
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<p>Existen varias estrategias que permiten generar este tipo de predicciones múltiples.
+<br><br></p>
+<p><strong>Recursive multi-step forecasting</strong>
+<br></p>
+<p>Dado que, para predecir el momento $t_{n}$ se necesita el valor de $t_{n-1}$, y $t_{n-1}$ se desconoce, es necesario hacer predicciones recursivas en las que, cada nueva predicción, se basa en la predicción anterior. A este proceso se le conoce como <em>recursive forecasting</em> o <em>recursive multi-step forecasting</em>.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <div>
-<img src='../images/forecasting_multi-step.gif' width="700"/>
+<img src='./images/forecasting_multi-step.gif' width="600"/>
 </div>
 </div>
 </div>
@@ -13347,11 +13359,6 @@ $( document ).ready(function(){
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Existen varias estrategias que permiten generar este tipo de predicciones múltiples.
-<br><br></p>
-<p><strong>Recursive multi-step forecasting</strong>
-<br></p>
-<p>Dado que, para predecir el momento $t_{n}$ se necesita el valor de $t_{n-1}$, y $t_{n-1}$ se desconoce, es necesario hacer predicciones recursivas en las que, cada nueva predicción, se basa en la predicción anterior. A este proceso se le conoce como <em>recursive forecasting</em> o <em>recursive multi-step forecasting</em>.</p>
 <p>La principal adaptación que se necesita hacer para aplicar modelos de <a href="https://www.cienciadedatos.net/documentos/py06_machine_learning_python_scikitlearn.html">scikit learn</a> a problemas de <em>recursive multi-step forecasting</em> es transformar la serie temporal
 en un matriz en la que, cada valor, está asociado a la ventana temporal (lags) que le preceden. Esta estrategia de <em>forecasting</em> pueden generarse fácilmente con las clases <code>ForecasterAutoreg</code> y <code>ForecasterCustom</code> de la librería <strong>skforecast</strong>.</p>
 
@@ -13361,7 +13368,7 @@ en un matriz en la que, cada valor, está asociado a la ventana temporal (lags) 
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><img src="../images/transform_timeseries.gif" alt="forecasting-python" title="forecasting-python"></p>
+<p><img src="./images/transform_timeseries.gif" alt="forecasting-python" title="forecasting-python"></p>
 
 </div>
 </div>
@@ -13423,7 +13430,7 @@ en un matriz en la que, cada valor, está asociado a la ventana temporal (lags) 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Tratamiento de datos</span>
@@ -13461,7 +13468,7 @@ en un matriz en la que, cada valor, está asociado a la ventana temporal (lags) 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Modelado y Forecasting</span>
@@ -13498,7 +13505,7 @@ en un matriz en la que, cada valor, está asociado a la ventana temporal (lags) 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Descarga de datos</span>
@@ -13522,7 +13529,7 @@ en un matriz en la que, cada valor, está asociado a la ventana temporal (lags) 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Preparación del dato</span>
@@ -13550,7 +13557,7 @@ en un matriz en la que, cada valor, está asociado a la ventana temporal (lags) 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Verificar que un índice temporal está completo</span>
@@ -13570,7 +13577,7 @@ en un matriz en la que, cada valor, está asociado a la ventana temporal (lags) 
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[7]:</div>
+    <div class="prompt output_prompt">Out[21]:</div>
 
 
 
@@ -13587,7 +13594,7 @@ en un matriz en la que, cada valor, está asociado a la ventana temporal (lags) 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Completar huecos en un índice temporal</span>
@@ -13610,7 +13617,7 @@ en un matriz en la que, cada valor, está asociado a la ventana temporal (lags) 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Separación datos train-test</span>
@@ -13663,7 +13670,7 @@ en un matriz en la que, cada valor, está asociado a la ventana temporal (lags) 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Crear y entrenar forecaster</span>
@@ -13688,7 +13695,7 @@ en un matriz en la que, cada valor, está asociado a la ventana temporal (lags) 
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[10]:</div>
+    <div class="prompt output_prompt">Out[24]:</div>
 
 
 
@@ -13718,7 +13725,7 @@ Parameters: {&#39;bootstrap&#39;: True, &#39;ccp_alpha&#39;: 0.0, &#39;criterion
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Predicciones</span>
@@ -13740,7 +13747,7 @@ Parameters: {&#39;bootstrap&#39;: True, &#39;ccp_alpha&#39;: 0.0, &#39;criterion
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[11]:</div>
+    <div class="prompt output_prompt">Out[25]:</div>
 
 
 
@@ -13763,7 +13770,7 @@ Freq: MS, dtype: float64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Gráfico</span>
@@ -13813,7 +13820,7 @@ Freq: MS, dtype: float64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Error</span>
@@ -13860,7 +13867,7 @@ Freq: MS, dtype: float64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Grid search de hiperparámetros</span>
@@ -13908,22 +13915,22 @@ Freq: MS, dtype: float64</pre>
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>loop lags_grid:   0%|          | 0/2 [00:00&lt;?, ?it/s]
 loop param_grid:   0%|          | 0/6 [00:00&lt;?, ?it/s]
-loop param_grid:  17%|█▋        | 1/6 [00:01&lt;00:07,  1.40s/it]
-loop param_grid:  33%|███▎      | 2/6 [00:08&lt;00:18,  4.68s/it]
-loop param_grid:  50%|█████     | 3/6 [00:09&lt;00:09,  3.22s/it]
-loop param_grid:  67%|██████▋   | 4/6 [00:17&lt;00:09,  4.78s/it]
-loop param_grid:  83%|████████▎ | 5/6 [00:18&lt;00:03,  3.61s/it]
-loop param_grid: 100%|██████████| 6/6 [00:26&lt;00:00,  4.95s/it]
-loop lags_grid:  50%|█████     | 1/2 [00:26&lt;00:26, 26.11s/it] 
+loop param_grid:  17%|█▋        | 1/6 [00:01&lt;00:06,  1.36s/it]
+loop param_grid:  33%|███▎      | 2/6 [00:07&lt;00:17,  4.46s/it]
+loop param_grid:  50%|█████     | 3/6 [00:09&lt;00:09,  3.07s/it]
+loop param_grid:  67%|██████▋   | 4/6 [00:16&lt;00:09,  4.61s/it]
+loop param_grid:  83%|████████▎ | 5/6 [00:17&lt;00:03,  3.49s/it]
+loop param_grid: 100%|██████████| 6/6 [00:25&lt;00:00,  4.79s/it]
+loop lags_grid:  50%|█████     | 1/2 [00:25&lt;00:25, 25.19s/it] 
 loop param_grid:   0%|          | 0/6 [00:00&lt;?, ?it/s]
-loop param_grid:  17%|█▋        | 1/6 [00:01&lt;00:07,  1.48s/it]
-loop param_grid:  33%|███▎      | 2/6 [00:08&lt;00:19,  4.84s/it]
-loop param_grid:  50%|█████     | 3/6 [00:10&lt;00:10,  3.35s/it]
-loop param_grid:  67%|██████▋   | 4/6 [00:17&lt;00:10,  5.07s/it]
-loop param_grid:  83%|████████▎ | 5/6 [00:19&lt;00:03,  3.84s/it]
-loop param_grid: 100%|██████████| 6/6 [00:27&lt;00:00,  5.34s/it]
-loop lags_grid: 100%|██████████| 2/2 [00:53&lt;00:00, 26.99s/it] 
-2021-05-14 21:14:45,124 root       INFO  Refitting `forecaster` using the best found parameters and the whole data set: 
+loop param_grid:  17%|█▋        | 1/6 [00:01&lt;00:07,  1.44s/it]
+loop param_grid:  33%|███▎      | 2/6 [00:08&lt;00:18,  4.71s/it]
+loop param_grid:  50%|█████     | 3/6 [00:09&lt;00:09,  3.26s/it]
+loop param_grid:  67%|██████▋   | 4/6 [00:17&lt;00:09,  4.93s/it]
+loop param_grid:  83%|████████▎ | 5/6 [00:19&lt;00:03,  3.73s/it]
+loop param_grid: 100%|██████████| 6/6 [00:27&lt;00:00,  5.28s/it]
+loop lags_grid: 100%|██████████| 2/2 [00:52&lt;00:00, 26.28s/it] 
+2021-05-14 21:34:17,640 root       INFO  Refitting `forecaster` using the best found parameters and the whole data set: 
 lags: [ 1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20] 
 params: {&#39;max_depth&#39;: 10, &#39;n_estimators&#39;: 500}
 
@@ -13937,7 +13944,7 @@ params: {&#39;max_depth&#39;: 10, &#39;n_estimators&#39;: 500}
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="prompt input_prompt">In&nbsp;[29]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Resultados Grid Search</span>
@@ -13955,7 +13962,7 @@ params: {&#39;max_depth&#39;: 10, &#39;n_estimators&#39;: 500}
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[15]:</div>
+    <div class="prompt output_prompt">Out[29]:</div>
 
 
 
@@ -14086,7 +14093,7 @@ params: {&#39;max_depth&#39;: 10, &#39;n_estimators&#39;: 500}
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="prompt input_prompt">In&nbsp;[30]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Crear y entrenar forecaster con mejores hiperparámetros</span>
@@ -14108,7 +14115,7 @@ params: {&#39;max_depth&#39;: 10, &#39;n_estimators&#39;: 500}
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="prompt input_prompt">In&nbsp;[31]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Predicciones</span>
@@ -14125,7 +14132,7 @@ params: {&#39;max_depth&#39;: 10, &#39;n_estimators&#39;: 500}
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="prompt input_prompt">In&nbsp;[32]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Gráfico</span>
@@ -14166,7 +14173,7 @@ params: {&#39;max_depth&#39;: 10, &#39;n_estimators&#39;: 500}
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="prompt input_prompt">In&nbsp;[33]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Error</span>
@@ -14221,7 +14228,7 @@ params: {&#39;max_depth&#39;: 10, &#39;n_estimators&#39;: 500}
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="prompt input_prompt">In&nbsp;[34]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Importancia predictores</span>
@@ -14240,7 +14247,7 @@ params: {&#39;max_depth&#39;: 10, &#39;n_estimators&#39;: 500}
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[20]:</div>
+    <div class="prompt output_prompt">Out[34]:</div>
 
 
 
@@ -14285,7 +14292,7 @@ params: {&#39;max_depth&#39;: 10, &#39;n_estimators&#39;: 500}
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="prompt input_prompt">In&nbsp;[35]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Modelo autorregresivo lineal statsmodels</span>
@@ -14357,7 +14364,7 @@ True
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="prompt input_prompt">In&nbsp;[36]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Descarga de datos</span>
@@ -14382,7 +14389,7 @@ True
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="prompt input_prompt">In&nbsp;[37]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Datos</span>
@@ -14426,7 +14433,7 @@ True
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="prompt input_prompt">In&nbsp;[38]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Separación datos train-test</span>
@@ -14453,7 +14460,7 @@ True
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="prompt input_prompt">In&nbsp;[39]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Crear y entrenar forecaster</span>
@@ -14482,7 +14489,7 @@ True
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="prompt input_prompt">In&nbsp;[40]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Predicciones</span>
@@ -14499,7 +14506,7 @@ True
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[27]:</div>
+<div class="prompt input_prompt">In&nbsp;[41]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Gráfico</span>
@@ -14547,7 +14554,7 @@ True
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[28]:</div>
+<div class="prompt input_prompt">In&nbsp;[42]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Error</span>
@@ -14591,7 +14598,7 @@ True
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[29]:</div>
+<div class="prompt input_prompt">In&nbsp;[43]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Grid search de hiperparámetros</span>
@@ -14638,39 +14645,39 @@ True
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>loop lags_grid:   0%|          | 0/3 [00:00&lt;?, ?it/s]
 loop param_grid:   0%|          | 0/9 [00:00&lt;?, ?it/s]
-loop param_grid:  11%|█         | 1/9 [00:00&lt;00:04,  1.61it/s]
-loop param_grid:  22%|██▏       | 2/9 [00:01&lt;00:06,  1.04it/s]
-loop param_grid:  33%|███▎      | 3/9 [00:07&lt;00:19,  3.18s/it]
-loop param_grid:  44%|████▍     | 4/9 [00:08&lt;00:10,  2.18s/it]
-loop param_grid:  56%|█████▌    | 5/9 [00:09&lt;00:07,  1.84s/it]
-loop param_grid:  67%|██████▋   | 6/9 [00:15&lt;00:09,  3.26s/it]
-loop param_grid:  78%|███████▊  | 7/9 [00:16&lt;00:04,  2.41s/it]
-loop param_grid:  89%|████████▉ | 8/9 [00:17&lt;00:02,  2.05s/it]
-loop param_grid: 100%|██████████| 9/9 [00:23&lt;00:00,  3.40s/it]
-loop lags_grid:  33%|███▎      | 1/3 [00:23&lt;00:47, 23.83s/it] 
+loop param_grid:  11%|█         | 1/9 [00:00&lt;00:04,  1.66it/s]
+loop param_grid:  22%|██▏       | 2/9 [00:01&lt;00:06,  1.05it/s]
+loop param_grid:  33%|███▎      | 3/9 [00:07&lt;00:18,  3.15s/it]
+loop param_grid:  44%|████▍     | 4/9 [00:08&lt;00:10,  2.15s/it]
+loop param_grid:  56%|█████▌    | 5/9 [00:09&lt;00:07,  1.81s/it]
+loop param_grid:  67%|██████▋   | 6/9 [00:15&lt;00:09,  3.18s/it]
+loop param_grid:  78%|███████▊  | 7/9 [00:15&lt;00:04,  2.35s/it]
+loop param_grid:  89%|████████▉ | 8/9 [00:17&lt;00:01,  2.00s/it]
+loop param_grid: 100%|██████████| 9/9 [00:23&lt;00:00,  3.32s/it]
+loop lags_grid:  33%|███▎      | 1/3 [00:23&lt;00:46, 23.32s/it] 
 loop param_grid:   0%|          | 0/9 [00:00&lt;?, ?it/s]
-loop param_grid:  11%|█         | 1/9 [00:00&lt;00:05,  1.56it/s]
-loop param_grid:  22%|██▏       | 2/9 [00:01&lt;00:06,  1.00it/s]
-loop param_grid:  33%|███▎      | 3/9 [00:07&lt;00:19,  3.30s/it]
-loop param_grid:  44%|████▍     | 4/9 [00:08&lt;00:11,  2.26s/it]
-loop param_grid:  56%|█████▌    | 5/9 [00:09&lt;00:07,  1.92s/it]
-loop param_grid:  67%|██████▋   | 6/9 [00:16&lt;00:10,  3.42s/it]
-loop param_grid:  78%|███████▊  | 7/9 [00:16&lt;00:05,  2.53s/it]
-loop param_grid:  89%|████████▉ | 8/9 [00:18&lt;00:02,  2.16s/it]
-loop param_grid: 100%|██████████| 9/9 [00:24&lt;00:00,  3.56s/it]
-loop lags_grid:  67%|██████▋   | 2/3 [00:48&lt;00:24, 24.49s/it] 
+loop param_grid:  11%|█         | 1/9 [00:00&lt;00:05,  1.59it/s]
+loop param_grid:  22%|██▏       | 2/9 [00:01&lt;00:06,  1.03it/s]
+loop param_grid:  33%|███▎      | 3/9 [00:07&lt;00:19,  3.21s/it]
+loop param_grid:  44%|████▍     | 4/9 [00:08&lt;00:11,  2.21s/it]
+loop param_grid:  56%|█████▌    | 5/9 [00:09&lt;00:07,  1.87s/it]
+loop param_grid:  67%|██████▋   | 6/9 [00:15&lt;00:10,  3.34s/it]
+loop param_grid:  78%|███████▊  | 7/9 [00:16&lt;00:04,  2.48s/it]
+loop param_grid:  89%|████████▉ | 8/9 [00:17&lt;00:02,  2.11s/it]
+loop param_grid: 100%|██████████| 9/9 [00:24&lt;00:00,  3.47s/it]
+loop lags_grid:  67%|██████▋   | 2/3 [00:47&lt;00:23, 23.93s/it] 
 loop param_grid:   0%|          | 0/9 [00:00&lt;?, ?it/s]
-loop param_grid:  11%|█         | 1/9 [00:00&lt;00:05,  1.50it/s]
-loop param_grid:  22%|██▏       | 2/9 [00:01&lt;00:07,  1.03s/it]
-loop param_grid:  33%|███▎      | 3/9 [00:08&lt;00:20,  3.43s/it]
-loop param_grid:  44%|████▍     | 4/9 [00:08&lt;00:11,  2.35s/it]
-loop param_grid:  56%|█████▌    | 5/9 [00:10&lt;00:07,  2.00s/it]
-loop param_grid:  67%|██████▋   | 6/9 [00:17&lt;00:10,  3.65s/it]
-loop param_grid:  78%|███████▊  | 7/9 [00:17&lt;00:05,  2.70s/it]
-loop param_grid:  89%|████████▉ | 8/9 [00:19&lt;00:02,  2.30s/it]
-loop param_grid: 100%|██████████| 9/9 [00:26&lt;00:00,  3.75s/it]
-loop lags_grid: 100%|██████████| 3/3 [01:15&lt;00:00, 25.03s/it] 
-2021-05-14 21:16:04,585 root       INFO  Refitting `forecaster` using the best found parameters and the whole data set: 
+loop param_grid:  11%|█         | 1/9 [00:00&lt;00:05,  1.54it/s]
+loop param_grid:  22%|██▏       | 2/9 [00:01&lt;00:07,  1.01s/it]
+loop param_grid:  33%|███▎      | 3/9 [00:08&lt;00:19,  3.33s/it]
+loop param_grid:  44%|████▍     | 4/9 [00:08&lt;00:11,  2.29s/it]
+loop param_grid:  56%|█████▌    | 5/9 [00:10&lt;00:07,  1.94s/it]
+loop param_grid:  67%|██████▋   | 6/9 [00:16&lt;00:10,  3.54s/it]
+loop param_grid:  78%|███████▊  | 7/9 [00:17&lt;00:05,  2.62s/it]
+loop param_grid:  89%|████████▉ | 8/9 [00:18&lt;00:02,  2.23s/it]
+loop param_grid: 100%|██████████| 9/9 [00:25&lt;00:00,  3.66s/it]
+loop lags_grid: 100%|██████████| 3/3 [01:13&lt;00:00, 24.42s/it] 
+2021-05-14 21:35:35,081 root       INFO  Refitting `forecaster` using the best found parameters and the whole data set: 
 lags: [ 1  2  3  4  5  6  7  8  9 10 11 12] 
 params: {&#39;max_depth&#39;: 10, &#39;n_estimators&#39;: 500}
 
@@ -14684,7 +14691,7 @@ params: {&#39;max_depth&#39;: 10, &#39;n_estimators&#39;: 500}
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[30]:</div>
+<div class="prompt input_prompt">In&nbsp;[44]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Resultados Grid Search</span>
@@ -14702,7 +14709,7 @@ params: {&#39;max_depth&#39;: 10, &#39;n_estimators&#39;: 500}
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[30]:</div>
+    <div class="prompt output_prompt">Out[44]:</div>
 
 
 
@@ -14791,7 +14798,7 @@ params: {&#39;max_depth&#39;: 10, &#39;n_estimators&#39;: 500}
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[31]:</div>
+<div class="prompt input_prompt">In&nbsp;[45]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Predicciones</span>
@@ -14838,7 +14845,7 @@ params: {&#39;max_depth&#39;: 10, &#39;n_estimators&#39;: 500}
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[32]:</div>
+<div class="prompt input_prompt">In&nbsp;[46]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Error</span>
@@ -14891,7 +14898,7 @@ params: {&#39;max_depth&#39;: 10, &#39;n_estimators&#39;: 500}
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[33]:</div>
+<div class="prompt input_prompt">In&nbsp;[47]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Descarga de datos</span>
@@ -14907,7 +14914,7 @@ params: {&#39;max_depth&#39;: 10, &#39;n_estimators&#39;: 500}
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[34]:</div>
+<div class="prompt input_prompt">In&nbsp;[48]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Preparación del dato</span>
@@ -14927,7 +14934,7 @@ params: {&#39;max_depth&#39;: 10, &#39;n_estimators&#39;: 500}
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[35]:</div>
+<div class="prompt input_prompt">In&nbsp;[49]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Separación datos train-test</span>
@@ -14953,7 +14960,7 @@ params: {&#39;max_depth&#39;: 10, &#39;n_estimators&#39;: 500}
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[36]:</div>
+<div class="prompt input_prompt">In&nbsp;[50]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Función para calcular los predictores a partir de la serie temporal</span>
@@ -14990,7 +14997,7 @@ params: {&#39;max_depth&#39;: 10, &#39;n_estimators&#39;: 500}
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[37]:</div>
+<div class="prompt input_prompt">In&nbsp;[51]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Crear y entrenar forecaster</span>
@@ -15015,7 +15022,7 @@ params: {&#39;max_depth&#39;: 10, &#39;n_estimators&#39;: 500}
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[37]:</div>
+    <div class="prompt output_prompt">Out[51]:</div>
 
 
 
@@ -15044,7 +15051,7 @@ Parameters: {&#39;bootstrap&#39;: True, &#39;ccp_alpha&#39;: 0.0, &#39;criterion
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[38]:</div>
+<div class="prompt input_prompt">In&nbsp;[52]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Predicciones</span>
@@ -15062,7 +15069,7 @@ Parameters: {&#39;bootstrap&#39;: True, &#39;ccp_alpha&#39;: 0.0, &#39;criterion
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[39]:</div>
+<div class="prompt input_prompt">In&nbsp;[53]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Gráfico</span>
@@ -15110,7 +15117,7 @@ Parameters: {&#39;bootstrap&#39;: True, &#39;ccp_alpha&#39;: 0.0, &#39;criterion
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[40]:</div>
+<div class="prompt input_prompt">In&nbsp;[54]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Error</span>
@@ -15156,7 +15163,7 @@ Parameters: {&#39;bootstrap&#39;: True, &#39;ccp_alpha&#39;: 0.0, &#39;criterion
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[41]:</div>
+<div class="prompt input_prompt">In&nbsp;[55]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Grid search de hiperparámetros</span>
@@ -15201,14 +15208,14 @@ Parameters: {&#39;bootstrap&#39;: True, &#39;ccp_alpha&#39;: 0.0, &#39;criterion
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>loop lags_grid:   0%|          | 0/1 [00:00&lt;?, ?it/s]
 loop param_grid:   0%|          | 0/6 [00:00&lt;?, ?it/s]
-loop param_grid:  17%|█▋        | 1/6 [00:07&lt;00:35,  7.11s/it]
-loop param_grid:  33%|███▎      | 2/6 [00:20&lt;00:42, 10.63s/it]
-loop param_grid:  50%|█████     | 3/6 [00:27&lt;00:27,  9.04s/it]
-loop param_grid:  67%|██████▋   | 4/6 [00:40&lt;00:21, 10.82s/it]
-loop param_grid:  83%|████████▎ | 5/6 [00:48&lt;00:09,  9.52s/it]
-loop param_grid: 100%|██████████| 6/6 [01:01&lt;00:00, 10.96s/it]
-loop lags_grid: 100%|██████████| 1/1 [01:01&lt;00:00, 61.89s/it] 
-2021-05-14 21:17:10,445 root       INFO  Refitting `forecaster` using the best found parameters and the whole data set: 
+loop param_grid:  17%|█▋        | 1/6 [00:06&lt;00:34,  6.97s/it]
+loop param_grid:  33%|███▎      | 2/6 [00:19&lt;00:41, 10.38s/it]
+loop param_grid:  50%|█████     | 3/6 [00:26&lt;00:26,  8.83s/it]
+loop param_grid:  67%|██████▋   | 4/6 [00:40&lt;00:21, 10.60s/it]
+loop param_grid:  83%|████████▎ | 5/6 [00:47&lt;00:09,  9.34s/it]
+loop param_grid: 100%|██████████| 6/6 [01:00&lt;00:00, 10.78s/it]
+loop lags_grid: 100%|██████████| 1/1 [01:00&lt;00:00, 60.73s/it] 
+2021-05-14 21:36:39,509 root       INFO  Refitting `forecaster` using the best found parameters and the whole data set: 
 lags: custom predictors 
 params: {&#39;max_depth&#39;: 10, &#39;n_estimators&#39;: 500}
 
@@ -15222,7 +15229,7 @@ params: {&#39;max_depth&#39;: 10, &#39;n_estimators&#39;: 500}
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[42]:</div>
+<div class="prompt input_prompt">In&nbsp;[56]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Resultados Grid Search</span>
@@ -15240,7 +15247,7 @@ params: {&#39;max_depth&#39;: 10, &#39;n_estimators&#39;: 500}
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[42]:</div>
+    <div class="prompt output_prompt">Out[56]:</div>
 
 
 
@@ -15325,7 +15332,7 @@ params: {&#39;max_depth&#39;: 10, &#39;n_estimators&#39;: 500}
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[43]:</div>
+<div class="prompt input_prompt">In&nbsp;[57]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Predicciones</span>
@@ -15372,7 +15379,7 @@ params: {&#39;max_depth&#39;: 10, &#39;n_estimators&#39;: 500}
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[44]:</div>
+<div class="prompt input_prompt">In&nbsp;[58]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Error</span>
@@ -15423,7 +15430,7 @@ params: {&#39;max_depth&#39;: 10, &#39;n_estimators&#39;: 500}
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[45]:</div>
+<div class="prompt input_prompt">In&nbsp;[59]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Descarga de datos</span>
@@ -15448,7 +15455,7 @@ params: {&#39;max_depth&#39;: 10, &#39;n_estimators&#39;: 500}
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[46]:</div>
+<div class="prompt input_prompt">In&nbsp;[60]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Separación datos train-test</span>
@@ -15477,7 +15484,7 @@ params: {&#39;max_depth&#39;: 10, &#39;n_estimators&#39;: 500}
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[47]:</div>
+<div class="prompt input_prompt">In&nbsp;[61]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Grid search de hiperparámetros</span>
@@ -15523,27 +15530,27 @@ params: {&#39;max_depth&#39;: 10, &#39;n_estimators&#39;: 500}
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>loop lags_grid:   0%|          | 0/3 [00:00&lt;?, ?it/s]
 loop param_grid:   0%|          | 0/10 [00:00&lt;?, ?it/s]
-loop param_grid:  20%|██        | 2/10 [00:00&lt;00:00, 10.58it/s]
-loop param_grid:  40%|████      | 4/10 [00:00&lt;00:00, 10.79it/s]
-loop param_grid:  60%|██████    | 6/10 [00:00&lt;00:00, 10.90it/s]
-loop param_grid:  80%|████████  | 8/10 [00:00&lt;00:00, 10.94it/s]
-loop param_grid: 100%|██████████| 10/10 [00:00&lt;00:00, 10.96it/s]
-loop lags_grid:  33%|███▎      | 1/3 [00:00&lt;00:01,  1.09it/s]   
-loop param_grid:   0%|          | 0/10 [00:00&lt;?, ?it/s]
-loop param_grid:  20%|██        | 2/10 [00:00&lt;00:00, 10.77it/s]
-loop param_grid:  40%|████      | 4/10 [00:00&lt;00:00, 10.90it/s]
-loop param_grid:  60%|██████    | 6/10 [00:00&lt;00:00, 10.99it/s]
-loop param_grid:  80%|████████  | 8/10 [00:00&lt;00:00, 11.02it/s]
-loop param_grid: 100%|██████████| 10/10 [00:00&lt;00:00, 11.05it/s]
-loop lags_grid:  67%|██████▋   | 2/3 [00:01&lt;00:00,  1.09it/s]   
-loop param_grid:   0%|          | 0/10 [00:00&lt;?, ?it/s]
-loop param_grid:  20%|██        | 2/10 [00:00&lt;00:00, 10.79it/s]
+loop param_grid:  20%|██        | 2/10 [00:00&lt;00:00, 10.82it/s]
 loop param_grid:  40%|████      | 4/10 [00:00&lt;00:00, 10.93it/s]
-loop param_grid:  60%|██████    | 6/10 [00:00&lt;00:00, 11.04it/s]
-loop param_grid:  80%|████████  | 8/10 [00:00&lt;00:00, 11.06it/s]
-loop param_grid: 100%|██████████| 10/10 [00:00&lt;00:00, 11.09it/s]
-loop lags_grid: 100%|██████████| 3/3 [00:02&lt;00:00,  1.09it/s]   
-2021-05-14 21:17:16,319 root       INFO  Refitting `forecaster` using the best found parameters and the whole data set: 
+loop param_grid:  60%|██████    | 6/10 [00:00&lt;00:00, 11.01it/s]
+loop param_grid:  80%|████████  | 8/10 [00:00&lt;00:00, 11.03it/s]
+loop param_grid: 100%|██████████| 10/10 [00:00&lt;00:00, 11.12it/s]
+loop lags_grid:  33%|███▎      | 1/3 [00:00&lt;00:01,  1.10it/s]   
+loop param_grid:   0%|          | 0/10 [00:00&lt;?, ?it/s]
+loop param_grid:  20%|██        | 2/10 [00:00&lt;00:00, 10.97it/s]
+loop param_grid:  40%|████      | 4/10 [00:00&lt;00:00, 11.16it/s]
+loop param_grid:  60%|██████    | 6/10 [00:00&lt;00:00, 11.14it/s]
+loop param_grid:  80%|████████  | 8/10 [00:00&lt;00:00, 11.09it/s]
+loop param_grid: 100%|██████████| 10/10 [00:00&lt;00:00, 11.13it/s]
+loop lags_grid:  67%|██████▋   | 2/3 [00:01&lt;00:00,  1.10it/s]   
+loop param_grid:   0%|          | 0/10 [00:00&lt;?, ?it/s]
+loop param_grid:  20%|██        | 2/10 [00:00&lt;00:00, 10.75it/s]
+loop param_grid:  40%|████      | 4/10 [00:00&lt;00:00, 10.92it/s]
+loop param_grid:  60%|██████    | 6/10 [00:00&lt;00:00, 11.03it/s]
+loop param_grid:  80%|████████  | 8/10 [00:00&lt;00:00, 11.08it/s]
+loop param_grid: 100%|██████████| 10/10 [00:00&lt;00:00, 11.13it/s]
+loop lags_grid: 100%|██████████| 3/3 [00:02&lt;00:00,  1.10it/s]   
+2021-05-14 21:36:45,300 root       INFO  Refitting `forecaster` using the best found parameters and the whole data set: 
 lags: 5 
 params: {&#39;estimator__alpha&#39;: 0.0001291549665014884}
 
@@ -15557,7 +15564,7 @@ params: {&#39;estimator__alpha&#39;: 0.0001291549665014884}
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[48]:</div>
+<div class="prompt input_prompt">In&nbsp;[62]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Resultados Grid Search</span>
@@ -15575,7 +15582,7 @@ params: {&#39;estimator__alpha&#39;: 0.0001291549665014884}
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[48]:</div>
+    <div class="prompt output_prompt">Out[62]:</div>
 
 
 
@@ -15655,7 +15662,7 @@ params: {&#39;estimator__alpha&#39;: 0.0001291549665014884}
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[49]:</div>
+<div class="prompt input_prompt">In&nbsp;[63]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Predicciones</span>
@@ -15702,7 +15709,7 @@ params: {&#39;estimator__alpha&#39;: 0.0001291549665014884}
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[50]:</div>
+<div class="prompt input_prompt">In&nbsp;[64]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Error</span>
@@ -15747,7 +15754,7 @@ params: {&#39;estimator__alpha&#39;: 0.0001291549665014884}
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[51]:</div>
+<div class="prompt input_prompt">In&nbsp;[65]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Descarga de datos</span>
@@ -15778,7 +15785,7 @@ params: {&#39;estimator__alpha&#39;: 0.0001291549665014884}
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[52]:</div>
+<div class="prompt input_prompt">In&nbsp;[66]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Crear y entrenar forecaster</span>
@@ -15862,7 +15869,7 @@ params: {&#39;estimator__alpha&#39;: 0.0001291549665014884}
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[53]:</div>
+<div class="prompt input_prompt">In&nbsp;[67]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Backtest con intervalos de predicción</span>
@@ -15957,7 +15964,7 @@ Number of observations used for testing: 109
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[54]:</div>
+<div class="prompt input_prompt">In&nbsp;[68]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sinfo</span> <span class="kn">import</span> <span class="n">sinfo</span>
@@ -15998,7 +16005,7 @@ Python 3.7.9 (default, Aug 31 2020, 12:42:55) [GCC 7.3.0]
 Linux-5.4.0-1048-aws-x86_64-with-debian-buster-sid
 4 logical CPU cores, x86_64
 -----
-Session information updated at 2021-05-14 21:17
+Session information updated at 2021-05-14 21:36
 </pre>
 </div>
 </div>
