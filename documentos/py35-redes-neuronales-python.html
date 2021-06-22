@@ -13704,7 +13704,7 @@ width=400
 <br><br></p>
 <p><strong>Error cuadrático medio</strong>
 <br></p>
-<p>El error cuadrático medio (<em>mean squared error, MSE</em>) es con diferencia la función de coste más utilizada en problemas de regresión. Para una determinada observación $i$, el error cuadrático medio se calcula como la diferencia entre el valor predicho $\hat{y}$ y el valor real $y$.</p>
+<p>El error cuadrático medio (<em>mean squared error, MSE</em>) es con diferencia la función de coste más utilizada en problemas de regresión. Para una determinada observación $i$, el error cuadrático medio se calcula como la diferencia al cuadrado entre el valor predicho $\hat{y}$ y el valor real $y$.</p>
 $$l^{(i)}(\mathbf{w}, b) = \left(\hat{y}^{(i)} - y^{(i)}\right)^2$$<p>Las funciones de coste suelen escribirse con la notación $l(\mathbf{w}, b)$ para hacer referencia a que su valor depende de los pesos y bias del modelo, ya que son estos los que determinan el valor de las predicciones $y^{(i)}$.</p>
 <p>Con frecuencia, esta función de coste se encuentra multiplicada por $\frac{1}{2}$, esto es simplemente por conveniencia matemática para simplificar el cálculo de su derivada.</p>
 $$l^{(i)}(\mathbf{w}, b) = \frac{1}{2} \left(\hat{y}^{(i)} - y^{(i)}\right)^2$$<p>Para cuantificar el error que comete el modelo todo un conjunto de datos, por ejemplo los de entrenamiento, simplemente se promedia el error de todas las $N$ observaciones.</p>
