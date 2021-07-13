@@ -13704,7 +13704,7 @@ width=400
 <br><br></p>
 <p><strong>Error cuadrático medio</strong>
 <br></p>
-<p>El error cuadrático medio (<em>mean squared error, MSE</em>) es con diferencia la función de coste más utilizada en problemas de regresión. Para una determinada observación $i$, el error cuadrático medio se calcula como la diferencia al cuadrado entre el valor predicho $\hat{y}$ y el valor real $y$.</p>
+<p>El error cuadrático medio (<em>mean squared error, MSE</em>) es con diferencia la función de coste más utilizada en problemas de regresión. Para una determinada observación $i$, el error cuadrático se calcula como la diferencia al cuadrado entre el valor predicho $\hat{y}$ y el valor real $y$.</p>
 $$l^{(i)}(\mathbf{w}, b) = \left(\hat{y}^{(i)} - y^{(i)}\right)^2$$<p>Las funciones de coste suelen escribirse con la notación $l(\mathbf{w}, b)$ para hacer referencia a que su valor depende de los pesos y bias del modelo, ya que son estos los que determinan el valor de las predicciones $y^{(i)}$.</p>
 <p>Con frecuencia, esta función de coste se encuentra multiplicada por $\frac{1}{2}$, esto es simplemente por conveniencia matemática para simplificar el cálculo de su derivada.</p>
 $$l^{(i)}(\mathbf{w}, b) = \frac{1}{2} \left(\hat{y}^{(i)} - y^{(i)}\right)^2$$<p>Para cuantificar el error que comete el modelo todo un conjunto de datos, por ejemplo los de entrenamiento, simplemente se promedia el error de todas las $N$ observaciones.</p>
@@ -13794,7 +13794,7 @@ width=600
 <ul>
 <li><p>Iniciar la red con valores aleatorios de los pesos y bias.</p>
 </li>
-<li><p>Para cada observación de entrenamiento ($X$, $y$), calcular el error que comete la red al hacer sus predicciones. Ponderar los errores de todas las observaciones.</p>
+<li><p>Para cada observación de entrenamiento ($X$, $y$), calcular el error que comete la red al hacer sus predicciones. Promediar los errores de todas las observaciones.</p>
 </li>
 <li><p>Identificar la responsabilidad que ha tenido cada peso y bias en el error de la predicción.</p>
 </li>
@@ -13804,8 +13804,7 @@ width=600
 </li>
 </ul>
 <p>Si bien la idea parece sencilla, alcanzar una forma de implementarla ha requerido la combinación de múltiples métodos matemáticos, en concreto, el algoritmo de retropropagación (<em>backpropagation</em>) y la optimización por descenso de gradiente (<em>gradient descent</em>).</p>
-<p>En los modelos de redes neuronales con múltiples predictores <strong>siempre</strong> hay que estandarizar o normalizar los predictores continuos antes del entrenamiento. Únicamente puede obviarse este paso cuando todos los predictores tienen la misma escala.
-<br><br></p>
+<br><br>
 <h3 id="Backpropagation">Backpropagation<a class="anchor-link" href="#Backpropagation">&#182;</a></h3><p><br></p>
 <p><em>Backpropagation</em> es el algoritmo que permite cuantificar la influencia que tiene cada peso y bias de la red en sus predicciones. Para conseguirlo, hace uso de la <a href="https://es.wikipedia.org/wiki/Regla_de_la_cadena">regla de la cadena</a> (<em>chain rule</em>) para calcular el gradiente, que no es más que es el vector formado por las derivadas parciales de una función.</p>
 <p>En el caso de las redes, la derivada parcial del error respecto a un parámetro (peso o bias) mide cuanta "responsabilidad" ha tenido ese parámetro en el error cometido. Gracias a esto, se puede identificar qué pesos de la red hay que modificar para mejorarla. El siguiente paso necesario, es determinar cuánto y cómo modificarlos (optimización).
@@ -13815,7 +13814,7 @@ width=600
 <p>Dado que, calcular el error del modelo para todas las observaciones de entrenamiento, en cada iteración, puede ser computacionalmente muy costoso, existe una alternativa al método de descenso de gradiente llamada gradiente estocástico (<em>stochastic gradient descent, SGD</em>). Este método consiste en dividir el conjunto de entrenamiento en lotes (<em>minibatch</em> o <em>batch</em>) y actualizar los parámetros de la red con cada uno. De esta forma, en lugar de esperar a evaluar todas las observaciones para actualizar los parámetros, se pueden ir actualizando de forma progresiva. Una ronda completa de iteraciones sobre todos los <em>batch</em> se llama época. El número de épocas con las que se entrena una red equivale al número de veces que la red ve cada ejemplo de entrenamiento.
 <br><br></p>
 <h3 id="Preprocesado">Preprocesado<a class="anchor-link" href="#Preprocesado">&#182;</a></h3><p><br></p>
-<p>A la hora de entrenar modelos basados en redes neuronales, es necesario realizar dos tipos de transformaciones a los datos.</p>
+<p>A la hora de entrenar modelos basados en redes neuronales, es necesario realizar, al menos, dos tipos de transformaciones de los datos.</p>
 <p><strong>Binarización (<em>One hot ecoding</em>) de las variables categóricas</strong>
 <br></p>
 <p>La binarización (<em>one-hot-encoding</em>) consiste en crear nuevas variables <em>dummy</em> con cada uno de los niveles de las variables cualitativas. Por ejemplo, una variable llamada color que contenga los niveles rojo, verde y azul, se convertirá en tres nuevas variables (color_rojo, color_verde, color_azul), todas con el valor 0 excepto la que coincide con la observación, que toma el valor 1.
