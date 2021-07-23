@@ -13576,7 +13576,7 @@ $$\hat{\mu} = \sum^n_{i =1} \overline{\textbf{w}}_i Y_i$$$$\hat{\mu} = (0\times1
 <ul>
 <li><p>El <em>Out-of-Bag Error</em> no es adecuado cuando las observaciones tienen una relación temporal (series temporales). Como la selección de las observaciones que participan en cada entrenamiento es aleatoria, no respetan el orden temporal y se estaría introduciendo información a futuro.</p>
 </li>
-<li><p>El preprocesado de los datos de entrenamiento se hace de forma conjunta, por lo que las observaciones <em>out-of-bag</em> pueden sufrir <a href="https://en.wikipedia.org/wiki/Leakage_(machine_learning"><em>data leakage</em></a>). De ser así, las estimaciones del <em>OOB-error</em> son demasiado optimistas.</p>
+<li><p>El preprocesado de los datos de entrenamiento se hace de forma conjunta, por lo que las observaciones <em>out-of-bag</em> pueden sufrir <a href="https://en.wikipedia.org/wiki/Leakage_(machine_learning)"><em>data leakage</em></a>. De ser así, las estimaciones del <em>OOB-error</em> son demasiado optimistas.</p>
 </li>
 </ul>
 <p>En un muestreo por <em>bootstrapping</em>, si el tamaño de los datos de entrenamiento es $n$, cada observación tiene una probabilidad de ser elegida de $\frac{1}{n}$. Por lo tanto, la probabilidad de no ser elegida en todo el proceso es de $(1-1/n)n$, lo que converge en $1/\epsilon$, que es aproximadamente un tercio.
