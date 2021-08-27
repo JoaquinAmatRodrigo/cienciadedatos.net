@@ -14557,7 +14557,7 @@ Number of observations used for testing: 480
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Optimizaci&#243;n-de-hiperpar&#225;metros-(tuning)">Optimizaci&#243;n de hiperpar&#225;metros (<em>tuning</em>)<a class="anchor-link" href="#Optimizaci&#243;n-de-hiperpar&#225;metros-(tuning)">&#182;</a></h3><p><br></p>
-<p>En el objeto <code>ForecasterAutoreg</code> entrenado, se han utilizado los primeros 24 lags y un modelo <a href="https://www.cienciadedatos.net/documentos/py08_random_forest_python.html">Ridge</a> con los hiperparámetros por defecto. Sin embargo, no hay ninguna razón por la que estos valores sean los más adecuados.</p>
+<p>En el objeto <code>ForecasterAutoreg</code> entrenado, se han utilizado los primeros 24 lags y un modelo <a href="https://www.cienciadedatos.net/documentos/py14-ridge-lasso-elastic-net-python.html">Ridge</a> con los hiperparámetros por defecto. Sin embargo, no hay ninguna razón por la que estos valores sean los más adecuados.</p>
 <p>Con el objetivo de identificar la mejor combinación de lags e hiperparámetros, se recurre a un <em>Grid Search</em> con validación por <em>backtesting</em>. Este proceso consiste en entrenar un modelo con cada combinación de hiperparámetros y lags, y evaluar su capacidad predictiva mediante <a href="https://es.wikipedia.org/wiki/Backtesting"><em>backtesting</em></a>. Dentro del proceso de <em>Grid Search</em>, se entrenan los modelos hasta final del 2013 ('2013-12-31 23:00:00').</p>
 
 </div>
