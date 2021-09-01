@@ -13332,7 +13332,7 @@ $( document ).ready(function(){
 <p>Con el objetivo de poder evaluar de forma robusta la capacidad del modelo acorde al uso que se le quiere dar, conviene no limitarse a predecir únicamente los últimos 7 días de la serie temporal, sino simular el proceso completo. Dos de las estrategias que se pueden emplear a la hora de realizar este tipo de validación son:</p>
 <p><strong>Time series cross-validation</strong></p>
 <p>El modelo se entrena cada vez antes de realizar las predicciones, de esta forma, se incorpora toda la información disponible hasta el momento. Se trata de una adaptación del proceso de <a href="https://es.wikipedia.org/wiki/Validaci%C3%B3n_cruzada">cross-validation</a> en el que, en lugar de hacer un reparto aleatorio de las observaciones, el conjunto de entrenamiento se incrementa de forma secuencial, manteniendo el orden temporal de los datos.</p>
-<p><img src="./images/diagram_time_series_cross_validation.jpg" style="width: 500px;"/></p>
+<p><img src="../images/diagram_time_series_cross_validation.jpg" style="width: 500px;"/></p>
 
 </div>
 </div>
@@ -13349,7 +13349,7 @@ $( document ).ready(function(){
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Backtesting</strong></p>
 <p>Es una estrategia similar a la de <em>time series cross-validation</em> pero sin reentrenar el modelo. El modelo se entrena una única vez con un conjunto inicial y con él se realizan las predicciones de forma secuencial sin actualizar el modelo y siguiendo el orden temporal de los datos. Esta estrategia tiene la ventaja de ser mucho más rápida que <em>time series cross-validation</em> puesto que el modelo solo se entrena una vez. La desventaja es que el modelo no incorpora la última información disponible por lo que puede perder capacidad predictiva con el tiempo.</p>
-<p><img src="./images/diagram_time_series_backtesting.jpg" style="width: 500px;"/></p>
+<p><img src="../images/diagram_time_series_backtesting.jpg" style="width: 500px;"/></p>
 <p><br></p>
 
 </div>
