@@ -1,3 +1,4 @@
+themoneytizer.com,57746,DIRECT
 smartadserver.com,1097,DIRECT
 contextweb.com,560288,RESELLER,89ff185a4c4e857c
 pubmatic.com,156439,RESELLER
@@ -746,3 +747,8 @@ pubmatic.com,150561,RESELLER,5d62403b186f2ace
 EMXDGT.com,1836,DIRECT,1e1d41537f7cad7f
 EMXDGT.com,1289,DIRECT,1e1d41537f7cad7f
 advertising.com,28335,DIRECT,e1a5b5b6e3255540
+adpone.com,59e252f6de67f6c8d1f8,DIRECT
+criteo.com,b-060278,DIRECT,9fac4a4a87c2a44f
+richaudience.com,06ehcbcfzk,DIRECT
+smilewanted.com,1362,DIRECT
+adyoulike.com,b3e21aeb2e950aa59e5e8cc1b6dd6f8e,DIRECT,4ad745ead2958bf7
