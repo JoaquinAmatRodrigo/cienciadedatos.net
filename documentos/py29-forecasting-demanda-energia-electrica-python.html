@@ -13344,7 +13344,7 @@ $( document ).ready(function(){
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><img src="./images/forecasting_multi-step.gif" style="width: 550px" alts="forecasting-python"></p>
+<p><img src="../images/forecasting_multi-step.gif" style="width: 550px" alts="forecasting-python"></p>
 
 </div>
 </div>
@@ -13361,7 +13361,7 @@ en un matriz en la que, cada valor, está asociado a la ventana temporal (lags) 
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><img src="./images/transform_timeseries.gif" style="width: 550px" alts="forecasting-python"></p>
+<p><img src="../images/transform_timeseries.gif" style="width: 550px" alts="forecasting-python"></p>
 
 </div>
 </div>
@@ -13377,7 +13377,7 @@ en un matriz en la que, cada valor, está asociado a la ventana temporal (lags) 
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Este tipo de transformación también permite incluir variables exógenas a la serie temporal.</p>
-<p><img src="./images/matrix_transformation_with_exog_variable.png" style="width: 550px;"></p>
+<p><img src="../images/matrix_transformation_with_exog_variable.png" style="width: 550px;"></p>
 <center><font size='2.5'> <i>Transformación de una serie temporal junto con una variable exógena.</i></font></center>
 </div>
 </div>
@@ -13389,7 +13389,7 @@ en un matriz en la que, cada valor, está asociado a la ventana temporal (lags) 
 <br></p>
 <p>El método <em>direct multi-step forecasting</em> consiste en entrenar un modelo distinto para cada <em>step</em>. Por ejemplo, si se quieren predecir los siguientes 5 valores de una serie temporal, se entrenan 5 modelos distintos, uno para cada <em>step</em>. Como resultado, las predicciones son independientes unas de otras.</p>
 <p>La principal complejidad de esta aproximación consiste en generar correctamente las matrices de entrenamiento para cada modelos. Todo este proceso está automatizado en la clase <code>ForecasterAutoregMultiOutput</code> de la librería <strong>skforecast</strong>. También es importante tener en cuenta que esta estrategia tiene un coste computacional más elevado ya que requiere entrenar múltiples modelos. En el siguiente esquema se muestra el proceso para un caso en el que se dispone de la variable respuesta y dos variables exógenas.</p>
-<p><img src="./images/diagram_skforecast_multioutput.png" style="width: 900px;"></p>
+<p><img src="../images/diagram_skforecast_multioutput.png" style="width: 900px;"></p>
 <center><font size='2.5'> <i>Tranformación de una serie temporal en en las  matrices necesarias para entrenar un modelo direct multi-step forecasting.</i></font></center><p><br><br></p>
 <p><strong>Multiple output forecasting</strong>
 <br></p>

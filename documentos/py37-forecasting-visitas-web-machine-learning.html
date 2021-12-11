@@ -13331,10 +13331,10 @@ $( document ).ready(function(){
 <p>Con el objetivo de poder evaluar de forma robusta la capacidad del modelo acorde al uso que se le quiere dar, conviene no limitarse a predecir únicamente los últimos 7 días de la serie temporal, sino simular el proceso completo. Dos de las estrategias que se pueden emplear a la hora de realizar este tipo de validación son:</p>
 <p><strong>Backtesting con reentrenamiento (refit)</strong></p>
 <p>El modelo se entrena cada vez antes de realizar las predicciones, de esta forma, se incorpora toda la información disponible hasta el momento. Se trata de una adaptación del proceso de <em>cross-validation</em> en el que, en lugar de hacer un reparto aleatorio de las observaciones, el conjunto de entrenamiento se incrementa de forma secuencial, manteniendo el orden temporal de los datos.</p>
-<p><img src="./images/diagram-backtesting-refit.png" style="width: 500px;"/></p>
+<p><img src="../images/diagram-backtesting-refit.png" style="width: 500px;"/></p>
 <center><font size='2.5'> <i>Diagrama de time series backtesting con un tamaño inicial de entrenamiento de 10 observaciones, un horizonte de predicción de 3 steps y reentrenamiento en cada iteración.</i></font></center><p><strong>Backtesting sin reentrenamiento</strong></p>
 <p>Con esta estrategia, el modelo se entrena una única vez con un conjunto inicial y se realizan las predicciones de forma secuencial sin actualizar el modelo y siguiendo el orden temporal de los datos. Esta estrategia tiene la ventaja de ser mucho más rápida que puesto que el modelo solo se entrena una vez. La desventaja es que el modelo no incorpora la última información disponible por lo que puede perder capacidad predictiva con el tiempo.</p>
-<p><img src="./images/diagram-backtesting-no-refit.png" style="width: 500px;"/></p>
+<p><img src="../images/diagram-backtesting-no-refit.png" style="width: 500px;"/></p>
 <p><br></p>
 <center><font size='2.5'> <i>Diagrama de time series backtesting con un tamaño inicial de entrenamiento de 10 observaciones, un horizonte de predicción de 3 steps, sin reentrenamiento en cada iteración.</i></font></center><p>El método de validación más adecuada dependerá de cuál sea la estrategia seguida en la puesta en producción, en concreto, de si el modelo se va a reentrenar periódicamente o no antes de que se ejecute el proceso de predicción. Independientemente de la estrategia utilizada, es importante no incluir los datos de test en el proceso de búsqueda para no caer en problemas de <em>overfitting</em>.</p>
 
