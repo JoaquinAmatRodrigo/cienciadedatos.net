@@ -14344,7 +14344,7 @@ loop lags_grid: 100%|███████████████████�
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Backtesting">Backtesting<a class="anchor-link" href="#Backtesting">&#182;</a></h2><p><br></p>
-<p>The <a href="https://joaquinamatrodrigo.github.io/skforecast/latest/guides/cross-validation-backtest.html">Backtesting</a> process consists of simulating the behavior that the model would have had if it had been run on a recurring basis, for example, predicting at intervals of 3 years (36 months) a total of 9 years. This type of evaluation can be easily applied with the <code>backtesting_forecaster()</code> function.</p>
+<p>The <a href="https://joaquinamatrodrigo.github.io/skforecast/latest/guides/backtesting.html">Backtesting</a> process consists of simulating the behavior that the model would have had if it had been run on a recurring basis, for example, predicting at intervals of 3 years (36 months) a total of 9 years. This type of evaluation can be easily applied with the <code>backtesting_forecaster()</code> function.</p>
 <p><strong>Backtesting with refit</strong></p>
 <p>The model is trained each tieme before making the predictions, in this way, the model use all the information available so far. It is a variation of the standar cross-validation but, instead of making a random distribution of the observations, the training set is increased sequentially, maintaining the temporal order of the data.</p>
 <p><img src="../images/diagram-backtesting-refit.png" style="width: 500px;"/></p>
