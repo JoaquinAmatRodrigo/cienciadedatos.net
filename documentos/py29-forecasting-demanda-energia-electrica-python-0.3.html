@@ -13392,7 +13392,7 @@ en un matriz en la que, cada valor, está asociado a la ventana temporal (lags) 
 <p>El método <em>direct multi-step forecasting</em> consiste en entrenar un modelo distinto para cada <em>step</em>. Por ejemplo, si se quieren predecir los siguientes 5 valores de una serie temporal, se entrenan 5 modelos distintos, uno para cada <em>step</em>. Como resultado, las predicciones son independientes unas de otras.</p>
 <p>La principal complejidad de esta aproximación consiste en generar correctamente las matrices de entrenamiento para cada modelos. Todo este proceso está automatizado en la clase <code>ForecasterAutoregMultiOutput</code> de la librería <strong>skforecast</strong>. También es importante tener en cuenta que esta estrategia tiene un coste computacional más elevado ya que requiere entrenar múltiples modelos. En el siguiente esquema se muestra el proceso para un caso en el que se dispone de la variable respuesta y dos variables exógenas.</p>
 <p><img src="../images/diagram_skforecast_multioutput.png" style="width: 900px;"></p>
-<center><font size='2.5'> <i>Tranformación de una serie temporal en en las  matrices necesarias para entrenar un modelo direct multi-step forecasting.</i></font></center><p><br><br></p>
+<center><font size='2.5'> <i>Transformación de una serie temporal en en las  matrices necesarias para entrenar un modelo direct multi-step forecasting.</i></font></center><p><br><br></p>
 <p><strong>Multiple output forecasting</strong>
 <br></p>
 <p>Determinados modelos son capaces de predecir de forma simultánea varios valores de una secuencia (<em>one-shot</em>). Un ejemplo de modelo con esta capacidad son las redes neuronales LSTM.
@@ -15578,7 +15578,7 @@ Days predicted in the backtesting: [&#39;2014-12-04&#39; &#39;2014-12-05&#39; &#
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Entrenamiento-del-Forecaster">Entrenamiento del Forecaster<a class="anchor-link" href="#Entrenamiento-del-Forecaster">&#182;</a></h3><p><br></p>
-<p>Se emplean los hiperparámetros y lags los identificados como óptimos en el apartado anterior.</p>
+<p>Se emplean los hiperparámetros y lags identificados como óptimos en el apartado anterior.</p>
 
 </div>
 </div>
