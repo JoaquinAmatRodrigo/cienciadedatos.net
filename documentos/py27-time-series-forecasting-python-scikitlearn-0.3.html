@@ -13303,7 +13303,7 @@ $( document ).ready(function(){
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Introduction">Introduction<a class="anchor-link" href="#Introduction">&#182;</a></h2><p><br></p>
 <p>A <a href="https://en.wikipedia.org/wiki/Time_series">time series</a> is a succession of chronologically ordered data spaced at equal or unequal intervals. The <a href="https://en.wikipedia.org/wiki/Forecasting#Time_series_methods">forecasting</a> process consists of predicting the future value of a time series, either by modeling the series solely based on its past behavior (autoregressive) or by using other external variables.</p>
-<p>This paper describes how to use <strong>Scikit-learn</strong> regression models to perform forecasting on time series. Specifically, it introduces <a href="https://joaquinamatrodrigo.github.io/skforecast/"><strong>Skforecast</strong></a>, a simple package that contains the classes and functions necessary to adapt any <strong>Scikit-learn</strong> regression model to forecasting problems.
+<p>This document describes how to use <strong>Scikit-learn</strong> regression models to perform forecasting on time series. Specifically, it introduces <a href="https://joaquinamatrodrigo.github.io/skforecast/"><strong>Skforecast</strong></a>, a simple library that contains the classes and functions necessary to adapt any <strong>Scikit-learn</strong> regression model to forecasting problems.
 <br><br></p>
 
 </div>
@@ -13345,7 +13345,7 @@ $( document ).ready(function(){
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>The main adaptation needed to apply <a href="https://scikit-learn.org/stable/">Scikit-learn</a> models to recursive multi-step forecasting problems is to transform the time series into a matrix in which each value is associated with the time window (lags) preceding it. This forecasting strategy can be easily generated with the <code>ForecasterAutoreg</code> and <code>ForecasterAutoregCustom</code> classes from the <strong>Skforecast</strong> package.</p>
+<p>The main adaptation needed to apply <a href="https://scikit-learn.org/stable/">Scikit-learn</a> models to recursive multi-step forecasting problems is to transform the time series into a matrix in which each value is associated with the time window (lags) preceding it. This forecasting strategy can be easily generated with the <code>ForecasterAutoreg</code> and <code>ForecasterAutoregCustom</code> classes from the <strong>Skforecast</strong> library.</p>
 
 </div>
 </div>
@@ -13373,7 +13373,7 @@ $( document ).ready(function(){
 <p><strong>Direct multi-step forecasting</strong>
 <br></p>
 <p>The direct multi-step forecasting method consists of training a different model for each step. For example, to predict the following 5 values of a time series, 5 different models are required to be trained, one for each step. As a result, the predictions are independent of each other.</p>
-<p>The main complexity of this approach is to generate the correct training matrices for each model. The <code>ForecasterAutoregMultiOutput</code> class of the <a href="https://joaquinamatrodrigo.github.io/skforecast/"><strong>Skforecast</strong></a> package automates this process. It is also important to bear in mind that this strategy has a higher computational cost since it requires the train of multiple models. The following diagram shows the process for a case in which the response variable and two exogenous variables are available.</p>
+<p>The main complexity of this approach is to generate the correct training matrices for each model. The <code>ForecasterAutoregMultiOutput</code> class of the <a href="https://joaquinamatrodrigo.github.io/skforecast/"><strong>Skforecast</strong></a> library automates this process. It is also important to bear in mind that this strategy has a higher computational cost since it requires the train of multiple models. The following diagram shows the process for a case in which the response variable and two exogenous variables are available.</p>
 <p><img src="../images/diagram_skforecast_multioutput.png" style="width: 900px;"></p>
 <center><font size='2.5'> <i>Transformation of a time series into the necessary matrices to train a direct multi-step forecasting model.</i></font></center><p><br><br></p>
 <p><strong>Multiple output forecasting</strong>
@@ -13397,8 +13397,8 @@ $( document ).ready(function(){
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Packages">Packages<a class="anchor-link" href="#Packages">&#182;</a></h3><p><br></p>
-<p>The packages used in this paper are:</p>
+<h3 id="Libraries">Libraries<a class="anchor-link" href="#Libraries">&#182;</a></h3><p><br></p>
+<p>The libraries used in this document are:</p>
 
 </div>
 </div>
@@ -13473,7 +13473,7 @@ $( document ).ready(function(){
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Data">Data<a class="anchor-link" href="#Data">&#182;</a></h3><p><br></p>
-<p>The data used in the examples of this paper have been obtained from the magnificent book <a href="https://otexts.com/fpp3/">Forecasting: Principles and Practice by Rob J Hyndman and George Athanasopoulos</a>.</p>
+<p>The data used in the examples of this document have been obtained from the magnificent book <a href="https://otexts.com/fpp3/">Forecasting: Principles and Practice by Rob J Hyndman and George Athanasopoulos</a>.</p>
 
 </div>
 </div>
@@ -13837,7 +13837,7 @@ Freq: MS, dtype: float64</pre>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Hyperparameter-tuning">Hyperparameter tuning<a class="anchor-link" href="#Hyperparameter-tuning">&#182;</a></h3><p><br></p>
 <p>The trained <code>ForecasterAutoreg</code> uses a 6 lag time window and a <a href="https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestRegressor.html">Random Forest</a> model with the default hyperparameters. However, there is no reason why these values are the most suitable.</p>
-<p>To identify the best combination of lags and hyperparameters, <a href="https://joaquinamatrodrigo.github.io/skforecast/0.3/guides/cross-validation-backtest.html">time series cross-validation and backtesting</a> strategies are available in the <strong>Skforecast</strong> package. Regardless of the procedure used, it is important not to include the test data in the search process to avoid overfitting problems. <a href="https://joaquinamatrodrigo.github.io/skforecast/0.3/guides/cross-validation-backtest.html">Time series cross-validation</a> along the training dataset is used in this case. For the first fold, the initial 50% of the observations are the training data and, the next 10 steps represent the validation set. In successive folds, the training set will contain all the data used in the previous fold and, the next 10 steps will be used as new validation data. This process will be repeated until the entire training data set is used.</p>
+<p>To identify the best combination of lags and hyperparameters, <a href="https://joaquinamatrodrigo.github.io/skforecast/0.3/guides/cross-validation-backtest.html">time series cross-validation and backtesting</a> strategies are available in the <strong>Skforecast</strong> library. Regardless of the procedure used, it is important not to include the test data in the search process to avoid overfitting problems. <a href="https://joaquinamatrodrigo.github.io/skforecast/0.3/guides/cross-validation-backtest.html">Time series cross-validation</a> along the training dataset is used in this case. For the first fold, the initial 50% of the observations are the training data and, the next 10 steps represent the validation set. In successive folds, the training set will contain all the data used in the previous fold and, the next 10 steps will be used as new validation data. This process will be repeated until the entire training data set is used.</p>
 
 </div>
 </div>
@@ -14817,7 +14817,7 @@ params: {&#39;max_depth&#39;: 3, &#39;n_estimators&#39;: 50}
 <h2 id="Recursive-autoregressive-forecasting-with-custom-predictors">Recursive autoregressive forecasting with custom predictors<a class="anchor-link" href="#Recursive-autoregressive-forecasting-with-custom-predictors">&#182;</a></h2><p><br></p>
 <p>In addition to the lags, it may be interesting to incorporate other characteristics of the time series in some scenarios. For example, the moving average of the last <em>n</em> values could be used to capture the series's trend.</p>
 <p>The <code>ForecasterAutoregCustom</code> class behaves very similar to the <code>ForecasterAutoreg</code> class seen in the previous sections, but with the difference that it is the user who defines the function used to create the predictors.</p>
-<p>The first example of the paper about predicting the last 36 months of the time series is repeated. In this case, the predictors are the first 10 lags and the values' moving average of the lasts 20 months.
+<p>The first example of the document about predicting the last 36 months of the time series is repeated. In this case, the predictors are the first 10 lags and the values' moving average of the lasts 20 months.
 <br><br></p>
 
 </div>
@@ -16015,7 +16015,7 @@ Number of observations used for testing: 108
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Load-and-save-models">Load and save models<a class="anchor-link" href="#Load-and-save-models">&#182;</a></h2><p><br></p>
-<p><a href="https://joaquinamatrodrigo.github.io/skforecast/"><strong>Skforecast</strong></a> models can be loaded and stored using <strong>pickle</strong> or <strong>joblib</strong> packages. A simple example using <strong>joblib</strong> is shown below.</p>
+<p><a href="https://joaquinamatrodrigo.github.io/skforecast/"><strong>Skforecast</strong></a> models can be loaded and stored using <strong>pickle</strong> or <strong>joblib</strong> libraries. A simple example using <strong>joblib</strong> is shown below.</p>
 
 </div>
 </div>
@@ -16272,7 +16272,7 @@ div.inner_cell {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>How to cite this paper?</strong></p>
+<p><strong>How to cite this document?</strong></p>
 <p style="text-align:left"><font size="3" color="#555">
 skforecast: time series forecasting with python and scikit learn by Joaquín Amat Rodrigo and Javier Escobar Ortiz, available under a Attribution 4.0 International (CC BY 4.0) at https://www.cienciadedatos.net/py27-forecasting-series-temporales-python-scikitlearn.html
 
