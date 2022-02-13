@@ -185,6 +185,8 @@
   </script>
 <!-- End Quantcast Choice. Consent Manager Tag v2.0 (for TCF 2.0) -->
 
+
+
 <style type="text/css">
     /*!
 *
@@ -13265,7 +13267,7 @@ div#notebook {
 <script>
 $( document ).ready(function(){
 
-            var cfg = {"base_numbering": 1, "nav_menu": {}, "number_sections": false, "sideBar": true, "skip_h1_title": true, "title_cell": "Table of contents", "title_sidebar": "Table of contents", "toc_cell": false, "toc_position": {"height": "calc(100% - 180px)", "left": "10px", "top": "150px", "width": "251px"}, "toc_section_display": true, "toc_window_display": true};
+            var cfg = {"base_numbering": 1, "nav_menu": {}, "number_sections": false, "sideBar": true, "skip_h1_title": true, "title_cell": "Tabla de contenidos", "title_sidebar": "Tabla de contenidos", "toc_cell": false, "toc_position": {"height": "calc(100% - 180px)", "left": "10px", "top": "150px", "width": "251px"}, "toc_section_display": true, "toc_window_display": true};
 
             // fire the main function with these parameters
             require(['nbextensions/toc2/toc2'], function (toc2) {
@@ -13295,17 +13297,6 @@ $( document ).ready(function(){
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <center><b>Joaquín Amat Rodrigo, Javier Escobar Ortiz</b></center><center><i>February, 2021 (last update January 2022)</i></center>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li><a href="https://www.cienciadedatos.net/documentos/py29-forecasting-electricity-power-demand-python.html">Forecasting electricity demand with Python</a></li>
-<li><a href="https://www.cienciadedatos.net/documentos/py39-forecasting-time-series-with-skforecast-xgboost-lightgbm-catboost.html">Forecasting time series with gradient boosting: Skforecast, XGBoost, LightGBM and CatBoost</a></li>
-<li><a href="https://www.cienciadedatos.net/documentos/py37-forecasting-web-traffic-machine-learning.html">Forecasting web traffic with machine learning and Python</a></li>
-</ul>
 </div>
 </div>
 </div>
@@ -13786,8 +13777,8 @@ Training range: [Timestamp(&#39;1992-04-01 00:00:00&#39;), Timestamp(&#39;2005-0
 Training index type: DatetimeIndex 
 Training index frequency: MS 
 Regressor parameters: {&#39;bootstrap&#39;: True, &#39;ccp_alpha&#39;: 0.0, &#39;criterion&#39;: &#39;squared_error&#39;, &#39;max_depth&#39;: None, &#39;max_features&#39;: &#39;auto&#39;, &#39;max_leaf_nodes&#39;: None, &#39;max_samples&#39;: None, &#39;min_impurity_decrease&#39;: 0.0, &#39;min_samples_leaf&#39;: 1, &#39;min_samples_split&#39;: 2, &#39;min_weight_fraction_leaf&#39;: 0.0, &#39;n_estimators&#39;: 100, &#39;n_jobs&#39;: None, &#39;oob_score&#39;: False, &#39;random_state&#39;: 123, &#39;verbose&#39;: 0, &#39;warm_start&#39;: False} 
-Creation date: 2022-01-05 19:47:02 
-Last fit date: 2022-01-05 19:47:02 
+Creation date: 2022-02-13 18:23:39 
+Last fit date: 2022-02-13 18:23:40 
 Skforecast version: 0.4.2 </pre>
 </div>
 
@@ -14013,21 +14004,21 @@ Freq: MS, Name: pred, dtype: float64</pre>
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>loop lags_grid:   0%|                                               | 0/2 [00:00&lt;?, ?it/s]
 loop param_grid:   0%|                                              | 0/6 [00:00&lt;?, ?it/s]
-loop param_grid:  17%|██████▎                               | 1/6 [00:01&lt;00:06,  1.27s/it]
-loop param_grid:  33%|████████████▋                         | 2/6 [00:08&lt;00:18,  4.67s/it]
-loop param_grid:  50%|███████████████████                   | 3/6 [00:09&lt;00:09,  3.16s/it]
-loop param_grid:  67%|█████████████████████████▎            | 4/6 [00:15&lt;00:08,  4.19s/it]
-loop param_grid:  83%|███████████████████████████████▋      | 5/6 [00:16&lt;00:03,  3.13s/it]
-loop param_grid: 100%|██████████████████████████████████████| 6/6 [00:24&lt;00:00,  4.64s/it]
-loop lags_grid:  50%|███████████████████▌                   | 1/2 [00:24&lt;00:24, 24.28s/it]
+loop param_grid:  17%|██████▎                               | 1/6 [00:01&lt;00:07,  1.45s/it]
+loop param_grid:  33%|████████████▋                         | 2/6 [00:07&lt;00:16,  4.04s/it]
+loop param_grid:  50%|███████████████████                   | 3/6 [00:08&lt;00:08,  2.88s/it]
+loop param_grid:  67%|█████████████████████████▎            | 4/6 [00:16&lt;00:09,  4.97s/it]
+loop param_grid:  83%|███████████████████████████████▋      | 5/6 [00:18&lt;00:03,  3.77s/it]
+loop param_grid: 100%|██████████████████████████████████████| 6/6 [00:26&lt;00:00,  5.08s/it]
+loop lags_grid:  50%|███████████████████▌                   | 1/2 [00:26&lt;00:26, 26.26s/it]
 loop param_grid:   0%|                                              | 0/6 [00:00&lt;?, ?it/s]
-loop param_grid:  17%|██████▎                               | 1/6 [00:01&lt;00:07,  1.50s/it]
-loop param_grid:  33%|████████████▋                         | 2/6 [00:09&lt;00:21,  5.33s/it]
-loop param_grid:  50%|███████████████████                   | 3/6 [00:11&lt;00:10,  3.63s/it]
-loop param_grid:  67%|█████████████████████████▎            | 4/6 [00:19&lt;00:10,  5.34s/it]
-loop param_grid:  83%|███████████████████████████████▋      | 5/6 [00:20&lt;00:03,  4.00s/it]
-loop param_grid: 100%|██████████████████████████████████████| 6/6 [00:28&lt;00:00,  5.43s/it]
-loop lags_grid: 100%|███████████████████████████████████████| 2/2 [00:53&lt;00:00, 26.60s/it]
+loop param_grid:  17%|██████▎                               | 1/6 [00:02&lt;00:13,  2.70s/it]
+loop param_grid:  33%|████████████▋                         | 2/6 [00:15&lt;00:33,  8.43s/it]
+loop param_grid:  50%|███████████████████                   | 3/6 [00:16&lt;00:15,  5.28s/it]
+loop param_grid:  67%|█████████████████████████▎            | 4/6 [00:25&lt;00:13,  6.66s/it]
+loop param_grid:  83%|███████████████████████████████▋      | 5/6 [00:27&lt;00:04,  4.91s/it]
+loop param_grid: 100%|██████████████████████████████████████| 6/6 [00:35&lt;00:00,  6.05s/it]
+loop lags_grid: 100%|███████████████████████████████████████| 2/2 [01:01&lt;00:00, 30.90s/it]
 </pre>
 </div>
 </div>
@@ -14038,7 +14029,7 @@ loop lags_grid: 100%|███████████████████�
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Refitting `forecaster` using the best found lags and parameters and the whole data set: 
+<pre>`Forecaster` refitted using the best-found lags and parameters, and the whole data set: 
   Lags: [ 1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20] 
   Parameters: {&#39;max_depth&#39;: 3, &#39;n_estimators&#39;: 500}
   Backtesting metric: 0.008055003809735634
@@ -14924,38 +14915,38 @@ Backtest error: [0.01057898]
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>loop lags_grid:   0%|                                               | 0/3 [00:00&lt;?, ?it/s]
 loop param_grid:   0%|                                              | 0/9 [00:00&lt;?, ?it/s]
-loop param_grid:  11%|████▏                                 | 1/9 [00:00&lt;00:04,  1.66it/s]
-loop param_grid:  22%|████████▍                             | 2/9 [00:01&lt;00:06,  1.09it/s]
-loop param_grid:  33%|████████████▋                         | 3/9 [00:07&lt;00:19,  3.24s/it]
-loop param_grid:  44%|████████████████▉                     | 4/9 [00:08&lt;00:11,  2.28s/it]
-loop param_grid:  56%|█████████████████████                 | 5/9 [00:09&lt;00:07,  1.98s/it]
-loop param_grid:  67%|█████████████████████████▎            | 6/9 [00:16&lt;00:10,  3.66s/it]
-loop param_grid:  78%|█████████████████████████████▌        | 7/9 [00:17&lt;00:05,  2.80s/it]
-loop param_grid:  89%|█████████████████████████████████▊    | 8/9 [00:19&lt;00:02,  2.40s/it]
-loop param_grid: 100%|██████████████████████████████████████| 9/9 [00:27&lt;00:00,  4.09s/it]
-loop lags_grid:  33%|█████████████                          | 1/3 [00:27&lt;00:54, 27.32s/it]
+loop param_grid:  11%|████▏                                 | 1/9 [00:00&lt;00:07,  1.10it/s]
+loop param_grid:  22%|████████▍                             | 2/9 [00:02&lt;00:08,  1.28s/it]
+loop param_grid:  33%|████████████▋                         | 3/9 [00:08&lt;00:21,  3.59s/it]
+loop param_grid:  44%|████████████████▉                     | 4/9 [00:09&lt;00:12,  2.44s/it]
+loop param_grid:  56%|█████████████████████                 | 5/9 [00:10&lt;00:08,  2.02s/it]
+loop param_grid:  67%|█████████████████████████▎            | 6/9 [00:17&lt;00:11,  3.67s/it]
+loop param_grid:  78%|█████████████████████████████▌        | 7/9 [00:18&lt;00:05,  2.80s/it]
+loop param_grid:  89%|█████████████████████████████████▊    | 8/9 [00:20&lt;00:02,  2.61s/it]
+loop param_grid: 100%|██████████████████████████████████████| 9/9 [00:29&lt;00:00,  4.52s/it]
+loop lags_grid:  33%|█████████████                          | 1/3 [00:29&lt;00:59, 29.55s/it]
 loop param_grid:   0%|                                              | 0/9 [00:00&lt;?, ?it/s]
-loop param_grid:  11%|████▏                                 | 1/9 [00:00&lt;00:07,  1.07it/s]
-loop param_grid:  22%|████████▍                             | 2/9 [00:02&lt;00:09,  1.40s/it]
-loop param_grid:  33%|████████████▋                         | 3/9 [00:09&lt;00:24,  4.03s/it]
-loop param_grid:  44%|████████████████▉                     | 4/9 [00:10&lt;00:13,  2.78s/it]
-loop param_grid:  56%|█████████████████████                 | 5/9 [00:12&lt;00:09,  2.29s/it]
-loop param_grid:  67%|█████████████████████████▎            | 6/9 [00:19&lt;00:12,  4.06s/it]
-loop param_grid:  78%|█████████████████████████████▌        | 7/9 [00:20&lt;00:06,  3.05s/it]
-loop param_grid:  89%|█████████████████████████████████▊    | 8/9 [00:22&lt;00:02,  2.55s/it]
-loop param_grid: 100%|██████████████████████████████████████| 9/9 [00:29&lt;00:00,  4.13s/it]
-loop lags_grid:  67%|██████████████████████████             | 2/3 [00:56&lt;00:28, 28.69s/it]
+loop param_grid:  11%|████▏                                 | 1/9 [00:00&lt;00:07,  1.02it/s]
+loop param_grid:  22%|████████▍                             | 2/9 [00:02&lt;00:10,  1.53s/it]
+loop param_grid:  33%|████████████▋                         | 3/9 [00:11&lt;00:28,  4.82s/it]
+loop param_grid:  44%|████████████████▉                     | 4/9 [00:12&lt;00:16,  3.25s/it]
+loop param_grid:  56%|█████████████████████                 | 5/9 [00:14&lt;00:11,  2.75s/it]
+loop param_grid:  67%|█████████████████████████▎            | 6/9 [00:22&lt;00:13,  4.61s/it]
+loop param_grid:  78%|█████████████████████████████▌        | 7/9 [00:23&lt;00:06,  3.44s/it]
+loop param_grid:  89%|█████████████████████████████████▊    | 8/9 [00:25&lt;00:02,  2.81s/it]
+loop param_grid: 100%|██████████████████████████████████████| 9/9 [00:34&lt;00:00,  4.84s/it]
+loop lags_grid:  67%|██████████████████████████             | 2/3 [01:03&lt;00:32, 32.38s/it]
 loop param_grid:   0%|                                              | 0/9 [00:00&lt;?, ?it/s]
-loop param_grid:  11%|████▏                                 | 1/9 [00:00&lt;00:05,  1.35it/s]
-loop param_grid:  22%|████████▍                             | 2/9 [00:01&lt;00:07,  1.03s/it]
-loop param_grid:  33%|████████████▋                         | 3/9 [00:09&lt;00:23,  3.89s/it]
-loop param_grid:  44%|████████████████▉                     | 4/9 [00:10&lt;00:13,  2.68s/it]
-loop param_grid:  56%|█████████████████████                 | 5/9 [00:11&lt;00:09,  2.28s/it]
-loop param_grid:  67%|█████████████████████████▎            | 6/9 [00:19&lt;00:13,  4.34s/it]
-loop param_grid:  78%|█████████████████████████████▌        | 7/9 [00:21&lt;00:06,  3.36s/it]
-loop param_grid:  89%|█████████████████████████████████▊    | 8/9 [00:23&lt;00:02,  2.85s/it]
-loop param_grid: 100%|██████████████████████████████████████| 9/9 [00:31&lt;00:00,  4.74s/it]
-loop lags_grid: 100%|███████████████████████████████████████| 3/3 [01:28&lt;00:00, 29.65s/it]</pre>
+loop param_grid:  11%|████▏                                 | 1/9 [00:01&lt;00:09,  1.24s/it]
+loop param_grid:  22%|████████▍                             | 2/9 [00:02&lt;00:10,  1.51s/it]
+loop param_grid:  33%|████████████▋                         | 3/9 [00:11&lt;00:29,  4.93s/it]
+loop param_grid:  44%|████████████████▉                     | 4/9 [00:13&lt;00:17,  3.47s/it]
+loop param_grid:  56%|█████████████████████                 | 5/9 [00:14&lt;00:11,  2.81s/it]
+loop param_grid:  67%|█████████████████████████▎            | 6/9 [00:24&lt;00:15,  5.28s/it]
+loop param_grid:  78%|█████████████████████████████▌        | 7/9 [00:25&lt;00:07,  3.84s/it]
+loop param_grid:  89%|█████████████████████████████████▊    | 8/9 [00:27&lt;00:03,  3.27s/it]
+loop param_grid: 100%|██████████████████████████████████████| 9/9 [00:38&lt;00:00,  5.62s/it]
+loop lags_grid: 100%|███████████████████████████████████████| 3/3 [01:42&lt;00:00, 34.18s/it]</pre>
 </div>
 </div>
 
@@ -14965,7 +14956,7 @@ loop lags_grid: 100%|███████████████████�
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Refitting `forecaster` using the best found lags and parameters and the whole data set: 
+<pre>`Forecaster` refitted using the best-found lags and parameters, and the whole data set: 
   Lags: [ 1  2  3  4  5  6  7  8  9 10 11 12] 
   Parameters: {&#39;max_depth&#39;: 3, &#39;n_estimators&#39;: 50}
   Backtesting metric: 0.007814854588045633
@@ -15325,8 +15316,8 @@ Training range: [Timestamp(&#39;1992-04-01 00:00:00&#39;), Timestamp(&#39;2005-0
 Training index type: DatetimeIndex 
 Training index frequency: MS 
 Regressor parameters: {&#39;bootstrap&#39;: True, &#39;ccp_alpha&#39;: 0.0, &#39;criterion&#39;: &#39;squared_error&#39;, &#39;max_depth&#39;: None, &#39;max_features&#39;: &#39;auto&#39;, &#39;max_leaf_nodes&#39;: None, &#39;max_samples&#39;: None, &#39;min_impurity_decrease&#39;: 0.0, &#39;min_samples_leaf&#39;: 1, &#39;min_samples_split&#39;: 2, &#39;min_weight_fraction_leaf&#39;: 0.0, &#39;n_estimators&#39;: 100, &#39;n_jobs&#39;: None, &#39;oob_score&#39;: False, &#39;random_state&#39;: 123, &#39;verbose&#39;: 0, &#39;warm_start&#39;: False} 
-Creation date: 2022-01-05 19:49:34 
-Last fit date: 2022-01-05 19:49:34 
+Creation date: 2022-02-13 18:26:36 
+Last fit date: 2022-02-13 18:26:37 
 Skforecast version: 0.4.2 </pre>
 </div>
 
@@ -15743,27 +15734,13 @@ Freq: MS, Name: y, dtype: float64</pre>
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>loop lags_grid:   0%|                                               | 0/1 [00:00&lt;?, ?it/s]
 loop param_grid:   0%|                                              | 0/6 [00:00&lt;?, ?it/s]
-loop param_grid:  17%|██████▎                               | 1/6 [00:01&lt;00:06,  1.34s/it]
-loop param_grid:  33%|████████████▋                         | 2/6 [00:09&lt;00:21,  5.28s/it]
-loop param_grid:  50%|███████████████████                   | 3/6 [00:11&lt;00:11,  3.70s/it]
-loop param_grid:  67%|█████████████████████████▎            | 4/6 [00:19&lt;00:10,  5.39s/it]
-loop param_grid:  83%|███████████████████████████████▋      | 5/6 [00:20&lt;00:03,  3.98s/it]
-loop param_grid: 100%|██████████████████████████████████████| 6/6 [00:28&lt;00:00,  5.19s/it]
-loop lags_grid: 100%|███████████████████████████████████████| 1/1 [00:28&lt;00:00, 28.20s/it]</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Refitting `forecaster` using the best found lags and parameters and the whole data set: 
-  Lags: custom predictors 
-  Parameters: {&#39;max_depth&#39;: 10, &#39;n_estimators&#39;: 100}
-  Backtesting metric: 0.0280647200742407
-
+loop param_grid:  17%|██████▎                               | 1/6 [00:02&lt;00:10,  2.01s/it]
+loop param_grid:  33%|████████████▋                         | 2/6 [00:11&lt;00:25,  6.46s/it]
+loop param_grid:  50%|███████████████████                   | 3/6 [00:13&lt;00:13,  4.39s/it]
+loop param_grid:  67%|█████████████████████████▎            | 4/6 [00:23&lt;00:13,  6.58s/it]
+loop param_grid:  83%|███████████████████████████████▋      | 5/6 [00:25&lt;00:04,  4.88s/it]
+loop param_grid: 100%|██████████████████████████████████████| 6/6 [00:35&lt;00:00,  6.84s/it]
+loop lags_grid: 100%|███████████████████████████████████████| 1/1 [00:35&lt;00:00, 35.98s/it]
 </pre>
 </div>
 </div>
@@ -15773,8 +15750,12 @@ loop lags_grid: 100%|███████████████████�
     <div class="prompt"></div>
 
 
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>`Forecaster` refitted using the best-found lags and parameters, and the whole data set: 
+  Lags: custom predictors 
+  Parameters: {&#39;max_depth&#39;: 10, &#39;n_estimators&#39;: 100}
+  Backtesting metric: 0.0280647200742407
+
 </pre>
 </div>
 </div>
@@ -16042,7 +16023,7 @@ Training range: None
 Training index type: None 
 Training index frequency: None 
 Regressor parameters: {&#39;standardscaler__copy&#39;: True, &#39;standardscaler__with_mean&#39;: True, &#39;standardscaler__with_std&#39;: True, &#39;lasso__alpha&#39;: 1.0, &#39;lasso__copy_X&#39;: True, &#39;lasso__fit_intercept&#39;: True, &#39;lasso__max_iter&#39;: 1000, &#39;lasso__normalize&#39;: &#39;deprecated&#39;, &#39;lasso__positive&#39;: False, &#39;lasso__precompute&#39;: False, &#39;lasso__random_state&#39;: 123, &#39;lasso__selection&#39;: &#39;cyclic&#39;, &#39;lasso__tol&#39;: 0.0001, &#39;lasso__warm_start&#39;: False} 
-Creation date: 2022-01-05 19:50:03 
+Creation date: 2022-02-13 18:27:14 
 Last fit date: None 
 Skforecast version: 0.4.2 </pre>
 </div>
@@ -16106,41 +16087,41 @@ Skforecast version: 0.4.2 </pre>
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>loop lags_grid:   0%|                                               | 0/3 [00:00&lt;?, ?it/s]
 loop param_grid:   0%|                                             | 0/10 [00:00&lt;?, ?it/s]
-loop param_grid:  10%|███▋                                 | 1/10 [00:00&lt;00:02,  3.43it/s]
-loop param_grid:  20%|███████▍                             | 2/10 [00:00&lt;00:02,  3.55it/s]
-loop param_grid:  30%|███████████                          | 3/10 [00:00&lt;00:02,  3.42it/s]
-loop param_grid:  40%|██████████████▊                      | 4/10 [00:01&lt;00:01,  3.45it/s]
-loop param_grid:  50%|██████████████████▌                  | 5/10 [00:01&lt;00:01,  3.51it/s]
-loop param_grid:  60%|██████████████████████▏              | 6/10 [00:01&lt;00:01,  3.52it/s]
-loop param_grid:  70%|█████████████████████████▉           | 7/10 [00:02&lt;00:00,  3.48it/s]
-loop param_grid:  80%|█████████████████████████████▌       | 8/10 [00:02&lt;00:00,  3.20it/s]
-loop param_grid:  90%|█████████████████████████████████▎   | 9/10 [00:02&lt;00:00,  3.01it/s]
-loop param_grid: 100%|████████████████████████████████████| 10/10 [00:03&lt;00:00,  2.98it/s]
-loop lags_grid:  33%|█████████████                          | 1/3 [00:03&lt;00:06,  3.10s/it]
+loop param_grid:  10%|███▋                                 | 1/10 [00:00&lt;00:04,  2.01it/s]
+loop param_grid:  20%|███████▍                             | 2/10 [00:01&lt;00:05,  1.54it/s]
+loop param_grid:  30%|███████████                          | 3/10 [00:01&lt;00:03,  1.87it/s]
+loop param_grid:  40%|██████████████▊                      | 4/10 [00:02&lt;00:02,  2.15it/s]
+loop param_grid:  50%|██████████████████▌                  | 5/10 [00:02&lt;00:02,  2.24it/s]
+loop param_grid:  60%|██████████████████████▏              | 6/10 [00:02&lt;00:01,  2.22it/s]
+loop param_grid:  70%|█████████████████████████▉           | 7/10 [00:03&lt;00:01,  2.12it/s]
+loop param_grid:  80%|█████████████████████████████▌       | 8/10 [00:03&lt;00:01,  1.99it/s]
+loop param_grid:  90%|█████████████████████████████████▎   | 9/10 [00:04&lt;00:00,  2.09it/s]
+loop param_grid: 100%|████████████████████████████████████| 10/10 [00:04&lt;00:00,  2.09it/s]
+loop lags_grid:  33%|█████████████                          | 1/3 [00:04&lt;00:09,  4.88s/it]
 loop param_grid:   0%|                                             | 0/10 [00:00&lt;?, ?it/s]
-loop param_grid:  10%|███▋                                 | 1/10 [00:00&lt;00:03,  2.81it/s]
-loop param_grid:  20%|███████▍                             | 2/10 [00:00&lt;00:02,  2.75it/s]
-loop param_grid:  30%|███████████                          | 3/10 [00:01&lt;00:03,  2.26it/s]
-loop param_grid:  40%|██████████████▊                      | 4/10 [00:01&lt;00:02,  2.02it/s]
-loop param_grid:  50%|██████████████████▌                  | 5/10 [00:02&lt;00:02,  2.18it/s]
-loop param_grid:  60%|██████████████████████▏              | 6/10 [00:02&lt;00:01,  2.36it/s]
-loop param_grid:  70%|█████████████████████████▉           | 7/10 [00:02&lt;00:01,  2.50it/s]
-loop param_grid:  80%|█████████████████████████████▌       | 8/10 [00:03&lt;00:00,  2.61it/s]
-loop param_grid:  90%|█████████████████████████████████▎   | 9/10 [00:03&lt;00:00,  2.68it/s]
-loop param_grid: 100%|████████████████████████████████████| 10/10 [00:04&lt;00:00,  2.66it/s]
-loop lags_grid:  67%|██████████████████████████             | 2/3 [00:07&lt;00:03,  3.64s/it]
+loop param_grid:  10%|███▋                                 | 1/10 [00:00&lt;00:07,  1.23it/s]
+loop param_grid:  20%|███████▍                             | 2/10 [00:01&lt;00:04,  1.65it/s]
+loop param_grid:  30%|███████████                          | 3/10 [00:01&lt;00:03,  2.07it/s]
+loop param_grid:  40%|██████████████▊                      | 4/10 [00:02&lt;00:02,  2.06it/s]
+loop param_grid:  50%|██████████████████▌                  | 5/10 [00:02&lt;00:02,  2.10it/s]
+loop param_grid:  60%|██████████████████████▏              | 6/10 [00:03&lt;00:01,  2.07it/s]
+loop param_grid:  70%|█████████████████████████▉           | 7/10 [00:03&lt;00:01,  2.24it/s]
+loop param_grid:  80%|█████████████████████████████▌       | 8/10 [00:03&lt;00:00,  2.44it/s]
+loop param_grid:  90%|█████████████████████████████████▎   | 9/10 [00:04&lt;00:00,  2.60it/s]
+loop param_grid: 100%|████████████████████████████████████| 10/10 [00:04&lt;00:00,  2.68it/s]
+loop lags_grid:  67%|██████████████████████████             | 2/3 [00:09&lt;00:04,  4.62s/it]
 loop param_grid:   0%|                                             | 0/10 [00:00&lt;?, ?it/s]
-loop param_grid:  10%|███▋                                 | 1/10 [00:00&lt;00:04,  2.05it/s]
-loop param_grid:  20%|███████▍                             | 2/10 [00:00&lt;00:03,  2.18it/s]
-loop param_grid:  30%|███████████                          | 3/10 [00:01&lt;00:03,  2.10it/s]
-loop param_grid:  40%|██████████████▊                      | 4/10 [00:01&lt;00:02,  2.14it/s]
-loop param_grid:  50%|██████████████████▌                  | 5/10 [00:02&lt;00:02,  2.22it/s]
-loop param_grid:  60%|██████████████████████▏              | 6/10 [00:02&lt;00:01,  2.27it/s]
-loop param_grid:  70%|█████████████████████████▉           | 7/10 [00:03&lt;00:01,  2.17it/s]
-loop param_grid:  80%|█████████████████████████████▌       | 8/10 [00:03&lt;00:01,  1.96it/s]
-loop param_grid:  90%|█████████████████████████████████▎   | 9/10 [00:04&lt;00:00,  1.92it/s]
-loop param_grid: 100%|████████████████████████████████████| 10/10 [00:04&lt;00:00,  2.11it/s]
-loop lags_grid: 100%|███████████████████████████████████████| 3/3 [00:11&lt;00:00,  3.96s/it]</pre>
+loop param_grid:  10%|███▋                                 | 1/10 [00:00&lt;00:05,  1.67it/s]
+loop param_grid:  20%|███████▍                             | 2/10 [00:01&lt;00:05,  1.40it/s]
+loop param_grid:  30%|███████████                          | 3/10 [00:01&lt;00:04,  1.54it/s]
+loop param_grid:  40%|██████████████▊                      | 4/10 [00:02&lt;00:03,  1.79it/s]
+loop param_grid:  50%|██████████████████▌                  | 5/10 [00:02&lt;00:02,  1.96it/s]
+loop param_grid:  60%|██████████████████████▏              | 6/10 [00:03&lt;00:02,  1.97it/s]
+loop param_grid:  70%|█████████████████████████▉           | 7/10 [00:04&lt;00:01,  1.69it/s]
+loop param_grid:  80%|█████████████████████████████▌       | 8/10 [00:04&lt;00:01,  1.72it/s]
+loop param_grid:  90%|█████████████████████████████████▎   | 9/10 [00:05&lt;00:00,  1.90it/s]
+loop param_grid: 100%|████████████████████████████████████| 10/10 [00:05&lt;00:00,  2.11it/s]
+loop lags_grid: 100%|███████████████████████████████████████| 3/3 [00:14&lt;00:00,  4.91s/it]</pre>
 </div>
 </div>
 
@@ -16150,7 +16131,7 @@ loop lags_grid: 100%|███████████████████�
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Refitting `forecaster` using the best found lags and parameters and the whole data set: 
+<pre>`Forecaster` refitted using the best-found lags and parameters, and the whole data set: 
   Lags: [ 1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20] 
   Parameters: {&#39;lasso__alpha&#39;: 0.021544346900318846}
   Backtesting metric: 0.010608155083112462
@@ -16675,6 +16656,174 @@ Test error (mse): 0.010536580526702845
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Forecasting-models-in-production">Forecasting models in production<a class="anchor-link" href="#Forecasting-models-in-production">&#182;</a></h2><p><br></p>
+<p>A trained model may be deployed in production in order to generate predictions regularly. Suppose predictions have to be generated on a weekly basis, for example, every Monday. By default, when using the <code>predict</code> method on a trained forecaster object, predictions start right after the last training observation. Therefore, the model could be retrained weekly, just before the first prediction is needed, and call its <code>predict</code> method. This strategy, although simple, may not be possible to use for several reasons:</p>
+<ul>
+<li><p>Model training is very expensive and cannot be run as often.</p>
+</li>
+<li><p>The history with which the model was trained is no longer available.</p>
+</li>
+<li><p>The prediction frequency is so high that there is no time to train the model between predictions.</p>
+</li>
+</ul>
+<p>In these scenarios, the model must be able to predict at any time, even if it has not been recently trained.</p>
+<p>Every model generated using skforecast has the <code>last_window</code> argument in its <code>predict</code> method. Using this argument, it is possible to provide only the past values needs to create the autoregressive predictors (lags) and thus, generate the predictions without the need to retrain the model.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[62]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data_train</span><span class="p">[</span><span class="s1">&#39;y&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">tail</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[62]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>date
+1999-02-01    0.512696
+1999-03-01    0.652996
+1999-04-01    0.573976
+1999-05-01    0.639238
+1999-06-01    0.703872
+Freq: MS, Name: y, dtype: float64</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[63]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">forecaster</span> <span class="o">=</span> <span class="n">ForecasterAutoreg</span><span class="p">(</span>
+                    <span class="n">regressor</span> <span class="o">=</span> <span class="n">RandomForestRegressor</span><span class="p">(),</span>
+                    <span class="n">lags</span> <span class="o">=</span> <span class="mi">5</span>
+                <span class="p">)</span>
+
+<span class="n">forecaster</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="n">data_train</span><span class="p">[</span><span class="s1">&#39;y&#39;</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[65]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">forecaster</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">steps</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[65]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>1999-07-01    0.756636
+1999-08-01    0.771173
+1999-09-01    0.792598
+Freq: MS, Name: pred, dtype: float64</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>As expected, predictions follow directly from the end of training data.</p>
+<p>When <code>last_window</code> is provided, the forecaster uses this data to generate the lags needed as predictors and starts the prediction afterwards.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[66]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">forecaster</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">steps</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">last_window</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;y&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">tail</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[66]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>2008-07-01    0.776003
+2008-08-01    0.776346
+2008-09-01    0.698149
+Freq: MS, Name: pred, dtype: float64</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Since the provided <code>last_window</code> contains values from 2008-02-01 to 2008-06-01, the forecaster is able to create the needed lags and predict the next 5 steps.</p>
+<blockquote><p><strong>⚠ WARNING:</strong><br>
+It is important to note that the lenght of last windows must be enought to include the maximum lag used by the forecaster. Fore example, if the forecaster uses lags 1, 24, 48, <code>last_window</code> must include the last 72 values of the series.</p>
+</blockquote>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Load-and-save-models">Load and save models<a class="anchor-link" href="#Load-and-save-models">&#182;</a></h2><p><br></p>
 <p><a href="https://joaquinamatrodrigo.github.io/skforecast/"><strong>Skforecast</strong></a> models can be loaded and stored using <strong>pickle</strong> or <strong>joblib</strong> libraries. A simple example using <strong>joblib</strong> is shown below.</p>
 
@@ -16683,7 +16832,7 @@ Test error (mse): 0.010536580526702845
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[54]:</div>
+<div class="prompt input_prompt">In&nbsp;[55]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Create forecaster</span>
@@ -16702,7 +16851,7 @@ Test error (mse): 0.010536580526702845
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[54]:</div>
+    <div class="prompt output_prompt">Out[55]:</div>
 
 
 
@@ -16722,7 +16871,7 @@ Freq: MS, Name: pred, dtype: float64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[55]:</div>
+<div class="prompt input_prompt">In&nbsp;[56]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Save model</span>
@@ -16739,7 +16888,7 @@ Freq: MS, Name: pred, dtype: float64</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[55]:</div>
+    <div class="prompt output_prompt">Out[56]:</div>
 
 
 
@@ -16756,7 +16905,7 @@ Freq: MS, Name: pred, dtype: float64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[56]:</div>
+<div class="prompt input_prompt">In&nbsp;[57]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Load model</span>
@@ -16770,7 +16919,7 @@ Freq: MS, Name: pred, dtype: float64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[57]:</div>
+<div class="prompt input_prompt">In&nbsp;[58]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Predict</span>
@@ -16787,7 +16936,7 @@ Freq: MS, Name: pred, dtype: float64</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[57]:</div>
+    <div class="prompt output_prompt">Out[58]:</div>
 
 
 
@@ -16814,7 +16963,7 @@ Freq: MS, Name: pred, dtype: float64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[58]:</div>
+<div class="prompt input_prompt">In&nbsp;[59]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">session_info</span>
@@ -16836,6 +16985,7 @@ Freq: MS, Name: pred, dtype: float64</pre>
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>-----
+ipykernel           6.4.1
 joblib              1.0.1
 matplotlib          3.4.3
 numpy               1.19.5
@@ -16851,9 +17001,9 @@ jupyterlab          3.1.11
 notebook            6.3.0
 -----
 Python 3.7.10 (default, Feb 26 2021, 18:47:35) [GCC 7.3.0]
-Linux-5.11.0-44-generic-x86_64-with-debian-bullseye-sid
+Linux-5.13.0-28-generic-x86_64-with-debian-bullseye-sid
 -----
-Session information updated at 2022-01-05 19:50
+Session information updated at 2022-02-13 18:27
 </pre>
 </div>
 </div>
@@ -16963,13 +17113,28 @@ div.inner_cell {
 Skforecast: time series forecasting with Python and Scikit-learn by Joaquín Amat Rodrigo and Javier Escobar Ortiz, available under a Attribution 4.0 International (CC BY 4.0) at https://www.cienciadedatos.net/py27-forecasting-series-temporales-python-scikitlearn.html
 
 </font></p>
+
+<p><br></p>
+
+<p><strong>Did you like the article? Your support is important</strong></p>
+<p style="text-align:left"><font size="3" color="#555">
+Website maintenance has high cost, your contribution will help me to continue generating free educational content. Many thanks! &#128522 </font>
+<form action="https://www.paypal.com/donate" method="post" target="_top">
+  <input type="hidden" name="hosted_button_id" value="6NULYFYDKFTQL" />
+  <input type="image" src="https://www.paypalobjects.com/en_US/ES/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
+  <img alt="" border="0" src="https://www.paypal.com/en_ES/i/scr/pixel.gif" width="1" height="1" />
+  </form>	
+</p>
+
+<p><br></p>
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />This work by  Joaquín Amat Rodrigo is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</p>
+<p><a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />This work by Joaquín Amat Rodrigo and Javier Escobar Ortiz is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</p>
 
 <p><br><br></p>
 
