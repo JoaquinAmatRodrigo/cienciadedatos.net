@@ -186,6 +186,7 @@
   </script>
 <!-- End Quantcast Choice. Consent Manager Tag v2.0 (for TCF 2.0) -->
 
+
 <style type="text/css">
     /*!
 *
@@ -13369,7 +13370,7 @@ $( document ).ready(function(){
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <div>
-<img src='../images/diagrama-multistep-recursiva.png' width="700"/>
+<img src='../images/diagrama-multistep-recursiva.png' width="650"/>
 </div><center><font size='2.5'> <i>Diagrama del proceso de predicción multi step recursivo, para predecir 3 steps a futuro utilizando los últimos 4 lags de la serie como predictores.</i></font></center>
 </div>
 </div>
@@ -13757,8 +13758,8 @@ Training range: [Timestamp(&#39;1992-04-01 00:00:00&#39;), Timestamp(&#39;2005-0
 Training index type: DatetimeIndex 
 Training index frequency: MS 
 Regressor parameters: {&#39;bootstrap&#39;: True, &#39;ccp_alpha&#39;: 0.0, &#39;criterion&#39;: &#39;squared_error&#39;, &#39;max_depth&#39;: None, &#39;max_features&#39;: &#39;auto&#39;, &#39;max_leaf_nodes&#39;: None, &#39;max_samples&#39;: None, &#39;min_impurity_decrease&#39;: 0.0, &#39;min_samples_leaf&#39;: 1, &#39;min_samples_split&#39;: 2, &#39;min_weight_fraction_leaf&#39;: 0.0, &#39;n_estimators&#39;: 100, &#39;n_jobs&#39;: None, &#39;oob_score&#39;: False, &#39;random_state&#39;: 123, &#39;verbose&#39;: 0, &#39;warm_start&#39;: False} 
-Creation date: 2022-03-18 20:13:43 
-Last fit date: 2022-03-18 20:13:43 
+Creation date: 2022-03-26 15:29:35 
+Last fit date: 2022-03-26 15:29:36 
 Skforecast version: 0.4.3 </pre>
 </div>
 
@@ -13943,6 +13944,7 @@ Freq: MS, Name: pred, dtype: float64</pre>
                         <span class="n">refit</span>              <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
                         <span class="n">metric</span>             <span class="o">=</span> <span class="s1">&#39;mean_squared_error&#39;</span><span class="p">,</span>
                         <span class="n">initial_train_size</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">datos_train</span><span class="p">)</span><span class="o">*</span><span class="mf">0.5</span><span class="p">),</span>
+                        <span class="n">fixed_train_size</span>   <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
                         <span class="n">return_best</span>        <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
                         <span class="n">verbose</span>            <span class="o">=</span> <span class="kc">False</span>
                    <span class="p">)</span>
@@ -13975,21 +13977,21 @@ Freq: MS, Name: pred, dtype: float64</pre>
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>loop lags_grid:   0%|                                               | 0/2 [00:00&lt;?, ?it/s]
 loop param_grid:   0%|                                              | 0/6 [00:00&lt;?, ?it/s]
-loop param_grid:  17%|██████▎                               | 1/6 [00:01&lt;00:06,  1.24s/it]
-loop param_grid:  33%|████████████▋                         | 2/6 [00:06&lt;00:15,  3.83s/it]
-loop param_grid:  50%|███████████████████                   | 3/6 [00:08&lt;00:07,  2.66s/it]
-loop param_grid:  67%|█████████████████████████▎            | 4/6 [00:15&lt;00:08,  4.41s/it]
-loop param_grid:  83%|███████████████████████████████▋      | 5/6 [00:16&lt;00:03,  3.31s/it]
-loop param_grid: 100%|██████████████████████████████████████| 6/6 [00:23&lt;00:00,  4.38s/it]
-loop lags_grid:  50%|███████████████████▌                   | 1/2 [00:23&lt;00:23, 23.06s/it]
+loop param_grid:  17%|██████▎                               | 1/6 [00:01&lt;00:05,  1.09s/it]
+loop param_grid:  33%|████████████▋                         | 2/6 [00:06&lt;00:13,  3.44s/it]
+loop param_grid:  50%|███████████████████                   | 3/6 [00:07&lt;00:07,  2.38s/it]
+loop param_grid:  67%|█████████████████████████▎            | 4/6 [00:12&lt;00:07,  3.56s/it]
+loop param_grid:  83%|███████████████████████████████▋      | 5/6 [00:13&lt;00:02,  2.70s/it]
+loop param_grid: 100%|██████████████████████████████████████| 6/6 [00:19&lt;00:00,  3.70s/it]
+loop lags_grid:  50%|███████████████████▌                   | 1/2 [00:19&lt;00:19, 19.47s/it]
 loop param_grid:   0%|                                              | 0/6 [00:00&lt;?, ?it/s]
-loop param_grid:  17%|██████▎                               | 1/6 [00:01&lt;00:06,  1.24s/it]
-loop param_grid:  33%|████████████▋                         | 2/6 [00:07&lt;00:15,  3.92s/it]
-loop param_grid:  50%|███████████████████                   | 3/6 [00:08&lt;00:08,  2.71s/it]
-loop param_grid:  67%|█████████████████████████▎            | 4/6 [00:14&lt;00:08,  4.07s/it]
-loop param_grid:  83%|███████████████████████████████▋      | 5/6 [00:15&lt;00:03,  3.06s/it]
-loop param_grid: 100%|██████████████████████████████████████| 6/6 [00:22&lt;00:00,  4.35s/it]
-loop lags_grid: 100%|███████████████████████████████████████| 2/2 [00:45&lt;00:00, 22.83s/it]
+loop param_grid:  17%|██████▎                               | 1/6 [00:01&lt;00:05,  1.14s/it]
+loop param_grid:  33%|████████████▋                         | 2/6 [00:06&lt;00:14,  3.62s/it]
+loop param_grid:  50%|███████████████████                   | 3/6 [00:07&lt;00:07,  2.51s/it]
+loop param_grid:  67%|█████████████████████████▎            | 4/6 [00:13&lt;00:07,  3.77s/it]
+loop param_grid:  83%|███████████████████████████████▋      | 5/6 [00:14&lt;00:02,  2.86s/it]
+loop param_grid: 100%|██████████████████████████████████████| 6/6 [00:20&lt;00:00,  3.93s/it]
+loop lags_grid: 100%|███████████████████████████████████████| 2/2 [00:40&lt;00:00, 20.05s/it]
 </pre>
 </div>
 </div>
@@ -14314,15 +14316,20 @@ loop lags_grid: 100%|███████████████████�
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Backtesting">Backtesting<a class="anchor-link" href="#Backtesting">&#182;</a></h3><p><br></p>
-<p>El proceso de <em>Backtesting</em> consiste en simular el comportamiento que habría tenido el modelo si se hubiese ido ejecutando de forma recurrente, por ejemplo, prediciendo un total de 9 años a intervalos de 3 años (36 meses). Este tipo de evaluación puede aplicarse fácilmente con la función <code>backtesting_forecaster()</code>.</p>
-<p><strong>Backtesting con reentrenamiento (refit)</strong></p>
+<p>El proceso de <em>backtesting</em> consiste en evaluar el comportamiento de un modelo predictivo al aplicarlo de forma retrospectiva sobre datos históricos. Por lo tanto, es una estrategia de validación que permite cuantificar la capacidad predictiva de un modelo.</p>
+<p><strong>Backtesting con reentrenamiento</strong></p>
 <p>El modelo se entrena cada vez antes de realizar las predicciones, de esta forma, se incorpora toda la información disponible hasta el momento. Se trata de una adaptación del proceso de <em>cross-validation</em> en el que, en lugar de hacer un reparto aleatorio de las observaciones, el conjunto de entrenamiento se incrementa de forma secuencial, manteniendo el orden temporal de los datos.</p>
 <p><img src="../images/diagram-backtesting-refit.png" style="width: 500px;"/></p>
-<center><font size='2.5'> <i>Diagrama de time series backtesting con un tamaño inicial de entrenamiento de 10 observaciones, un horizonte de predicción de 3 steps y reentrenamiento en cada iteración.</i></font></center><p><strong>Backtesting sin reentrenamiento</strong></p>
+<center><font size='2.5'> <i>Diagrama de time series backtesting con un tamaño inicial de entrenamiento de 10 observaciones, un horizonte de predicción de 3 steps y reentrenamiento en cada iteración.</i></font></center><p><strong>Backtesting con reentrenamiento y tamaño de entrenamiento constante</strong></p>
+<p>Similar a la estrategia anterior pero, en este caso, el tamaño del conjunto de entrenamiento no se incrementa, simplemente se desplaza la ventana de tiempo que abarca. Esta estrategia se conoce también como <em>time series cross-validation</em> o <em>walk-forward validation</em>.</p>
+<p><img src="../images/diagram-backtesting-refit-fixed-train-size.png" style="width: 500px;"/></p>
+<center><font size='2.5'> <i>Diagrama de time series backtesting con un tamaño inicial de entrenamiento de 10 observaciones, un horizonte de predicción de 3 steps y reentrenamiento de tamaño constante.</i></font></center><p><strong>Backtesting sin reentrenamiento</strong></p>
 <p>Con esta estrategia, el modelo se entrena una única vez con un conjunto inicial y se realizan las predicciones de forma secuencial sin actualizar el modelo y siguiendo el orden temporal de los datos. Esta estrategia tiene la ventaja de ser mucho más rápida puesto que el modelo solo se entrena una vez. La desventaja es que el modelo no incorpora la última información disponible por lo que puede perder capacidad predictiva con el tiempo.</p>
 <p><img src="../images/diagram-backtesting-no-refit.png" style="width: 500px;"/></p>
 <p><br></p>
-<center><font size='2.5'> <i>Diagrama de time series backtesting con un tamaño inicial de entrenamiento de 10 observaciones, un horizonte de predicción de 3 steps, sin reentrenamiento en cada iteración.</i></font></center><p>Independientemente de la estrategia utilizada, es importante no incluir los datos de test en el proceso de búsqueda para no caer en problemas de <em>overfitting</em>.</p>
+<p><center><font size='2.5'> <i>Diagrama de time series backtesting con un tamaño inicial de entrenamiento de 10 observaciones, un horizonte de predicción de 3 steps, sin reentrenamiento en cada iteración.</i></font></center>
+<br></p>
+<p>La librería skforecast tiene disponible todas estas <a href="https://joaquinamatrodrigo.github.io/skforecast/latest/notebooks/backtesting.html">entrategias de backtesting</a>. Independientemente de cuál se utilice, es importante no incluir los datos de test en el proceso de búsqueda para no caer en problemas de <em>overfitting</em>.</p>
 <p>Para este ejemplo, se sigue una estrategia de <em>backtesting</em> con reentrenamiento. Internamente, el proceso seguido por la función es:</p>
 <ul>
 <li><p>En la primera iteración se emplea el 50% de las observaciones entrenamiento (en este caso 87) para el entrenamiento inicial y las siguientes 36 observaciones como conjunto de validación.</p>
@@ -14348,13 +14355,14 @@ loop lags_grid: 100%|███████████████████�
 <span class="n">datos_val</span>  <span class="o">=</span> <span class="n">datos</span><span class="p">[</span><span class="o">-</span><span class="n">n_val</span><span class="p">:]</span>
 
 <span class="n">metric</span><span class="p">,</span> <span class="n">predicciones_backtest</span> <span class="o">=</span> <span class="n">backtesting_forecaster</span><span class="p">(</span>
-                                    <span class="n">forecaster</span> <span class="o">=</span> <span class="n">forecaster</span><span class="p">,</span>
-                                    <span class="n">y</span>          <span class="o">=</span> <span class="n">datos</span><span class="p">[</span><span class="s1">&#39;y&#39;</span><span class="p">],</span>
+                                    <span class="n">forecaster</span>         <span class="o">=</span> <span class="n">forecaster</span><span class="p">,</span>
+                                    <span class="n">y</span>                  <span class="o">=</span> <span class="n">datos</span><span class="p">[</span><span class="s1">&#39;y&#39;</span><span class="p">],</span>
                                     <span class="n">initial_train_size</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">datos_train</span><span class="p">),</span>
-                                    <span class="n">steps</span>      <span class="o">=</span> <span class="n">steps</span><span class="p">,</span>
-                                    <span class="n">refit</span>      <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
-                                    <span class="n">metric</span>     <span class="o">=</span> <span class="s1">&#39;mean_squared_error&#39;</span><span class="p">,</span>
-                                    <span class="n">verbose</span>    <span class="o">=</span> <span class="kc">True</span>
+                                    <span class="n">steps</span>              <span class="o">=</span> <span class="n">steps</span><span class="p">,</span>
+                                    <span class="n">refit</span>              <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+                                    <span class="n">fixed_train_size</span>   <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+                                    <span class="n">metric</span>             <span class="o">=</span> <span class="s1">&#39;mean_squared_error&#39;</span><span class="p">,</span>
+                                    <span class="n">verbose</span>            <span class="o">=</span> <span class="kc">True</span>
                                <span class="p">)</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Error de backtest: </span><span class="si">{</span><span class="n">metric</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
@@ -14443,6 +14451,7 @@ Error de backtest: 0.010578977232387663
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Importancia-predictores">Importancia predictores<a class="anchor-link" href="#Importancia-predictores">&#182;</a></h3><p><br></p>
 <p>Dado que el objeto <code>ForecasterAutoreg</code> utiliza modelos <em>scikit-learn</em>, una vez entrenado, se puede acceder a la importancia de los predictores. Cuando el regresor empleado es un <code>LinearRegression</code>, <code>Lasso</code> o <code>Ridge</code>, la importancia queda reflejada en los <a href="https://www.cienciadedatos.net/documentos/py10-regresion-lineal-python.html#Interpretaci%C3%B3n-del-modelo">coeficientes</a> del modelo. En regresores  <code>GradientBoostingRegressor</code>, <code>RandomForestRegressor</code> o <code>HistGradientBoostingRegressor</code>, la importancia de los predictores está basada en la <a href="https://www.cienciadedatos.net/documentos/py08_random_forest_python.html#Importancia-de-los-predictores">reducción de impureza</a>.</p>
+<p><em>Nota: este método solo devuelve valores si el regresor utilizado dentro del forecaster tiene el atributo <code>coef_</code> o <code>feature_importances_</code>.</em></p>
 
 </div>
 </div>
@@ -14743,8 +14752,8 @@ Training range: [Timestamp(&#39;1992-04-01 00:00:00&#39;), Timestamp(&#39;2005-0
 Training index type: DatetimeIndex 
 Training index frequency: MS 
 Regressor parameters: {&#39;bootstrap&#39;: True, &#39;ccp_alpha&#39;: 0.0, &#39;criterion&#39;: &#39;squared_error&#39;, &#39;max_depth&#39;: None, &#39;max_features&#39;: &#39;auto&#39;, &#39;max_leaf_nodes&#39;: None, &#39;max_samples&#39;: None, &#39;min_impurity_decrease&#39;: 0.0, &#39;min_samples_leaf&#39;: 1, &#39;min_samples_split&#39;: 2, &#39;min_weight_fraction_leaf&#39;: 0.0, &#39;n_estimators&#39;: 100, &#39;n_jobs&#39;: None, &#39;oob_score&#39;: False, &#39;random_state&#39;: 123, &#39;verbose&#39;: 0, &#39;warm_start&#39;: False} 
-Creation date: 2022-03-18 20:14:36 
-Last fit date: 2022-03-18 20:14:36 
+Creation date: 2022-03-26 15:30:23 
+Last fit date: 2022-03-26 15:30:23 
 Skforecast version: 0.4.3 </pre>
 </div>
 
@@ -14888,17 +14897,18 @@ Skforecast version: 0.4.3 </pre>
 <span class="n">lags_grid</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">20</span><span class="p">]</span>
 
 <span class="n">resultados_grid</span> <span class="o">=</span> <span class="n">grid_search_forecaster</span><span class="p">(</span>
-                        <span class="n">forecaster</span>  <span class="o">=</span> <span class="n">forecaster</span><span class="p">,</span>
-                        <span class="n">y</span>           <span class="o">=</span> <span class="n">datos_train</span><span class="p">[</span><span class="s1">&#39;y&#39;</span><span class="p">],</span>
-                        <span class="n">exog</span>        <span class="o">=</span> <span class="n">datos_train</span><span class="p">[</span><span class="s1">&#39;exog_1&#39;</span><span class="p">],</span>
-                        <span class="n">param_grid</span>  <span class="o">=</span> <span class="n">param_grid</span><span class="p">,</span>
-                        <span class="n">lags_grid</span>   <span class="o">=</span> <span class="n">lags_grid</span><span class="p">,</span>
-                        <span class="n">steps</span>       <span class="o">=</span> <span class="mi">10</span><span class="p">,</span>
-                        <span class="n">refit</span>       <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
-                        <span class="n">metric</span>      <span class="o">=</span> <span class="s1">&#39;mean_squared_error&#39;</span><span class="p">,</span>
+                        <span class="n">forecaster</span>         <span class="o">=</span> <span class="n">forecaster</span><span class="p">,</span>
+                        <span class="n">y</span>                  <span class="o">=</span> <span class="n">datos_train</span><span class="p">[</span><span class="s1">&#39;y&#39;</span><span class="p">],</span>
+                        <span class="n">exog</span>               <span class="o">=</span> <span class="n">datos_train</span><span class="p">[</span><span class="s1">&#39;exog_1&#39;</span><span class="p">],</span>
+                        <span class="n">param_grid</span>         <span class="o">=</span> <span class="n">param_grid</span><span class="p">,</span>
+                        <span class="n">lags_grid</span>          <span class="o">=</span> <span class="n">lags_grid</span><span class="p">,</span>
+                        <span class="n">steps</span>              <span class="o">=</span> <span class="mi">10</span><span class="p">,</span>
+                        <span class="n">refit</span>              <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+                        <span class="n">metric</span>             <span class="o">=</span> <span class="s1">&#39;mean_squared_error&#39;</span><span class="p">,</span>
                         <span class="n">initial_train_size</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">datos_train</span><span class="p">)</span><span class="o">*</span><span class="mf">0.5</span><span class="p">),</span>
-                        <span class="n">return_best</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
-                        <span class="n">verbose</span>     <span class="o">=</span> <span class="kc">False</span>
+                        <span class="n">fixed_train_size</span>   <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+                        <span class="n">return_best</span>        <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+                        <span class="n">verbose</span>            <span class="o">=</span> <span class="kc">False</span>
                     <span class="p">)</span>
 </pre></div>
 
@@ -14929,38 +14939,38 @@ Skforecast version: 0.4.3 </pre>
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>loop lags_grid:   0%|                                               | 0/3 [00:00&lt;?, ?it/s]
 loop param_grid:   0%|                                              | 0/9 [00:00&lt;?, ?it/s]
-loop param_grid:  11%|████▏                                 | 1/9 [00:00&lt;00:05,  1.48it/s]
-loop param_grid:  22%|████████▍                             | 2/9 [00:01&lt;00:06,  1.05it/s]
-loop param_grid:  33%|████████████▋                         | 3/9 [00:07&lt;00:19,  3.19s/it]
-loop param_grid:  44%|████████████████▉                     | 4/9 [00:08&lt;00:11,  2.20s/it]
-loop param_grid:  56%|█████████████████████                 | 5/9 [00:09&lt;00:07,  1.84s/it]
-loop param_grid:  67%|█████████████████████████▎            | 6/9 [00:15&lt;00:09,  3.13s/it]
-loop param_grid:  78%|█████████████████████████████▌        | 7/9 [00:15&lt;00:04,  2.32s/it]
-loop param_grid:  89%|█████████████████████████████████▊    | 8/9 [00:17&lt;00:02,  2.01s/it]
-loop param_grid: 100%|██████████████████████████████████████| 9/9 [00:23&lt;00:00,  3.31s/it]
-loop lags_grid:  33%|█████████████                          | 1/3 [00:23&lt;00:46, 23.38s/it]
+loop param_grid:  11%|████▏                                 | 1/9 [00:00&lt;00:04,  1.72it/s]
+loop param_grid:  22%|████████▍                             | 2/9 [00:01&lt;00:05,  1.17it/s]
+loop param_grid:  33%|████████████▋                         | 3/9 [00:06&lt;00:16,  2.73s/it]
+loop param_grid:  44%|████████████████▉                     | 4/9 [00:07&lt;00:09,  1.88s/it]
+loop param_grid:  56%|█████████████████████                 | 5/9 [00:08&lt;00:06,  1.59s/it]
+loop param_grid:  67%|█████████████████████████▎            | 6/9 [00:13&lt;00:08,  2.79s/it]
+loop param_grid:  78%|█████████████████████████████▌        | 7/9 [00:14&lt;00:04,  2.10s/it]
+loop param_grid:  89%|█████████████████████████████████▊    | 8/9 [00:15&lt;00:01,  1.80s/it]
+loop param_grid: 100%|██████████████████████████████████████| 9/9 [00:20&lt;00:00,  2.89s/it]
+loop lags_grid:  33%|█████████████                          | 1/3 [00:20&lt;00:40, 20.48s/it]
 loop param_grid:   0%|                                              | 0/9 [00:00&lt;?, ?it/s]
-loop param_grid:  11%|████▏                                 | 1/9 [00:00&lt;00:05,  1.58it/s]
-loop param_grid:  22%|████████▍                             | 2/9 [00:01&lt;00:07,  1.02s/it]
-loop param_grid:  33%|████████████▋                         | 3/9 [00:09&lt;00:23,  3.85s/it]
-loop param_grid:  44%|████████████████▉                     | 4/9 [00:09&lt;00:13,  2.62s/it]
-loop param_grid:  56%|█████████████████████                 | 5/9 [00:11&lt;00:08,  2.13s/it]
-loop param_grid:  67%|█████████████████████████▎            | 6/9 [00:17&lt;00:10,  3.49s/it]
-loop param_grid:  78%|█████████████████████████████▌        | 7/9 [00:17&lt;00:05,  2.57s/it]
-loop param_grid:  89%|█████████████████████████████████▊    | 8/9 [00:19&lt;00:02,  2.24s/it]
-loop param_grid: 100%|██████████████████████████████████████| 9/9 [00:25&lt;00:00,  3.56s/it]
-loop lags_grid:  67%|██████████████████████████             | 2/3 [00:49&lt;00:24, 24.89s/it]
+loop param_grid:  11%|████▏                                 | 1/9 [00:00&lt;00:04,  1.68it/s]
+loop param_grid:  22%|████████▍                             | 2/9 [00:01&lt;00:06,  1.11it/s]
+loop param_grid:  33%|████████████▋                         | 3/9 [00:07&lt;00:17,  2.93s/it]
+loop param_grid:  44%|████████████████▉                     | 4/9 [00:07&lt;00:10,  2.02s/it]
+loop param_grid:  56%|█████████████████████                 | 5/9 [00:08&lt;00:06,  1.72s/it]
+loop param_grid:  67%|█████████████████████████▎            | 6/9 [00:14&lt;00:09,  3.07s/it]
+loop param_grid:  78%|█████████████████████████████▌        | 7/9 [00:15&lt;00:04,  2.27s/it]
+loop param_grid:  89%|█████████████████████████████████▊    | 8/9 [00:16&lt;00:01,  1.93s/it]
+loop param_grid: 100%|██████████████████████████████████████| 9/9 [00:22&lt;00:00,  3.10s/it]
+loop lags_grid:  67%|██████████████████████████             | 2/3 [00:42&lt;00:21, 21.40s/it]
 loop param_grid:   0%|                                              | 0/9 [00:00&lt;?, ?it/s]
-loop param_grid:  11%|████▏                                 | 1/9 [00:00&lt;00:04,  1.62it/s]
-loop param_grid:  22%|████████▍                             | 2/9 [00:01&lt;00:07,  1.02s/it]
-loop param_grid:  33%|████████████▋                         | 3/9 [00:07&lt;00:19,  3.33s/it]
-loop param_grid:  44%|████████████████▉                     | 4/9 [00:08&lt;00:11,  2.29s/it]
-loop param_grid:  56%|█████████████████████                 | 5/9 [00:10&lt;00:07,  1.94s/it]
-loop param_grid:  67%|█████████████████████████▎            | 6/9 [00:16&lt;00:10,  3.37s/it]
-loop param_grid:  78%|█████████████████████████████▌        | 7/9 [00:16&lt;00:04,  2.49s/it]
-loop param_grid:  89%|█████████████████████████████████▊    | 8/9 [00:18&lt;00:02,  2.11s/it]
-loop param_grid: 100%|██████████████████████████████████████| 9/9 [00:25&lt;00:00,  3.60s/it]
-loop lags_grid: 100%|███████████████████████████████████████| 3/3 [01:14&lt;00:00, 24.78s/it]</pre>
+loop param_grid:  11%|████▏                                 | 1/9 [00:00&lt;00:04,  1.63it/s]
+loop param_grid:  22%|████████▍                             | 2/9 [00:01&lt;00:06,  1.07it/s]
+loop param_grid:  33%|████████████▋                         | 3/9 [00:07&lt;00:18,  3.04s/it]
+loop param_grid:  44%|████████████████▉                     | 4/9 [00:07&lt;00:10,  2.10s/it]
+loop param_grid:  56%|█████████████████████                 | 5/9 [00:09&lt;00:07,  1.79s/it]
+loop param_grid:  67%|█████████████████████████▎            | 6/9 [00:15&lt;00:09,  3.20s/it]
+loop param_grid:  78%|█████████████████████████████▌        | 7/9 [00:15&lt;00:04,  2.37s/it]
+loop param_grid:  89%|█████████████████████████████████▊    | 8/9 [00:17&lt;00:02,  2.03s/it]
+loop param_grid: 100%|██████████████████████████████████████| 9/9 [00:23&lt;00:00,  3.33s/it]
+loop lags_grid: 100%|███████████████████████████████████████| 3/3 [01:05&lt;00:00, 21.94s/it]</pre>
 </div>
 </div>
 
@@ -15329,8 +15339,8 @@ Training range: [Timestamp(&#39;1992-04-01 00:00:00&#39;), Timestamp(&#39;2005-0
 Training index type: DatetimeIndex 
 Training index frequency: MS 
 Regressor parameters: {&#39;bootstrap&#39;: True, &#39;ccp_alpha&#39;: 0.0, &#39;criterion&#39;: &#39;squared_error&#39;, &#39;max_depth&#39;: None, &#39;max_features&#39;: &#39;auto&#39;, &#39;max_leaf_nodes&#39;: None, &#39;max_samples&#39;: None, &#39;min_impurity_decrease&#39;: 0.0, &#39;min_samples_leaf&#39;: 1, &#39;min_samples_split&#39;: 2, &#39;min_weight_fraction_leaf&#39;: 0.0, &#39;n_estimators&#39;: 100, &#39;n_jobs&#39;: None, &#39;oob_score&#39;: False, &#39;random_state&#39;: 123, &#39;verbose&#39;: 0, &#39;warm_start&#39;: False} 
-Creation date: 2022-03-18 20:15:51 
-Last fit date: 2022-03-18 20:15:51 
+Creation date: 2022-03-26 15:31:30 
+Last fit date: 2022-03-26 15:31:30 
 Skforecast version: 0.4.3 </pre>
 </div>
 
@@ -15715,6 +15725,7 @@ Freq: MS, Name: y, dtype: float64</pre>
                         <span class="n">refit</span>       <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
                         <span class="n">metric</span>      <span class="o">=</span> <span class="s1">&#39;mean_squared_error&#39;</span><span class="p">,</span>
                         <span class="n">initial_train_size</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">datos_train</span><span class="p">)</span><span class="o">*</span><span class="mf">0.5</span><span class="p">),</span>
+                        <span class="n">fixed_train_size</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
                         <span class="n">return_best</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
                         <span class="n">verbose</span>     <span class="o">=</span> <span class="kc">False</span>
                     <span class="p">)</span>
@@ -15747,13 +15758,13 @@ Freq: MS, Name: y, dtype: float64</pre>
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>loop lags_grid:   0%|                                               | 0/1 [00:00&lt;?, ?it/s]
 loop param_grid:   0%|                                              | 0/6 [00:00&lt;?, ?it/s]
-loop param_grid:  17%|██████▎                               | 1/6 [00:01&lt;00:06,  1.26s/it]
-loop param_grid:  33%|████████████▋                         | 2/6 [00:06&lt;00:14,  3.69s/it]
-loop param_grid:  50%|███████████████████                   | 3/6 [00:08&lt;00:08,  2.68s/it]
-loop param_grid:  67%|█████████████████████████▎            | 4/6 [00:13&lt;00:07,  3.89s/it]
-loop param_grid:  83%|███████████████████████████████▋      | 5/6 [00:15&lt;00:02,  2.96s/it]
-loop param_grid: 100%|██████████████████████████████████████| 6/6 [00:21&lt;00:00,  3.99s/it]
-loop lags_grid: 100%|███████████████████████████████████████| 1/1 [00:21&lt;00:00, 21.18s/it]</pre>
+loop param_grid:  17%|██████▎                               | 1/6 [00:01&lt;00:05,  1.09s/it]
+loop param_grid:  33%|████████████▋                         | 2/6 [00:06&lt;00:13,  3.45s/it]
+loop param_grid:  50%|███████████████████                   | 3/6 [00:07&lt;00:07,  2.38s/it]
+loop param_grid:  67%|█████████████████████████▎            | 4/6 [00:12&lt;00:07,  3.55s/it]
+loop param_grid:  83%|███████████████████████████████▋      | 5/6 [00:13&lt;00:02,  2.69s/it]
+loop param_grid: 100%|██████████████████████████████████████| 6/6 [00:19&lt;00:00,  3.66s/it]
+loop lags_grid: 100%|███████████████████████████████████████| 1/1 [00:19&lt;00:00, 19.37s/it]</pre>
 </div>
 </div>
 
@@ -16054,7 +16065,7 @@ Training range: None
 Training index type: None 
 Training index frequency: None 
 Regressor parameters: {&#39;standardscaler__copy&#39;: True, &#39;standardscaler__with_mean&#39;: True, &#39;standardscaler__with_std&#39;: True, &#39;lasso__alpha&#39;: 1.0, &#39;lasso__copy_X&#39;: True, &#39;lasso__fit_intercept&#39;: True, &#39;lasso__max_iter&#39;: 1000, &#39;lasso__normalize&#39;: &#39;deprecated&#39;, &#39;lasso__positive&#39;: False, &#39;lasso__precompute&#39;: False, &#39;lasso__random_state&#39;: 123, &#39;lasso__selection&#39;: &#39;cyclic&#39;, &#39;lasso__tol&#39;: 0.0001, &#39;lasso__warm_start&#39;: False} 
-Creation date: 2022-03-18 20:16:14 
+Creation date: 2022-03-26 15:31:50 
 Last fit date: None 
 Skforecast version: 0.4.3 </pre>
 </div>
@@ -16087,11 +16098,12 @@ Skforecast version: 0.4.3 </pre>
                         <span class="n">forecaster</span>  <span class="o">=</span> <span class="n">forecaster</span><span class="p">,</span>
                         <span class="n">y</span>           <span class="o">=</span> <span class="n">datos_train</span><span class="p">[</span><span class="s1">&#39;y&#39;</span><span class="p">],</span>
                         <span class="n">param_grid</span>  <span class="o">=</span> <span class="n">param_grid</span><span class="p">,</span>
-                        <span class="n">lags_grid</span> <span class="o">=</span> <span class="n">lags_grid</span><span class="p">,</span>
+                        <span class="n">lags_grid</span>   <span class="o">=</span> <span class="n">lags_grid</span><span class="p">,</span>
                         <span class="n">steps</span>       <span class="o">=</span> <span class="mi">36</span><span class="p">,</span>
                         <span class="n">refit</span>       <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
                         <span class="n">metric</span>      <span class="o">=</span> <span class="s1">&#39;mean_squared_error&#39;</span><span class="p">,</span>
                         <span class="n">initial_train_size</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">datos_train</span><span class="p">)</span><span class="o">*</span><span class="mf">0.5</span><span class="p">),</span>
+                        <span class="n">fixed_train_size</span>   <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
                         <span class="n">return_best</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
                         <span class="n">verbose</span>     <span class="o">=</span> <span class="kc">False</span>
                     <span class="p">)</span>
@@ -16124,41 +16136,41 @@ Skforecast version: 0.4.3 </pre>
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>loop lags_grid:   0%|                                               | 0/3 [00:00&lt;?, ?it/s]
 loop param_grid:   0%|                                             | 0/10 [00:00&lt;?, ?it/s]
-loop param_grid:  10%|███▋                                 | 1/10 [00:00&lt;00:04,  2.22it/s]
-loop param_grid:  20%|███████▍                             | 2/10 [00:00&lt;00:02,  2.77it/s]
-loop param_grid:  30%|███████████                          | 3/10 [00:01&lt;00:02,  3.10it/s]
-loop param_grid:  40%|██████████████▊                      | 4/10 [00:01&lt;00:01,  3.34it/s]
-loop param_grid:  50%|██████████████████▌                  | 5/10 [00:01&lt;00:01,  3.45it/s]
-loop param_grid:  60%|██████████████████████▏              | 6/10 [00:01&lt;00:01,  3.43it/s]
-loop param_grid:  70%|█████████████████████████▉           | 7/10 [00:02&lt;00:00,  3.34it/s]
-loop param_grid:  80%|█████████████████████████████▌       | 8/10 [00:02&lt;00:00,  3.39it/s]
-loop param_grid:  90%|█████████████████████████████████▎   | 9/10 [00:02&lt;00:00,  3.41it/s]
-loop param_grid: 100%|████████████████████████████████████| 10/10 [00:03&lt;00:00,  3.43it/s]
-loop lags_grid:  33%|█████████████                          | 1/3 [00:03&lt;00:06,  3.04s/it]
+loop param_grid:  10%|███▋                                 | 1/10 [00:00&lt;00:02,  3.26it/s]
+loop param_grid:  20%|███████▍                             | 2/10 [00:00&lt;00:02,  3.58it/s]
+loop param_grid:  30%|███████████                          | 3/10 [00:00&lt;00:01,  3.71it/s]
+loop param_grid:  40%|██████████████▊                      | 4/10 [00:01&lt;00:01,  3.75it/s]
+loop param_grid:  50%|██████████████████▌                  | 5/10 [00:01&lt;00:01,  3.74it/s]
+loop param_grid:  60%|██████████████████████▏              | 6/10 [00:01&lt;00:01,  3.76it/s]
+loop param_grid:  70%|█████████████████████████▉           | 7/10 [00:01&lt;00:00,  3.78it/s]
+loop param_grid:  80%|█████████████████████████████▌       | 8/10 [00:02&lt;00:00,  3.78it/s]
+loop param_grid:  90%|█████████████████████████████████▎   | 9/10 [00:02&lt;00:00,  3.77it/s]
+loop param_grid: 100%|████████████████████████████████████| 10/10 [00:02&lt;00:00,  3.79it/s]
+loop lags_grid:  33%|█████████████                          | 1/3 [00:02&lt;00:05,  2.68s/it]
 loop param_grid:   0%|                                             | 0/10 [00:00&lt;?, ?it/s]
-loop param_grid:  10%|███▋                                 | 1/10 [00:00&lt;00:02,  3.37it/s]
-loop param_grid:  20%|███████▍                             | 2/10 [00:00&lt;00:02,  3.06it/s]
-loop param_grid:  30%|███████████                          | 3/10 [00:01&lt;00:02,  2.51it/s]
-loop param_grid:  40%|██████████████▊                      | 4/10 [00:01&lt;00:02,  2.48it/s]
-loop param_grid:  50%|██████████████████▌                  | 5/10 [00:02&lt;00:02,  2.32it/s]
-loop param_grid:  60%|██████████████████████▏              | 6/10 [00:02&lt;00:01,  2.37it/s]
-loop param_grid:  70%|█████████████████████████▉           | 7/10 [00:02&lt;00:01,  2.40it/s]
-loop param_grid:  80%|█████████████████████████████▌       | 8/10 [00:03&lt;00:00,  2.44it/s]
-loop param_grid:  90%|█████████████████████████████████▎   | 9/10 [00:03&lt;00:00,  2.51it/s]
-loop param_grid: 100%|████████████████████████████████████| 10/10 [00:03&lt;00:00,  2.57it/s]
-loop lags_grid:  67%|██████████████████████████             | 2/3 [00:07&lt;00:03,  3.59s/it]
+loop param_grid:  10%|███▋                                 | 1/10 [00:00&lt;00:02,  3.42it/s]
+loop param_grid:  20%|███████▍                             | 2/10 [00:00&lt;00:02,  3.53it/s]
+loop param_grid:  30%|███████████                          | 3/10 [00:00&lt;00:01,  3.56it/s]
+loop param_grid:  40%|██████████████▊                      | 4/10 [00:01&lt;00:01,  3.59it/s]
+loop param_grid:  50%|██████████████████▌                  | 5/10 [00:01&lt;00:01,  3.59it/s]
+loop param_grid:  60%|██████████████████████▏              | 6/10 [00:01&lt;00:01,  3.61it/s]
+loop param_grid:  70%|█████████████████████████▉           | 7/10 [00:01&lt;00:00,  3.63it/s]
+loop param_grid:  80%|█████████████████████████████▌       | 8/10 [00:02&lt;00:00,  3.64it/s]
+loop param_grid:  90%|█████████████████████████████████▎   | 9/10 [00:02&lt;00:00,  3.66it/s]
+loop param_grid: 100%|████████████████████████████████████| 10/10 [00:02&lt;00:00,  3.67it/s]
+loop lags_grid:  67%|██████████████████████████             | 2/3 [00:05&lt;00:02,  2.73s/it]
 loop param_grid:   0%|                                             | 0/10 [00:00&lt;?, ?it/s]
-loop param_grid:  10%|███▋                                 | 1/10 [00:00&lt;00:03,  2.26it/s]
-loop param_grid:  20%|███████▍                             | 2/10 [00:00&lt;00:03,  2.49it/s]
-loop param_grid:  30%|███████████                          | 3/10 [00:01&lt;00:02,  2.76it/s]
-loop param_grid:  40%|██████████████▊                      | 4/10 [00:01&lt;00:02,  2.97it/s]
-loop param_grid:  50%|██████████████████▌                  | 5/10 [00:01&lt;00:01,  2.82it/s]
-loop param_grid:  60%|██████████████████████▏              | 6/10 [00:02&lt;00:01,  2.98it/s]
-loop param_grid:  70%|█████████████████████████▉           | 7/10 [00:02&lt;00:00,  3.13it/s]
-loop param_grid:  80%|█████████████████████████████▌       | 8/10 [00:02&lt;00:00,  3.27it/s]
-loop param_grid:  90%|█████████████████████████████████▎   | 9/10 [00:02&lt;00:00,  3.37it/s]
-loop param_grid: 100%|████████████████████████████████████| 10/10 [00:03&lt;00:00,  3.15it/s]
-loop lags_grid: 100%|███████████████████████████████████████| 3/3 [00:10&lt;00:00,  3.45s/it]</pre>
+loop param_grid:  10%|███▋                                 | 1/10 [00:00&lt;00:02,  3.18it/s]
+loop param_grid:  20%|███████▍                             | 2/10 [00:00&lt;00:02,  3.25it/s]
+loop param_grid:  30%|███████████                          | 3/10 [00:00&lt;00:02,  3.36it/s]
+loop param_grid:  40%|██████████████▊                      | 4/10 [00:01&lt;00:01,  3.44it/s]
+loop param_grid:  50%|██████████████████▌                  | 5/10 [00:01&lt;00:01,  3.49it/s]
+loop param_grid:  60%|██████████████████████▏              | 6/10 [00:01&lt;00:01,  3.51it/s]
+loop param_grid:  70%|█████████████████████████▉           | 7/10 [00:02&lt;00:00,  3.53it/s]
+loop param_grid:  80%|█████████████████████████████▌       | 8/10 [00:02&lt;00:00,  3.54it/s]
+loop param_grid:  90%|█████████████████████████████████▎   | 9/10 [00:02&lt;00:00,  3.56it/s]
+loop param_grid: 100%|████████████████████████████████████| 10/10 [00:02&lt;00:00,  3.58it/s]
+loop lags_grid: 100%|███████████████████████████████████████| 3/3 [00:08&lt;00:00,  2.77s/it]</pre>
 </div>
 </div>
 
@@ -16380,7 +16392,7 @@ loop lags_grid: 100%|███████████████████�
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Intervalos-de-predicci&#243;n">Intervalos de predicci&#243;n<a class="anchor-link" href="#Intervalos-de-predicci&#243;n">&#182;</a></h2><p><br></p>
 <p>Un intervalo de predicción define el intervalo dentro del cual es de esperar que se encuentre el verdadero valor de $y$ con una determinada probabilidad. Por ejemplo, es de esperar que el intervalo de predicción (1, 99) contenga el verdadero valor de la predicción con un 98% de probabilidad.</p>
-<p>Rob J Hyndman y George Athanasopoulos, listan en su libro <em>Forecasting: Principles and Practice</em> <a href="https://otexts.com/fpp2/prediction-intervals.html">mútiples formas de estimar intervalos de predicción</a>, la mayoría los cuales requieren que los residuos (errores) del modelo se distribuyan de forma normal. Cuando no se puede asumir esta propiedad, se puede recurrir a <em>bootstrapping</em>, que solo asume que los residuos no están correlacionados. Este es el método utilizado en la librería <strong>skforecast</strong> para los modelos de tipo <code>ForecasterAutoreg</code> y <code>ForecasterAutoregCustom</code>.</p>
+<p>Rob J Hyndman y George Athanasopoulos, listan en su libro <em>Forecasting: Principles and Practice</em> <a href="https://otexts.com/fpp2/prediction-intervals.html">mútiples formas de estimar intervalos de predicción</a>, la mayoría los cuales requieren que los residuos (errores) del modelo se distribuyan de forma normal. Cuando no se puede asumir esta propiedad, se puede recurrir a <em>bootstrapping</em>, que solo asume que los residuos no están correlacionados. Este es el método utilizado en la librería <strong>skforecast</strong> para los modelos de tipo <code>ForecasterAutoreg</code> y <code>ForecasterAutoregCustom</code>. Puede encontrarse más detalle en <a href="https://joaquinamatrodrigo.github.io/skforecast/0.4.3/notebooks/prediction-intervals.html">skforecast-prediction intervals</a>.</p>
 <div>
 <img src='../images/bootstrapped-prediction-interval.gif'/>
 </div><center><font size='2.5'> <i>Diagrama de cómo crear intervalos de predicción utilizando el proceso de bootstrapping.</i></font></center><p><br><br></p>
@@ -16606,6 +16618,7 @@ loop lags_grid: 100%|███████████████████�
                             <span class="n">forecaster</span>         <span class="o">=</span> <span class="n">forecaster</span><span class="p">,</span>
                             <span class="n">y</span>                  <span class="o">=</span> <span class="n">datos</span><span class="p">[</span><span class="s1">&#39;y&#39;</span><span class="p">],</span>
                             <span class="n">initial_train_size</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">datos_train</span><span class="p">),</span>
+                            <span class="n">fixed_train_size</span>   <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
                             <span class="n">steps</span>              <span class="o">=</span> <span class="n">steps</span><span class="p">,</span>
                             <span class="n">metric</span>             <span class="o">=</span> <span class="s1">&#39;mean_squared_error&#39;</span><span class="p">,</span>
                             <span class="n">refit</span>              <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
@@ -16730,6 +16743,129 @@ Error de test (mse): 0.012100781904923396
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="M&#233;tricas-custom">M&#233;tricas custom<a class="anchor-link" href="#M&#233;tricas-custom">&#182;</a></h2><p><br></p>
+<p>En los procesos de <code>backtesting_forecaster</code> y optimización de hiperparámetros (<code>grid_search_forecaster</code>), además de las métricas <em>mean_squared_error</em>, <em>mean_absolute_error</em>  y <em>mean_absolute_percentage_error</em>, el usuario puede utilizar cualquier función que desee siempre y cuando cumpla que:</p>
+<ul>
+<li><p>Tine como argumentos:</p>
+<ul>
+<li><p><code>y_true</code>: verdaderos valores de la serie.</p>
+</li>
+<li><p><code>y_pred</code>: valores predichos.</p>
+</li>
+</ul>
+</li>
+<li><p>Devuelve un valor numérico (<code>float</code> o <code>int</code>).</p>
+</li>
+<li><p>El modelo es mejor cuanto menor es la métrica. Esto es únicamente necesario si se quiere que la función <code>grid_search_forecaster</code> reentrene automáticamente el mejor modelo encontrado.</p>
+</li>
+</ul>
+<p>Gracias a esta flexibilidad, es posible evaluar la capacidad predictiva del modelo en escenarios muy diversos, por ejemplo:</p>
+<ul>
+<li><p>Considerar únicamente determinados meses, días u horas.</p>
+</li>
+<li><p>Considerar únicamente fechas que sean festivos.</p>
+</li>
+<li><p>Considerar únicamente el último <em>step</em> del horizonte predicho.</p>
+</li>
+</ul>
+<p>Véase un ejemplo el que se quiere predecir un horizonte de 12 meses, pero únicamente considerar los últimos 3 meses de cada año para calcular la métrica de interés.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[53]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Custom metric </span>
+<span class="c1"># ==============================================================================</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">mean_absolute_error</span>
+
+<span class="k">def</span> <span class="nf">custom_metric</span><span class="p">(</span><span class="n">y_true</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Calcular el mean_absolute_error utilizando únicamente las predicciones de</span>
+<span class="sd">    los 3 últimos meses del año.</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="n">mask</span> <span class="o">=</span> <span class="n">y_true</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">month</span><span class="o">.</span><span class="n">isin</span><span class="p">([</span><span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">])</span>
+    <span class="n">metric</span> <span class="o">=</span> <span class="n">mean_absolute_error</span><span class="p">(</span><span class="n">y_true</span><span class="p">[</span><span class="n">mask</span><span class="p">],</span> <span class="n">y_pred</span><span class="p">[</span><span class="n">mask</span><span class="p">])</span>
+    
+    <span class="k">return</span> <span class="n">metric</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[54]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Backtesting </span>
+<span class="c1"># ==============================================================================</span>
+<span class="n">n_val</span> <span class="o">=</span> <span class="mi">36</span><span class="o">*</span><span class="mi">3</span> <span class="c1"># Se separan para el backtest los últimos 9 años</span>
+<span class="n">datos_train</span> <span class="o">=</span> <span class="n">datos</span><span class="p">[:</span><span class="o">-</span><span class="n">n_val</span><span class="p">]</span>
+<span class="n">datos_val</span>  <span class="o">=</span> <span class="n">datos</span><span class="p">[</span><span class="o">-</span><span class="n">n_val</span><span class="p">:]</span>
+
+<span class="n">metric</span><span class="p">,</span> <span class="n">predicciones_backtest</span> <span class="o">=</span> <span class="n">backtesting_forecaster</span><span class="p">(</span>
+                                    <span class="n">forecaster</span>         <span class="o">=</span> <span class="n">forecaster</span><span class="p">,</span>
+                                    <span class="n">y</span>                  <span class="o">=</span> <span class="n">datos</span><span class="p">[</span><span class="s1">&#39;y&#39;</span><span class="p">],</span>
+                                    <span class="n">initial_train_size</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">datos_train</span><span class="p">),</span>
+                                    <span class="n">steps</span>              <span class="o">=</span> <span class="n">steps</span><span class="p">,</span>
+                                    <span class="n">refit</span>              <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+                                    <span class="n">fixed_train_size</span>   <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+                                    <span class="n">metric</span>             <span class="o">=</span> <span class="n">custom_metric</span><span class="p">,</span>
+                                    <span class="n">verbose</span>            <span class="o">=</span> <span class="kc">True</span>
+                               <span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Error de backtest: </span><span class="si">{</span><span class="n">metric</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Information of backtesting process
+----------------------------------
+Number of observations used for initial training: 87
+Number of observations used for backtesting: 108
+    Number of folds: 3
+    Number of steps per fold: 36
+
+Data partition in fold: 0
+    Training:   1992-04-01 00:00:00 -- 1999-06-01 00:00:00
+    Validation: 1999-07-01 00:00:00 -- 2002-06-01 00:00:00
+Data partition in fold: 1
+    Training:   1992-04-01 00:00:00 -- 2002-06-01 00:00:00
+    Validation: 2002-07-01 00:00:00 -- 2005-06-01 00:00:00
+Data partition in fold: 2
+    Training:   1992-04-01 00:00:00 -- 2005-06-01 00:00:00
+    Validation: 2005-07-01 00:00:00 -- 2008-06-01 00:00:00
+
+Error de backtest: 0.12033751744029517
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Cargar-y-guardar-modelos">Cargar y guardar modelos<a class="anchor-link" href="#Cargar-y-guardar-modelos">&#182;</a></h2><p><br></p>
 <p>Los modelos generados con <strong>skforecast</strong> se pueden cargar y guardar usando las librerías <strong>pickle</strong> o <strong>joblib</strong>. A continuación se muestra un ejemplo sencillo utilizando <strong>joblib</strong>.</p>
 
@@ -16738,7 +16874,7 @@ Error de test (mse): 0.012100781904923396
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[53]:</div>
+<div class="prompt input_prompt">In&nbsp;[55]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Crear forecaster</span>
@@ -16757,7 +16893,7 @@ Error de test (mse): 0.012100781904923396
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[53]:</div>
+    <div class="prompt output_prompt">Out[55]:</div>
 
 
 
@@ -16777,7 +16913,7 @@ Freq: MS, Name: pred, dtype: float64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[54]:</div>
+<div class="prompt input_prompt">In&nbsp;[56]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Guardar modelo</span>
@@ -16794,7 +16930,7 @@ Freq: MS, Name: pred, dtype: float64</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[54]:</div>
+    <div class="prompt output_prompt">Out[56]:</div>
 
 
 
@@ -16811,7 +16947,7 @@ Freq: MS, Name: pred, dtype: float64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[55]:</div>
+<div class="prompt input_prompt">In&nbsp;[57]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Cargar modelo</span>
@@ -16825,7 +16961,7 @@ Freq: MS, Name: pred, dtype: float64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[56]:</div>
+<div class="prompt input_prompt">In&nbsp;[58]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Predicciones</span>
@@ -16842,7 +16978,7 @@ Freq: MS, Name: pred, dtype: float64</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[56]:</div>
+    <div class="prompt output_prompt">Out[58]:</div>
 
 
 
@@ -16883,7 +17019,7 @@ Freq: MS, Name: pred, dtype: float64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[57]:</div>
+<div class="prompt input_prompt">In&nbsp;[59]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">forecaster</span> <span class="o">=</span> <span class="n">ForecasterAutoreg</span><span class="p">(</span>
@@ -16909,7 +17045,7 @@ Freq: MS, Name: pred, dtype: float64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[58]:</div>
+<div class="prompt input_prompt">In&nbsp;[60]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">last_window</span> <span class="o">=</span> <span class="n">datos_test</span><span class="p">[</span><span class="s1">&#39;y&#39;</span><span class="p">][</span><span class="o">-</span><span class="mi">6</span><span class="p">:]</span>
@@ -16926,7 +17062,7 @@ Freq: MS, Name: pred, dtype: float64</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[58]:</div>
+    <div class="prompt output_prompt">Out[60]:</div>
 
 
 
@@ -16962,7 +17098,7 @@ Freq: MS, Name: pred, dtype: float64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[59]:</div>
+<div class="prompt input_prompt">In&nbsp;[61]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">session_info</span>
@@ -17000,7 +17136,7 @@ notebook            6.1.6
 Python 3.7.9 (default, Aug 31 2020, 12:42:55) [GCC 7.3.0]
 Linux-5.13.0-35-generic-x86_64-with-debian-bullseye-sid
 -----
-Session information updated at 2022-03-18 20:16
+Session information updated at 2022-03-26 15:32
 </pre>
 </div>
 </div>
@@ -17017,7 +17153,6 @@ Session information updated at 2022-03-18 20:16
 <p>Time Series Analysis and Forecasting with ADAM Ivan Svetunkov <a href="https://openforecast.org/adam/">libro</a></p>
 <p>Python Data Science Handbook by Jake VanderPlas <a href="https://www.amazon.es/gp/product/1491912057/ref=as_li_qf_asin_il_tl?ie=UTF8&amp;tag=cienciadedato-21&amp;creative=24630&amp;linkCode=as2&amp;creativeASIN=1491912057&amp;linkId=73620d22f9d4a0a76d27592dabf13c83">libro</a></p>
 <p>Python for Finance: Mastering Data-Driven Finance <a href="https://www.amazon.es/gp/product/1492024333/ref=as_li_qf_asin_il_tl?ie=UTF8&amp;tag=cienciadedato-21&amp;creative=24630&amp;linkCode=as2&amp;creativeASIN=1492024333&amp;linkId=70c3175ad015970cd1c2328b7a40a055">libro</a></p>
-<p><a href="https://joaquinamatrodrigo.github.io/skforecast/latest/index.html"><strong>skforecast</strong></a></p>
 
 </div>
 </div>
