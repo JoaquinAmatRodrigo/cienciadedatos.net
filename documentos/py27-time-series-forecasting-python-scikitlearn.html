@@ -13971,7 +13971,7 @@ Freq: MS, Name: pred, dtype: float64</pre>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Hyperparameter-tuning">Hyperparameter tuning<a class="anchor-link" href="#Hyperparameter-tuning">&#182;</a></h3><p><br></p>
 <p>The trained <code>ForecasterAutoreg</code> uses a 6 lag time window and a <a href="https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestRegressor.html">Random Forest</a> model with the default hyperparameters. However, there is no reason why these values are the most suitable. In order to identify the best combination of lags and hyperparameters, the <strong>Skforecast</strong> library provides the <code>grid_search_forecaster</code> function. It compares the results obtained with each model configuration.</p>
-<p>For more detailed documentation, visit: <a href="https://joaquinamatrodrigo.github.io/skforecast/latest/notebooks/grid-search-forecaster.html">skforecast-grid_search_forecaster</a>.</p>
+<p>For more detailed documentation, visit: <a href="https://joaquinamatrodrigo.github.io/skforecast/latest/notebooks/grid-search-forecaster.html">skforecast grid search forecaster</a>.</p>
 
 </div>
 </div>
@@ -16108,7 +16108,7 @@ loop lags_grid: 100%|███████████████████�
 <h3 id="ForecasterAutoregMultiOutput">ForecasterAutoregMultiOutput<a class="anchor-link" href="#ForecasterAutoregMultiOutput">&#182;</a></h3><p><br></p>
 <p>Unlike when using <code>ForecasterAutoreg</code> or <code>ForecasterAutoregCustom</code>, the number of steps to be predicted must be indicated in the <code>ForecasterAutoregMultiOutput</code> type models. This means that the number of predictions obtained when executing the <code>predict()</code> method is always the same. It is not possible to predict steps beyond the value defined at their creation.</p>
 <p>For this example, a linear model with <code>Lasso</code> penalty is used as a regressor. These models require the predictors to be standardized, so it is combined with a <code>StandardScaler</code> using a <code>Pipeline</code>.</p>
-<p>For more detailed documentation, visit: <a href="https://joaquinamatrodrigo.github.io/skforecast/latest/notebooks/sklearn-pipeline.html">skforecast-with_scikit-learn_pipelines</a>.</p>
+<p>For more detailed documentation, visit: <a href="https://joaquinamatrodrigo.github.io/skforecast/latest/notebooks/sklearn-pipeline.html">skforecast with scikit learn pipelines</a>.</p>
 
 </div>
 </div>
@@ -16988,7 +16988,7 @@ Backtest error: 0.1203375174402947
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Save-and-load-models">Save and load models<a class="anchor-link" href="#Save-and-load-models">&#182;</a></h2><p><br></p>
 <p><strong>Skforecast</strong> models can be loaded and stored using <strong>Pickle</strong> or <strong>Joblib</strong> libraries. A simple example using <strong>Joblib</strong> is shown below.</p>
-<p>For more detailed documentation, visit: <a href="https://joaquinamatrodrigo.github.io/skforecast/latest/notebooks/save-load-forecaster.html">skforecast-save_and_load_forecaster</a>.</p>
+<p>For more detailed documentation, visit: <a href="https://joaquinamatrodrigo.github.io/skforecast/latest/notebooks/save-load-forecaster.html">skforecast save and load forecaster</a>.</p>
 
 </div>
 </div>
@@ -17134,7 +17134,7 @@ Freq: MS, Name: pred, dtype: float64</pre>
 </ul>
 <p>In these scenarios, the model must be able to predict at any time, even if it has not been recently trained.</p>
 <p>Every model generated using <strong>Skforecast</strong> has the <code>last_window</code> argument in its <code>predict</code> method. Using this argument, it is possible to provide only the past values needs to create the autoregressive predictors (lags) and thus, generate the predictions without the need to retrain the model.</p>
-<p>For more detailed documentation, visit: <a href="https://joaquinamatrodrigo.github.io/skforecast/latest/notebooks/forecaster-in-production.html">skforecast-forecaster_in_production</a>.</p>
+<p>For more detailed documentation, visit: <a href="https://joaquinamatrodrigo.github.io/skforecast/latest/notebooks/forecaster-in-production.html">skforecast forecaster in production</a>.</p>
 
 </div>
 </div>
