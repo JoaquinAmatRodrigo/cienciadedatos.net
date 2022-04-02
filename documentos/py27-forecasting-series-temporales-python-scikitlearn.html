@@ -13369,7 +13369,7 @@ $( document ).ready(function(){
 <p>Cuando se trabaja con series temporales, raramente se quiere predecir solo el siguiente elemento de la serie ($t_{+1}$), sino todo un intervalo futuro o un punto alejado en el tiempo ($t_{+n}$). A cada paso de predicción se le conoce como <em>step</em>. Existen varias estrategias que permiten generar este tipo de predicciones múltiples.
 <br><br></p>
 <h3 id="Recursive-multi-step-forecasting">Recursive multi-step forecasting<a class="anchor-link" href="#Recursive-multi-step-forecasting">&#182;</a></h3><p><br></p>
-<p>Dado que, para predecir el momento $t_{n}$ se necesita el valor de $t_{n-1}$, y $t_{n-1}$ se desconoce, se sigue un proceso recursivo en las que, cada nueva predicción, hace uso de la predicción anterior. A este proceso se le conoce como <em>recursive forecasting</em> o <em>recursive multi-step forecasting</em> y pueden generarse fácilmente con las clases <code>ForecasterAutoreg</code> y <code>ForecasterAutoregCustom</code> de la librería <strong>skforecast</strong>.</p>
+<p>Dado que, para predecir el momento $t_{n}$ se necesita el valor de $t_{n-1}$, y $t_{n-1}$ se desconoce, se sigue un proceso recursivo en el que, cada nueva predicción, hace uso de la predicción anterior. A este proceso se le conoce como <em>recursive forecasting</em> o <em>recursive multi-step forecasting</em> y pueden generarse fácilmente con las clases <code>ForecasterAutoreg</code> y <code>ForecasterAutoregCustom</code> de la librería <strong>skforecast</strong>.</p>
 
 </div>
 </div>
