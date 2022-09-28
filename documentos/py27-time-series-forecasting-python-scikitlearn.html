@@ -13325,7 +13325,7 @@ $( document ).ready(function(){
 <h2 id="Introduction">Introduction<a class="anchor-link" href="#Introduction">&#182;</a></h2><p><br></p>
 <p>A <a href="https://en.wikipedia.org/wiki/Time_series">time series</a> is a succession of chronologically ordered data spaced at equal or unequal intervals. The <a href="https://en.wikipedia.org/wiki/Forecasting#Time_series_methods">forecasting</a> process consists of predicting the future value of a time series, either by modeling the series solely based on its past behavior (autoregressive) or by using other external variables.</p>
 <div>
-<img src='./images/forecasting_multi-step_en.gif' width="600"/>
+<img src='../images/forecasting_multi-step_en.gif' width="600"/>
 </div><p>This document describes how to use <a href="https://scikit-learn.org/stable/"><strong>Scikit-learn</strong></a> regression models to perform forecasting on time series. Specifically, it introduces <a href="https://joaquinamatrodrigo.github.io/skforecast/"><strong>Skforecast</strong></a>, a simple library that contains the classes and functions necessary to adapt any <strong>Scikit-learn</strong> regression model to forecasting problems.</p>
 <p>More examples in <a href="https://joaquinamatrodrigo.github.io/skforecast/latest/examples/examples.html">skforecast-examples</a>.
 <br><br></p>
@@ -13346,7 +13346,7 @@ $( document ).ready(function(){
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><img src="./images/transform_timeseries.gif" style="width: 550px;">
+<p><img src="../images/transform_timeseries.gif" style="width: 550px;">
 <br></p>
 <center><font size='2.5'> <i>Time series transformation into a matrix of 5 lags and a vector with the value of the series that follows each row of the matrix.</i></font></center>
 </div>
@@ -13356,7 +13356,7 @@ $( document ).ready(function(){
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>This type of transformation also allows to include additional variables.</p>
-<p><img src="./images/matrix_transformation_with_exog_variable.png" style="width: 550px;"></p>
+<p><img src="../images/matrix_transformation_with_exog_variable.png" style="width: 550px;"></p>
 <center><font size='2.5'> <i>Time series transformation including an exogenous variable.</i></font></center>
 </div>
 </div>
@@ -13385,7 +13385,7 @@ $( document ).ready(function(){
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <div>
-<img src='./images/diagram-recursive-mutistep-forecasting.png' width="650"/>
+<img src='../images/diagram-recursive-mutistep-forecasting.png' width="650"/>
 </div><center><font size='2.5'> <i>Recursive multi-step prediction process diagram to predict 3 steps into the future using the last 4 lags of the series as predictors.</i></font></center>
 </div>
 </div>
@@ -13394,9 +13394,9 @@ $( document ).ready(function(){
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Direct-multi-step-forecasting">Direct multi-step forecasting<a class="anchor-link" href="#Direct-multi-step-forecasting">&#182;</a></h3><p>Direct multi-step forecasting consists of training a different model for each step of the forecast horizon. For example, to predict the next 5 values of a time series, 5 different models are trained, one for each step. As a result, the predictions are independent of each other.</p>
-<p align="center"><img src="./images/diagram-direct-multi-step-forecasting.png" style="width: 700px"></p><center><font size='2.5'> <i>Direct multi-step prediction process diagram to predict 3 steps into the future using the last 4 lags of the series as predictors.</i></font></center><p><br><br></p>
+<p align="center"><img src="../images/diagram-direct-multi-step-forecasting.png" style="width: 700px"></p><center><font size='2.5'> <i>Direct multi-step prediction process diagram to predict 3 steps into the future using the last 4 lags of the series as predictors.</i></font></center><p><br><br></p>
 <p>The main complexity of this approach is to generate the correct training matrices for each model. The <code>ForecasterAutoregMultiOutput</code> class of the <strong>skforecast</strong> library automates this process. It is also important to bear in mind that this strategy has a higher computational cost since it requires the train of multiple models. The following diagram shows the process for a case in which the response variable and two exogenous variables are available.</p>
-<p><img src="./images/diagram_skforecast_multioutput.png" style="width: 900px;"></p>
+<p><img src="../images/diagram_skforecast_multioutput.png" style="width: 900px;"></p>
 <center><font size='2.5'> <i>Transformation of a time series into matrices to train a direct multi-step forecasting model</i></font></center><p><br><br></p>
 <h3 id="Multiple-output-forecasting">Multiple output forecasting<a class="anchor-link" href="#Multiple-output-forecasting">&#182;</a></h3><p><br></p>
 <p>Some machine learning models, such as long short-term memory (LSTM) neural network, can predict simultaneously several values of a sequence (one-shot). This strategy is not currently implemented in <strong>skforecast</strong> library.
@@ -14392,13 +14392,13 @@ loop lags_grid: 100%|███████████████████�
 <h3 id="Backtesting">Backtesting<a class="anchor-link" href="#Backtesting">&#182;</a></h3><p>Backtesting is a term used in modeling to refer to testing a predictive model on historical data. Backtesting involves moving backward in time, step-by-step, in as many stages as is necessary. Therefore, it is a special type of cross-validation applied to previous period(s).</p>
 <p><strong>Backtesting with refit and increasing training size (fixed origin)</strong></p>
 <p>The model is trained each time before making predictions. With this configuration, the model uses all the data available so far. It is a variation of the standard cross-validation but, instead of making a random distribution of the observations, the training set increases sequentially, maintaining the temporal order of the data.</p>
-<p><img src="./images/diagram-backtesting-refit.png" style="width: 500px;"/></p>
+<p><img src="../images/diagram-backtesting-refit.png" style="width: 500px;"/></p>
 <center><font size='2.5'> <i>Time series backtesting diagram with an initial training size of 10 observations, a prediction horizon of 3 steps, and retraining at each iteration.</i></font></center><p><strong>Backtesting with refit and fixed training size (rolling origin)</strong></p>
 <p>A technique similar to the previous one but, in this case, the forecast origin rolls forward, therefore, the size of training remains constant. This is also known as time series cross-validation or walk-forward validation.</p>
-<p><img src="./images/diagram-backtesting-refit-fixed-train-size.png" style="width: 500px;"/></p>
+<p><img src="../images/diagram-backtesting-refit-fixed-train-size.png" style="width: 500px;"/></p>
 <center><font size='2.5'> <i>Time series backtesting diagram with an initial training size of 10 observations, a prediction horizon of 3 steps, and a training set of constant size.</i></font></center><p><strong>Backtesting without refit</strong></p>
 <p>After an initial train, the model is used sequentially without updating it and following the temporal order of the data. This strategy has the advantage of being much faster since the model is trained only once. However, the model does not incorporate the latest data available, so it may lose predictive capacity over time.</p>
-<p><img src="./images/diagram-backtesting-no-refit.png" style="width: 500px;"/></p>
+<p><img src="../images/diagram-backtesting-no-refit.png" style="width: 500px;"/></p>
 <p><center><font size='2.5'> <i>Time series backtesting diagram with an initial training size of 10 observations, a prediction horizon of 3 steps, and no retraining at each iteration.</i></font></center>
 <br></p>
 <p>The <strong>skforecast</strong> library has the mentioned <a href="https://joaquinamatrodrigo.github.io/skforecast/latest/notebooks/backtesting.html">backtesting strategies</a> implemented. Regardless of which one is used, it is important not to include test data in the search process to avoid overfitting problems.</p>
@@ -16510,7 +16510,7 @@ loop lags_grid: 100%|███████████████████�
 <p>A prediction interval defines the interval within which the true value of $y$ is expected to be found with a given probability.</p>
 <p>Rob J Hyndman and George Athanasopoulos, list in their book <em>Forecasting: Principles and Practice</em> <a href="https://otexts.com/fpp2/prediction-intervals.html">multiple ways to estimate prediction intervals</a>, most of which require that the residuals (errors) of the model are distributed in a normal way. When this property cannot be assumed, bootstrapping can be resorted to, which only assumes that the residuals are uncorrelated. This is the method used in the <strong>Skforecast</strong> library for the <code>ForecasterAutoreg</code> and <code>ForecasterAutoregCustom</code> type models. For example, the prediction interval (1, 99) can be expected to contain the true prediction value with 98% probability.</p>
 <div>
-<img src='./images/bootstrapped-prediction-interval.gif'/>
+<img src='../images/bootstrapped-prediction-interval.gif'/>
 </div><center><font size='2.5'> <i>Diagram of how to create prediction intervals using bootstrapping.</i></font></center><p><br><br></p>
 
 </div>
