@@ -16,7 +16,7 @@
   gtag('config', 'UA-170033283-1');
 </script>
 
-<meta name="description" content="Ejemplo de cómo predecir la demanda de energía eléctrica mediante modelos predictivos de forecasting con Python, sklearn, statsmodels y skforecast."/>
+<meta name="description" content="Ejemplo de cómo predecir la demanda de energía eléctrica mediante modelos predictivos de forecasting con Python."/>
 
 <title>Predicción (forecasting) de la demanda eléctrica con Python</title>
 
@@ -184,6 +184,8 @@
   })();
   </script>
 <!-- End Quantcast Choice. Consent Manager Tag v2.0 (for TCF 2.0) -->
+
+
 
 <style type="text/css">
     /*!
@@ -13364,7 +13366,7 @@ $( document ).ready(function(){
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Tratamiento de datos</span>
@@ -13388,7 +13390,7 @@ $( document ).ready(function(){
 <span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">StandardScaler</span>
 <span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">mean_absolute_error</span>
 <span class="kn">from</span> <span class="nn">skforecast.ForecasterAutoreg</span> <span class="kn">import</span> <span class="n">ForecasterAutoreg</span>
-<span class="kn">from</span> <span class="nn">skforecast.ForecasterAutoregMultiOutput</span> <span class="kn">import</span> <span class="n">ForecasterAutoregMultiOutput</span>
+<span class="kn">from</span> <span class="nn">skforecast.ForecasterAutoregDirect</span> <span class="kn">import</span> <span class="n">ForecasterAutoregDirect</span>
 <span class="kn">from</span> <span class="nn">skforecast.model_selection</span> <span class="kn">import</span> <span class="n">grid_search_forecaster</span>
 <span class="kn">from</span> <span class="nn">skforecast.model_selection</span> <span class="kn">import</span> <span class="n">backtesting_forecaster</span>
 
@@ -13399,6 +13401,25 @@ $( document ).ready(function(){
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>/home/ximo/anaconda3/envs/cienciadedatos_39/lib/python3.9/site-packages/statsmodels/compat/pandas.py:61: FutureWarning: pandas.Int64Index is deprecated and will be removed from pandas in a future version. Use pandas.Index with the appropriate dtype instead.
+  from pandas import Int64Index as NumericIndex
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -14336,8 +14357,8 @@ Training range: [Timestamp(&#39;2012-01-01 00:00:00&#39;), Timestamp(&#39;2014-1
 Training index type: DatetimeIndex 
 Training index frequency: H 
 Regressor parameters: {&#39;alpha&#39;: 1.0, &#39;copy_X&#39;: True, &#39;fit_intercept&#39;: True, &#39;max_iter&#39;: None, &#39;normalize&#39;: &#39;deprecated&#39;, &#39;positive&#39;: False, &#39;random_state&#39;: None, &#39;solver&#39;: &#39;auto&#39;, &#39;tol&#39;: 0.001} 
-Creation date: 2022-09-29 11:43:14 
-Last fit date: 2022-09-29 11:43:14 
+Creation date: 2022-10-05 09:10:49 
+Last fit date: 2022-10-05 09:10:49 
 Skforecast version: 0.5.0 
 Python version: 3.9.13 </pre>
 </div>
@@ -14582,7 +14603,7 @@ Data partition in fold: 29
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Grid search de hiperparámetros</span>
@@ -14641,41 +14662,41 @@ Data partition in fold: 29
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>loop lags_grid:   0%|                                               | 0/3 [00:00&lt;?, ?it/s]
 loop param_grid:   0%|                                             | 0/10 [00:00&lt;?, ?it/s]
+loop param_grid:  10%|███▋                                 | 1/10 [00:01&lt;00:15,  1.68s/it]
+loop param_grid:  20%|███████▍                             | 2/10 [00:03&lt;00:13,  1.71s/it]
+loop param_grid:  30%|███████████                          | 3/10 [00:05&lt;00:12,  1.79s/it]
+loop param_grid:  40%|██████████████▊                      | 4/10 [00:07&lt;00:12,  2.11s/it]
+loop param_grid:  50%|██████████████████▌                  | 5/10 [00:10&lt;00:10,  2.17s/it]
+loop param_grid:  60%|██████████████████████▏              | 6/10 [00:11&lt;00:07,  1.96s/it]
+loop param_grid:  70%|█████████████████████████▉           | 7/10 [00:12&lt;00:05,  1.71s/it]
+loop param_grid:  80%|█████████████████████████████▌       | 8/10 [00:14&lt;00:03,  1.54s/it]
+loop param_grid:  90%|█████████████████████████████████▎   | 9/10 [00:15&lt;00:01,  1.54s/it]
+loop param_grid: 100%|████████████████████████████████████| 10/10 [00:17&lt;00:00,  1.53s/it]
+loop lags_grid:  33%|█████████████                          | 1/3 [00:17&lt;00:34, 17.15s/it]
+loop param_grid:   0%|                                             | 0/10 [00:00&lt;?, ?it/s]
+loop param_grid:  10%|███▋                                 | 1/10 [00:01&lt;00:12,  1.37s/it]
+loop param_grid:  20%|███████▍                             | 2/10 [00:02&lt;00:11,  1.41s/it]
+loop param_grid:  30%|███████████                          | 3/10 [00:04&lt;00:10,  1.53s/it]
+loop param_grid:  40%|██████████████▊                      | 4/10 [00:05&lt;00:09,  1.50s/it]
+loop param_grid:  50%|██████████████████▌                  | 5/10 [00:07&lt;00:07,  1.45s/it]
+loop param_grid:  60%|██████████████████████▏              | 6/10 [00:08&lt;00:06,  1.50s/it]
+loop param_grid:  70%|█████████████████████████▉           | 7/10 [00:10&lt;00:04,  1.52s/it]
+loop param_grid:  80%|█████████████████████████████▌       | 8/10 [00:11&lt;00:03,  1.50s/it]
+loop param_grid:  90%|█████████████████████████████████▎   | 9/10 [00:13&lt;00:01,  1.47s/it]
+loop param_grid: 100%|████████████████████████████████████| 10/10 [00:14&lt;00:00,  1.40s/it]
+loop lags_grid:  67%|██████████████████████████             | 2/3 [00:31&lt;00:15, 15.65s/it]
+loop param_grid:   0%|                                             | 0/10 [00:00&lt;?, ?it/s]
 loop param_grid:  10%|███▋                                 | 1/10 [00:01&lt;00:10,  1.18s/it]
-loop param_grid:  20%|███████▍                             | 2/10 [00:02&lt;00:12,  1.53s/it]
-loop param_grid:  30%|███████████                          | 3/10 [00:04&lt;00:11,  1.61s/it]
-loop param_grid:  40%|██████████████▊                      | 4/10 [00:06&lt;00:09,  1.64s/it]
-loop param_grid:  50%|██████████████████▌                  | 5/10 [00:07&lt;00:07,  1.58s/it]
-loop param_grid:  60%|██████████████████████▏              | 6/10 [00:09&lt;00:05,  1.46s/it]
-loop param_grid:  70%|█████████████████████████▉           | 7/10 [00:10&lt;00:03,  1.33s/it]
-loop param_grid:  80%|█████████████████████████████▌       | 8/10 [00:11&lt;00:02,  1.33s/it]
-loop param_grid:  90%|█████████████████████████████████▎   | 9/10 [00:12&lt;00:01,  1.25s/it]
-loop param_grid: 100%|████████████████████████████████████| 10/10 [00:13&lt;00:00,  1.21s/it]
-loop lags_grid:  33%|█████████████                          | 1/3 [00:13&lt;00:27, 13.63s/it]
-loop param_grid:   0%|                                             | 0/10 [00:00&lt;?, ?it/s]
-loop param_grid:  10%|███▋                                 | 1/10 [00:01&lt;00:10,  1.12s/it]
-loop param_grid:  20%|███████▍                             | 2/10 [00:02&lt;00:09,  1.14s/it]
-loop param_grid:  30%|███████████                          | 3/10 [00:03&lt;00:07,  1.14s/it]
-loop param_grid:  40%|██████████████▊                      | 4/10 [00:04&lt;00:06,  1.13s/it]
-loop param_grid:  50%|██████████████████▌                  | 5/10 [00:05&lt;00:05,  1.12s/it]
-loop param_grid:  60%|██████████████████████▏              | 6/10 [00:06&lt;00:04,  1.14s/it]
-loop param_grid:  70%|█████████████████████████▉           | 7/10 [00:07&lt;00:03,  1.13s/it]
-loop param_grid:  80%|█████████████████████████████▌       | 8/10 [00:09&lt;00:02,  1.14s/it]
-loop param_grid:  90%|█████████████████████████████████▎   | 9/10 [00:10&lt;00:01,  1.14s/it]
-loop param_grid: 100%|████████████████████████████████████| 10/10 [00:11&lt;00:00,  1.13s/it]
-loop lags_grid:  67%|██████████████████████████             | 2/3 [00:24&lt;00:12, 12.27s/it]
-loop param_grid:   0%|                                             | 0/10 [00:00&lt;?, ?it/s]
-loop param_grid:  10%|███▋                                 | 1/10 [00:01&lt;00:10,  1.13s/it]
-loop param_grid:  20%|███████▍                             | 2/10 [00:02&lt;00:08,  1.12s/it]
-loop param_grid:  30%|███████████                          | 3/10 [00:03&lt;00:07,  1.12s/it]
-loop param_grid:  40%|██████████████▊                      | 4/10 [00:04&lt;00:06,  1.12s/it]
-loop param_grid:  50%|██████████████████▌                  | 5/10 [00:05&lt;00:05,  1.13s/it]
-loop param_grid:  60%|██████████████████████▏              | 6/10 [00:06&lt;00:04,  1.16s/it]
-loop param_grid:  70%|█████████████████████████▉           | 7/10 [00:07&lt;00:03,  1.13s/it]
-loop param_grid:  80%|█████████████████████████████▌       | 8/10 [00:09&lt;00:02,  1.15s/it]
-loop param_grid:  90%|█████████████████████████████████▎   | 9/10 [00:10&lt;00:01,  1.20s/it]
-loop param_grid: 100%|████████████████████████████████████| 10/10 [00:11&lt;00:00,  1.24s/it]
-loop lags_grid: 100%|███████████████████████████████████████| 3/3 [00:36&lt;00:00, 12.24s/it]</pre>
+loop param_grid:  20%|███████▍                             | 2/10 [00:02&lt;00:10,  1.28s/it]
+loop param_grid:  30%|███████████                          | 3/10 [00:03&lt;00:09,  1.31s/it]
+loop param_grid:  40%|██████████████▊                      | 4/10 [00:05&lt;00:09,  1.53s/it]
+loop param_grid:  50%|██████████████████▌                  | 5/10 [00:07&lt;00:08,  1.65s/it]
+loop param_grid:  60%|██████████████████████▏              | 6/10 [00:08&lt;00:06,  1.56s/it]
+loop param_grid:  70%|█████████████████████████▉           | 7/10 [00:10&lt;00:04,  1.51s/it]
+loop param_grid:  80%|█████████████████████████████▌       | 8/10 [00:12&lt;00:03,  1.56s/it]
+loop param_grid:  90%|█████████████████████████████████▎   | 9/10 [00:13&lt;00:01,  1.45s/it]
+loop param_grid: 100%|████████████████████████████████████| 10/10 [00:14&lt;00:00,  1.43s/it]
+loop lags_grid: 100%|███████████████████████████████████████| 3/3 [00:46&lt;00:00, 15.47s/it]</pre>
 </div>
 </div>
 
@@ -14711,7 +14732,7 @@ loop lags_grid: 100%|███████████████████�
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Resultados Grid Search</span>
@@ -14729,7 +14750,7 @@ loop lags_grid: 100%|███████████████████�
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[25]:</div>
+    <div class="prompt output_prompt">Out[23]:</div>
 
 
 
@@ -14990,7 +15011,7 @@ loop lags_grid: 100%|███████████████████�
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">forecaster</span>
@@ -15006,7 +15027,7 @@ loop lags_grid: 100%|███████████████████�
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[26]:</div>
+    <div class="prompt output_prompt">Out[24]:</div>
 
 
 
@@ -15027,8 +15048,8 @@ Training range: [Timestamp(&#39;2012-01-01 00:00:00&#39;), Timestamp(&#39;2014-1
 Training index type: DatetimeIndex 
 Training index frequency: H 
 Regressor parameters: {&#39;alpha&#39;: 215.44346900318823, &#39;copy_X&#39;: True, &#39;fit_intercept&#39;: True, &#39;max_iter&#39;: None, &#39;normalize&#39;: &#39;deprecated&#39;, &#39;positive&#39;: False, &#39;random_state&#39;: None, &#39;solver&#39;: &#39;auto&#39;, &#39;tol&#39;: 0.001} 
-Creation date: 2022-09-29 11:44:32 
-Last fit date: 2022-09-29 11:45:08 
+Creation date: 2022-10-05 09:10:50 
+Last fit date: 2022-10-05 09:11:36 
 Skforecast version: 0.5.0 
 Python version: 3.9.13 </pre>
 </div>
@@ -15050,7 +15071,7 @@ Python version: 3.9.13 </pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[27]:</div>
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Backtest modelo final</span>
@@ -15102,7 +15123,7 @@ Python version: 3.9.13 </pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[28]:</div>
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Error backtest</span>
@@ -15155,7 +15176,7 @@ Python version: 3.9.13 </pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[29]:</div>
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Backtest del conjunto de test con intervalos de predicción</span>
@@ -15198,7 +15219,7 @@ Python version: 3.9.13 </pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[29]:</div>
+    <div class="prompt output_prompt">Out[27]:</div>
 
 
 
@@ -15270,7 +15291,7 @@ Python version: 3.9.13 </pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[30]:</div>
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Gráfico</span>
@@ -15319,7 +15340,7 @@ Python version: 3.9.13 </pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[31]:</div>
+<div class="prompt input_prompt">In&nbsp;[29]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Cobertura del intervalo predicho</span>
@@ -15391,7 +15412,7 @@ Python version: 3.9.13 </pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[32]:</div>
+<div class="prompt input_prompt">In&nbsp;[30]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">backtest_predict_next_24h</span><span class="p">(</span><span class="n">forecaster</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">hour_init_prediction</span><span class="p">,</span> <span class="n">exog</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
@@ -15496,7 +15517,7 @@ Python version: 3.9.13 </pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[33]:</div>
+<div class="prompt input_prompt">In&nbsp;[31]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Backtest</span>
@@ -15541,7 +15562,7 @@ Days predicted in the backtesting: [&#39;2014-12-04&#39; &#39;2014-12-05&#39; &#
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[34]:</div>
+<div class="prompt input_prompt">In&nbsp;[32]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Gráfico</span>
@@ -15582,7 +15603,7 @@ Days predicted in the backtesting: [&#39;2014-12-04&#39; &#39;2014-12-05&#39; &#
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[35]:</div>
+<div class="prompt input_prompt">In&nbsp;[33]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Error backtest</span>
@@ -15637,7 +15658,7 @@ Days predicted in the backtesting: [&#39;2014-12-04&#39; &#39;2014-12-05&#39; &#
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[36]:</div>
+<div class="prompt input_prompt">In&nbsp;[34]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Importancia predictores</span>
@@ -15655,7 +15676,7 @@ Days predicted in the backtesting: [&#39;2014-12-04&#39; &#39;2014-12-05&#39; &#
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[36]:</div>
+    <div class="prompt output_prompt">Out[34]:</div>
 
 
 
@@ -15771,7 +15792,7 @@ Days predicted in the backtesting: [&#39;2014-12-04&#39; &#39;2014-12-05&#39; &#
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[37]:</div>
+<div class="prompt input_prompt">In&nbsp;[35]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Se convierte la columna Holiday de boolean a integer</span>
@@ -15787,7 +15808,7 @@ Days predicted in the backtesting: [&#39;2014-12-04&#39; &#39;2014-12-05&#39; &#
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[38]:</div>
+<div class="prompt input_prompt">In&nbsp;[36]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Crear y entrenar forecaster</span>
@@ -15814,7 +15835,7 @@ Days predicted in the backtesting: [&#39;2014-12-04&#39; &#39;2014-12-05&#39; &#
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[38]:</div>
+    <div class="prompt output_prompt">Out[36]:</div>
 
 
 
@@ -15835,8 +15856,8 @@ Training range: [Timestamp(&#39;2012-01-01 00:00:00&#39;), Timestamp(&#39;2014-1
 Training index type: DatetimeIndex 
 Training index frequency: H 
 Regressor parameters: {&#39;alpha&#39;: 215.44, &#39;copy_X&#39;: True, &#39;fit_intercept&#39;: True, &#39;max_iter&#39;: None, &#39;normalize&#39;: &#39;deprecated&#39;, &#39;positive&#39;: False, &#39;random_state&#39;: None, &#39;solver&#39;: &#39;auto&#39;, &#39;tol&#39;: 0.001} 
-Creation date: 2022-09-29 11:45:34 
-Last fit date: 2022-09-29 11:45:34 
+Creation date: 2022-10-05 09:12:10 
+Last fit date: 2022-10-05 09:12:10 
 Skforecast version: 0.5.0 
 Python version: 3.9.13 </pre>
 </div>
@@ -15858,7 +15879,7 @@ Python version: 3.9.13 </pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[39]:</div>
+<div class="prompt input_prompt">In&nbsp;[37]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Backtest</span>
@@ -15904,7 +15925,7 @@ Days predicted in the backtesting: [&#39;2014-12-04&#39; &#39;2014-12-05&#39; &#
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[40]:</div>
+<div class="prompt input_prompt">In&nbsp;[38]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Gráfico</span>
@@ -15945,7 +15966,7 @@ Days predicted in the backtesting: [&#39;2014-12-04&#39; &#39;2014-12-05&#39; &#
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[41]:</div>
+<div class="prompt input_prompt">In&nbsp;[39]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Error backtest</span>
@@ -15991,7 +16012,7 @@ Days predicted in the backtesting: [&#39;2014-12-04&#39; &#39;2014-12-05&#39; &#
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[42]:</div>
+<div class="prompt input_prompt">In&nbsp;[40]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Creación de nuevas variables exógenas</span>
@@ -16017,7 +16038,7 @@ Days predicted in the backtesting: [&#39;2014-12-04&#39; &#39;2014-12-05&#39; &#
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[42]:</div>
+    <div class="prompt output_prompt">Out[40]:</div>
 
 
 
@@ -16174,7 +16195,7 @@ Days predicted in the backtesting: [&#39;2014-12-04&#39; &#39;2014-12-05&#39; &#
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[43]:</div>
+<div class="prompt input_prompt">In&nbsp;[41]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Crear y entrenar forecaster</span>
@@ -16277,12 +16298,12 @@ Error de backtest: 313.09877692673194
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[44]:</div>
+<div class="prompt input_prompt">In&nbsp;[42]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Grid search de hiperparámetros</span>
 <span class="c1"># ==============================================================================</span>
-<span class="n">forecaster</span> <span class="o">=</span> <span class="n">ForecasterAutoregMultiOutput</span><span class="p">(</span>
+<span class="n">forecaster</span> <span class="o">=</span> <span class="n">ForecasterAutoregDirect</span><span class="p">(</span>
                 <span class="n">regressor</span> <span class="o">=</span> <span class="n">LGBMRegressor</span><span class="p">(</span><span class="n">max_depth</span><span class="o">=</span><span class="mi">4</span><span class="p">),</span>
                 <span class="n">steps</span>     <span class="o">=</span> <span class="mi">36</span><span class="p">,</span>
                 <span class="n">lags</span>      <span class="o">=</span> <span class="mi">24</span> <span class="c1"># Este valor será remplazado en el grid search</span>
@@ -16337,17 +16358,17 @@ Error de backtest: 313.09877692673194
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>loop lags_grid:   0%|                                               | 0/2 [00:00&lt;?, ?it/s]
 loop param_grid:   0%|                                              | 0/4 [00:00&lt;?, ?it/s]
-loop param_grid:  25%|█████████▌                            | 1/4 [00:04&lt;00:13,  4.34s/it]
-loop param_grid:  50%|███████████████████                   | 2/4 [00:13&lt;00:14,  7.27s/it]
-loop param_grid:  75%|████████████████████████████▌         | 3/4 [00:18&lt;00:06,  6.31s/it]
-loop param_grid: 100%|██████████████████████████████████████| 4/4 [00:35&lt;00:00, 10.46s/it]
-loop lags_grid:  50%|███████████████████▌                   | 1/2 [00:35&lt;00:35, 35.66s/it]
+loop param_grid:  25%|█████████▌                            | 1/4 [00:06&lt;00:19,  6.49s/it]
+loop param_grid:  50%|███████████████████                   | 2/4 [00:22&lt;00:24, 12.26s/it]
+loop param_grid:  75%|████████████████████████████▌         | 3/4 [00:31&lt;00:10, 10.75s/it]
+loop param_grid: 100%|██████████████████████████████████████| 4/4 [00:56&lt;00:00, 16.25s/it]
+loop lags_grid:  50%|███████████████████▌                   | 1/2 [00:56&lt;00:56, 56.44s/it]
 loop param_grid:   0%|                                              | 0/4 [00:00&lt;?, ?it/s]
-loop param_grid:  25%|█████████▌                            | 1/4 [00:17&lt;00:52, 17.36s/it]
-loop param_grid:  50%|███████████████████                   | 2/4 [00:28&lt;00:27, 13.67s/it]
-loop param_grid:  75%|████████████████████████████▌         | 3/4 [00:56&lt;00:20, 20.39s/it]
-loop param_grid: 100%|██████████████████████████████████████| 4/4 [01:15&lt;00:00, 19.80s/it]
-loop lags_grid: 100%|███████████████████████████████████████| 2/2 [01:51&lt;00:00, 55.70s/it]
+loop param_grid:  25%|█████████▌                            | 1/4 [00:05&lt;00:17,  5.71s/it]
+loop param_grid:  50%|███████████████████                   | 2/4 [00:20&lt;00:22, 11.12s/it]
+loop param_grid:  75%|████████████████████████████▌         | 3/4 [00:28&lt;00:09,  9.68s/it]
+loop param_grid: 100%|██████████████████████████████████████| 4/4 [00:56&lt;00:00, 16.82s/it]
+loop lags_grid: 100%|███████████████████████████████████████| 2/2 [01:52&lt;00:00, 56.40s/it]
 </pre>
 </div>
 </div>
@@ -16382,7 +16403,7 @@ loop lags_grid: 100%|███████████████████�
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[45]:</div>
+<div class="prompt input_prompt">In&nbsp;[43]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Backtest</span>
@@ -16428,7 +16449,7 @@ Days predicted in the backtesting: [&#39;2014-12-04&#39; &#39;2014-12-05&#39; &#
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[46]:</div>
+<div class="prompt input_prompt">In&nbsp;[44]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Gráfico</span>
@@ -16469,7 +16490,7 @@ Days predicted in the backtesting: [&#39;2014-12-04&#39; &#39;2014-12-05&#39; &#
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[47]:</div>
+<div class="prompt input_prompt">In&nbsp;[45]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Error backtest</span>
@@ -16522,7 +16543,7 @@ Days predicted in the backtesting: [&#39;2014-12-04&#39; &#39;2014-12-05&#39; &#
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[48]:</div>
+<div class="prompt input_prompt">In&nbsp;[46]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">session_info</span>
@@ -16563,7 +16584,7 @@ notebook            6.4.12
 Python 3.9.13 (main, Aug 25 2022, 23:26:10) [GCC 11.2.0]
 Linux-5.15.0-48-generic-x86_64-with-glibc2.31
 -----
-Session information updated at 2022-09-29 11:48
+Session information updated at 2022-10-05 09:14
 </pre>
 </div>
 </div>
@@ -16656,7 +16677,7 @@ div.inner_cell {
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>¿Cómo citar este documento?</strong></p>
 <p style="text-align:left"><font size="3" color="#555">
-Skforecast: forecasting series temporales con Python y Scikitlearn by Joaquín Amat Rodrigo and Javier Escobar Ortiz, available under a Attribution 4.0 International (CC BY 4.0) at https://www.cienciadedatos.net/py29-forecasting-demanda-energia-electrica-python.html
+  Predicción (forecasting) de la demanda eléctrica con Python by Joaquín Amat Rodrigo and Javier Escobar Ortiz, available under a Attribution 4.0 International (CC BY 4.0) at https://www.cienciadedatos.net/py29-forecasting-demanda-energia-electrica-python.html
 
 </font></p>
 
