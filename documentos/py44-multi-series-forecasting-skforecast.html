@@ -186,6 +186,8 @@
   </script>
 <!-- End Quantcast Choice. Consent Manager Tag v2.0 (for TCF 2.0) -->
 
+
+
 <style type="text/css">
     /*!
 *
@@ -13278,12 +13280,12 @@ $( document ).ready(function(){
   <div tabindex="-1" id="notebook" class="border-box-sizing">
     <div class="container" id="notebook-container">
 
-  <div style= "background-color: #7e56c2; color: #ffffff; height: 2.4rem; position: relative; width: 100%;">
-    <p style= "color: #ffffff; align-items: center; display: flex; height: 100%; justify-content: center;">
-      If you like&nbsp; <b> Skforecast </b>,&nbsp; please give us a star on &nbsp;
-      <a style= "color: #ffffff;" href="https://github.com/JoaquinAmatRodrigo/skforecast/" rel="noopener noreferrer" target="_blank"><u>GitHub</u></a>! ⭐️
-    </p>
-  </div>
+<div style= "background-color: #7e56c2; color: #ffffff; height: 2.4rem; position: relative; width: 100%;">
+  <p style= "color: #ffffff; align-items: center; display: flex; height: 100%; justify-content: center;">
+    If you like&nbsp; <b> Skforecast </b>,&nbsp; please give us a star on &nbsp;
+    <a style= "color: #ffffff;" href="https://github.com/JoaquinAmatRodrigo/skforecast/" rel="noopener noreferrer" target="_blank"><u>GitHub</u></a>! ⭐️
+  </p>
+</div>
 
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -13292,7 +13294,6 @@ $( document ).ready(function(){
 </div>
 </div>
 </div>
-
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13349,30 +13350,24 @@ $( document ).ready(function(){
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Advantages-and-limitations">Advantages and limitations<a class="anchor-link" href="#Advantages-and-limitations">&#182;</a></h2>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Multiple time series forecasting not always outperform single time series forecasting. Which one works best, depends largely on the characteristics of the use case they are applied to. However it worth to take in consideration the following heuristics:</p>
-<p>Advantages of multiple time series:</p>
+<h2 id="Advantages-and-limitations">Advantages and limitations<a class="anchor-link" href="#Advantages-and-limitations">&#182;</a></h2><p><br></p>
+<p>Multi-series forecasts do not always outperform single-series forecasts. Which one works best depends largely on the characteristics of the use case to which they are applied. However, the following heuristic is worth keeping in mind:</p>
+<p>Advantages of multi-series:</p>
 <ul>
-<li><p>It is easier to maintain and monitoring one single model than several ones.</p>
+<li><p>It is easier to maintain and monitor a single model than several.</p>
 </li>
-<li><p>Since all series are combined together during training, the model is better able to learn even though the series are short.</p>
+<li><p>Since all time series are combined during training, the model has a higher learning capacity even if the series are short.</p>
 </li>
 <li><p>By combining multiple time series, the model can learn more generalizable patterns.</p>
 </li>
 </ul>
-<p>Disadvantages of multiple time series:</p>
+<p>Disadvantages of multi-series:</p>
 <ul>
-<li><p>If the series do not follow the same internal dynamics, the model can learn a pattern that does not represent any of them.</p>
+<li><p>If the series do not follow the same internal dynamics, the model may learn a pattern that does not represent any of them.</p>
 </li>
-<li><p>Series may mask each other so the model may not predict all them with the same performance.</p>
+<li><p>The series may mask each other, so the model may not predict all of them with the same performance.</p>
 </li>
-<li><p>It is computationally more demanding (time and resources) to train and backtest a big model than several small ones.</p>
+<li><p>It is more computationally demanding (time and resources) to train and backtest a big model than several small ones.</p>
 </li>
 </ul>
 
@@ -13382,8 +13377,9 @@ $( document ).ready(function(){
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Case-of-study">Case of study<a class="anchor-link" href="#Case-of-study">&#182;</a></h2><p>The objective of this study is to compare the forecasting performance achieved by a multi-series model versus using a different model for each series.</p>
-<p>Data has been obtained from <a href="https://www.kaggle.com/competitions/demand-forecasting-kernels-only/data">Store Item Demand Forecasting Challenge</a>. This data set contains 913,000 sales transactions from 2013–01–01 to 2017–12–31 for 50 products (SKU) in 10 stores. The goal is to predict the sales of the next 7 days for 50 different items in 1 store using the 5 years history available.</p>
+<h2 id="Case-of-study">Case of study<a class="anchor-link" href="#Case-of-study">&#182;</a></h2><p><br></p>
+<p>The objective of this study is to compare the forecasting performance achieved by a multi-series model versus using a different model for each series.</p>
+<p>Data has been obtained from <a href="https://www.kaggle.com/competitions/demand-forecasting-kernels-only/data">Store Item Demand Forecasting Challenge</a>. This dataset contains 913,000 sales transactions from 2013–01–01 to 2017–12–31 for 50 products (SKU) in 10 stores. The goal is to predict the next 7 days sales for 50 different items in one store using the available 5 years history.</p>
 
 </div>
 </div>
@@ -13892,9 +13888,6 @@ Test dates       : 2017-06-01 00:00:00 --- 2017-12-31 00:00:00  (n=214)
 
     <div class="prompt"></div>
 
-
-<div class="output_subarea output_stream output_stderr output_text">
-</div>
 </div>
 
 <div class="output_area">
@@ -13961,7 +13954,7 @@ Test dates       : 2017-06-01 00:00:00 --- 2017-12-31 00:00:00  (n=214)
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>The autocorrelation plots show a clear association between sales on one day and sales on the same day a week earlier. This type of correlation is an indication that autoregressive models can work well.</p>
-<p>There is also a common weekly seasonality among series. There is also a common weekly seasonality among series. The similar the dynamics between series, the more likely the model will learn useful patterns..</p>
+<p>There is also a common weekly seasonality between the series. The more similar the dynamics between the series, the more likely the model will learn useful patterns.</p>
 
 </div>
 </div>
@@ -13969,7 +13962,8 @@ Test dates       : 2017-06-01 00:00:00 --- 2017-12-31 00:00:00  (n=214)
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Individual-forecaster-for-each-product">Individual forecaster for each product<a class="anchor-link" href="#Individual-forecaster-for-each-product">&#182;</a></h2><p>A different model is trained for each item of the store and its mean absolute error is estimated using <a href="https://joaquinamatrodrigo.github.io/skforecast/latest/user_guides/backtesting.html#backtesting">backtesting</a>.</p>
+<h2 id="Individual-forecaster-for-each-product">Individual forecaster for each product<a class="anchor-link" href="#Individual-forecaster-for-each-product">&#182;</a></h2><p><br></p>
+<p>A different model is trained for each item of the store and its mean absolute error is estimated using <a href="https://joaquinamatrodrigo.github.io/skforecast/latest/user_guides/backtesting.html#backtesting">backtesting</a>.</p>
 
 </div>
 </div>
@@ -14044,7 +14038,8 @@ Test dates       : 2017-06-01 00:00:00 --- 2017-12-31 00:00:00  (n=214)
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Multiseries-forecaster">Multiseries forecaster<a class="anchor-link" href="#Multiseries-forecaster">&#182;</a></h2><p>A single multi-series model is trained to predict the sales of each product over the next 7 days.</p>
+<h2 id="Multiseries-forecaster">Multiseries forecaster<a class="anchor-link" href="#Multiseries-forecaster">&#182;</a></h2><p><br></p>
+<p>A single multi-series model is trained to predict the sales of each product over the next 7 days.</p>
 
 </div>
 </div>
@@ -14732,8 +14727,9 @@ dtype: int64</pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Impact-of-the-series-length">Impact of the series length<a class="anchor-link" href="#Impact-of-the-series-length">&#182;</a></h2><p>If a time series has few observations, the amount of information available for the model to learn is limited. This is a well know problem in real cases where there is not much historical data available. Non multivariate multi series forecasters combine all the series together during training; therefore they can access more data.</p>
-<p>In this section, the same comparison between single series forecasting and multi series forecasting is performed but, this time, the length of the series is much shorter.</p>
+<h2 id="Impact-of-the-series-length">Impact of the series length<a class="anchor-link" href="#Impact-of-the-series-length">&#182;</a></h2><p><br></p>
+<p>If a time series has few observations, the amount of information available for the model to learn is limited. This is a well know problem in real cases where there is not much historical data available. Non multivariate multi-series forecasters combine all the series during training; therefore they can access more data.</p>
+<p>In this section, the same comparison between single-series forecasting and multi-series forecasting is performed but, this time, the length of the series is much shorter.</p>
 
 </div>
 </div>
@@ -15036,7 +15032,7 @@ dtype: int64</pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>The advantage of using a multi-series forecaster seems to increase as the length of the available series is reduced.</p>
+<p>The average improvement has increased from 6.6 to 8.2%. The advantage of using a multi-series forecaster seems to grow as the length of the available series is reduced.</p>
 
 </div>
 </div>
@@ -15044,7 +15040,8 @@ dtype: int64</pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Hyperparameter-tuning-and-lags-selection">Hyperparameter tuning and lags selection<a class="anchor-link" href="#Hyperparameter-tuning-and-lags-selection">&#182;</a></h2><p>In the previous sections, the comparison between forecasters was done without optimizing the hyperparameters of the regressors. To make a fair comparison, a grid search strategy is used in order to select the best configuration of each forecaster. See more information in <a href="https://joaquinamatrodrigo.github.io/skforecast/latest/user_guides/hyperparameter-tuning-and-lags-selection.html">hyperparameter tuning and lags selection</a>.</p>
+<h2 id="Hyperparameter-tuning-and-lags-selection">Hyperparameter tuning and lags selection<a class="anchor-link" href="#Hyperparameter-tuning-and-lags-selection">&#182;</a></h2><p><br></p>
+<p>In the previous sections, the comparison between forecasters was done without optimizing the hyperparameters of the regressors. To make a fair comparison, a grid search strategy is used in order to select the best configuration for each forecaster. See more information in <a href="https://joaquinamatrodrigo.github.io/skforecast/latest/user_guides/hyperparameter-tuning-and-lags-selection.html">hyperparameter tuning and lags selection</a>.</p>
 
 </div>
 </div>
@@ -15744,15 +15741,17 @@ dtype: int64</pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Conclusions">Conclusions<a class="anchor-link" href="#Conclusions">&#182;</a></h2>
+<p>After identifying the combination of lags and hyperparameters that achieve the best predictive performance for each forecaster, more single-series models have achieved higher predictive ability by better generalizing their own data (one item). Even so, the multi-series model provides better results for most of the items.</p>
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>This use case shows that, a multi-series model, may have advantages over multiple individual models when forecasting time series that follow similar dynamics.
-Beyond the potential improvements in forecasting, it is also important to take in consideration the benefit of having only one model to maintain.</p>
+<h2 id="Conclusions">Conclusions<a class="anchor-link" href="#Conclusions">&#182;</a></h2><p><br></p>
+<p>This use case shows that a multi-series model may have advantages over multiple individual models when forecasting time series that follow similar dynamics.
+Beyond the potential improvements in forecasting, it is also important to take into consideration the benefit of having only one model to maintain.</p>
 
 </div>
 </div>
@@ -15814,16 +15813,7 @@ Session information updated at 2022-10-12 10:24
 </div>
 
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-
-
-    </div>
-</div>
-</div>
+<div class="cell border-box-sizing code_cell rendered celltag_"hide_input"">
 
 <div class="output_wrapper">
 <div class="output">
@@ -15831,8 +15821,7 @@ Session information updated at 2022-10-12 10:24
 
 <div class="output_area">
 
-    <div class="prompt"></div>
-
+    <div class="prompt"> </div>
 
 
 <div class="output_html rendered_html output_subarea ">
@@ -15934,7 +15923,6 @@ Website maintenance has high cost, your contribution will help me to continue ge
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />This work by  Joaquín Amat Rodrigo and Javier Escobar Ortiz is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</p>
-
 
 <p><br><br></p>
 
