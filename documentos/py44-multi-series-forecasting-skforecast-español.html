@@ -13281,12 +13281,14 @@ $( document ).ready(function(){
   <div tabindex="-1" id="notebook" class="border-box-sizing">
     <div class="container" id="notebook-container">
 
+<!-- banner github -->
 <div style= "background-color: #7e56c2; color: #ffffff; height: 2.4rem; position: relative; width: 100%;">
   <p style= "color: #ffffff; align-items: center; display: flex; height: 100%; justify-content: center;">
     Si te gusta&nbsp; <b> Skforecast </b>,&nbsp; ayúdanos dándonos una estrella en &nbsp;
     <a style= "color: #ffffff;" href="https://github.com/JoaquinAmatRodrigo/skforecast/" rel="noopener noreferrer" target="_blank"><u>GitHub</u></a>! ⭐️
   </p>
 </div>
+<!-- banner github -->
 
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -13298,21 +13300,14 @@ $( document ).ready(function(){
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<center><b>Joaquín Amat Rodrigo, Javier Escobar Ortiz</b></center><center><i>Octubre 2022</i></center>
+<center><b>Joaquín Amat Rodrigo, Javier Escobar Ortiz</b></center><center><i>Octubre 2022 (última actualización Marzo 2023)</i></center>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li><a href="https://www.cienciadedatos.net/documentos/py27-forecasting-series-temporales-python-scikitlearn.html">Skforecast: forecasting series temporales con Python y Scikit-learn</a></li>
-<li><a href="https://www.cienciadedatos.net/documentos/py29-forecasting-demanda-energia-electrica-python.html">Forecasting de la demanda eléctrica</a></li>
-<li><a href="https://www.cienciadedatos.net/documentos/py37-forecasting-visitas-web-machine-learning.html">Forecasting de las visitas a una página web</a></li>
-<li><a href="https://www.cienciadedatos.net/documentos/py39-forecasting-series-temporales-con-skforecast-xgboost-lightgbm-catboost.html">Forecasting series temporales con gradient boosting: Skforecast, XGBoost, LightGBM y CatBoost</a></li>
-<li><a href="https://www.cienciadedatos.net/documentos/py41-forecasting-criptomoneda-bitcoin-machine-learning-python.html">Predicción del precio de Bitcoin con Python</a></li>
-<li><a href="https://www.cienciadedatos.net/documentos/py42-intervalos-prediccion-modelos-forecasting-machine-learning.html">Intervalos de predicción en modelos de forecasting</a></li>
-</ul>
+<p>Más sobre forecasting: <a href="https://joaquinamatrodrigo.github.io/skforecast/latest/examples/examples.html">Ejemplos con Skforecast</a></p>
 
 </div>
 </div>
@@ -13323,7 +13318,7 @@ $( document ).ready(function(){
 <h2 id="Forecasting-multiseries">Forecasting multiseries<a class="anchor-link" href="#Forecasting-multiseries">&#182;</a></h2><p>En el <em>forecasting</em> de <a href="https://joaquinamatrodrigo.github.io/skforecast/latest/quick-start/introduction-forecasting.html">series temporales univariantes</a>, una única serie temporal se modela como una combinación lineal o no lineal de sus <em>lags</em>. Es decir, los valores pasados de la serie se utilizan para predecir su comportamiento futuro. En el <em>forecasting</em> multiserie, dos o más series temporales se modelan conjuntamente mediante un único modelo. Se pueden distinguir dos estrategias:</p>
 <p><strong>Múltiples series temporales no multivariantes</strong></p>
 <p>En esta situación, cada serie temporal es independiente de las demás o, dicho de otro modo, los valores pasados de una serie no se utilizan como predictores de las otras series. ¿Por qué es útil entonces modelar todo junto? Aunque las series no dependen unas de otras, pueden seguir el mismo patrón intrínseco en cuanto a sus valores pasados y futuros. Por ejemplo, en una misma tienda, las ventas de los productos A y B pueden no estar relacionadas, pero siguen la misma dinámica, la de la tienda.</p>
-<p align="center"><img src="../images/forecaster_multi_series_train_matrix_diagram.png" style="width: 800px"></p><p>Para predecir los siguientes <em>n steps</em>, se sigue una estrategia recurisva, <a href="https://joaquinamatrodrigo.github.io/skforecast/latest/quick-start/introduction-forecasting.html#multi-step-forecasting">recursive multi-step forecasting</a>. La única diferencia es que se debe indicar el nombre, o nivel, de la serie para la que se quieren realizar las predicciones.</p>
+<p align="center"><img src="../images/forecaster_multi_series_train_matrix_diagram.png" style="width: 800px"></p><p>Para predecir los siguientes <em>n steps</em>, se sigue una estrategia recurisva, <a href="https://joaquinamatrodrigo.github.io/skforecast/latest/quick-start/introduction-forecasting.html#multi-step-forecasting">recursive multi-step forecasting</a>.</p>
 <p align="center"><img src="../images/forecaster_multi_series_prediction_diagram.png" style="width: 800px"></p><p><strong>Múltiples series temporales multivariantes</strong></p>
 <p>Todas las series se modelan teniendo en cuenta que cada serie temporal depende no sólo de sus valores pasados, sino también de los valores pasados de las demás series. Se espera que el modelo no sólo aprenda la información de cada serie por separado, sino que también las relacione. Por ejemplo, las mediciones realizadas por todos los sensores (caudal, temperatura, presión...) instalados en una máquina industrial como un compresor. <a href="https://joaquinamatrodrigo.github.io/skforecast/latest/user_guides/multivariate-forecasting.html">Series temporales multivariantes user guide</a>.</p>
 <p align="center"><img src="../images/forecaster_multivariate_train_matrix_diagram.png" style="width: 800px"></p>
@@ -13349,6 +13344,22 @@ La clase <code>ForecasterAutoregMultiSeries</code> cubre el caso de uso de <b>se
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<script src="https://kit.fontawesome.com/d20edc211b.js" crossorigin="anonymous"></script><div class="admonition note" name="html-admonition" style="background: rgba(0,184,212,.1); padding-top: 0px; padding-bottom: 6px; border-radius: 8px; border-left: 8px solid #00b8d4;">
+
+<p class="title">
+    <i class="fa-circle-exclamation fa" style="font-size: 18px; color:#00b8d4;"></i>
+    <b> &nbsp Note</b>
+</p>
+
+Para aplicar forecasting a múltiples series temporales no multivariantes con <b>predictores custom</b> se puede usar la clase <code>ForecasterAutoregMultiSeriesCustom</code>. Guía de usuario: <a href="https://joaquinamatrodrigo.github.io/skforecast/latest/user_guides/custom-predictors.html">Custom predictors for recursive multi-step forecasting</a>.
+
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Ventajas-y-limitaciones">Ventajas y limitaciones<a class="anchor-link" href="#Ventajas-y-limitaciones">&#182;</a></h2><p><br></p>
 <p>El <em>forecasting</em> multiserie no siempre superan al modelado de la serie individual. Cuál de ellas funciona mejor depende en gran medida de las características del caso de uso al que se aplican. Sin embargo, conviene tener en cuenta la siguiente heurística:</p>
 <p>Ventajas de los modelos multiseries:</p>
@@ -13366,7 +13377,7 @@ La clase <code>ForecasterAutoregMultiSeries</code> cubre el caso de uso de <b>se
 </li>
 <li><p>Las series pueden enmascararse unas a otras, por lo que el modelo puede no predecirlas todas con el mismo rendimiento.</p>
 </li>
-<li><p>Suele ser más exigente desde el punto de vista computacional (tiempo y recursos) entrenar y realizar <a href="https://joaquinamatrodrigo.github.io/skforecast/latest/user_guides/backtesting.html"><em>backtesting</em></a> de un modelo grande que de varios pequeños.</p>
+<li><p>Es más exigente desde el punto de vista computacional (tiempo y recursos) entrenar y realizar <a href="https://joaquinamatrodrigo.github.io/skforecast/latest/user_guides/backtesting.html"><em>backtesting</em></a> de un modelo grande que de varios pequeños.</p>
 </li>
 </ul>
 
@@ -16883,6 +16894,7 @@ Multi-series forecasting with python and skforecast by Joaquín Amat Rodrigo and
 
 </font></p>
 
+<!-- citation -->
 <p><br></p>
 
 <p><strong>¿Te ha gustado el artículo? Tu ayuda es importante</strong></p>
@@ -16896,7 +16908,7 @@ Mantener un sitio web tiene unos costes elevados, tu contribución me ayudará a
 </p>
 
 <p><br></p>
-
+<!-- citation -->
 
 </div>
 </div>
@@ -16906,9 +16918,9 @@ Mantener un sitio web tiene unos costes elevados, tu contribución me ayudará a
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />This work by  Joaquín Amat Rodrigo and Javier Escobar Ortiz is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</p>
 
+<!-- anuncio_themoneytizer_MEGABANNER_INFERIOR -->
 <p><br><br></p>
 
-<!-- anuncio_themoneytizer_MEGABANNER_INFERIOR -->
 <div id="73746-28"><script src="//ads.themoneytizer.com/s/gen.js?type=28"></script><script src="//ads.themoneytizer.com/s/requestform.js?siteId=73746&formatId=28"></script></div>
 <!-- anuncio_themoneytizer_MEGABANNER_INFERIOR -->
 
