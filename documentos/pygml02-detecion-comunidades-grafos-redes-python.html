@@ -189,6 +189,7 @@
   </script>
   <!-- End Quantcast Choice. Consent Manager Tag v2.0 (for TCF 2.0) -->
 
+
 <style type="text/css">
     /*!
 *
@@ -13269,7 +13270,7 @@ div#notebook {
 <script>
 $( document ).ready(function(){
 
-            var cfg = {"base_numbering": 1, "nav_menu": {}, "number_sections": false, "sideBar": true, "skip_h1_title": true, "title_cell": "Tabla de contenidos", "title_sidebar": "Tabla de contenidos", "toc_cell": false, "toc_position": {"height": "calc(100% - 180px)", "left": "10px", "top": "150px", "width": "372.784px"}, "toc_section_display": true, "toc_window_display": true};
+            var cfg = {"base_numbering": 1, "nav_menu": {}, "number_sections": false, "sideBar": true, "skip_h1_title": false, "title_cell": "Tabla de contenidos", "title_sidebar": "Tabla de contenidos", "toc_cell": false, "toc_position": {"height": "calc(100% - 180px)", "left": "10px", "top": "150px", "width": "372.77px"}, "toc_section_display": true, "toc_window_display": true};
 
             // fire the main function with these parameters
             require(['nbextensions/toc2/toc2'], function (toc2) {
@@ -13298,7 +13299,7 @@ $( document ).ready(function(){
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Introducci&#243;n">Introducci&#243;n<a class="anchor-link" href="#Introducci&#243;n">&#182;</a></h1><p><br></p>
+<h2 id="Introducci&#243;n">Introducci&#243;n<a class="anchor-link" href="#Introducci&#243;n">&#182;</a></h2><p><br></p>
 <p>La detección de comunidades, también conocida como partición de grafos, hace referencia al conjunto de técnicas no supervisadas utilizadas para encontrar grupos de nodos altamente interconectados. Más concretamente, la detección de comunidades trata de identificar subconjuntos de nodos que están muy conectados entre ellos y, al mismo tiempo, poco conectados con el resto de nodos de la red.</p>
 <p>La detección de comunidades tiene multitud de aplicaciones, tales como la identificación de grupos de personas con intereses similares, la clasificación de proteínas con funciones relacionadas y la agrupación de sitios web con temas comunes.</p>
 <p>Son muchos los métodos de detección de comunidades que se han desarollado, parte de ellos como adaptaciones de <a href="https://www.cienciadedatos.net/documentos/py20-clustering-con-python.html">algoritmos de clustering</a>, con la principal diferencia de que la similitud entre nodos se cuantifica utilizando únicamente la topología de la red.</p>
@@ -13313,7 +13314,7 @@ $( document ).ready(function(){
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Detecci&#243;n-de-comunidades">Detecci&#243;n de comunidades<a class="anchor-link" href="#Detecci&#243;n-de-comunidades">&#182;</a></h1><p><br></p>
+<h2 id="Detecci&#243;n-de-comunidades">Detecci&#243;n de comunidades<a class="anchor-link" href="#Detecci&#243;n-de-comunidades">&#182;</a></h2><p><br></p>
 <p>En términos simples, una comunidad es un grupo de nodos que tienen una alta densidad de conexiones entre ellos, pero una baja densidad de conexiones con nodos fuera del grupo. La detección de comunidades trata de encontrar esos conjuntos de nodos que están más conectados entre sí que con el resto del grafo. Existen multitud de algoritmos para detectar comunidades, y el algoritmo adecuado depende del tipo de grafo y del problema en cuestión. Algunos de los algoritmos más utilizados son:</p>
 <ul>
 <li><p><strong>Algoritmo de Girvan-Newman</strong>: este algoritmo se basa en la idea de eliminar progresivamente los enlaces que conectan los grupos de nodos con mayor densidad (enlaces con mayor <em>betweenness centrality</em>) hasta que queden subgrafos desconectados que representan las comunidades.</p>
@@ -13331,8 +13332,8 @@ $( document ).ready(function(){
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Algoritmo-de-Louvain">Algoritmo de Louvain<a class="anchor-link" href="#Algoritmo-de-Louvain">&#182;</a></h1><p><br></p>
-<h2 id="Modularidad">Modularidad<a class="anchor-link" href="#Modularidad">&#182;</a></h2><p><br></p>
+<h2 id="Algoritmo-de-Louvain">Algoritmo de Louvain<a class="anchor-link" href="#Algoritmo-de-Louvain">&#182;</a></h2><p><br></p>
+<h3 id="Modularidad">Modularidad<a class="anchor-link" href="#Modularidad">&#182;</a></h3><p><br></p>
 <p>El algoritmo de Louvain tiene como objetivo optimizar un concepto matemático denominado modularidad, una medida que se utiliza en la teoría de grafos para evaluar la calidad de una partición.</p>
 <p>La modularidad se define como la diferencia entre el número de enlaces observado dentro de las comunidades y el número de enlaces esperados por azar. Una alta modularidad indica que las comunidades encontradas tienen más conexiones que las esperadas por azar y, por tanto, son compactas y bien definidas.</p>
 <p>La modularidad tiene un rango de valores entre -0.5 y 1 y se define mediante la siguiente fórmula:</p>
@@ -13394,7 +13395,7 @@ $$<p>dónde $L$ es el número total de enlaces del grafo.</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Algoritmo">Algoritmo<a class="anchor-link" href="#Algoritmo">&#182;</a></h2><p><br></p>
+<h3 id="Algoritmo">Algoritmo<a class="anchor-link" href="#Algoritmo">&#182;</a></h3><p><br></p>
 <p>El algoritmo de <a href="https://perso.uclouvain.be/vincent.blondel/research/louvain.html">Louvain</a> es uno de los algoritmos más populares y eficientes para detectar comunidades en grafos. Se basa en la idea de maximizar el número de enlaces dentro de una comunidad y minimizar el número de enlaces entre comunidades (optimización de modularidad). Su funcionamiento se divide en dos fases: una fase de agrupamiento y una fase de refinamiento.</p>
 <p><strong>Fase de agrupamiento</strong></p>
 <p>En la fase de agrupamiento, cada nodo se asigna a su propia comunidad. Luego, se itera sobre cada nodo del grafo y se calcula la ganancia en modularidad que se obtendría al mover el nodo a una comunidad diferente. Si se obtiene una ganancia positiva, se mueve el nodo a la comunidad correspondiente. Esto se repite hasta que ya no se pueden obtener ganancias adicionales.</p>
@@ -13418,7 +13419,7 @@ $$<p>dónde $L$ es el número total de enlaces del grafo.</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Control-del-tama&#241;o-de-las-comunidades:-Resoluci&#243;n">Control del tama&#241;o de las comunidades: Resoluci&#243;n<a class="anchor-link" href="#Control-del-tama&#241;o-de-las-comunidades:-Resoluci&#243;n">&#182;</a></h2><p><br></p>
+<h3 id="Control-del-tama&#241;o-de-las-comunidades:-Resoluci&#243;n">Control del tama&#241;o de las comunidades: Resoluci&#243;n<a class="anchor-link" href="#Control-del-tama&#241;o-de-las-comunidades:-Resoluci&#243;n">&#182;</a></h3><p><br></p>
 <p>El algoritmo de Louvain tiene un parámetro llamado <code>resolution</code> (resolución) que controla el grado de resolución de las comunidades detectadas. Un valor de resolución alto produce comunidades más pequeñas y específicas, mientras que un valor bajo produce comunidades más grandes y generales. Este es un parámetro importante que debe ser ajustado para cada caso.</p>
 <p>La siguiente figura del artículo "Laplacian Dynamics and Multiscale Modular Structure in Networks" se muestra la influencia del parámetro <em>resolution</em> en la calidad de las particiones ($R(t)$). En la imagen, el parámetro <em>time</em> representa <em>resolution</em>. Se puede apreciar que, cuanto mayor es la resolución, más pequeñas son las comunidades encontradas.</p>
 <p align="center"><img src="../images/pygml02-resolution.png" style="width: 500px"></p><p><br></p>
@@ -13432,7 +13433,7 @@ $$<p>dónde $L$ es el número total de enlaces del grafo.</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Algoritmo-de-Louvain-con-Python">Algoritmo de Louvain con Python<a class="anchor-link" href="#Algoritmo-de-Louvain-con-Python">&#182;</a></h1><p><br></p>
+<h2 id="Algoritmo-de-Louvain-con-Python">Algoritmo de Louvain con Python<a class="anchor-link" href="#Algoritmo-de-Louvain-con-Python">&#182;</a></h2><p><br></p>
 <p>El algoritmo de Louvain está disponible en Python a través de la librería <a href="https://networkx.org/documentation/stable/reference/algorithms/generated/networkx.algorithms.community.louvain.louvain_communities.html#networkx.algorithms.community.louvain.louvain_communities">networkx</a>. A continuación se muestra un ejemplo simple con el objetivo de ilustrar su funcionamiento.</p>
 
 </div>
@@ -13714,7 +13715,7 @@ $$<p>dónde $L$ es el número total de enlaces del grafo.</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Caso-de-estudio:-c&#237;rculos-sociales-de-Facebook-(Stanford)">Caso de estudio: c&#237;rculos sociales de Facebook (Stanford)<a class="anchor-link" href="#Caso-de-estudio:-c&#237;rculos-sociales-de-Facebook-(Stanford)">&#182;</a></h1><p><br></p>
+<h2 id="Caso-de-estudio:-c&#237;rculos-sociales-de-Facebook-(Stanford)">Caso de estudio: c&#237;rculos sociales de Facebook (Stanford)<a class="anchor-link" href="#Caso-de-estudio:-c&#237;rculos-sociales-de-Facebook-(Stanford)">&#182;</a></h2><p><br></p>
 
 </div>
 </div>
@@ -13722,7 +13723,7 @@ $$<p>dónde $L$ es el número total de enlaces del grafo.</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Librer&#237;as">Librer&#237;as<a class="anchor-link" href="#Librer&#237;as">&#182;</a></h2>
+<h3 id="Librer&#237;as">Librer&#237;as<a class="anchor-link" href="#Librer&#237;as">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -13750,7 +13751,7 @@ $$<p>dónde $L$ es el número total de enlaces del grafo.</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Datos">Datos<a class="anchor-link" href="#Datos">&#182;</a></h2><p><br></p>
+<h3 id="Datos">Datos<a class="anchor-link" href="#Datos">&#182;</a></h3><p><br></p>
 <p>La base de datos "Social circles: Facebook" fue creada por investigadores de la universidad de Stanford en el año 2012. Este conjunto de datos representa redes de amistad de Facebook. Los datos disponibles incluyen características de nodos (perfiles) y sus conexiones de amistad. Los datos fueron anonimizados reemplazando los nombres y otras identificaciones por un índice numérico. Pueden descargarse de la web de Stanford (<a href="https://snap.stanford.edu/data/ego-Facebook.html">https://snap.stanford.edu/data/ego-Facebook.html</a>).</p>
 
 </div>
@@ -13870,7 +13871,7 @@ $$<p>dónde $L$ es el número total de enlaces del grafo.</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Creaci&#243;n-del-grafo">Creaci&#243;n del grafo<a class="anchor-link" href="#Creaci&#243;n-del-grafo">&#182;</a></h2>
+<h3 id="Creaci&#243;n-del-grafo">Creaci&#243;n del grafo<a class="anchor-link" href="#Creaci&#243;n-del-grafo">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -13946,7 +13947,7 @@ Número de enlaces: 5000
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Visualizaci&#243;n-de-la-red">Visualizaci&#243;n de la red<a class="anchor-link" href="#Visualizaci&#243;n-de-la-red">&#182;</a></h2>
+<h3 id="Visualizaci&#243;n-de-la-red">Visualizaci&#243;n de la red<a class="anchor-link" href="#Visualizaci&#243;n-de-la-red">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -14009,7 +14010,7 @@ Número de enlaces: 5000
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Detecci&#243;n-de-comunidades">Detecci&#243;n de comunidades<a class="anchor-link" href="#Detecci&#243;n-de-comunidades">&#182;</a></h2>
+<h3 id="Detecci&#243;n-de-comunidades">Detecci&#243;n de comunidades<a class="anchor-link" href="#Detecci&#243;n-de-comunidades">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -14056,7 +14057,7 @@ Tamaño de las comunidades detectadas: [339, 111, 1274]
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Representaci&#243;n-de-la-red-y-sus-comunidades">Representaci&#243;n de la red y sus comunidades<a class="anchor-link" href="#Representaci&#243;n-de-la-red-y-sus-comunidades">&#182;</a></h2><p>Para visualizar las comunidades detectadas, se puede utilizar la función <code>draw_networkx()</code> de <code>NetworkX</code>. Esta función permite especificar un diccionario de colores para los nodos en función de su comunidad.</p>
+<h3 id="Representaci&#243;n-de-la-red-y-sus-comunidades">Representaci&#243;n de la red y sus comunidades<a class="anchor-link" href="#Representaci&#243;n-de-la-red-y-sus-comunidades">&#182;</a></h3><p>Para visualizar las comunidades detectadas, se puede utilizar la función <code>draw_networkx()</code> de <code>NetworkX</code>. Esta función permite especificar un diccionario de colores para los nodos en función de su comunidad.</p>
 
 </div>
 </div>
@@ -14138,7 +14139,7 @@ Tamaño de las comunidades detectadas: [339, 111, 1274]
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Conclusiones">Conclusiones<a class="anchor-link" href="#Conclusiones">&#182;</a></h2><p><br></p>
+<h3 id="Conclusiones">Conclusiones<a class="anchor-link" href="#Conclusiones">&#182;</a></h3><p><br></p>
 <p>En este documento se ha descrito cómo detectar comunidades en redes sociales utilizando el algoritmo de Louvain. Este algoritmo es una de las técnicas más populares para la detección de comunidades en redes sociales. Sin embargo, existen otras técnicas que pueden ser útiles en algunos casos. Por ejemplo, el algoritmo de Girvan-Newman, que permite detectar comunidades en redes dirigidas.</p>
 
 </div>
@@ -14147,7 +14148,7 @@ Tamaño de las comunidades detectadas: [339, 111, 1274]
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Informaci&#243;n-de-sesi&#243;n">Informaci&#243;n de sesi&#243;n<a class="anchor-link" href="#Informaci&#243;n-de-sesi&#243;n">&#182;</a></h1>
+<h2 id="Informaci&#243;n-de-sesi&#243;n">Informaci&#243;n de sesi&#243;n<a class="anchor-link" href="#Informaci&#243;n-de-sesi&#243;n">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -14199,14 +14200,7 @@ Session information updated at 2023-04-02 18:01
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Bibliograf&#237;a">Bibliograf&#237;a<a class="anchor-link" href="#Bibliograf&#237;a">&#182;</a></h1><p><br></p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Bibliograf&#237;a">Bibliograf&#237;a<a class="anchor-link" href="#Bibliograf&#237;a">&#182;</a></h2><p><br></p>
 <p>Network Science - Albert-László Barabási</p>
 <p>V. D. Blondel, J.-L. Guillaume, R. Lambiotte and E. Lefebvre, "Fast unfolding of communities in large networks," J. Stat. Mech. (2008) P10008, p. 12, 2008.</p>
 <p><a href="https://networkx.github.io">NetworkX</a></p>
@@ -14225,6 +14219,7 @@ Detección de comunidades en grafos y redes con python by Fernando Carazo and Jo
 
 </font></p>
 
+<!-- donacion -->
 <p><br></p>
 
 <p><strong>¿Te ha gustado el artículo? Tu ayuda es importante</strong></p>
@@ -14241,6 +14236,7 @@ Detección de comunidades en grafos y redes con python by Fernando Carazo and Jo
 </p>
 
 <p><br></p>
+<!-- donacion -->
 
 </div>
 </div>
@@ -14257,14 +14253,14 @@ Detección de comunidades en grafos y redes con python by Fernando Carazo and Jo
   <script src="//ads.themoneytizer.com/s/requestform.js?siteId=73746&formatId=28"></script>
 </div>
 <!-- anuncio_themoneytizer_MEGABANNER_INFERIOR -->
-    
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-
+<p>%%html</p>
 <style>
 .text_cell_render p {
     text-align: justify;
