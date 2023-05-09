@@ -906,7 +906,7 @@ improvedigital.com,1895,RESELLER
 spotx.tv,202009,RESELLER,7842df1d2fe2db34
 appnexus.com,8904,DIRECT,f5ab79cb980f11d1
 openx.com,537148817,RESELLER,6a698e2ec38604c6
-pubmatic,162439,RESELLER,5d62403b186f2ace
+pubmatic.com,162439,RESELLER,5d62403b186f2ace
 spotx.tv,113481,RESELLER,7842df1d2fe2db34
 spotxchange.com,113481,RESELLER,7842df1d2fe2db34
 rubiconproject.com,18194,RESELLER,0bfd66d529a55807
