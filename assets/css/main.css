@@ -3490,8 +3490,9 @@ input, select, textarea {
 			color: inherit;
 			cursor: pointer;
 			display: block;
-			font-size: medium;
-			padding: 0.625em 0;
+			font-size: 1.1em;
+			font-weight: 600;
+			padding: 0.5em 0;
 		}
 
 			#menu ul a:hover, #menu ul span:hover {
@@ -3557,7 +3558,7 @@ input, select, textarea {
 		}
 
 			#menu > ul > li > ul a, #menu > ul > li > ul span {
-				font-size: em;
+				font-size: 0.9em;
 			}
 
 			#menu > ul > li > ul > li {
