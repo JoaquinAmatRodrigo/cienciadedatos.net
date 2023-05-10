@@ -1795,7 +1795,7 @@ input, select, textarea {
 		font-weight: 400;
 		letter-spacing: 0.075em;
 		margin-top: -0.5em;
-		text-transform: uppercase;
+		text-transform: none;
 	}
 
 	header.major > :last-child {
@@ -3481,7 +3481,7 @@ input, select, textarea {
 		list-style: none;
 		margin-bottom: 0;
 		padding: 0;
-		text-transform: uppercase;
+		text-transform: none;
 	}
 
 		#menu ul a, #menu ul span {
@@ -3556,7 +3556,7 @@ input, select, textarea {
 		}
 
 			#menu > ul > li > ul a, #menu > ul > li > ul span {
-				font-size: 0.8em;
+				font-size: 1em;
 			}
 
 			#menu > ul > li > ul > li {
