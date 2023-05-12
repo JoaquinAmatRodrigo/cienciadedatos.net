@@ -3571,3 +3571,10 @@ input, select, textarea {
 			margin-top: 0;
 			padding-top: 0;
 		}
+
+/* Custom */
+.responsivelogo {
+	width: 100%;
+	max-width: 400px;
+	height: auto;
+	}
