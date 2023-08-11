@@ -13360,12 +13360,12 @@ $$y_i= \beta_0 + \beta_1 x_{i1} + \beta_2 x_{i2} + ... + \beta_p x_{ip} +\epsilo
 <ul>
 <li><p>$\beta_{0}$: es la ordenada en el origen, se corresponde con el valor promedio de la variable respuesta $y$ cuando todos los predictores son cero.</p>
 </li>
-<li><p>$\beta_{j}$: es el efecto promedio que tiene sobre la variable respuesta el incremento en una unidad de la variable predictora $x_{j}$, manteniéndose constantes el resto de variables. Se conocen como coeficientes parciales de regresión.</p>
+<li><p>$\beta_{i}$: es el efecto promedio que tiene sobre la variable respuesta el incremento en una unidad de la variable predictora $x_{i}$, manteniéndose constantes el resto de variables. Se conocen como coeficientes parciales de regresión.</p>
 </li>
 <li><p>$e$: es el residuo o error, la diferencia entre el valor observado y el estimado por el modelo. Recoge el efecto de todas aquellas variables que influyen en $y$ pero que no se incluyen en el modelo como predictores.</p>
 </li>
 </ul>
-<p>En la gran mayoría de casos, los valores $\beta_0$ y $\beta_j$ poblacionales se desconocen, por lo que, a partir de una muestra, se obtienen sus estimaciones $\hat{\beta}_0$ y $\hat{\beta}_j$. Ajustar el modelo consiste en estimar, a partir de los datos disponibles, los valores de los coeficientes de regresión que maximizan la verosimilitud (<em>likelihood</em>), es decir, los que dan lugar al modelo que con mayor probabilidad puede haber generado los datos observados.</p>
+<p>En la gran mayoría de casos, los valores $\beta_0$ y $\beta_i$ poblacionales se desconocen, por lo que, a partir de una muestra, se obtienen sus estimaciones $\hat{\beta}_0$ y $\hat{\beta}_i$. Ajustar el modelo consiste en estimar, a partir de los datos disponibles, los valores de los coeficientes de regresión que maximizan la verosimilitud (<em>likelihood</em>), es decir, los que dan lugar al modelo que con mayor probabilidad puede haber generado los datos observados.</p>
 <p>El método empleado con más frecuencia es el ajuste por mínimos cuadrados ordinarios (<em>OLS</em>), que identifica como mejor modelo la recta (o plano si es regresión múltiple) que minimiza la suma de las desviaciones verticales entre cada dato de entrenamiento y la recta, elevadas al cuadrado.</p>
 
 </div>
