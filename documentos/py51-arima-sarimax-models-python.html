@@ -13346,16 +13346,16 @@ $( document ).ready(function(){
 <p>When the terms $P$, $D$, $Q$, and $m$ are zero and no exogenous variables are included in the model, the SARIMAX model is equivalent to an ARIMA.</p>
 <p>Several Python libraries implement ARIMA-SARIMAX models. Four of them are:</p>
 <ul>
-<li><p><a href="https://www.statsmodels.org/stable/index.html">statsmodels</a>: this is one of the most complete libraries for statistical modeling. While the functional paradigm may be intuitive for those coming from the R environment, those accustomed to the object-oriented API of scikit-learn may need a short period of adaptation.</p>
+<li><p><a href="https://www.statsmodels.org/stable/index.html"><b>statsmodels</b></a>: is one of the most complete libraries for statistical modeling in Python. Its API is often more intuitive for those coming from the R environment than for those used to the object-oriented API of scikit-learn.</p>
 </li>
-<li><p><a href="http://alkaline-ml.com/pmdarima/">pmdarima</a>: This is a wrapper for <code>statsmodels SARIMAX</code>. Its distinguishing feature is its seamless integration with the scikit-learn API, allowing users familiar with scikit-learn's conventions to seamlessly dive into time series modeling.</p>
+<li><p><a href="http://alkaline-ml.com/pmdarima/"><b>pmdarima</b></a>: This is a wrapper for <code>statsmodels SARIMAX</code>. Its distinguishing feature is its seamless integration with the scikit-learn API, allowing users familiar with scikit-learn's conventions to seamlessly dive into time series modeling.</p>
 </li>
-<li><p><a href="https://skforecast.org/latest/index.html">skforecast</a>: a novel wrapper for <code>statsmodels SARIMAX</code> that also follows the scikit-learn API. This implementation is very similar to that of pmdarima, but has been streamlined to include only the essential elements for skforecast, resulting in significant speed improvements.</p>
+<li><p><a href="https://skforecast.org/latest/index.html"><b>skforecast</b></a>: Among its many forecasting features, it has a new wrapper of <code>statsmodels SARIMAX</code> that also follows the scikit-learn API. This implementation is very similar to that of pmdarima, but has been simplified to include only the essential elements for skforecast, resulting in significant speed improvements.</p>
 </li>
-<li><p><a href="https://nixtla.github.io/statsforecast/">statsForecast</a>: statsForecast offers a collection of widely used univariate time series forecasting models, including automatic ARIMA, ETS, CES, and Theta modeling optimized for high performance using numba.</p>
+<li><p><a href="https://nixtla.github.io/statsforecast/"><b>statsForecast</b></a>: It offers a collection of widely used univariate time series forecasting models, including automatic ARIMA, ETS, CES, and Theta modeling optimized for high performance using numba.</p>
 </li>
 </ul>
-<p>This guide delves into three of these libraries - <strong>statsmodels</strong>, <strong>pmdarima</strong>, and <strong>skforecast</strong> - and elucidates the methodology for building ARIMA models using each. In addition, the introduction of the <code>ForecasterSarimax</code> class extends the capabilities of ARIMA-SARIMAX models by incorporating functionalities such as backtesting, hyperparameter tuning, probabilistic forecasting, and more.</p>
+<p>This guide delves into three of these libraries - <strong>statsmodels</strong>, <strong>pmdarima</strong>, and <strong>skforecast</strong> -and explains how to building ARIMA-SARIMAX models using each. In addition, the introduction of the <code>ForecasterSarimax</code> class extends the capabilities of ARIMA-SARIMAX models by incorporating functionalities such as backtesting, hyperparameter tuning, probabilistic forecasting, and more.</p>
 
 </div>
 </div>
