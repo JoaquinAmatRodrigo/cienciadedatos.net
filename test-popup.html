@@ -208,14 +208,14 @@
     </script>
 </body>
 </html> -->
-
+<!-- 
 <!DOCTYPE html>
 <html>
 <head>
     <title>Popup Example</title>
     <style>
         .popup {
-            display: block;
+            display: none;
             position: fixed;
             top: 10px;
             right: 35px;
@@ -246,20 +246,24 @@
         }
 
         @media only screen and (max-width: 767px) {
-            .popup {
-                width: 20%;
+        .popup {
+            display: none;
             }
         }
 
         @media only screen and (min-width: 1300px) {
             .popup {
                 width: 50%;
-                right: 150px;
+                font-size: 16px;
+                right: 100px;
             }
         }
 
-        @media only screen and (max-width: 320px) {
+        @media only screen and (max-width: 480px) {
             .popup {
+                display: none;
+            }
+            .popup .close {
                 display: none;
             }
         }
@@ -275,7 +279,9 @@
     <script>
         function showPopup() {
             var popup = document.getElementById("myPopup");
-            popup.style.display = "block";
+            if (window.innerWidth > 767) {
+                popup.style.display = "block";
+            }
         }
 
         function hidePopup() {
@@ -284,7 +290,7 @@
         }
     </script>
 </body>
-</html>
+</html> -->
 
 <!-- <!DOCTYPE html>
 <html>
@@ -410,5 +416,71 @@
 </html> -->
 
 
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Popup Example</title>
+    <style>
+        .popup {
+            display: none; /* Set initial display to none */
+            position: fixed;
+            top: 10px;
+            right: 35px;
+            font-size: 14px;
+            font-family: 'Open Sans', sans-serif;
+            background-color: #ffab4040;
+            border: 3px solid #ffab40;
+            border-radius: 10px;
+            padding: 5px 10px;
+            z-index: 9999;
+            width: 50%;
+            overflow: auto;
+            line-height: 1.2;
+        }
+
+        .popup .close {
+            position: absolute;
+            top: 5px;
+            right: 10px;
+            font-size: 20px;
+            font-weight: bold;
+            color: #aaa;
+            cursor: pointer;
+        }
+
+        .popup .close:hover {
+            color: #000;
+        }
+
+        /* @media only screen and (min-width: 768px) and (max-width: 1450px) {
+            .popup {
+                width: 70%;
+                font-size: 16px;
+                right: 100px;
+            }
+        } */
+    </style>
+</head>
+<body onload="showPopup()">
+    <div class="popup" id="myPopup">
+        <span class="close" onclick="hidePopup()">&times;</span>
+        <p>¡Colabora en mantener las puertas del conocimiento abiertas! Si nuestros artículos te han ayudado a progresar en tu formación o carrera profesional, apreciaríamos enormemente tu apoyo. Tu contribución nos permite mantener esta plataforma accesible para todos y crear nuevos contenidos. Puedes hacerlo a través de <a href="https://www.paypal.com/donate/?hosted_button_id=6NULYFYDKFTQL" target="_blank" rel="noopener noreferrer"><b>PayPal</b></a> o <a href="https://github.com/sponsors/JoaquinAmatRodrigo" target="_blank" rel="noopener noreferrer"><b>Github Sponsors</b></a> ¡Son solo un par de cliks &#128522; &#128522;!</p>
+    </div>
+
+    <script>
+        function showPopup() {
+            var popup = document.getElementById("myPopup");
+            if (window.innerWidth > 768) {
+                popup.style.display = "block";
+            }
+        }       
+
+        function hidePopup() {
+            var popup = document.getElementById("myPopup");
+            popup.style.display = "none";
+        }
+    </script>
+</body>
+</html>
 
 
