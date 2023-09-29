@@ -215,41 +215,53 @@
     <title>Popup Example</title>
     <style>
         .popup {
-            display: none;
-	position: fixed;
-	top: 10px;
-	right: 35px;
-	font-size: 14px;
-	font-family: 'Open Sans', sans-serif;
-	background-color: #ffab4040;
-	border: 3px solid #ffab40;
-	border-radius: 10px;
-	padding: 5px 10px;
-	z-index: 9999;
-	width: 70%;
-	overflow: auto;
-	line-height: 1.2;
-}
+            display: block;
+            position: fixed;
+            top: 10px;
+            right: 35px;
+            font-size: 14px;
+            font-family: 'Open Sans', sans-serif;
+            background-color: #ffab4040;
+            border: 3px solid #ffab40;
+            border-radius: 10px;
+            padding: 5px 10px;
+            z-index: 9999;
+            width: 70%;
+            overflow: auto;
+            line-height: 1.2;
+        }
 
-.popup .close {
-	position: absolute;
-	top: 5px;
-	right: 10px;
-	font-size: 20px;
-	font-weight: bold;
-	color: #aaa;
-	cursor: pointer;
-}
+        .popup .close {
+            position: absolute;
+            top: 5px;
+            right: 10px;
+            font-size: 20px;
+            font-weight: bold;
+            color: #aaa;
+            cursor: pointer;
+        }
 
-.popup .close:hover {
-	color: #000;
-}
+        .popup .close:hover {
+            color: #000;
+        }
 
-@media screen and (max-width: 767px) {
-	.popup {
-		display: none;
-	}
-}
+        @media only screen and (max-width: 767px) {
+            .popup {
+                width: 20%;
+            }
+        }
+
+        @media only screen and (min-width: 1300px) {
+            .popup {
+                width: 50%;
+            }
+        }
+
+        @media only screen and (max-width: 320px) {
+            .popup {
+                display: none;
+            }
+        }
         
     </style>
 </head>

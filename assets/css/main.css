@@ -3581,18 +3581,18 @@ input, select, textarea {
 
 /*style for the popup*/
 .popup {
-	display: none;
+	display: block;
 	position: fixed;
-	top: 7px;
+	top: 10px;
 	right: 35px;
 	font-size: 14px;
 	font-family: 'Open Sans', sans-serif;
 	background-color: #ffab4040;
 	border: 3px solid #ffab40;
 	border-radius: 10px;
-	padding: 5px 10px 1px 10px;
+	padding: 5px 10px;
 	z-index: 9999;
-	width: 50%;
+	width: 70%;
 	overflow: auto;
 	line-height: 1.2;
 }
@@ -3611,14 +3611,20 @@ input, select, textarea {
 	color: #000;
 }
 
-@media screen and (max-width: 767px) {
+@media only screen and (max-width: 767px) {
 	.popup {
-		display: none;
+		width: 20%;
 	}
 }
 
-@media screen and (min-width: 768px) {
-    .popup {
-        width: 71%;
-    }
+@media only screen and (min-width: 1300px) {
+	.popup {
+		width: 50%;
+	}
+}
+
+@media only screen and (max-width: 320px) {
+	.popup {
+		display: none;
+	}
 }
