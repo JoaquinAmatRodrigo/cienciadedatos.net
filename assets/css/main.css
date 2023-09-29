@@ -3599,11 +3599,11 @@ input, select, textarea {
 
 .popup .close {
 	position: absolute;
-	top: 5px;
-	right: 10px;
+	top: 0px;
+    right: 3px;
 	font-size: 20px;
 	font-weight: bold;
-	color: #aaa;
+	color: #000;
 	cursor: pointer;
 }
 
