@@ -3622,6 +3622,6 @@ input, select, textarea {
 
 @media only screen and (max-width: 410px) {
 	.popup {
-		right: 50px;
+		right: 10px;
 	}
 }
