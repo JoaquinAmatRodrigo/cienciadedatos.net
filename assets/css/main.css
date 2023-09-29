@@ -3581,7 +3581,7 @@ input, select, textarea {
 
 /*style for the popup*/
 .popup {
-	display: block;
+	display: none;
 	position: fixed;
 	top: 10px;
 	right: 50px;
@@ -3626,14 +3626,11 @@ input, select, textarea {
 	}
 }
 
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 480px) {
 	.popup {
 		display: none;
 	}
-}
-
-@media only screen and (max-width: 480px) {
-	.popup {
+	.popup .close {
 		display: none;
 	}
 }
