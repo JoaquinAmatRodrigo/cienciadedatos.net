@@ -3611,7 +3611,7 @@ input, select, textarea {
 	color: #000;
 }
 
-@media only screen and (max-width: 767px) {
+/* @media only screen and (max-width: 767px) {
 	.popup {
 		width: 55%;
 		font-size: 12px;
@@ -3633,4 +3633,4 @@ input, select, textarea {
 	.popup .close {
 		display: none;
 	}
-}
+} */
