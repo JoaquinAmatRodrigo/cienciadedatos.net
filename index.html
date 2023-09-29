@@ -207,10 +207,12 @@
 		<script>
 			function showPopup() {
 				var popup = document.getElementById("myPopup");
-				if (window.innerWidth > 768) {
+				if (window.innerWidth > 926) {
 					popup.style.display = "block";
+				} else {
+					popup.style.display = "none";
 				}
-			} 
+			}
 
 			function hidePopup() {
 				var popup = document.getElementById("myPopup");
