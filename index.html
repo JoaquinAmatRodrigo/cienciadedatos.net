@@ -196,7 +196,7 @@
 		<!--Pop up-->
 		<div class="popup" id="myPopup">
 			<span class="close" onclick="hidePopup()">&times;</span>
-			<p>
+			<p id="popupText">
 			Si nuestros artículos te han ayudado a progresar en tu
 			formación o carrera profesional, apreciaríamos enormemente tu apoyo. Tu contribución nos permite mantener esta plataforma
 			accesible para todos y crear nuevos contenidos. Puedes hacerlo a través de 
@@ -207,10 +207,12 @@
 		<script>
 			function showPopup() {
 				var popup = document.getElementById("myPopup");
-				if (window.innerWidth > 926) {
+				var popupText = document.getElementById("popupText");
+				if (window.innerWidth > 768) {
 					popup.style.display = "block";
 				} else {
-					popup.style.display = "none";
+					popupText.innerHTML = "Apoya nuestro trabajo en <a href='https://www.paypal.com/donate/?hosted_button_id=6NULYFYDKFTQL' target='_blank' rel='noopener noreferrer'><b>PayPal</b></a> o <a href='https://github.com/sponsors/JoaquinAmatRodrigo' target='_blank' rel='noopener noreferrer'><b>Github Sponsors</b></a>";
+					popup.style.display = "block";
 				}
 			}
 
