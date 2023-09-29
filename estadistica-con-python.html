@@ -189,7 +189,37 @@
 <!-- End Quantcast Choice. Consent Manager Tag v2.0 (for TCF 2.0) -->
 
 	</head>
-	<body class="is-preload">
+	<body class="is-preload" onload="showPopup()">
+
+		<!--Pop up-->
+		<div class="popup" id="myPopup">
+			<span class="close" onclick="hidePopup()">&times;</span>
+			<p id="popupText">
+			Si nuestros artículos te han ayudado, apreciaríamos enormemente tu apoyo. Tu contribución nos permite mantener esta plataforma
+			accesible para todos y crear nuevos contenidos. Puedes hacerlo a través de 
+			<a href="https://www.paypal.com/donate/?hosted_button_id=6NULYFYDKFTQL" target="_blank" rel="noopener noreferrer"><b>PayPal</b></a>
+			o <a href="https://github.com/sponsors/JoaquinAmatRodrigo" target="_blank" rel="noopener noreferrer"><b>Github Sponsors</b></a>
+		</p>
+		</div>
+		<script>
+			function showPopup() {
+				var popup = document.getElementById("myPopup");
+				var popupText = document.getElementById("popupText");
+				if (window.innerWidth > 768) {
+					popup.style.display = "block";
+				} else {
+					popupText.innerHTML = "Apóyanos en <a href='https://www.paypal.com/donate/?hosted_button_id=6NULYFYDKFTQL' target='_blank' rel='noopener noreferrer'><b>PayPal</b></a> o <a href='https://github.com/sponsors/JoaquinAmatRodrigo' target='_blank' rel='noopener noreferrer'><b>Github Sponsors</b></a>";
+					popup.style.display = "block";
+				}
+			}
+
+			function hidePopup() {
+				var popup = document.getElementById("myPopup");
+				popup.style.display = "none";
+			}
+			window.addEventListener("resize", showPopup);
+		</script>
+		<!--Pop up-->
 
 		<!-- Wrapper -->
 			<div id="wrapper">
