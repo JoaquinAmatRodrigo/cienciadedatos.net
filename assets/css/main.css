@@ -3611,14 +3611,15 @@ input, select, textarea {
 	color: #000;
 }
 
-/* @media only screen and (max-width: 767px) {
+@media only screen and (max-width: 1300px) {
 	.popup {
+		display: block;
 		width: 55%;
-		font-size: 12px;
+		font-size: 14px;
 	}
 }
 
-@media only screen and (min-width: 1300px) {
+/* @media only screen and (min-width: 1300px) {
 	.popup {
 		width: 50%;
 		font-size: 16px;
