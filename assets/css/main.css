@@ -3631,3 +3631,9 @@ input, select, textarea {
 		display: none;
 	}
 }
+
+@media only screen and (max-width: 480px) {
+	.popup {
+		display: none;
+	}
+}
