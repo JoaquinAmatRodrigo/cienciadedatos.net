@@ -3611,27 +3611,11 @@ input, select, textarea {
 	color: #000;
 }
 
-@media only screen and (max-width: 1800px) {
-	.popup {
-		display: block;
-		width: 55%;
-		font-size: 14px;
-	}
-}
 
-/* @media only screen and (min-width: 1300px) {
+@media only screen and (min-width: 1300px) {
 	.popup {
 		width: 50%;
 		font-size: 16px;
 		right: 100px;
 	}
 }
-
-@media only screen and (max-width: 480px) {
-	.popup {
-		display: none;
-	}
-	.popup .close {
-		display: none;
-	}
-} */
