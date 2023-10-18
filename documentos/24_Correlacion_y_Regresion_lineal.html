@@ -3162,7 +3162,7 @@ div.tocify {
 
 </head>
 
-<body>
+<body onload="setTimeout(showPopup, 20000)">
 
 
 <div class="container-fluid main-container">
@@ -3190,6 +3190,40 @@ div.tocify {
 </ul>
 </div>
 
+
+<!--Pop up-->
+<div class="popup" id="myPopup">
+  <span class="close" onclick="hidePopup()">x</span>
+  <p id="popupText" style="font-size: 14px;">
+  Si nuestros artículos te han ayudado, apreciaríamos enormemente tu apoyo. Tu contribución nos permite mantener esta plataforma
+  accesible para todos y crear nuevos contenidos. Puedes hacerlo a través de 
+  <a href="https://www.paypal.com/donate/?hosted_button_id=6NULYFYDKFTQL" target="_blank" rel="noopener noreferrer"><b>PayPal</b></a>
+  o <a href="https://github.com/sponsors/JoaquinAmatRodrigo" target="_blank" rel="noopener noreferrer"><b>Github Sponsors</b></a>
+</p>
+</div>
+<script>
+  function showPopup() {
+    var popup = document.getElementById("myPopup");
+    var popupText = document.getElementById("popupText");
+    if (window.innerWidth > 768) {
+      popup.style.display = "block";
+    } else {
+      popupText.innerHTML = "Apóyanos en <a href='https://www.paypal.com/donate/?hosted_button_id=6NULYFYDKFTQL' target='_blank' rel='noopener noreferrer'><b>PayPal</b></a> o <a href='https://github.com/sponsors/JoaquinAmatRodrigo' target='_blank' rel='noopener noreferrer'><b>Github Sponsors</b></a>";
+      popup.style.display = "block";
+    }
+  }
+
+  function hidePopup() {
+    var popup = document.getElementById("myPopup");
+    popup.style.display = "none";
+  }
+  window.addEventListener("resize", showPopup);
+</script>
+
+<div>
+  <p> <br><br><br><br><br></p>
+</div>
+<!--Pop up-->
 
 
 <h1 class="title toc-ignore">Correlación lineal y Regresión lineal simple</h1>
@@ -3314,6 +3348,51 @@ blockquote {
 .pagedtable table {
     font-size: 14px;
 }
+
+/*style for the popup*/
+.popup {
+    display: none;
+    position: fixed;
+    top: 30px;
+    left: 60%;
+    transform: translateX(-50%);
+    font-family: 'Open Sans', sans-serif;
+    background-color: #FFEACF;
+    border: 3px solid #ffab40;
+    border-radius: 10px;
+    padding: 5px 10px;
+    z-index: 9999;
+    width: 50%;
+    max-width: 700px; /* Adjust this value as needed */
+    overflow: auto;
+    line-height: 1.2;
+    text-align: center;
+}
+
+.popup .close {
+    position: absolute;
+    top: 0px;
+    right: 3px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #000;
+    cursor: pointer;
+}
+
+.popup .close:hover {
+    color: #000;
+}
+
+
+@media only screen and (min-width: 1300px) {
+    .popup {
+        width: 50%;
+        font-size: 16px;
+        left: 55%;
+        transform: translateX(-50%);
+    }
+}
+
 </style>
 <p><br> Más sobre ciencia de datos: <a href="https://cienciadedatos.net"><strong>cienciadedatos.net</strong></a> <br></p>
 <ul>
@@ -3337,13 +3416,6 @@ blockquote {
 <li><p>Por norma general, los estudios de correlación lineal preceden a la generación de modelos de regresión lineal. Primero se analiza si ambas variables están correlacionadas y, en caso de estarlo, se procede a generar el modelo de regresión. <br><br></p></li>
 </ul>
 
-
-<!-- anuncio_themoneytizer MEGASKYSCRAPER -->
-<div id="73746-20" style="position:fixed; bottom:0; top:0; right:0;">
-  <script src="//ads.themoneytizer.com/s/gen.js?type=20"></script>
-  <script src="//ads.themoneytizer.com/s/requestform.js?siteId=73746&formatId=20"></script>
-</div>
-<!-- anuncio_themoneytizer MEGASKYSCRAPER -->
 
 </div>
 <div id="correlación-lineal" class="section level1">
@@ -3733,10 +3805,7 @@ blockquote {
 <p>Donde <span class="math inline">\(Sy\)</span> y <span class="math inline">\(Sx\)</span> son las desviaciones típicas de cada variable y <span class="math inline">\(R\)</span> el coeficiente de correlación. <span class="math inline">\(\hat{\beta}_0\)</span> es el valor esperado la variable <span class="math inline">\(Y\)</span> cuando <span class="math inline">\(X\)</span> = 0, es decir, la intersección de la recta con el eje y. Es un dato necesario para generar la recta, pero en ocasiones, no tiene interpretación práctica (situaciones en las que <span class="math inline">\(X\)</span> no puede adquirir el valor 0).</p>
 <p>Una recta de regresión puede emplearse para diferentes propósitos y dependiendo de ellos es necesario satisfacer distintas condiciones. En caso de querer medir la relación lineal entre dos variables, la recta de regresión lo va a indicar de forma directa (ya que calcula la correlación). Sin embargo, en caso de querer predecir el valor de una variable en función de la otra, no solo se necesita calcular la recta, sino que además hay que asegurar que el modelo sea bueno. <br><br></p>
 
-<!-- anuncio_themoneytizer_ROBAPÁGINAS -->
-<div id="73746-2"><script src="//ads.themoneytizer.com/s/gen.js?type=2"></script><script src="//ads.themoneytizer.com/s/requestform.js?siteId=73746&formatId=2"></script></div>
-<!-- anuncio_themoneytizer_ROBAPÁGINAS -->
-<p><br><br></p>
+
 
 <div id="inferencia-mediante-regresión-lineal.-significancia-e-intervalo-de-confianza-para-beta_0-y-beta_1" class="section level2">
 <h2>Inferencia mediante regresión lineal. Significancia e intervalo de confianza para <span class="math inline">\(\beta_0\)</span> y <span class="math inline">\(\beta_1\)</span></h2>
@@ -4108,9 +4177,6 @@ blockquote {
 <div class="sourceCode" id="cb92"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb92-1"><a href="#cb92-1"></a><span class="kw">par</span>(<span class="dt">mfrow =</span> <span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">1</span>))</span></code></pre></div>
 <p><br><br></p>
 
-<!-- anuncio_themoneytizer_ROBAPÁGINAS INFERIOR  -->
-<div id="73746-19"><script src="//ads.themoneytizer.com/s/gen.js?type=19"></script><script src="//ads.themoneytizer.com/s/requestform.js?siteId=73746&formatId=19"></script></div>
-<!-- anuncio_themoneytizer_ROBAPÁGINAS INFERIOR  -->
 
 <p><br><br></p>
 

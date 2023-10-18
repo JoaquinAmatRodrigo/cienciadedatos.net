@@ -191,7 +191,37 @@
 
 	
 	</head>
-	<body class="is-preload">
+	<body class="is-preload" onload="showPopup()">
+
+		<!--Pop up-->
+		<div class="popup" id="myPopup">
+			<span class="close" onclick="hidePopup()">&times;</span>
+			<p id="popupText">
+			Si nuestros artículos te han ayudado, apreciaríamos enormemente tu apoyo. Tu contribución nos permite mantener esta plataforma
+			accesible para todos y crear nuevos contenidos. Puedes hacerlo a través de 
+			<a href="https://www.paypal.com/donate/?hosted_button_id=6NULYFYDKFTQL" target="_blank" rel="noopener noreferrer"><b>PayPal</b></a>
+			o <a href="https://github.com/sponsors/JoaquinAmatRodrigo" target="_blank" rel="noopener noreferrer"><b>Github Sponsors</b></a>
+		</p>
+		</div>
+		<script>
+			function showPopup() {
+				var popup = document.getElementById("myPopup");
+				var popupText = document.getElementById("popupText");
+				if (window.innerWidth > 768) {
+					popup.style.display = "block";
+				} else {
+					popupText.innerHTML = "Apóyanos en <a href='https://www.paypal.com/donate/?hosted_button_id=6NULYFYDKFTQL' target='_blank' rel='noopener noreferrer'><b>PayPal</b></a> o <a href='https://github.com/sponsors/JoaquinAmatRodrigo' target='_blank' rel='noopener noreferrer'><b>Github Sponsors</b></a>";
+					popup.style.display = "block";
+				}
+			}
+
+			function hidePopup() {
+				var popup = document.getElementById("myPopup");
+				popup.style.display = "none";
+			}
+			window.addEventListener("resize", showPopup);
+		</script>
+		<!--Pop up-->
 
 		<!-- Wrapper -->
 			<div id="wrapper">
@@ -432,6 +462,21 @@
 											</ul>
 										</article>
 
+								</section>
+
+								<!-- Section -->
+								<section style="padding-top: 35px;">
+
+									<header class="major">
+										<h2>Hacer una donación</h2>
+									</header>
+
+									<p>
+									¡Colabora en mantener las puertas del conocimiento abiertas! Si nuestros artículos te han ayudado a progresar en tu formación o carrera profesional,
+									apreciaríamos enormemente tu apoyo. Tu contribución nos permite mantener esta plataforma accesible para todos y crear nuevos contenidos.  Puedes hacerlo a través de <a href="https://www.paypal.com/donate/?hosted_button_id=6NULYFYDKFTQL" target="_blank" rel="noopener noreferrer" class="button"><b>PayPal</b></a> 
+									o <a href="https://github.com/sponsors/JoaquinAmatRodrigo" target="_blank" rel="noopener noreferrer" class="button"><b>Github Sponsors</b></a> ¡Son solo un par de clicks &#128522;&#128522;!
+									</p>
+										
 								</section>
 
 								<!-- Section -->
@@ -694,34 +739,12 @@
 
 							<!-- Section -->
 								<section>
-									<header class="major">
-										<h2>Información de contacto</h2>
-									</header>
-
-									<ul class="contact">
-										<li class="fa-envelope-o"><a href="#">j.amatrodrigo@gmail.com</a></li>
-									</ul>
-
-									<ul class="icons">
-											<li><a href="https://www.linkedin.com/in/joaquin-amat-rodrigo" class="icon fa-linkedin-square"><span class="label">Linkedin</span></a></li>
-											<li><a href="https://github.com/JoaquinAmatRodrigo" class="icon fa-github"><span class="label">Git Hub</span></a></li>
-											<li>
-												<form action="https://www.paypal.com/donate" method="post" target="_top">
-												<input type="hidden" name="hosted_button_id" value="6NULYFYDKFTQL" />
-												<input type="image" src="https://www.paypalobjects.com/en_US/ES/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
-												<img alt="" border="0" src="https://www.paypal.com/en_ES/i/scr/pixel.gif" width="1" height="1" />
-												</form>																									
-											</li>
-										</ul>
-										
 									<p>
 									<!-- anuncio_themoneytizer_MEGABANNER_INFERIOR -->
 									<div id="73746-28"><script src="//ads.themoneytizer.com/s/gen.js?type=28"></script><script src="//ads.themoneytizer.com/s/requestform.js?siteId=73746&formatId=28"></script></div>
 									<!-- anuncio_themoneytizer_MEGABANNER_INFERIOR -->
 									</p>
 								</section>
-
-								
 
 							<!-- Footer -->
 								<footer id="footer">

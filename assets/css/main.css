@@ -3577,3 +3577,51 @@ input, select, textarea {
 	max-width: 400px;
 	height: auto;
 	}
+
+
+/*style for the popup*/
+.popup {
+	display: none;
+	position: fixed;
+	top: 10px;
+	right: 50px;
+	font-size: 13px;
+	font-family: 'Open Sans', sans-serif;
+	background-color: #ffab4040;
+	border: 3px solid #ffab40;
+	border-radius: 10px;
+	padding: 5px 10px;
+	z-index: 9999;
+	width: 70%;
+	overflow: auto;
+	line-height: 1.2;
+}
+
+.popup .close {
+	position: absolute;
+	top: 0px;
+    right: 3px;
+	font-size: 20px;
+	font-weight: bold;
+	color: #000;
+	cursor: pointer;
+}
+
+.popup .close:hover {
+	color: #000;
+}
+
+
+@media only screen and (min-width: 1300px) {
+	.popup {
+		width: 50%;
+		font-size: 16px;
+		right: 100px;
+	}
+}
+
+@media only screen and (max-width: 410px) {
+	.popup {
+		right: 10px;
+	}
+}

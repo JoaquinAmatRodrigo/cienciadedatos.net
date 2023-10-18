@@ -1647,6 +1647,51 @@ font-weight: 400;
 font-style: italic;
 opacity: 0.3;
 }
+
+/*style for the popup*/
+.popup {
+    display: none;
+    position: fixed;
+    top: 30px;
+    left: 60%;
+    transform: translateX(-50%);
+    font-family: 'Open Sans', sans-serif;
+    background-color: #FFEACF;
+    border: 3px solid #ffab40;
+    border-radius: 10px;
+    padding: 5px 10px;
+    z-index: 9999;
+    width: 50%;
+    max-width: 700px; /* Adjust this value as needed */
+    overflow: auto;
+    line-height: 1.2;
+    text-align: center;
+}
+
+.popup .close {
+    position: absolute;
+    top: 0px;
+    right: 3px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #000;
+    cursor: pointer;
+}
+
+.popup .close:hover {
+    color: #000;
+}
+
+
+@media only screen and (min-width: 1300px) {
+    .popup {
+        width: 50%;
+        font-size: 16px;
+        left: 55%;
+        transform: translateX(-50%);
+    }
+}
+
 </style>
 <script>// Production steps of ECMA-262, Edition 5, 15.4.4.18
 // Reference: http://es5.github.io/#x15.4.4.18
@@ -3156,7 +3201,7 @@ div.tocify {
 
 </head>
 
-<body>
+<body onload="setTimeout(showPopup, 20000)">
 
 
 <div class="container-fluid main-container">
@@ -3184,7 +3229,39 @@ div.tocify {
 </ul>
 </div>
 
+<!--Pop up-->
+<div class="popup" id="myPopup">
+  <span class="close" onclick="hidePopup()">x</span>
+  <p id="popupText" style="font-size: 14px;">
+  Si nuestros artículos te han ayudado, apreciaríamos enormemente tu apoyo. Tu contribución nos permite mantener esta plataforma
+  accesible para todos y crear nuevos contenidos. Puedes hacerlo a través de 
+  <a href="https://www.paypal.com/donate/?hosted_button_id=6NULYFYDKFTQL" target="_blank" rel="noopener noreferrer"><b>PayPal</b></a>
+  o <a href="https://github.com/sponsors/JoaquinAmatRodrigo" target="_blank" rel="noopener noreferrer"><b>Github Sponsors</b></a>
+</p>
+</div>
+<script>
+  function showPopup() {
+    var popup = document.getElementById("myPopup");
+    var popupText = document.getElementById("popupText");
+    if (window.innerWidth > 768) {
+      popup.style.display = "block";
+    } else {
+      popupText.innerHTML = "Apóyanos en <a href='https://www.paypal.com/donate/?hosted_button_id=6NULYFYDKFTQL' target='_blank' rel='noopener noreferrer'><b>PayPal</b></a> o <a href='https://github.com/sponsors/JoaquinAmatRodrigo' target='_blank' rel='noopener noreferrer'><b>Github Sponsors</b></a>";
+      popup.style.display = "block";
+    }
+  }
 
+  function hidePopup() {
+    var popup = document.getElementById("myPopup");
+    popup.style.display = "none";
+  }
+  window.addEventListener("resize", showPopup);
+</script>
+
+<div>
+  <p> <br><br><br><br><br></p>
+</div>
+<!--Pop up-->
 
 <h1 class="title toc-ignore">ANOVA análisis de varianza para comparar múltiples medias</h1>
 <h4 class="author">Joaquín Amat Rodrigo</h4>

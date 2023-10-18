@@ -13275,7 +13275,7 @@ $( document ).ready(function(){
             });
     });
 </script>
-<body>
+<body onload="setTimeout(showPopup, 20000)">
   <div tabindex="-1" id="notebook" class="border-box-sizing">
     <div class="container" id="notebook-container">
 
@@ -13287,13 +13287,41 @@ $( document ).ready(function(){
 </div>
 </div>
 
+<!--Pop up-->
+<div class="popup" id="myPopup">
+  <span class="close" onclick="hidePopup()">&times;</span>
+  <p id="popupText">
+    If you found skforecast useful, you can support us with a donation. Your contribution will help to continue developing and improving this project. Many thanks! <a href="https://www.paypal.com/donate/?hosted_button_id=D2JZSWRLTZDL6" target="_blank" rel="noopener noreferrer"><b>PayPal</b></a>
+  or <a href="https://github.com/sponsors/JoaquinAmatRodrigo" target="_blank" rel="noopener noreferrer"><b>Github Sponsors</b></a>
+</p>
+</div>
+<script>
+  function showPopup() {
+    var popup = document.getElementById("myPopup");
+    var popupText = document.getElementById("popupText");
+    if (window.innerWidth > 768) {
+      popup.style.display = "block";
+    } else {
+      popupText.innerHTML = "Support <b>skforecast</b> at <a href='https://www.paypal.com/donate/?hosted_button_id=D2JZSWRLTZDL6' target='_blank' rel='noopener noreferrer'><b>PayPal</b></a> or <a href='https://github.com/sponsors/JoaquinAmatRodrigo' target='_blank' rel='noopener noreferrer'><b>Github Sponsors</b></a>";
+      popup.style.display = "block";
+    }
+  }
+
+  function hidePopup() {
+    var popup = document.getElementById("myPopup");
+    popup.style.display = "none";
+  }
+  window.addEventListener("resize", showPopup);
+</script>
+<!--Pop up-->
+
 <!-- banner github -->
-<div style= "background-color: #7e56c2; color: #ffffff; height: 2.4rem; position: relative; width: 100%;">
+<!-- <div style= "background-color: #7e56c2; color: #ffffff; height: 2.4rem; position: relative; width: 100%;">
 	<p style= "color: #ffffff; align-items: center; display: flex; height: 100%; justify-content: center;">
 		If you like&nbsp; <b> Skforecast </b>,&nbsp; please give us a star on &nbsp;
 		<a style= "color: #ffffff;" href="https://github.com/JoaquinAmatRodrigo/skforecast/" rel="noopener noreferrer" target="_blank"><u>GitHub</u></a>! ⭐️
 	</p>
-</div>
+</div> -->
 <!-- banner github -->
 
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
@@ -17662,6 +17690,51 @@ div.inner_cell {
 
 .rendered_html h4 {
     font-size: 20px;
+}
+
+/*style for the pop up*/
+.popup {
+    display: none;
+    position: fixed;
+    top: 30px;
+    left: 60%;
+    transform: translateX(-50%);
+    font-family: 'Open Sans', sans-serif;
+    background-color: #FFEACF;
+    border: 3px solid #ffab40;
+    border-radius: 10px;
+    padding: 10px 10px;
+    z-index: 9999;
+    width: 50%;
+    max-width: 1000px; /* Adjust this value as needed */
+    overflow: auto;
+    line-height: 1.2;
+    text-align: center;
+    font-size: 16px;
+}
+
+.popup .close {
+    position: absolute;
+    top: 0px;
+    right: 3px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #000;
+    cursor: pointer;
+}
+
+.popup .close:hover {
+    color: #000;
+}
+
+
+@media only screen and (min-width: 1300px) {
+    .popup {
+        width: 50%;
+        font-size: 16px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
 }
 
 </style>
