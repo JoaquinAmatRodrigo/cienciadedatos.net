@@ -15491,6 +15491,8 @@ var element = $('#eed0dc7a-869a-4f1b-aa1e-f0b5dffad2e4');
 </p>
 
 Exogenous variables must be known at the time of the forecast. For example, if temperature is used as an exogenous variable, the temperature value for the next hour must be known at the time of the forecast. If the temperature value is not known, the forecast will not be possible.
+<br><br>
+Weather variables should be used with caution. When the model is deployed into production, future weather conditions are not known, but are predictions made by meteorological services. Because they are predictions, they introduce errors into the forecasting model. As a result, the model's predictions are likely to get worse. One way to anticipate this problem, and to know (not avoid) the expected performance of the model, is to use the weather forecasts available at the time the model is trained, rather than the recorded conditions.
 
 </div>
 </div>
