@@ -1,0 +1,26 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: cienciadedatos.net
+message: >-
+  If you use this website, please cite it using the metadata from this file.
+type: website
+authors:
+  - given-names: Joaquin
+    family-names: Amat Rodrigo
+    email: j.amatrodrigo@gmail.com
+url: 'https://cienciadedatos.net'
+abstract: >-
+  Web de divulgación con material formativo sobre estadística, algoritmos de machine learning, ciencia de datos y programación en R y Python.
+keywords:
+  - estadistica
+  - machine learning
+  - algoritmos
+  - python
+  - r
+  - ciencia de datos
+doi: 
+license: CC-BY-4.0
+version: 1.0.1
+date-released: '2023-10-16'
