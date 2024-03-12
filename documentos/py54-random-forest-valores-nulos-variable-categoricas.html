@@ -186,6 +186,7 @@
 </script>
 <!-- End Quantcast Choice. Consent Manager Tag v2.0 (for TCF 2.0) -->
 
+
 <style type="text/css">
     /*!
 *
@@ -13281,7 +13282,7 @@ $( document ).ready(function(){
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1><center><font size="25">Random forest con valores nulos y variables categoricas</font></center></h1>
+<h1><center><font size="25">Random forest con valores nulos y variables categóricas</font></center></h1>
 </div>
 </div>
 </div>
@@ -13309,7 +13310,14 @@ $( document ).ready(function(){
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Introducci&#243;n">Introducci&#243;n<a class="anchor-link" href="#Introducci&#243;n">&#182;</a></h2><p>Los modelos de <a href="https://cienciadedatos.net/documentos/py08_random_forest_python">Random Forest</a> son una poderosa técnica en el campo del aprendizaje automático (<em>machine learning</em>). Se basan en la construcción de múltiples <a href="https://cienciadedatos.net/documentos/py07_arboles_decision_python">árboles de decisión</a> y combinan sus predicciones para obtener un resultado final más robusto y preciso. Este enfoque de conjunto permite a los Random Forest superar muchas de las limitaciones asociadas con un solo árbol de decisión, como el sobreajuste y la sensibilidad a pequeñas variaciones en los datos de entrenamiento. Gracias a su versatilidad y capacidad para manejar una amplia variedad de problemas de clasificación y regresión, Random Forest se han convertido en una herramienta indispensable para los científicos de datos.</p>
+<h2 id="Introducci&#243;n">Introducci&#243;n<a class="anchor-link" href="#Introducci&#243;n">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Los modelos de <a href="https://cienciadedatos.net/documentos/py08_random_forest_python">Random Forest</a> son una poderosa técnica en el campo del aprendizaje automático (<em>machine learning</em>). Se basan en la construcción de múltiples <a href="https://cienciadedatos.net/documentos/py07_arboles_decision_python">árboles de decisión</a> y combinan sus predicciones para obtener un resultado final más robusto y preciso. Este enfoque de conjunto permite a los Random Forest superar muchas de las limitaciones asociadas con un solo árbol de decisión, como el sobreajuste y la sensibilidad a pequeñas variaciones en los datos de entrenamiento. Gracias a su versatilidad y capacidad para manejar una amplia variedad de problemas de clasificación y regresión, Random Forest se han convertido en una herramienta indispensable para los científicos de datos.</p>
 <p>En el ecosistema Python, una de las implementaciones de Random Forest más utilizadas es la disponible en Scikit-learn (<a href="https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestRegressor.html">RandomForestRegressor, RandomForestClassifier</a>). Aunque esta implementación satisface con éxito la mayoría de los casos de uso, tiene dos limitaciones: no acepta datos ausentes (<em>missing</em>) y carece de la capacidad de manejar de forma nativa variables categóricas. Esto lleva a la necesidad de aplicar estrategias de preprocesamiento (como <em>one hot encoding</em>, <em>target encoding</em>, etc.) para superar estas limitaciones.</p>
 <p><strong>XGBoost</strong> y <strong>LightGBM</strong>, conocidos sobre todo por su eficaz aplicación de <a href="https://cienciadedatos.net/documentos/py09_gradient_boosting_python">modelos gradient boosting</a>, también permiten crear modelos Random Forest. Estas implementaciones tienen varias ventajas sobre la de Scikit-learn:</p>
 <ul>
@@ -13340,8 +13348,9 @@ $( document ).ready(function(){
 </p>
 
 El principal beneficio de utilizar la librería XGBoost o LightGBM para entrenar modelos random forest frente a la implementación nativa de scikit-learn es la velocidad junto con su capacidad para manejar variables categóricas.
+<br>
 
-Desde la version *1.4* de Scikit-learn, la implementación de Random Forest ha añadido la capacidad de manejar ausentes.
+Desde la version <code>1.4</code> de Scikit-learn, la implementación de Random Forest ha añadido la capacidad de manejar valores ausentes.
 
 </div>
 </div>
@@ -13372,14 +13381,21 @@ La implementación de XGBoost tiene algunas diferencias con respecto a la implem
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Librer&#237;as">Librer&#237;as<a class="anchor-link" href="#Librer&#237;as">&#182;</a></h2><p>Las librerías utilizadas en este documento son:</p>
+<h2 id="Librer&#237;as">Librer&#237;as<a class="anchor-link" href="#Librer&#237;as">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Las librerías utilizadas en este documento son:</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Tratamiento de datos</span>
@@ -13411,9 +13427,9 @@ La implementación de XGBoost tiene algunas diferencias con respecto a la implem
 <span class="c1"># Configuración warnings</span>
 <span class="c1"># ==============================================================================</span>
 <span class="kn">import</span> <span class="nn">warnings</span>
-<span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s1">&#39;once&#39;</span><span class="p">)</span>
+<span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s2">&quot;ignore&quot;</span><span class="p">,</span> <span class="n">category</span><span class="o">=</span><span class="ne">DeprecationWarning</span><span class="p">)</span>
+<span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s2">&quot;ignore&quot;</span><span class="p">,</span> <span class="n">category</span><span class="o">=</span><span class="ne">FutureWarning</span><span class="p">)</span>
 <span class="n">optuna</span><span class="o">.</span><span class="n">logging</span><span class="o">.</span><span class="n">set_verbosity</span><span class="p">(</span><span class="n">optuna</span><span class="o">.</span><span class="n">logging</span><span class="o">.</span><span class="n">WARNING</span><span class="p">)</span>
-
 
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;XGBoost version: </span><span class="si">{</span><span class="n">xgboost</span><span class="o">.</span><span class="n">__version__</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;LightGBM version: </span><span class="si">{</span><span class="n">lightgbm</span><span class="o">.</span><span class="n">__version__</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
@@ -13471,7 +13487,7 @@ El conjunto de datos original (20.640 observaciones y 9 variables) ha sido modif
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Descarga de datos california housing extended</span>
@@ -13480,7 +13496,7 @@ El conjunto de datos original (20.640 observaciones y 9 variables) ha sido modif
     <span class="s1">&#39;https://raw.githubusercontent.com/JoaquinAmatRodrigo/&#39;</span>
     <span class="s1">&#39;Estadistica-machine-learning-python/master/data/california_housing_extended.csv&#39;</span>
 <span class="p">)</span>
-<span class="n">datos</span> <span class="o">=</span> <span class="n">datos</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Latitude&#39;</span><span class="p">,</span> <span class="s1">&#39;Longitude&#39;</span><span class="p">,</span> <span class="s1">&#39;Latitude_Longitude&#39;</span><span class="p">,</span> <span class="s1">&#39;cordenadas_california_housing&#39;</span><span class="p">])</span>
+<span class="n">datos</span> <span class="o">=</span> <span class="n">datos</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Latitude&#39;</span><span class="p">,</span> <span class="s1">&#39;Longitude&#39;</span><span class="p">])</span>
 <span class="n">datos</span><span class="p">[</span><span class="s1">&#39;postcode&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;postcode_&quot;</span> <span class="o">+</span> <span class="n">datos</span><span class="p">[</span><span class="s1">&#39;postcode&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span>
 <span class="n">datos</span><span class="p">[</span><span class="s1">&#39;postcode&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">datos</span><span class="p">[</span><span class="s1">&#39;postcode&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;postcode_nan&#39;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Dimensiones de los datos:&quot;</span><span class="p">,</span> <span class="n">datos</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
@@ -13501,14 +13517,14 @@ El conjunto de datos original (20.640 observaciones y 9 variables) ha sido modif
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Dimensiones de los datos: (20640, 10)
+<pre>Dimensiones de los datos: (20640, 11)
 </pre>
 </div>
 </div>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[5]:</div>
+    <div class="prompt output_prompt">Out[2]:</div>
 
 
 
@@ -13537,6 +13553,7 @@ El conjunto de datos original (20.640 observaciones y 9 variables) ha sido modif
       <th>AveBedrms</th>
       <th>Population</th>
       <th>AveOccup</th>
+      <th>MedHouseVal</th>
       <th>county</th>
       <th>postcode</th>
       <th>ciudad_mas_cercana</th>
@@ -13552,6 +13569,7 @@ El conjunto de datos original (20.640 observaciones y 9 variables) ha sido modif
       <td>1.023810</td>
       <td>322.0</td>
       <td>2.555556</td>
+      <td>4.526</td>
       <td>Contra Costa County</td>
       <td>postcode_94563.0</td>
       <td>Berkeley</td>
@@ -13565,6 +13583,7 @@ El conjunto de datos original (20.640 observaciones y 9 variables) ha sido modif
       <td>0.971880</td>
       <td>2401.0</td>
       <td>2.109842</td>
+      <td>3.585</td>
       <td>Contra Costa County</td>
       <td>postcode_94563.0</td>
       <td>Orinda</td>
@@ -13578,6 +13597,7 @@ El conjunto de datos original (20.640 observaciones y 9 variables) ha sido modif
       <td>1.073446</td>
       <td>496.0</td>
       <td>2.802260</td>
+      <td>3.521</td>
       <td>Alameda County</td>
       <td>postcode_94613.0</td>
       <td>Piedmont</td>
@@ -13591,6 +13611,7 @@ El conjunto de datos original (20.640 observaciones y 9 variables) ha sido modif
       <td>1.073059</td>
       <td>558.0</td>
       <td>2.547945</td>
+      <td>3.413</td>
       <td>Alameda County</td>
       <td>postcode_94613.0</td>
       <td>Berkeley</td>
@@ -13604,6 +13625,7 @@ El conjunto de datos original (20.640 observaciones y 9 variables) ha sido modif
       <td>1.081081</td>
       <td>565.0</td>
       <td>2.181467</td>
+      <td>3.422</td>
       <td>Alameda County</td>
       <td>postcode_94613.0</td>
       <td>Berkeley</td>
@@ -13622,7 +13644,7 @@ El conjunto de datos original (20.640 observaciones y 9 variables) ha sido modif
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Porcentaje de valores nuelos por columna</span>
@@ -13640,7 +13662,7 @@ El conjunto de datos original (20.640 observaciones y 9 variables) ha sido modif
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[6]:</div>
+    <div class="prompt output_prompt">Out[3]:</div>
 
 
 
@@ -13652,6 +13674,7 @@ AveRooms                        0.000000
 AveBedrms                       0.000000
 Population                      0.000000
 AveOccup                        0.000000
+MedHouseVal                     0.000000
 county                          0.305281
 postcode                        0.102859
 ciudad_mas_cercana              0.000000
@@ -13667,7 +13690,7 @@ dtype: float64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Categorias que aparecen menos de 10 veces se agrupan en una categoria &quot;otro&quot;</span>
@@ -13687,7 +13710,7 @@ dtype: float64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Numero de categorias por variable</span>
@@ -13728,7 +13751,7 @@ ciudad_mas_cercana: 411
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Las variables de tipo categorico se almacenan como dtype category</span>
@@ -13749,7 +13772,7 @@ ciudad_mas_cercana: 411
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[9]:</div>
+    <div class="prompt output_prompt">Out[6]:</div>
 
 
 
@@ -13761,6 +13784,7 @@ AveRooms                         float64
 AveBedrms                        float64
 Population                       float64
 AveOccup                         float64
+MedHouseVal                      float64
 county                          category
 postcode                        category
 ciudad_mas_cercana              category
@@ -13776,14 +13800,12 @@ dtype: object</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># División de los datos en train, validation y test</span>
 <span class="c1"># ==============================================================================</span>
-<span class="n">col_numericas</span> <span class="o">=</span> <span class="n">datos</span><span class="o">.</span><span class="n">select_dtypes</span><span class="p">(</span><span class="n">include</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">number</span><span class="p">)</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">to_list</span><span class="p">()</span>
-<span class="n">col_categoricas</span> <span class="o">=</span> <span class="n">datos</span><span class="o">.</span><span class="n">select_dtypes</span><span class="p">(</span><span class="n">exclude</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">number</span><span class="p">)</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">to_list</span><span class="p">()</span>
-<span class="n">target</span> <span class="o">=</span> <span class="s1">&#39;MedInc&#39;</span>
+<span class="n">target</span> <span class="o">=</span> <span class="s1">&#39;MedHouseVal&#39;</span>
 
 <span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span>
     <span class="n">datos</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="n">target</span><span class="p">),</span>
@@ -13820,9 +13842,9 @@ dtype: object</pre>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Observaciones en train: (13209, 9)
-Observaciones en validation: (3303, 9)
-Observaciones en test: (4128, 9)
+<pre>Observaciones en train: (13209, 10)
+Observaciones en validation: (3303, 10)
+Observaciones en test: (4128, 10)
 </pre>
 </div>
 </div>
@@ -13880,14 +13902,15 @@ En este caso se realiza una codificación de las variables categóricas con <cod
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Target encoding de las variables categóricas</span>
 <span class="c1"># ==============================================================================</span>
+<span class="n">col_categoricas</span> <span class="o">=</span> <span class="n">datos</span><span class="o">.</span><span class="n">select_dtypes</span><span class="p">(</span><span class="n">exclude</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">number</span><span class="p">)</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">to_list</span><span class="p">()</span>
 <span class="n">encoder</span> <span class="o">=</span> <span class="n">ColumnTransformer</span><span class="p">(</span>
     <span class="n">transformers</span><span class="o">=</span><span class="p">[</span>
-        <span class="p">(</span><span class="s1">&#39;target&#39;</span><span class="p">,</span> <span class="n">TargetEncoder</span><span class="p">(),</span> <span class="n">col_categoricas</span><span class="p">)</span>
+        <span class="p">(</span><span class="s1">&#39;target&#39;</span><span class="p">,</span> <span class="n">TargetEncoder</span><span class="p">(</span><span class="n">target_type</span><span class="o">=</span><span class="s2">&quot;continuous&quot;</span><span class="p">),</span> <span class="n">col_categoricas</span><span class="p">)</span>
     <span class="p">],</span>
     <span class="n">remainder</span><span class="o">=</span><span class="s1">&#39;passthrough&#39;</span>
 <span class="p">)</span><span class="o">.</span><span class="n">set_output</span><span class="p">(</span><span class="n">transform</span><span class="o">=</span><span class="s1">&#39;pandas&#39;</span><span class="p">)</span>
@@ -13916,9 +13939,9 @@ En este caso se realiza una codificación de las variables categóricas con <cod
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Observaciones en train encoded: (13209, 9)
-Observaciones en validation encoded: (3303, 9)
-Observaciones en test encoded: (4128, 9)
+<pre>Observaciones en train encoded: (13209, 10)
+Observaciones en validation encoded: (3303, 10)
+Observaciones en test encoded: (4128, 10)
 </pre>
 </div>
 </div>
@@ -13929,7 +13952,7 @@ Observaciones en test encoded: (4128, 9)
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Búsqueda bayesiana de hiperparámetros con optuna</span>
@@ -13981,13 +14004,13 @@ Observaciones en test encoded: (4128, 9)
 
  
  
-<div id="5ca78664-b3e7-4e9f-b549-2af7db9f26b2"></div>
+<div id="662b5b36-1da0-4006-a50d-6797c2314032"></div>
 <div class="output_subarea output_widget_view ">
 <script type="text/javascript">
-var element = $('#5ca78664-b3e7-4e9f-b549-2af7db9f26b2');
+var element = $('#662b5b36-1da0-4006-a50d-6797c2314032');
 </script>
 <script type="application/vnd.jupyter.widget-view+json">
-{"model_id": "95f5fa9feaef4102834157430aad3851", "version_major": 2, "version_minor": 0}
+{"model_id": "6e1b725ed56842acbea0ee880f8b490d", "version_major": 2, "version_minor": 0}
 </script>
 </div>
 
@@ -13999,8 +14022,8 @@ var element = $('#5ca78664-b3e7-4e9f-b549-2af7db9f26b2');
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Mejores hiperparámetros: {&#39;n_estimators&#39;: 600, &#39;max_depth&#39;: 20, &#39;min_samples_split&#39;: 4, &#39;min_samples_leaf&#39;: 48, &#39;max_features&#39;: 0.9632593378962936, &#39;ccp_alpha&#39;: 0.0008948638094300378, &#39;min_impurity_decrease&#39;: 0.005639961101567448}
-Mejor score: 1.0115837515168993
+<pre>Mejores hiperparámetros: {&#39;n_estimators&#39;: 800, &#39;max_depth&#39;: 17, &#39;min_samples_split&#39;: 69, &#39;min_samples_leaf&#39;: 4, &#39;max_features&#39;: 0.46194796254324455, &#39;ccp_alpha&#39;: 0.023038477521006434, &#39;min_impurity_decrease&#39;: 0.013826157516659318}
+Mejor score: 0.5767107118731251
 </pre>
 </div>
 </div>
@@ -14011,7 +14034,7 @@ Mejor score: 1.0115837515168993
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Random Forest scikit-learn con los mejores hiperparámetros encontrados</span>
@@ -14064,9 +14087,9 @@ Mejor score: 1.0115837515168993
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Tiempo entrenamiento: 5.33 segundos
-Tiempo predicción:    0.19 segundos
-RMSE:                 0.96
+<pre>Tiempo entrenamiento: 3.05 segundos
+Tiempo predicción:    0.23 segundos
+RMSE:                 0.61
 </pre>
 </div>
 </div>
@@ -14078,13 +14101,14 @@ RMSE:                 0.96
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Random-Forest-con-XGBoost">Random Forest con XGBoost<a class="anchor-link" href="#Random-Forest-con-XGBoost">&#182;</a></h2>
+<h2 id="Random-Forest-con-XGBoost">Random Forest con XGBoost<a class="anchor-link" href="#Random-Forest-con-XGBoost">&#182;</a></h2><p><br></p>
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Búsqueda bayesiana de hiperparámetros con optuna</span>
@@ -14139,13 +14163,13 @@ RMSE:                 0.96
 
  
  
-<div id="6962ec7a-6b2b-41c4-97d4-63e6ad55f0dc"></div>
+<div id="eedecae4-0ab9-4c7f-bcd7-3090c86e8cd4"></div>
 <div class="output_subarea output_widget_view ">
 <script type="text/javascript">
-var element = $('#6962ec7a-6b2b-41c4-97d4-63e6ad55f0dc');
+var element = $('#eedecae4-0ab9-4c7f-bcd7-3090c86e8cd4');
 </script>
 <script type="application/vnd.jupyter.widget-view+json">
-{"model_id": "925667a639f3402383e5b19455a7662a", "version_major": 2, "version_minor": 0}
+{"model_id": "f7d9ec0074304bb4a4f29b2ae5c3078f", "version_major": 2, "version_minor": 0}
 </script>
 </div>
 
@@ -14157,8 +14181,8 @@ var element = $('#6962ec7a-6b2b-41c4-97d4-63e6ad55f0dc');
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Mejores hiperparámetros: {&#39;n_estimators&#39;: 400, &#39;max_depth&#39;: 28, &#39;reg_lambda&#39;: 0.04233898286077747, &#39;reg_alpha&#39;: 0.004975683869774296, &#39;gamma&#39;: 1.240217326600147, &#39;subsample&#39;: 0.9541432679387234, &#39;colsample_bynode&#39;: 0.6382050847794876}
-Mejor score: 0.9228203377563332
+<pre>Mejores hiperparámetros: {&#39;n_estimators&#39;: 1000, &#39;max_depth&#39;: 28, &#39;reg_lambda&#39;: 4.019385478115608e-05, &#39;reg_alpha&#39;: 0.017967239941045324, &#39;gamma&#39;: 0.07529217069252889, &#39;subsample&#39;: 0.8072275371971737, &#39;colsample_bynode&#39;: 0.7604468036009921}
+Mejor score: 0.43820288664297014
 </pre>
 </div>
 </div>
@@ -14169,7 +14193,7 @@ Mejor score: 0.9228203377563332
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Random Forest XGBoost con los mejores hiperparámetros encontrados</span>
@@ -14225,9 +14249,9 @@ Mejor score: 0.9228203377563332
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Tiempo entrenamiento: 23.23 segundos
-Tiempo predicción:    0.15 segundos
-RMSE:                 0.88
+<pre>Tiempo entrenamiento: 123.19 segundos
+Tiempo predicción:    0.49 segundos
+RMSE:                 0.46
 </pre>
 </div>
 </div>
@@ -14239,13 +14263,14 @@ RMSE:                 0.88
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Random-Forest-con-LightGBM">Random Forest con LightGBM<a class="anchor-link" href="#Random-Forest-con-LightGBM">&#182;</a></h2>
+<h2 id="Random-Forest-con-LightGBM">Random Forest con LightGBM<a class="anchor-link" href="#Random-Forest-con-LightGBM">&#182;</a></h2><p><br></p>
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Búsqueda bayesiana de hiperparámetros con optuna</span>
@@ -14277,7 +14302,7 @@ RMSE:                 0.88
     <span class="k">return</span> <span class="n">score</span>
 
 <span class="n">study</span> <span class="o">=</span> <span class="n">optuna</span><span class="o">.</span><span class="n">create_study</span><span class="p">(</span><span class="n">direction</span><span class="o">=</span><span class="s1">&#39;minimize&#39;</span><span class="p">)</span>
-<span class="n">study</span><span class="o">.</span><span class="n">optimize</span><span class="p">(</span><span class="n">objective</span><span class="p">,</span> <span class="n">n_trials</span><span class="o">=</span><span class="mi">35</span><span class="p">,</span> <span class="n">show_progress_bar</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="mi">60</span><span class="o">*</span><span class="mi">5</span><span class="p">)</span>
+<span class="n">study</span><span class="o">.</span><span class="n">optimize</span><span class="p">(</span><span class="n">objective</span><span class="p">,</span> <span class="n">n_trials</span><span class="o">=</span><span class="mi">25</span><span class="p">,</span> <span class="n">show_progress_bar</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="mi">60</span><span class="o">*</span><span class="mi">5</span><span class="p">)</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Mejores hiperparámetros:&#39;</span><span class="p">,</span> <span class="n">study</span><span class="o">.</span><span class="n">best_params</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Mejor score:&#39;</span><span class="p">,</span> <span class="n">study</span><span class="o">.</span><span class="n">best_value</span><span class="p">)</span>
@@ -14301,13 +14326,13 @@ RMSE:                 0.88
 
  
  
-<div id="c27322d1-d6a9-409b-a6dd-dce505a0ebf8"></div>
+<div id="c36cc2d6-5b8b-4554-980b-c37fe2c3bac7"></div>
 <div class="output_subarea output_widget_view ">
 <script type="text/javascript">
-var element = $('#c27322d1-d6a9-409b-a6dd-dce505a0ebf8');
+var element = $('#c36cc2d6-5b8b-4554-980b-c37fe2c3bac7');
 </script>
 <script type="application/vnd.jupyter.widget-view+json">
-{"model_id": "50114bdc5f3c446aba1c823b2b0f47cc", "version_major": 2, "version_minor": 0}
+{"model_id": "4c3e7df962f042bfa095ca07626dc3a1", "version_major": 2, "version_minor": 0}
 </script>
 </div>
 
@@ -14319,8 +14344,8 @@ var element = $('#c27322d1-d6a9-409b-a6dd-dce505a0ebf8');
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Mejores hiperparámetros: {&#39;n_estimators&#39;: 500, &#39;num_leaves&#39;: 254, &#39;reg_lambda&#39;: 0.03552207893307555, &#39;reg_alpha&#39;: 3.267435129406208e-05, &#39;min_samples_leaf&#39;: 2, &#39;colsample_bytree&#39;: 0.9351801476659535, &#39;colsample_bynode&#39;: 0.9157375081895376, &#39;subsample&#39;: 0.9875111813837428}
-Mejor score: 0.9551342240063208
+<pre>Mejores hiperparámetros: {&#39;n_estimators&#39;: 900, &#39;num_leaves&#39;: 182, &#39;reg_lambda&#39;: 0.0006407955794893048, &#39;reg_alpha&#39;: 0.07336325542256919, &#39;min_samples_leaf&#39;: 11, &#39;colsample_bytree&#39;: 0.8180313370435927, &#39;colsample_bynode&#39;: 0.6470365376300803, &#39;subsample&#39;: 0.7676612983421611}
+Mejor score: 0.47846907209163364
 </pre>
 </div>
 </div>
@@ -14331,7 +14356,7 @@ Mejor score: 0.9551342240063208
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Random Forest LightGBM con los mejores hiperparámetros encontrados</span>
@@ -14384,9 +14409,9 @@ Mejor score: 0.9551342240063208
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Tiempo entrenamiento: 3.82 segundos
-Tiempo predicción:    0.07 segundos
-RMSE:                 0.92
+<pre>Tiempo entrenamiento: 4.82 segundos
+Tiempo predicción:    0.13 segundos
+RMSE:                 0.51
 </pre>
 </div>
 </div>
@@ -14398,23 +14423,36 @@ RMSE:                 0.92
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Resultados">Resultados<a class="anchor-link" href="#Resultados">&#182;</a></h2>
+<h2 id="Resultados">Resultados<a class="anchor-link" href="#Resultados">&#182;</a></h2><p><br></p>
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Comparativa de modelos</span>
 <span class="c1"># ==============================================================================</span>
 <span class="n">resultados</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
                <span class="s1">&#39;rmse&#39;</span><span class="p">:</span> <span class="p">[</span><span class="n">rmse_rf_sklearn</span><span class="p">,</span> <span class="n">rmse_rf_xgboost</span><span class="p">,</span> <span class="n">rmse_rf_lgbm</span><span class="p">],</span>
-               <span class="s1">&#39;tiempo_entrenamiento&#39;</span><span class="p">:</span> <span class="p">[</span><span class="n">tiempo_entrenamiento_sklearn</span><span class="p">,</span> <span class="n">tiempo_entrenamiento_xgboost</span><span class="p">,</span> <span class="n">tiempo_entrenamiento_lgbm</span><span class="p">],</span>
-               <span class="s1">&#39;tiempo_prediccion&#39;</span><span class="p">:</span> <span class="p">[</span><span class="n">tiempo_prediccion_sklearn</span><span class="p">,</span> <span class="n">tiempo_prediccion_xgboost</span><span class="p">,</span> <span class="n">tiempo_prediccion_lgbm</span><span class="p">]</span>
+               <span class="s1">&#39;tiempo_entrenamiento&#39;</span><span class="p">:</span> <span class="p">[</span>
+                  <span class="n">tiempo_entrenamiento_sklearn</span><span class="p">,</span>
+                  <span class="n">tiempo_entrenamiento_xgboost</span><span class="p">,</span>
+                  <span class="n">tiempo_entrenamiento_lgbm</span>
+                <span class="p">],</span>
+               <span class="s1">&#39;tiempo_prediccion&#39;</span><span class="p">:</span> <span class="p">[</span>
+                  <span class="n">tiempo_prediccion_sklearn</span><span class="p">,</span>
+                  <span class="n">tiempo_prediccion_xgboost</span><span class="p">,</span>
+                  <span class="n">tiempo_prediccion_lgbm</span>
+                <span class="p">]</span>
                <span class="p">},</span>
-               <span class="n">index</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Random Forest sklearn&#39;</span><span class="p">,</span> <span class="s1">&#39;Random Forest XGBoost&#39;</span><span class="p">,</span> <span class="s1">&#39;Random Forest LightGBM&#39;</span><span class="p">]</span>
+               <span class="n">index</span> <span class="o">=</span> <span class="p">[</span>
+                  <span class="s1">&#39;Random Forest sklearn&#39;</span><span class="p">,</span>
+                  <span class="s1">&#39;Random Forest XGBoost&#39;</span><span class="p">,</span>
+                  <span class="s1">&#39;Random Forest LightGBM&#39;</span>
+                <span class="p">]</span>
              <span class="p">)</span>
 <span class="n">resultados</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">highlight_min</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;green&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">precision</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
 </pre></div>
@@ -14429,43 +14467,43 @@ RMSE:                 0.92
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[18]:</div>
+    <div class="prompt output_prompt">Out[15]:</div>
 
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <style type="text/css">
-#T_f01ad_row1_col0, #T_f01ad_row2_col1, #T_f01ad_row2_col2 {
+#T_86b48_row0_col1, #T_86b48_row1_col0, #T_86b48_row2_col2 {
   background-color: green;
 }
 </style>
-<table id="T_f01ad">
+<table id="T_86b48">
   <thead>
     <tr>
       <th class="blank level0" >&nbsp;</th>
-      <th id="T_f01ad_level0_col0" class="col_heading level0 col0" >rmse</th>
-      <th id="T_f01ad_level0_col1" class="col_heading level0 col1" >tiempo_entrenamiento</th>
-      <th id="T_f01ad_level0_col2" class="col_heading level0 col2" >tiempo_prediccion</th>
+      <th id="T_86b48_level0_col0" class="col_heading level0 col0" >rmse</th>
+      <th id="T_86b48_level0_col1" class="col_heading level0 col1" >tiempo_entrenamiento</th>
+      <th id="T_86b48_level0_col2" class="col_heading level0 col2" >tiempo_prediccion</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th id="T_f01ad_level0_row0" class="row_heading level0 row0" >Random Forest sklearn</th>
-      <td id="T_f01ad_row0_col0" class="data row0 col0" >0.96</td>
-      <td id="T_f01ad_row0_col1" class="data row0 col1" >5.33</td>
-      <td id="T_f01ad_row0_col2" class="data row0 col2" >0.19</td>
+      <th id="T_86b48_level0_row0" class="row_heading level0 row0" >Random Forest sklearn</th>
+      <td id="T_86b48_row0_col0" class="data row0 col0" >0.61</td>
+      <td id="T_86b48_row0_col1" class="data row0 col1" >3.05</td>
+      <td id="T_86b48_row0_col2" class="data row0 col2" >0.23</td>
     </tr>
     <tr>
-      <th id="T_f01ad_level0_row1" class="row_heading level0 row1" >Random Forest XGBoost</th>
-      <td id="T_f01ad_row1_col0" class="data row1 col0" >0.88</td>
-      <td id="T_f01ad_row1_col1" class="data row1 col1" >23.23</td>
-      <td id="T_f01ad_row1_col2" class="data row1 col2" >0.15</td>
+      <th id="T_86b48_level0_row1" class="row_heading level0 row1" >Random Forest XGBoost</th>
+      <td id="T_86b48_row1_col0" class="data row1 col0" >0.46</td>
+      <td id="T_86b48_row1_col1" class="data row1 col1" >123.19</td>
+      <td id="T_86b48_row1_col2" class="data row1 col2" >0.49</td>
     </tr>
     <tr>
-      <th id="T_f01ad_level0_row2" class="row_heading level0 row2" >Random Forest LightGBM</th>
-      <td id="T_f01ad_row2_col0" class="data row2 col0" >0.92</td>
-      <td id="T_f01ad_row2_col1" class="data row2 col1" >3.82</td>
-      <td id="T_f01ad_row2_col2" class="data row2 col2" >0.07</td>
+      <th id="T_86b48_level0_row2" class="row_heading level0 row2" >Random Forest LightGBM</th>
+      <td id="T_86b48_row2_col0" class="data row2 col0" >0.51</td>
+      <td id="T_86b48_row2_col1" class="data row2 col1" >4.82</td>
+      <td id="T_86b48_row2_col2" class="data row2 col2" >0.13</td>
     </tr>
   </tbody>
 </table>
@@ -14481,13 +14519,30 @@ RMSE:                 0.92
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Informaci&#243;n-de-sesi&#243;n">Informaci&#243;n de sesi&#243;n<a class="anchor-link" href="#Informaci&#243;n-de-sesi&#243;n">&#182;</a></h2>
+<div class="admonition note" name="html-admonition" style="background: rgba(0,184,212,.1); padding-top: 0px; padding-bottom: 6px; border-radius: 8px; border-left: 8px solid #00b8d4; border-color: #00b8d4; padding-left: 10px;">
+
+<p class="title">
+    <i style="font-size: 18px; color:#00b8d4; border-color: #00b8d4;"></i>
+    <b> <span style="color: #00b8d4;">&#9998;</span> Note</b>
+</p>
+
+Esta tabla muestra los resultados en cuento a capacidad predictiva, velocidad de entrenamiento y velocidad de inferencia de los modelos Random Forest de las librerías scikit-learn, XGBoost y LightGBM, cada una con la mejor configuración de hiperparámetros encontrada con Optuna. Por lo tanto, los tiempos de entrenamiento y predicción no son comparables entre sí. Para comparar los tiempos de entrenamiento se debería utilizar los mismos hiparparámetros para cada modelo.
+
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Informaci&#243;n-de-sesi&#243;n">Informaci&#243;n de sesi&#243;n<a class="anchor-link" href="#Informaci&#243;n-de-sesi&#243;n">&#182;</a></h2><p><br></p>
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">session_info</span>
@@ -14527,7 +14582,7 @@ notebook            6.5.4
 Python 3.11.4 (main, Jul  5 2023, 13:45:01) [GCC 11.2.0]
 Linux-5.15.0-1055-aws-x86_64-with-glibc2.31
 -----
-Session information updated at 2024-03-08 15:51
+Session information updated at 2024-03-12 21:48
 </pre>
 </div>
 </div>
@@ -14677,6 +14732,7 @@ Mantener un sitio web tiene unos costes elevados, tu contribución me ayudará a
 
 <p><br></p>
 <!-- donation -->
+
 
 </div>
 </div>
