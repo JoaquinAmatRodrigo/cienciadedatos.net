@@ -186,6 +186,7 @@
 </script>
 <!-- End Quantcast Choice. Consent Manager Tag v2.0 (for TCF 2.0) -->
 
+
 <style type="text/css">
     /*!
 *
@@ -13281,7 +13282,7 @@ $( document ).ready(function(){
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1><center><font size="25">Random forest con valores nulos y variables categoricas</font></center></h1>
+<h1><center><font size="25">Random forest con valores nulos y variables categóricas</font></center></h1>
 </div>
 </div>
 </div>
@@ -13340,8 +13341,9 @@ $( document ).ready(function(){
 </p>
 
 El principal beneficio de utilizar la librería XGBoost o LightGBM para entrenar modelos random forest frente a la implementación nativa de scikit-learn es la velocidad junto con su capacidad para manejar variables categóricas.
+<br>
 
-Desde la version *1.4* de Scikit-learn, la implementación de Random Forest ha añadido la capacidad de manejar ausentes.
+Desde la version <code>1.4</code> de Scikit-learn, la implementación de Random Forest ha añadido la capacidad de manejar valores ausentes.
 
 </div>
 </div>
@@ -13412,8 +13414,8 @@ La implementación de XGBoost tiene algunas diferencias con respecto a la implem
 <span class="c1"># ==============================================================================</span>
 <span class="kn">import</span> <span class="nn">warnings</span>
 <span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s2">&quot;ignore&quot;</span><span class="p">,</span> <span class="n">category</span><span class="o">=</span><span class="ne">DeprecationWarning</span><span class="p">)</span>
+<span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s2">&quot;ignore&quot;</span><span class="p">,</span> <span class="n">category</span><span class="o">=</span><span class="ne">FutureWarning</span><span class="p">)</span>
 <span class="n">optuna</span><span class="o">.</span><span class="n">logging</span><span class="o">.</span><span class="n">set_verbosity</span><span class="p">(</span><span class="n">optuna</span><span class="o">.</span><span class="n">logging</span><span class="o">.</span><span class="n">WARNING</span><span class="p">)</span>
-
 
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;XGBoost version: </span><span class="si">{</span><span class="n">xgboost</span><span class="o">.</span><span class="n">__version__</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;LightGBM version: </span><span class="si">{</span><span class="n">lightgbm</span><span class="o">.</span><span class="n">__version__</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
@@ -13435,10 +13437,10 @@ La implementación de XGBoost tiene algunas diferencias con respecto a la implem
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>XGBoost version: 1.7.6
-LightGBM version: 3.3.5
-Optuna version: 3.4.0
-Scikit-learn version: 1.3.2
+<pre>XGBoost version: 2.0.3
+LightGBM version: 4.3.0
+Optuna version: 3.2.0
+Scikit-learn version: 1.4.1.post1
 </pre>
 </div>
 </div>
@@ -13789,8 +13791,6 @@ dtype: object</pre>
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># División de los datos en train, validation y test</span>
 <span class="c1"># ==============================================================================</span>
-<span class="n">col_numericas</span> <span class="o">=</span> <span class="n">datos</span><span class="o">.</span><span class="n">select_dtypes</span><span class="p">(</span><span class="n">include</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">number</span><span class="p">)</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">to_list</span><span class="p">()</span>
-<span class="n">col_categoricas</span> <span class="o">=</span> <span class="n">datos</span><span class="o">.</span><span class="n">select_dtypes</span><span class="p">(</span><span class="n">exclude</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">number</span><span class="p">)</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">to_list</span><span class="p">()</span>
 <span class="n">target</span> <span class="o">=</span> <span class="s1">&#39;MedHouseVal&#39;</span>
 
 <span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span>
@@ -13893,6 +13893,7 @@ En este caso se realiza una codificación de las variables categóricas con <cod
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Target encoding de las variables categóricas</span>
 <span class="c1"># ==============================================================================</span>
+<span class="n">col_categoricas</span> <span class="o">=</span> <span class="n">datos</span><span class="o">.</span><span class="n">select_dtypes</span><span class="p">(</span><span class="n">exclude</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">number</span><span class="p">)</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">to_list</span><span class="p">()</span>
 <span class="n">encoder</span> <span class="o">=</span> <span class="n">ColumnTransformer</span><span class="p">(</span>
     <span class="n">transformers</span><span class="o">=</span><span class="p">[</span>
         <span class="p">(</span><span class="s1">&#39;target&#39;</span><span class="p">,</span> <span class="n">TargetEncoder</span><span class="p">(),</span> <span class="n">col_categoricas</span><span class="p">)</span>
@@ -13989,13 +13990,13 @@ Observaciones en test encoded: (4128, 10)
 
  
  
-<div id="99f9f249-5d03-4dde-9f63-b626d8520b0d"></div>
+<div id="08650ada-6ae5-493e-90b8-545c9467ce66"></div>
 <div class="output_subarea output_widget_view ">
 <script type="text/javascript">
-var element = $('#99f9f249-5d03-4dde-9f63-b626d8520b0d');
+var element = $('#08650ada-6ae5-493e-90b8-545c9467ce66');
 </script>
 <script type="application/vnd.jupyter.widget-view+json">
-{"model_id": "973ddfacf8994e8fb0ddbdb001c73ba6", "version_major": 2, "version_minor": 0}
+{"model_id": "6e1b725ed56842acbea0ee880f8b490d", "version_major": 2, "version_minor": 0}
 </script>
 </div>
 
@@ -14007,8 +14008,8 @@ var element = $('#99f9f249-5d03-4dde-9f63-b626d8520b0d');
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Mejores hiperparámetros: {&#39;n_estimators&#39;: 800, &#39;max_depth&#39;: 7, &#39;min_samples_split&#39;: 44, &#39;min_samples_leaf&#39;: 100, &#39;max_features&#39;: 0.42550157273247, &#39;ccp_alpha&#39;: 0.102338147394226, &#39;min_impurity_decrease&#39;: 0.002683945271541782}
-Mejor score: 0.6996862631948638
+<pre>Mejores hiperparámetros: {&#39;n_estimators&#39;: 800, &#39;max_depth&#39;: 17, &#39;min_samples_split&#39;: 69, &#39;min_samples_leaf&#39;: 4, &#39;max_features&#39;: 0.46194796254324455, &#39;ccp_alpha&#39;: 0.023038477521006434, &#39;min_impurity_decrease&#39;: 0.013826157516659318}
+Mejor score: 0.5767107118731251
 </pre>
 </div>
 </div>
@@ -14072,9 +14073,9 @@ Mejor score: 0.6996862631948638
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Tiempo entrenamiento: 4.21 segundos
-Tiempo predicción:    0.22 segundos
-RMSE:                 0.73
+<pre>Tiempo entrenamiento: 3.05 segundos
+Tiempo predicción:    0.23 segundos
+RMSE:                 0.61
 </pre>
 </div>
 </div>
@@ -14147,13 +14148,13 @@ RMSE:                 0.73
 
  
  
-<div id="c30b594b-bf39-4fc5-b744-c0f0d4c4e0d7"></div>
+<div id="bd5581d0-47b1-453e-b8c1-6c25ec7432a6"></div>
 <div class="output_subarea output_widget_view ">
 <script type="text/javascript">
-var element = $('#c30b594b-bf39-4fc5-b744-c0f0d4c4e0d7');
+var element = $('#bd5581d0-47b1-453e-b8c1-6c25ec7432a6');
 </script>
 <script type="application/vnd.jupyter.widget-view+json">
-{"model_id": "57a1421eeaa642b0a996c4d9a6bd444d", "version_major": 2, "version_minor": 0}
+{"model_id": "f7d9ec0074304bb4a4f29b2ae5c3078f", "version_major": 2, "version_minor": 0}
 </script>
 </div>
 
@@ -14165,8 +14166,8 @@ var element = $('#c30b594b-bf39-4fc5-b744-c0f0d4c4e0d7');
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Mejores hiperparámetros: {&#39;n_estimators&#39;: 400, &#39;max_depth&#39;: 21, &#39;reg_lambda&#39;: 0.0004751845189187447, &#39;reg_alpha&#39;: 0.0011635564921761686, &#39;gamma&#39;: 0.48210711785013216, &#39;subsample&#39;: 0.7505461482818288, &#39;colsample_bynode&#39;: 0.5074753577213829}
-Mejor score: 0.44206312762461636
+<pre>Mejores hiperparámetros: {&#39;n_estimators&#39;: 1000, &#39;max_depth&#39;: 28, &#39;reg_lambda&#39;: 4.019385478115608e-05, &#39;reg_alpha&#39;: 0.017967239941045324, &#39;gamma&#39;: 0.07529217069252889, &#39;subsample&#39;: 0.8072275371971737, &#39;colsample_bynode&#39;: 0.7604468036009921}
+Mejor score: 0.43820288664297014
 </pre>
 </div>
 </div>
@@ -14233,8 +14234,8 @@ Mejor score: 0.44206312762461636
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Tiempo entrenamiento: 18.16 segundos
-Tiempo predicción:    0.13 segundos
+<pre>Tiempo entrenamiento: 123.19 segundos
+Tiempo predicción:    0.49 segundos
 RMSE:                 0.46
 </pre>
 </div>
@@ -14285,7 +14286,7 @@ RMSE:                 0.46
     <span class="k">return</span> <span class="n">score</span>
 
 <span class="n">study</span> <span class="o">=</span> <span class="n">optuna</span><span class="o">.</span><span class="n">create_study</span><span class="p">(</span><span class="n">direction</span><span class="o">=</span><span class="s1">&#39;minimize&#39;</span><span class="p">)</span>
-<span class="n">study</span><span class="o">.</span><span class="n">optimize</span><span class="p">(</span><span class="n">objective</span><span class="p">,</span> <span class="n">n_trials</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">show_progress_bar</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="mi">60</span><span class="o">*</span><span class="mi">5</span><span class="p">)</span>
+<span class="n">study</span><span class="o">.</span><span class="n">optimize</span><span class="p">(</span><span class="n">objective</span><span class="p">,</span> <span class="n">n_trials</span><span class="o">=</span><span class="mi">25</span><span class="p">,</span> <span class="n">show_progress_bar</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="mi">60</span><span class="o">*</span><span class="mi">5</span><span class="p">)</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Mejores hiperparámetros:&#39;</span><span class="p">,</span> <span class="n">study</span><span class="o">.</span><span class="n">best_params</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Mejor score:&#39;</span><span class="p">,</span> <span class="n">study</span><span class="o">.</span><span class="n">best_value</span><span class="p">)</span>
@@ -14309,13 +14310,13 @@ RMSE:                 0.46
 
  
  
-<div id="e1c03eb9-96ff-4db7-a179-a10005ef2ce8"></div>
+<div id="7b860383-3307-4284-8649-0c0ab66ebc8c"></div>
 <div class="output_subarea output_widget_view ">
 <script type="text/javascript">
-var element = $('#e1c03eb9-96ff-4db7-a179-a10005ef2ce8');
+var element = $('#7b860383-3307-4284-8649-0c0ab66ebc8c');
 </script>
 <script type="application/vnd.jupyter.widget-view+json">
-{"model_id": "f30dff8b8b1549a79960caf685ab64f0", "version_major": 2, "version_minor": 0}
+{"model_id": "4c3e7df962f042bfa095ca07626dc3a1", "version_major": 2, "version_minor": 0}
 </script>
 </div>
 
@@ -14327,10 +14328,8 @@ var element = $('#e1c03eb9-96ff-4db7-a179-a10005ef2ce8');
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>[LightGBM] [Warning] min_data_in_leaf is set with min_samples_leaf=74, min_child_samples=20 will be ignored. Current value: min_data_in_leaf=74
-[LightGBM] [Warning] min_data_in_leaf is set with min_samples_leaf=84, min_child_samples=20 will be ignored. Current value: min_data_in_leaf=84
-Mejores hiperparámetros: {&#39;n_estimators&#39;: 900, &#39;num_leaves&#39;: 69, &#39;reg_lambda&#39;: 4.902263715525493, &#39;reg_alpha&#39;: 10.818105322592398, &#39;min_samples_leaf&#39;: 74, &#39;colsample_bytree&#39;: 0.7992873583577824, &#39;colsample_bynode&#39;: 0.8286542476983196, &#39;subsample&#39;: 0.5145249813357646}
-Mejor score: 0.5512502789427677
+<pre>Mejores hiperparámetros: {&#39;n_estimators&#39;: 900, &#39;num_leaves&#39;: 182, &#39;reg_lambda&#39;: 0.0006407955794893048, &#39;reg_alpha&#39;: 0.07336325542256919, &#39;min_samples_leaf&#39;: 11, &#39;colsample_bytree&#39;: 0.8180313370435927, &#39;colsample_bynode&#39;: 0.6470365376300803, &#39;subsample&#39;: 0.7676612983421611}
+Mejor score: 0.47846907209163364
 </pre>
 </div>
 </div>
@@ -14394,10 +14393,9 @@ Mejor score: 0.5512502789427677
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>[LightGBM] [Warning] min_data_in_leaf is set with min_samples_leaf=74, min_child_samples=20 will be ignored. Current value: min_data_in_leaf=74
-Tiempo entrenamiento: 1.20 segundos
-Tiempo predicción:    0.08 segundos
-RMSE:                 0.59
+<pre>Tiempo entrenamiento: 4.82 segundos
+Tiempo predicción:    0.13 segundos
+RMSE:                 0.51
 </pre>
 </div>
 </div>
@@ -14422,10 +14420,22 @@ RMSE:                 0.59
 <span class="c1"># ==============================================================================</span>
 <span class="n">resultados</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
                <span class="s1">&#39;rmse&#39;</span><span class="p">:</span> <span class="p">[</span><span class="n">rmse_rf_sklearn</span><span class="p">,</span> <span class="n">rmse_rf_xgboost</span><span class="p">,</span> <span class="n">rmse_rf_lgbm</span><span class="p">],</span>
-               <span class="s1">&#39;tiempo_entrenamiento&#39;</span><span class="p">:</span> <span class="p">[</span><span class="n">tiempo_entrenamiento_sklearn</span><span class="p">,</span> <span class="n">tiempo_entrenamiento_xgboost</span><span class="p">,</span> <span class="n">tiempo_entrenamiento_lgbm</span><span class="p">],</span>
-               <span class="s1">&#39;tiempo_prediccion&#39;</span><span class="p">:</span> <span class="p">[</span><span class="n">tiempo_prediccion_sklearn</span><span class="p">,</span> <span class="n">tiempo_prediccion_xgboost</span><span class="p">,</span> <span class="n">tiempo_prediccion_lgbm</span><span class="p">]</span>
+               <span class="s1">&#39;tiempo_entrenamiento&#39;</span><span class="p">:</span> <span class="p">[</span>
+                  <span class="n">tiempo_entrenamiento_sklearn</span><span class="p">,</span>
+                  <span class="n">tiempo_entrenamiento_xgboost</span><span class="p">,</span>
+                  <span class="n">tiempo_entrenamiento_lgbm</span>
+                <span class="p">],</span>
+               <span class="s1">&#39;tiempo_prediccion&#39;</span><span class="p">:</span> <span class="p">[</span>
+                  <span class="n">tiempo_prediccion_sklearn</span><span class="p">,</span>
+                  <span class="n">tiempo_prediccion_xgboost</span><span class="p">,</span>
+                  <span class="n">tiempo_prediccion_lgbm</span>
+                <span class="p">]</span>
                <span class="p">},</span>
-               <span class="n">index</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Random Forest sklearn&#39;</span><span class="p">,</span> <span class="s1">&#39;Random Forest XGBoost&#39;</span><span class="p">,</span> <span class="s1">&#39;Random Forest LightGBM&#39;</span><span class="p">]</span>
+               <span class="n">index</span> <span class="o">=</span> <span class="p">[</span>
+                  <span class="s1">&#39;Random Forest sklearn&#39;</span><span class="p">,</span>
+                  <span class="s1">&#39;Random Forest XGBoost&#39;</span><span class="p">,</span>
+                  <span class="s1">&#39;Random Forest LightGBM&#39;</span>
+                <span class="p">]</span>
              <span class="p">)</span>
 <span class="n">resultados</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">highlight_min</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;green&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">precision</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
 </pre></div>
@@ -14446,37 +14456,37 @@ RMSE:                 0.59
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <style type="text/css">
-#T_bd077_row1_col0, #T_bd077_row2_col1, #T_bd077_row2_col2 {
+#T_86b48_row0_col1, #T_86b48_row1_col0, #T_86b48_row2_col2 {
   background-color: green;
 }
 </style>
-<table id="T_bd077">
+<table id="T_86b48">
   <thead>
     <tr>
       <th class="blank level0" >&nbsp;</th>
-      <th id="T_bd077_level0_col0" class="col_heading level0 col0" >rmse</th>
-      <th id="T_bd077_level0_col1" class="col_heading level0 col1" >tiempo_entrenamiento</th>
-      <th id="T_bd077_level0_col2" class="col_heading level0 col2" >tiempo_prediccion</th>
+      <th id="T_86b48_level0_col0" class="col_heading level0 col0" >rmse</th>
+      <th id="T_86b48_level0_col1" class="col_heading level0 col1" >tiempo_entrenamiento</th>
+      <th id="T_86b48_level0_col2" class="col_heading level0 col2" >tiempo_prediccion</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th id="T_bd077_level0_row0" class="row_heading level0 row0" >Random Forest sklearn</th>
-      <td id="T_bd077_row0_col0" class="data row0 col0" >0.73</td>
-      <td id="T_bd077_row0_col1" class="data row0 col1" >4.21</td>
-      <td id="T_bd077_row0_col2" class="data row0 col2" >0.22</td>
+      <th id="T_86b48_level0_row0" class="row_heading level0 row0" >Random Forest sklearn</th>
+      <td id="T_86b48_row0_col0" class="data row0 col0" >0.61</td>
+      <td id="T_86b48_row0_col1" class="data row0 col1" >3.05</td>
+      <td id="T_86b48_row0_col2" class="data row0 col2" >0.23</td>
     </tr>
     <tr>
-      <th id="T_bd077_level0_row1" class="row_heading level0 row1" >Random Forest XGBoost</th>
-      <td id="T_bd077_row1_col0" class="data row1 col0" >0.46</td>
-      <td id="T_bd077_row1_col1" class="data row1 col1" >18.16</td>
-      <td id="T_bd077_row1_col2" class="data row1 col2" >0.13</td>
+      <th id="T_86b48_level0_row1" class="row_heading level0 row1" >Random Forest XGBoost</th>
+      <td id="T_86b48_row1_col0" class="data row1 col0" >0.46</td>
+      <td id="T_86b48_row1_col1" class="data row1 col1" >123.19</td>
+      <td id="T_86b48_row1_col2" class="data row1 col2" >0.49</td>
     </tr>
     <tr>
-      <th id="T_bd077_level0_row2" class="row_heading level0 row2" >Random Forest LightGBM</th>
-      <td id="T_bd077_row2_col0" class="data row2 col0" >0.59</td>
-      <td id="T_bd077_row2_col1" class="data row2 col1" >1.20</td>
-      <td id="T_bd077_row2_col2" class="data row2 col2" >0.08</td>
+      <th id="T_86b48_level0_row2" class="row_heading level0 row2" >Random Forest LightGBM</th>
+      <td id="T_86b48_row2_col0" class="data row2 col0" >0.51</td>
+      <td id="T_86b48_row2_col1" class="data row2 col1" >4.82</td>
+      <td id="T_86b48_row2_col2" class="data row2 col2" >0.13</td>
     </tr>
   </tbody>
 </table>
@@ -14488,6 +14498,22 @@ RMSE:                 0.59
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="admonition note" name="html-admonition" style="background: rgba(0,184,212,.1); padding-top: 0px; padding-bottom: 6px; border-radius: 8px; border-left: 8px solid #00b8d4; border-color: #00b8d4; padding-left: 10px;">
+
+<p class="title">
+    <i style="font-size: 18px; color:#00b8d4; border-color: #00b8d4;"></i>
+    <b> <span style="color: #00b8d4;">&#9998;</span> Note</b>
+</p>
+
+Esta tabla muestra los resultados en cuento a capacidad predictiva, velocidad de entrenamiento y velocidad de inferencia de los modelos Random Forest de las librerías scikit-learn, XGBoost y LightGBM, cada una con la mejor configuración de hiperparámetros encontrada con Optuna. Por lo tanto, los tiempos de entrenamiento y predicción no son comparables entre sí. Para comparar los tiempos de entrenamiento se debería utilizar los mismos hiparparámetros para cada modelo.
+
+</div>
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -14520,23 +14546,25 @@ RMSE:                 0.59
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>-----
-lightgbm            3.3.5
-matplotlib          3.8.2
-numpy               1.26.3
-optuna              3.4.0
-pandas              2.1.4
+lightgbm            4.3.0
+matplotlib          3.7.2
+numpy               1.25.2
+optuna              3.2.0
+pandas              2.0.3
 session_info        1.0.0
-sklearn             1.3.2
-xgboost             1.7.6
+sklearn             1.4.1.post1
+xgboost             2.0.3
 -----
-IPython             8.19.0
-jupyter_client      8.6.0
-jupyter_core        5.5.0
+IPython             8.14.0
+jupyter_client      8.3.0
+jupyter_core        5.3.1
+jupyterlab          4.0.5
+notebook            6.5.4
 -----
-Python 3.12.0 | packaged by Anaconda, Inc. | (main, Oct  2 2023, 17:29:18) [GCC 11.2.0]
+Python 3.11.4 (main, Jul  5 2023, 13:45:01) [GCC 11.2.0]
 Linux-5.15.0-1055-aws-x86_64-with-glibc2.31
 -----
-Session information updated at 2024-03-12 16:24
+Session information updated at 2024-03-12 21:48
 </pre>
 </div>
 </div>
