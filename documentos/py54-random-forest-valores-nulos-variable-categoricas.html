@@ -13310,7 +13310,14 @@ $( document ).ready(function(){
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Introducci&#243;n">Introducci&#243;n<a class="anchor-link" href="#Introducci&#243;n">&#182;</a></h2><p>Los modelos de <a href="https://cienciadedatos.net/documentos/py08_random_forest_python">Random Forest</a> son una poderosa técnica en el campo del aprendizaje automático (<em>machine learning</em>). Se basan en la construcción de múltiples <a href="https://cienciadedatos.net/documentos/py07_arboles_decision_python">árboles de decisión</a> y combinan sus predicciones para obtener un resultado final más robusto y preciso. Este enfoque de conjunto permite a los Random Forest superar muchas de las limitaciones asociadas con un solo árbol de decisión, como el sobreajuste y la sensibilidad a pequeñas variaciones en los datos de entrenamiento. Gracias a su versatilidad y capacidad para manejar una amplia variedad de problemas de clasificación y regresión, Random Forest se han convertido en una herramienta indispensable para los científicos de datos.</p>
+<h2 id="Introducci&#243;n">Introducci&#243;n<a class="anchor-link" href="#Introducci&#243;n">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Los modelos de <a href="https://cienciadedatos.net/documentos/py08_random_forest_python">Random Forest</a> son una poderosa técnica en el campo del aprendizaje automático (<em>machine learning</em>). Se basan en la construcción de múltiples <a href="https://cienciadedatos.net/documentos/py07_arboles_decision_python">árboles de decisión</a> y combinan sus predicciones para obtener un resultado final más robusto y preciso. Este enfoque de conjunto permite a los Random Forest superar muchas de las limitaciones asociadas con un solo árbol de decisión, como el sobreajuste y la sensibilidad a pequeñas variaciones en los datos de entrenamiento. Gracias a su versatilidad y capacidad para manejar una amplia variedad de problemas de clasificación y regresión, Random Forest se han convertido en una herramienta indispensable para los científicos de datos.</p>
 <p>En el ecosistema Python, una de las implementaciones de Random Forest más utilizadas es la disponible en Scikit-learn (<a href="https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestRegressor.html">RandomForestRegressor, RandomForestClassifier</a>). Aunque esta implementación satisface con éxito la mayoría de los casos de uso, tiene dos limitaciones: no acepta datos ausentes (<em>missing</em>) y carece de la capacidad de manejar de forma nativa variables categóricas. Esto lleva a la necesidad de aplicar estrategias de preprocesamiento (como <em>one hot encoding</em>, <em>target encoding</em>, etc.) para superar estas limitaciones.</p>
 <p><strong>XGBoost</strong> y <strong>LightGBM</strong>, conocidos sobre todo por su eficaz aplicación de <a href="https://cienciadedatos.net/documentos/py09_gradient_boosting_python">modelos gradient boosting</a>, también permiten crear modelos Random Forest. Estas implementaciones tienen varias ventajas sobre la de Scikit-learn:</p>
 <ul>
@@ -13374,7 +13381,14 @@ La implementación de XGBoost tiene algunas diferencias con respecto a la implem
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Librer&#237;as">Librer&#237;as<a class="anchor-link" href="#Librer&#237;as">&#182;</a></h2><p>Las librerías utilizadas en este documento son:</p>
+<h2 id="Librer&#237;as">Librer&#237;as<a class="anchor-link" href="#Librer&#237;as">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Las librerías utilizadas en este documento son:</p>
 
 </div>
 </div>
@@ -13896,7 +13910,7 @@ En este caso se realiza una codificación de las variables categóricas con <cod
 <span class="n">col_categoricas</span> <span class="o">=</span> <span class="n">datos</span><span class="o">.</span><span class="n">select_dtypes</span><span class="p">(</span><span class="n">exclude</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">number</span><span class="p">)</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">to_list</span><span class="p">()</span>
 <span class="n">encoder</span> <span class="o">=</span> <span class="n">ColumnTransformer</span><span class="p">(</span>
     <span class="n">transformers</span><span class="o">=</span><span class="p">[</span>
-        <span class="p">(</span><span class="s1">&#39;target&#39;</span><span class="p">,</span> <span class="n">TargetEncoder</span><span class="p">(),</span> <span class="n">col_categoricas</span><span class="p">)</span>
+        <span class="p">(</span><span class="s1">&#39;target&#39;</span><span class="p">,</span> <span class="n">TargetEncoder</span><span class="p">(</span><span class="n">target_type</span><span class="o">=</span><span class="s2">&quot;continuous&quot;</span><span class="p">),</span> <span class="n">col_categoricas</span><span class="p">)</span>
     <span class="p">],</span>
     <span class="n">remainder</span><span class="o">=</span><span class="s1">&#39;passthrough&#39;</span>
 <span class="p">)</span><span class="o">.</span><span class="n">set_output</span><span class="p">(</span><span class="n">transform</span><span class="o">=</span><span class="s1">&#39;pandas&#39;</span><span class="p">)</span>
@@ -13990,10 +14004,10 @@ Observaciones en test encoded: (4128, 10)
 
  
  
-<div id="08650ada-6ae5-493e-90b8-545c9467ce66"></div>
+<div id="662b5b36-1da0-4006-a50d-6797c2314032"></div>
 <div class="output_subarea output_widget_view ">
 <script type="text/javascript">
-var element = $('#08650ada-6ae5-493e-90b8-545c9467ce66');
+var element = $('#662b5b36-1da0-4006-a50d-6797c2314032');
 </script>
 <script type="application/vnd.jupyter.widget-view+json">
 {"model_id": "6e1b725ed56842acbea0ee880f8b490d", "version_major": 2, "version_minor": 0}
@@ -14087,7 +14101,8 @@ RMSE:                 0.61
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Random-Forest-con-XGBoost">Random Forest con XGBoost<a class="anchor-link" href="#Random-Forest-con-XGBoost">&#182;</a></h2>
+<h2 id="Random-Forest-con-XGBoost">Random Forest con XGBoost<a class="anchor-link" href="#Random-Forest-con-XGBoost">&#182;</a></h2><p><br></p>
+
 </div>
 </div>
 </div>
@@ -14148,10 +14163,10 @@ RMSE:                 0.61
 
  
  
-<div id="bd5581d0-47b1-453e-b8c1-6c25ec7432a6"></div>
+<div id="eedecae4-0ab9-4c7f-bcd7-3090c86e8cd4"></div>
 <div class="output_subarea output_widget_view ">
 <script type="text/javascript">
-var element = $('#bd5581d0-47b1-453e-b8c1-6c25ec7432a6');
+var element = $('#eedecae4-0ab9-4c7f-bcd7-3090c86e8cd4');
 </script>
 <script type="application/vnd.jupyter.widget-view+json">
 {"model_id": "f7d9ec0074304bb4a4f29b2ae5c3078f", "version_major": 2, "version_minor": 0}
@@ -14248,7 +14263,8 @@ RMSE:                 0.46
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Random-Forest-con-LightGBM">Random Forest con LightGBM<a class="anchor-link" href="#Random-Forest-con-LightGBM">&#182;</a></h2>
+<h2 id="Random-Forest-con-LightGBM">Random Forest con LightGBM<a class="anchor-link" href="#Random-Forest-con-LightGBM">&#182;</a></h2><p><br></p>
+
 </div>
 </div>
 </div>
@@ -14310,10 +14326,10 @@ RMSE:                 0.46
 
  
  
-<div id="7b860383-3307-4284-8649-0c0ab66ebc8c"></div>
+<div id="c36cc2d6-5b8b-4554-980b-c37fe2c3bac7"></div>
 <div class="output_subarea output_widget_view ">
 <script type="text/javascript">
-var element = $('#7b860383-3307-4284-8649-0c0ab66ebc8c');
+var element = $('#c36cc2d6-5b8b-4554-980b-c37fe2c3bac7');
 </script>
 <script type="application/vnd.jupyter.widget-view+json">
 {"model_id": "4c3e7df962f042bfa095ca07626dc3a1", "version_major": 2, "version_minor": 0}
@@ -14407,7 +14423,8 @@ RMSE:                 0.51
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Resultados">Resultados<a class="anchor-link" href="#Resultados">&#182;</a></h2>
+<h2 id="Resultados">Resultados<a class="anchor-link" href="#Resultados">&#182;</a></h2><p><br></p>
+
 </div>
 </div>
 </div>
@@ -14518,7 +14535,8 @@ Esta tabla muestra los resultados en cuento a capacidad predictiva, velocidad de
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Informaci&#243;n-de-sesi&#243;n">Informaci&#243;n de sesi&#243;n<a class="anchor-link" href="#Informaci&#243;n-de-sesi&#243;n">&#182;</a></h2>
+<h2 id="Informaci&#243;n-de-sesi&#243;n">Informaci&#243;n de sesi&#243;n<a class="anchor-link" href="#Informaci&#243;n-de-sesi&#243;n">&#182;</a></h2><p><br></p>
+
 </div>
 </div>
 </div>
@@ -14714,6 +14732,7 @@ Mantener un sitio web tiene unos costes elevados, tu contribución me ayudará a
 
 <p><br></p>
 <!-- donation -->
+
 
 </div>
 </div>
