@@ -16712,27 +16712,6 @@ var element = $('#e429b8e8-6db1-47d2-85af-ba85b149f6e5');
 <div class="output_wrapper">
 <div class="output">
 
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-Cell <span class="ansi-green-fg">In[1], line 3</span>
-<span class="ansi-green-intense-fg ansi-bold">      1</span> <span style="color: rgb(95,135,135)"># Out-sample residuals distribution</span>
-<span class="ansi-green-intense-fg ansi-bold">      2</span> <span style="color: rgb(95,135,135)"># ==============================================================================</span>
-<span class="ansi-green-fg">----&gt; 3</span> <span style="color: rgb(0,135,0)">print</span>(<span class="ansi-yellow-bg">pd</span><span style="color: rgb(98,98,98)">.</span>Series(np<span style="color: rgb(98,98,98)">.</span>where(residuals <span style="color: rgb(98,98,98)">&lt;</span> <span style="color: rgb(98,98,98)">0</span>, <span style="color: rgb(175,0,0)">&#39;</span><span style="color: rgb(175,0,0)">negative</span><span style="color: rgb(175,0,0)">&#39;</span>, <span style="color: rgb(175,0,0)">&#39;</span><span style="color: rgb(175,0,0)">positive</span><span style="color: rgb(175,0,0)">&#39;</span>))<span style="color: rgb(98,98,98)">.</span>value_counts())
-<span class="ansi-green-intense-fg ansi-bold">      4</span> fig, ax <span style="color: rgb(98,98,98)">=</span> plt<span style="color: rgb(98,98,98)">.</span>subplots(figsize<span style="color: rgb(98,98,98)">=</span>(<span style="color: rgb(98,98,98)">8</span>, <span style="color: rgb(98,98,98)">6</span>))
-<span class="ansi-green-intense-fg ansi-bold">      5</span> _ <span style="color: rgb(98,98,98)">=</span> plot_residuals(residuals<span style="color: rgb(98,98,98)">=</span>residuals, fig<span style="color: rgb(98,98,98)">=</span>fig)
-
-<span class="ansi-red-fg">NameError</span>: name &#39;pd&#39; is not defined</pre>
-</div>
-</div>
-
 </div>
 </div>
 
