@@ -13638,7 +13638,7 @@ Forecaster id: None </pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Once the model is created, a <a href="https://joaquinamatrodrigo.github.io/skforecast/latest/user_guides/backtesting.html">backtesting</a> process is run to simulate the behavior of the forecaster if it had predicted the test set in 10-day batches.</p>
+<p>Once the model is created, a <a href="https://joaquinamatrodrigo.github.io/skforecast/latest/user_guides/backtesting.html">backtesting</a> process is run to simulate the behavior of the forecaster if it had predicted the test set in 7-day batches.</p>
 
 </div>
 </div>
@@ -14205,7 +14205,7 @@ var element = $('#3f5c2726-9ab6-4dca-a60e-a03ede46b680');
                                    <span class="n">y</span>                  <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">production</span><span class="p">,</span>
                                    <span class="n">initial_train_size</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">loc</span><span class="p">[:</span><span class="n">end_train</span><span class="p">]),</span>
                                    <span class="n">fixed_train_size</span>   <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
-                                   <span class="n">steps</span>              <span class="o">=</span> <span class="mi">12</span><span class="p">,</span>
+                                   <span class="n">steps</span>              <span class="o">=</span> <span class="mi">10</span><span class="p">,</span>
                                    <span class="n">metric</span>             <span class="o">=</span> <span class="s1">&#39;mean_absolute_error&#39;</span><span class="p">,</span>
                                    <span class="n">refit</span>              <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
                                    <span class="n">verbose</span>            <span class="o">=</span> <span class="kc">False</span>
@@ -14250,7 +14250,7 @@ var element = $('#b9d6648b-323a-4424-be40-b43700971885');
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Backtest error: 26.8
+<pre>Backtest error: 27.8
 </pre>
 </div>
 </div>
