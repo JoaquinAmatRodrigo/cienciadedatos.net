@@ -13105,15 +13105,6 @@ $( document ).ready(function(){
   <div tabindex="-1" id="notebook" class="border-box-sizing">
     <div class="container" id="notebook-container">
 
-<!-- banner github -->
-<div style= "background-color: #001633; color: #ffffff; height: 2.4rem; position: relative; width: 100%;">
-	<p style= "color: #ffffff; align-items: center; display: flex; height: 100%; justify-content: center;">
-		If you like&nbsp; <b> Skforecast </b>,&nbsp; please give us a star on &nbsp;
-		<a style= "color: #ffffff;" href="https://github.com/JoaquinAmatRodrigo/skforecast/" rel="noopener noreferrer" target="_blank"><u>GitHub</u></a>! ⭐️
-	</p>
-</div>
-<!-- banner github -->
- 
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13148,8 +13139,12 @@ $( document ).ready(function(){
 <li><a href="https://www.cienciadedatos.net/documentos/py41-forecasting-cryptocurrency-bitcoin-machine-learning-python.html">Bitcoin price prediction with Python</a></li>
 <li><a href="https://cienciadedatos.net/documentos/py52-stacking-ensemble-models-forecasting.html">Stacking ensemble of machine learning models to improve forecasting</a></li>
 <li><a href="https://cienciadedatos.net/documentos/py57-interpretable-forecasting-models.html">Interpretable forecasting models</a></li>
+<li><a href="https://cienciadedatos.net/documentos/py45-weighted-time-series-forecasting.html">Mitigating the Impact of Covid on forecasting Models</a></li>
+<li><a href="https://cienciadedatos.net/documentos/py46-forecasting-time-series-missing-values.html">Forecasting time series with missing values</a></li>
 </ul>
-<p align="center"><img src='https://github.com/JoaquinAmatRodrigo/skforecast/raw/master/docs/img/banner-landing-page-skforecast.png'style="width: 600px"></p>
+<div style="text-align: center;">
+    <img src="https://github.com/JoaquinAmatRodrigo/skforecast/raw/master/docs/img/banner-landing-page-skforecast.png" alt="Banner" style="display: block; margin: 0 auto;">
+</div>
 </div>
 </div>
 </div>
@@ -13241,7 +13236,7 @@ For a more detailed explanation of ARIMA-SARIMAX models visit:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="prompt input_prompt">In&nbsp;[34]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Libraries</span>
@@ -13275,7 +13270,6 @@ For a more detailed explanation of ARIMA-SARIMAX models visit:
 <span class="kn">from</span> <span class="nn">skforecast.ForecasterSarimax</span> <span class="kn">import</span> <span class="n">ForecasterSarimax</span>
 <span class="kn">from</span> <span class="nn">skforecast.model_selection_sarimax</span> <span class="kn">import</span> <span class="n">backtesting_sarimax</span>
 <span class="kn">from</span> <span class="nn">skforecast.model_selection_sarimax</span> <span class="kn">import</span> <span class="n">grid_search_sarimax</span>
-<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">mean_absolute_error</span>
 
 <span class="kn">import</span> <span class="nn">warnings</span>
 <span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s1">&#39;once&#39;</span><span class="p">)</span>
@@ -13347,7 +13341,7 @@ At the time of writing this document, <code>pmdarima</code> is only compatible w
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[35]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Data download</span>
@@ -13412,7 +13406,7 @@ Freq: MS, Name: litters, dtype: float64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[36]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Train-test dates</span>
@@ -13560,7 +13554,7 @@ It's common to use both tests together to get a more comprehensive understanding
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[37]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Test stationarity</span>
@@ -13734,7 +13728,7 @@ These guidelines provide a useful starting point when selecting the orders of an
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[38]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Autocorrelation plot for original and differentiated series</span>
@@ -13774,7 +13768,7 @@ These guidelines provide a useful starting point when selecting the orders of an
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[39]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Partial autocorrelation plot for original and differenced series</span>
@@ -13838,7 +13832,7 @@ These guidelines provide a useful starting point when selecting the orders of an
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[40]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Time series descoposition of original versus differenced series</span>
@@ -13919,7 +13913,7 @@ These guidelines provide a useful starting point when selecting the orders of an
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[41]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># First-order differentiation combined with seasonal differentiation</span>
@@ -14007,7 +14001,7 @@ Exploratory data analysis is an evolving and iterative process in which the insi
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[42]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># ARIMA model with statsmodels.Sarimax</span>
@@ -14029,7 +14023,7 @@ Exploratory data analysis is an evolving and iterative process in which the insi
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[9]:</div>
+    <div class="prompt output_prompt">Out[42]:</div>
 
 
 
@@ -14043,10 +14037,10 @@ Exploratory data analysis is an evolving and iterative process in which the insi
   <th>Model:</th>           <td>SARIMAX(1, 1, 1)x(1, 1, 1, 12)</td> <th>  Log Likelihood     </th> <td>-1356.051</td>
 </tr>
 <tr>
-  <th>Date:</th>                   <td>Wed, 31 Jul 2024</td>        <th>  AIC                </th> <td>2722.103</td> 
+  <th>Date:</th>                   <td>Tue, 06 Aug 2024</td>        <th>  AIC                </th> <td>2722.103</td> 
 </tr>
 <tr>
-  <th>Time:</th>                       <td>21:09:15</td>            <th>  BIC                </th> <td>2736.040</td> 
+  <th>Time:</th>                       <td>15:47:17</td>            <th>  BIC                </th> <td>2736.040</td> 
 </tr>
 <tr>
   <th>Sample:</th>                    <td>01-01-1969</td>           <th>  HQIC               </th> <td>2727.763</td> 
@@ -14136,7 +14130,7 @@ Exploratory data analysis is an evolving and iterative process in which the insi
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In&nbsp;[43]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Prediction</span>
@@ -14192,7 +14186,7 @@ Freq: MS, Name: predictions_statsmodels, dtype: float64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[44]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># ARIMA model with skforecast.Sarimax</span>
@@ -14211,7 +14205,7 @@ Freq: MS, Name: predictions_statsmodels, dtype: float64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="prompt input_prompt">In&nbsp;[45]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Prediction</span>
@@ -14310,7 +14304,7 @@ Since <b>skforecast Sarimax</b>, is a wrapper of <b>statsmodels SARIMAX</b>, the
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="prompt input_prompt">In&nbsp;[46]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># ARIMA model with pdmarima.Sarimax</span>
@@ -14330,7 +14324,7 @@ Since <b>skforecast Sarimax</b>, is a wrapper of <b>statsmodels SARIMAX</b>, the
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[13]:</div>
+    <div class="prompt output_prompt">Out[46]:</div>
 
 
 
@@ -14344,10 +14338,10 @@ Since <b>skforecast Sarimax</b>, is a wrapper of <b>statsmodels SARIMAX</b>, the
   <th>Model:</th>           <td>SARIMAX(1, 1, 1)x(1, 1, 1, 12)</td> <th>  Log Likelihood     </th> <td>-1355.749</td>
 </tr>
 <tr>
-  <th>Date:</th>                   <td>Wed, 31 Jul 2024</td>        <th>  AIC                </th> <td>2723.498</td> 
+  <th>Date:</th>                   <td>Tue, 06 Aug 2024</td>        <th>  AIC                </th> <td>2723.498</td> 
 </tr>
 <tr>
-  <th>Time:</th>                       <td>21:09:16</td>            <th>  BIC                </th> <td>2740.223</td> 
+  <th>Time:</th>                       <td>15:47:18</td>            <th>  BIC                </th> <td>2740.223</td> 
 </tr>
 <tr>
   <th>Sample:</th>                    <td>01-01-1969</td>           <th>  HQIC               </th> <td>2730.290</td> 
@@ -14406,7 +14400,7 @@ Since <b>skforecast Sarimax</b>, is a wrapper of <b>statsmodels SARIMAX</b>, the
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">In&nbsp;[47]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Prediction</span>
@@ -14447,7 +14441,7 @@ Freq: MS, Name: predictions_pdmarima, dtype: float64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="prompt input_prompt">In&nbsp;[48]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Plot predictions</span>
@@ -14542,7 +14536,7 @@ While <code>pdmarima</code> works as a wrapper for <code>statmodels SARIMAX</cod
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="prompt input_prompt">In&nbsp;[49]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># ARIMA model with ForecasterSarimax and skforecast Sarimax</span>
@@ -14567,7 +14561,7 @@ While <code>pdmarima</code> works as a wrapper for <code>statmodels SARIMAX</cod
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[16]:</div>
+    <div class="prompt output_prompt">Out[49]:</div>
 
 
 
@@ -14619,7 +14613,7 @@ If <code>suppress_warnings_fit=True</code> warnings generated during fitting wil
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="prompt input_prompt">In&nbsp;[50]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Backtest forecaster</span>
@@ -14716,13 +14710,13 @@ Fold: 9
 
  
  
-<div id="200f2f3a-6cf8-420e-81c7-cce2892b9859"></div>
+<div id="31cab078-0910-4837-a210-fbcaebb00baf"></div>
 <div class="output_subarea output_widget_view ">
 <script type="text/javascript">
-var element = $('#200f2f3a-6cf8-420e-81c7-cce2892b9859');
+var element = $('#31cab078-0910-4837-a210-fbcaebb00baf');
 </script>
 <script type="application/vnd.jupyter.widget-view+json">
-{"model_id": "07a42097ee6c4c67b923a9399ba3030a", "version_major": 2, "version_minor": 0}
+{"model_id": "deeb464642fc4948a6f5c073d715ff8d", "version_major": 2, "version_minor": 0}
 </script>
 </div>
 
@@ -14759,7 +14753,7 @@ var element = $('#200f2f3a-6cf8-420e-81c7-cce2892b9859');
   <tbody>
     <tr>
       <th>0</th>
-      <td>19611.23635</td>
+      <td>19611.236346</td>
     </tr>
   </tbody>
 </table>
@@ -14770,7 +14764,7 @@ var element = $('#200f2f3a-6cf8-420e-81c7-cce2892b9859');
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[17]:</div>
+    <div class="prompt output_prompt">Out[50]:</div>
 
 
 
@@ -14826,7 +14820,7 @@ var element = $('#200f2f3a-6cf8-420e-81c7-cce2892b9859');
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="prompt input_prompt">In&nbsp;[51]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Plot backtest predictions</span>
@@ -14945,7 +14939,7 @@ For a detailed explanation of Akaike's Information Criterion (AIC) see <a href="
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="prompt input_prompt">In&nbsp;[52]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Train-validation-test data</span>
@@ -15016,7 +15010,7 @@ Test dates       : 1984-02-01 00:00:00 --- 1990-01-01 00:00:00  (n=72)
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="prompt input_prompt">In&nbsp;[53]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Grid search based on backtesting</span>
@@ -15081,13 +15075,13 @@ Test dates       : 1984-02-01 00:00:00 --- 1990-01-01 00:00:00  (n=72)
 
  
  
-<div id="d1e4d342-773c-4e31-8476-d791903779d7"></div>
+<div id="b0ecf6e7-4510-4766-816e-3cfa91354684"></div>
 <div class="output_subarea output_widget_view ">
 <script type="text/javascript">
-var element = $('#d1e4d342-773c-4e31-8476-d791903779d7');
+var element = $('#b0ecf6e7-4510-4766-816e-3cfa91354684');
 </script>
 <script type="application/vnd.jupyter.widget-view+json">
-{"model_id": "0c3a41f81e5d44bba599aa685720c4ec", "version_major": 2, "version_minor": 0}
+{"model_id": "1bb82a82b9be470a8087a42fb045d1fe", "version_major": 2, "version_minor": 0}
 </script>
 </div>
 
@@ -15095,7 +15089,7 @@ var element = $('#d1e4d342-773c-4e31-8476-d791903779d7');
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[20]:</div>
+    <div class="prompt output_prompt">Out[53]:</div>
 
 
 
@@ -15129,7 +15123,7 @@ var element = $('#d1e4d342-773c-4e31-8476-d791903779d7');
     <tr>
       <th>16</th>
       <td>{'order': (0, 1, 1), 'seasonal_order': (1, 1, ...</td>
-      <td>18789.897505</td>
+      <td>18789.897509</td>
       <td>(0, 1, 1)</td>
       <td>(1, 1, 1, 12)</td>
       <td>n</td>
@@ -15137,7 +15131,7 @@ var element = $('#d1e4d342-773c-4e31-8476-d791903779d7');
     <tr>
       <th>15</th>
       <td>{'order': (0, 1, 1), 'seasonal_order': (1, 1, ...</td>
-      <td>18789.897505</td>
+      <td>18789.897509</td>
       <td>(0, 1, 1)</td>
       <td>(1, 1, 1, 12)</td>
       <td>None</td>
@@ -15145,7 +15139,7 @@ var element = $('#d1e4d342-773c-4e31-8476-d791903779d7');
     <tr>
       <th>34</th>
       <td>{'order': (1, 1, 1), 'seasonal_order': (1, 1, ...</td>
-      <td>19897.376859</td>
+      <td>19897.376855</td>
       <td>(1, 1, 1)</td>
       <td>(1, 1, 1, 12)</td>
       <td>n</td>
@@ -15153,7 +15147,7 @@ var element = $('#d1e4d342-773c-4e31-8476-d791903779d7');
     <tr>
       <th>33</th>
       <td>{'order': (1, 1, 1), 'seasonal_order': (1, 1, ...</td>
-      <td>19897.376859</td>
+      <td>19897.376855</td>
       <td>(1, 1, 1)</td>
       <td>(1, 1, 1, 12)</td>
       <td>None</td>
@@ -15161,7 +15155,7 @@ var element = $('#d1e4d342-773c-4e31-8476-d791903779d7');
     <tr>
       <th>43</th>
       <td>{'order': (2, 1, 1), 'seasonal_order': (1, 1, ...</td>
-      <td>20176.730203</td>
+      <td>20176.734402</td>
       <td>(2, 1, 1)</td>
       <td>(1, 1, 1, 12)</td>
       <td>n</td>
@@ -15179,7 +15173,7 @@ var element = $('#d1e4d342-773c-4e31-8476-d791903779d7');
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="prompt input_prompt">In&nbsp;[54]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Auto arima: selection based on AIC</span>
@@ -15217,32 +15211,32 @@ var element = $('#d1e4d342-773c-4e31-8476-d791903779d7');
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Performing stepwise search to minimize aic
- ARIMA(0,1,0)(1,1,1)[12]             : AIC=3903.204, Time=0.37 sec
+ ARIMA(0,1,0)(1,1,1)[12]             : AIC=3903.204, Time=0.36 sec
  ARIMA(0,1,0)(0,1,0)[12]             : AIC=3942.897, Time=0.03 sec
- ARIMA(1,1,0)(1,1,0)[12]             : AIC=3846.786, Time=0.22 sec
+ ARIMA(1,1,0)(1,1,0)[12]             : AIC=3846.786, Time=0.21 sec
  ARIMA(0,1,1)(0,1,1)[12]             : AIC=3840.318, Time=0.29 sec
  ARIMA(0,1,1)(0,1,0)[12]             : AIC=3873.797, Time=0.10 sec
- ARIMA(0,1,1)(1,1,1)[12]             : AIC=3841.882, Time=0.46 sec
- ARIMA(0,1,1)(0,1,2)[12]             : AIC=3841.572, Time=2.05 sec
- ARIMA(0,1,1)(1,1,0)[12]             : AIC=3852.231, Time=0.54 sec
- ARIMA(0,1,1)(1,1,2)[12]             : AIC=3842.593, Time=3.25 sec
- ARIMA(0,1,0)(0,1,1)[12]             : AIC=3904.615, Time=0.18 sec
- ARIMA(1,1,1)(0,1,1)[12]             : AIC=3834.135, Time=0.47 sec
+ ARIMA(0,1,1)(1,1,1)[12]             : AIC=3841.882, Time=0.50 sec
+ ARIMA(0,1,1)(0,1,2)[12]             : AIC=3841.572, Time=14.07 sec
+ ARIMA(0,1,1)(1,1,0)[12]             : AIC=3852.231, Time=4.56 sec
+ ARIMA(0,1,1)(1,1,2)[12]             : AIC=3842.593, Time=23.28 sec
+ ARIMA(0,1,0)(0,1,1)[12]             : AIC=3904.615, Time=1.58 sec
+ ARIMA(1,1,1)(0,1,1)[12]             : AIC=3834.135, Time=0.50 sec
  ARIMA(1,1,1)(0,1,0)[12]             : AIC=3866.187, Time=0.11 sec
  ARIMA(1,1,1)(1,1,1)[12]             : AIC=3835.564, Time=0.46 sec
- ARIMA(1,1,1)(0,1,2)[12]             : AIC=3835.160, Time=1.96 sec
- ARIMA(1,1,1)(1,1,0)[12]             : AIC=3844.410, Time=0.30 sec
- ARIMA(1,1,1)(1,1,2)[12]             : AIC=3836.443, Time=3.05 sec
- ARIMA(1,1,0)(0,1,1)[12]             : AIC=3836.696, Time=0.27 sec
- ARIMA(2,1,1)(0,1,1)[12]             : AIC=3836.104, Time=0.98 sec
- ARIMA(1,1,2)(0,1,1)[12]             : AIC=3836.107, Time=0.71 sec
- ARIMA(0,1,2)(0,1,1)[12]             : AIC=3834.320, Time=0.38 sec
- ARIMA(2,1,0)(0,1,1)[12]             : AIC=3834.277, Time=0.36 sec
- ARIMA(2,1,2)(0,1,1)[12]             : AIC=3837.435, Time=1.17 sec
- ARIMA(1,1,1)(0,1,1)[12] intercept   : AIC=3835.455, Time=0.49 sec
+ ARIMA(1,1,1)(0,1,2)[12]             : AIC=3835.160, Time=12.84 sec
+ ARIMA(1,1,1)(1,1,0)[12]             : AIC=3844.410, Time=4.47 sec
+ ARIMA(1,1,1)(1,1,2)[12]             : AIC=3836.443, Time=22.92 sec
+ ARIMA(1,1,0)(0,1,1)[12]             : AIC=3836.696, Time=4.43 sec
+ ARIMA(2,1,1)(0,1,1)[12]             : AIC=3836.104, Time=16.89 sec
+ ARIMA(1,1,2)(0,1,1)[12]             : AIC=3836.107, Time=7.07 sec
+ ARIMA(0,1,2)(0,1,1)[12]             : AIC=3834.320, Time=0.39 sec
+ ARIMA(2,1,0)(0,1,1)[12]             : AIC=3834.277, Time=0.35 sec
+ ARIMA(2,1,2)(0,1,1)[12]             : AIC=3837.435, Time=13.92 sec
+ ARIMA(1,1,1)(0,1,1)[12] intercept   : AIC=3835.455, Time=7.05 sec
 
 Best model:  ARIMA(1,1,1)(0,1,1)[12]          
-Total fit time: 18.247 seconds
+Total fit time: 136.437 seconds
 </pre>
 </div>
 </div>
@@ -15261,7 +15255,7 @@ Total fit time: 18.247 seconds
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="prompt input_prompt">In&nbsp;[55]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Capture auto_arima trace in a pandas dataframe</span>
@@ -15276,7 +15270,7 @@ Total fit time: 18.247 seconds
             <span class="n">max_q</span>             <span class="o">=</span> <span class="mi">3</span><span class="p">,</span>
             <span class="n">seasonal</span>          <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
             <span class="n">test</span>              <span class="o">=</span> <span class="s1">&#39;adf&#39;</span><span class="p">,</span>
-            <span class="n">m</span>                 <span class="o">=</span> <span class="mi">12</span><span class="p">,</span> <span class="c1"># Seasonal period</span>
+            <span class="n">m</span>                 <span class="o">=</span> <span class="mi">12</span><span class="p">,</span>   <span class="c1"># Seasonal period</span>
             <span class="n">d</span>                 <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="c1"># The algorithm will determine &#39;d&#39;</span>
             <span class="n">D</span>                 <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="c1"># The algorithm will determine &#39;D&#39;</span>
             <span class="n">trace</span>             <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
@@ -15310,7 +15304,7 @@ Total fit time: 18.247 seconds
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[22]:</div>
+    <div class="prompt output_prompt">Out[55]:</div>
 
 
 
@@ -15347,7 +15341,7 @@ Total fit time: 18.247 seconds
       <td>(0,1,1,12)</td>
       <td></td>
       <td>3834.135</td>
-      <td>0.65</td>
+      <td>7.56</td>
     </tr>
     <tr>
       <th>1</th>
@@ -15355,7 +15349,7 @@ Total fit time: 18.247 seconds
       <td>(0,1,1,12)</td>
       <td></td>
       <td>3834.277</td>
-      <td>0.36</td>
+      <td>0.41</td>
     </tr>
     <tr>
       <th>2</th>
@@ -15363,7 +15357,7 @@ Total fit time: 18.247 seconds
       <td>(0,1,1,12)</td>
       <td></td>
       <td>3834.320</td>
-      <td>0.40</td>
+      <td>1.91</td>
     </tr>
     <tr>
       <th>3</th>
@@ -15371,7 +15365,7 @@ Total fit time: 18.247 seconds
       <td>(0,1,2,12)</td>
       <td></td>
       <td>3835.160</td>
-      <td>1.88</td>
+      <td>14.28</td>
     </tr>
     <tr>
       <th>4</th>
@@ -15379,7 +15373,7 @@ Total fit time: 18.247 seconds
       <td>(0,1,1,12)</td>
       <td>intercept</td>
       <td>3835.455</td>
-      <td>0.49</td>
+      <td>8.59</td>
     </tr>
     <tr>
       <th>5</th>
@@ -15387,7 +15381,7 @@ Total fit time: 18.247 seconds
       <td>(1,1,1,12)</td>
       <td></td>
       <td>3835.564</td>
-      <td>0.57</td>
+      <td>7.35</td>
     </tr>
     <tr>
       <th>6</th>
@@ -15395,7 +15389,7 @@ Total fit time: 18.247 seconds
       <td>(0,1,1,12)</td>
       <td></td>
       <td>3836.104</td>
-      <td>6.59</td>
+      <td>15.77</td>
     </tr>
     <tr>
       <th>7</th>
@@ -15403,7 +15397,7 @@ Total fit time: 18.247 seconds
       <td>(0,1,1,12)</td>
       <td></td>
       <td>3836.107</td>
-      <td>1.56</td>
+      <td>9.06</td>
     </tr>
     <tr>
       <th>8</th>
@@ -15411,7 +15405,7 @@ Total fit time: 18.247 seconds
       <td>(1,1,2,12)</td>
       <td></td>
       <td>3836.443</td>
-      <td>3.37</td>
+      <td>23.13</td>
     </tr>
     <tr>
       <th>9</th>
@@ -15419,7 +15413,7 @@ Total fit time: 18.247 seconds
       <td>(0,1,1,12)</td>
       <td></td>
       <td>3836.696</td>
-      <td>0.37</td>
+      <td>3.86</td>
     </tr>
     <tr>
       <th>10</th>
@@ -15427,7 +15421,7 @@ Total fit time: 18.247 seconds
       <td>(0,1,1,12)</td>
       <td></td>
       <td>3837.435</td>
-      <td>1.22</td>
+      <td>17.71</td>
     </tr>
     <tr>
       <th>11</th>
@@ -15435,7 +15429,7 @@ Total fit time: 18.247 seconds
       <td>(0,1,1,12)</td>
       <td></td>
       <td>3840.318</td>
-      <td>0.28</td>
+      <td>4.19</td>
     </tr>
     <tr>
       <th>12</th>
@@ -15443,7 +15437,7 @@ Total fit time: 18.247 seconds
       <td>(0,1,2,12)</td>
       <td></td>
       <td>3841.572</td>
-      <td>2.05</td>
+      <td>13.32</td>
     </tr>
     <tr>
       <th>13</th>
@@ -15451,7 +15445,7 @@ Total fit time: 18.247 seconds
       <td>(1,1,1,12)</td>
       <td></td>
       <td>3841.882</td>
-      <td>0.45</td>
+      <td>6.56</td>
     </tr>
     <tr>
       <th>14</th>
@@ -15459,7 +15453,7 @@ Total fit time: 18.247 seconds
       <td>(1,1,2,12)</td>
       <td></td>
       <td>3842.593</td>
-      <td>4.82</td>
+      <td>21.57</td>
     </tr>
     <tr>
       <th>15</th>
@@ -15467,7 +15461,7 @@ Total fit time: 18.247 seconds
       <td>(1,1,0,12)</td>
       <td></td>
       <td>3844.410</td>
-      <td>0.29</td>
+      <td>4.98</td>
     </tr>
     <tr>
       <th>16</th>
@@ -15475,7 +15469,7 @@ Total fit time: 18.247 seconds
       <td>(1,1,0,12)</td>
       <td></td>
       <td>3846.786</td>
-      <td>0.20</td>
+      <td>3.16</td>
     </tr>
     <tr>
       <th>17</th>
@@ -15483,7 +15477,7 @@ Total fit time: 18.247 seconds
       <td>(1,1,0,12)</td>
       <td></td>
       <td>3852.231</td>
-      <td>1.19</td>
+      <td>4.73</td>
     </tr>
     <tr>
       <th>18</th>
@@ -15491,7 +15485,7 @@ Total fit time: 18.247 seconds
       <td>(0,1,0,12)</td>
       <td></td>
       <td>3866.187</td>
-      <td>0.11</td>
+      <td>0.20</td>
     </tr>
     <tr>
       <th>19</th>
@@ -15499,7 +15493,7 @@ Total fit time: 18.247 seconds
       <td>(0,1,0,12)</td>
       <td></td>
       <td>3873.797</td>
-      <td>0.10</td>
+      <td>0.15</td>
     </tr>
     <tr>
       <th>20</th>
@@ -15507,7 +15501,7 @@ Total fit time: 18.247 seconds
       <td>(1,1,1,12)</td>
       <td></td>
       <td>3903.204</td>
-      <td>0.33</td>
+      <td>3.37</td>
     </tr>
     <tr>
       <th>21</th>
@@ -15515,7 +15509,7 @@ Total fit time: 18.247 seconds
       <td>(0,1,1,12)</td>
       <td></td>
       <td>3904.615</td>
-      <td>0.17</td>
+      <td>2.80</td>
     </tr>
     <tr>
       <th>22</th>
@@ -15523,7 +15517,7 @@ Total fit time: 18.247 seconds
       <td>(0,1,0,12)</td>
       <td></td>
       <td>3942.897</td>
-      <td>0.03</td>
+      <td>0.06</td>
     </tr>
   </tbody>
 </table>
@@ -15546,7 +15540,7 @@ Total fit time: 18.247 seconds
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="prompt input_prompt">In&nbsp;[56]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Backtest predictions with the best model according to grid search</span>
@@ -15606,13 +15600,13 @@ Total fit time: 18.247 seconds
 
  
  
-<div id="f98e534a-7dca-48db-9669-91f57ee4c601"></div>
+<div id="1ce222e7-b5e7-419e-a405-8837caf6af59"></div>
 <div class="output_subarea output_widget_view ">
 <script type="text/javascript">
-var element = $('#f98e534a-7dca-48db-9669-91f57ee4c601');
+var element = $('#1ce222e7-b5e7-419e-a405-8837caf6af59');
 </script>
 <script type="application/vnd.jupyter.widget-view+json">
-{"model_id": "9e0f1a1c5dfa43a2a7ba2e4f3c18d4b2", "version_major": 2, "version_minor": 0}
+{"model_id": "fde8ad38a0dd40bca7cb17fd192db181", "version_major": 2, "version_minor": 0}
 </script>
 </div>
 
@@ -15628,13 +15622,13 @@ var element = $('#f98e534a-7dca-48db-9669-91f57ee4c601');
 
  
  
-<div id="46a1b82f-de23-4472-a041-a99cb4bc7391"></div>
+<div id="61567561-3a6e-4870-af5b-bd5d56f7dde9"></div>
 <div class="output_subarea output_widget_view ">
 <script type="text/javascript">
-var element = $('#46a1b82f-de23-4472-a041-a99cb4bc7391');
+var element = $('#61567561-3a6e-4870-af5b-bd5d56f7dde9');
 </script>
 <script type="application/vnd.jupyter.widget-view+json">
-{"model_id": "8cb1ea5437f846b5888419b49365d24e", "version_major": 2, "version_minor": 0}
+{"model_id": "fd31e1d3d8cc431cbd93c3cce57880cf", "version_major": 2, "version_minor": 0}
 </script>
 </div>
 
@@ -15646,7 +15640,7 @@ var element = $('#46a1b82f-de23-4472-a041-a99cb4bc7391');
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="prompt input_prompt">In&nbsp;[57]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Compare predictions</span>
@@ -15716,7 +15710,7 @@ var element = $('#46a1b82f-de23-4472-a041-a99cb4bc7391');
   <tbody>
     <tr>
       <th>0</th>
-      <td>19803.08069</td>
+      <td>19803.080711</td>
     </tr>
   </tbody>
 </table>
@@ -15868,7 +15862,7 @@ To learn more about exogenous variables and how to correctly manage them with sk
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="prompt input_prompt">In&nbsp;[58]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Split data Train - Last window</span>
@@ -15940,7 +15934,7 @@ Last window dates : 1980-02-01 00:00:00 --- 1990-01-01 00:00:00  (n=120)
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="prompt input_prompt">In&nbsp;[59]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Train ARIMA forecaster with values from 1969-01-01 to 1980-01-01</span>
@@ -15970,7 +15964,7 @@ Last window dates : 1980-02-01 00:00:00 --- 1990-01-01 00:00:00  (n=120)
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[27]:</div>
+<div class="prompt input_prompt">In&nbsp;[60]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Predict using last window</span>
@@ -15992,15 +15986,15 @@ Last window dates : 1980-02-01 00:00:00 --- 1990-01-01 00:00:00  (n=120)
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[27]:</div>
+    <div class="prompt output_prompt">Out[60]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>1990-02-01    580893.320790
-1990-03-01    693624.449198
-1990-04-01    654315.472032
+<pre>1990-02-01    580893.320804
+1990-03-01    693624.449213
+1990-04-01    654315.472035
 Freq: MS, Name: pred, dtype: float64</pre>
 </div>
 
@@ -16012,7 +16006,7 @@ Freq: MS, Name: pred, dtype: float64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[28]:</div>
+<div class="prompt input_prompt">In&nbsp;[61]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Plot predictions</span>
@@ -16060,7 +16054,7 @@ Freq: MS, Name: pred, dtype: float64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[29]:</div>
+<div class="prompt input_prompt">In&nbsp;[62]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">session_info</span>
@@ -16088,18 +16082,17 @@ pandas              2.2.2
 pmdarima            2.0.4
 session_info        1.0.0
 skforecast          0.13.0
-sklearn             1.5.1
 statsmodels         0.14.2
 -----
 IPython             8.26.0
 jupyter_client      8.6.2
 jupyter_core        5.7.2
-notebook            6.0.0
+notebook            6.4.12
 -----
 Python 3.12.4 | packaged by Anaconda, Inc. | (main, Jun 18 2024, 15:12:24) [GCC 11.2.0]
-Linux-5.15.0-1065-aws-x86_64-with-glibc2.31
+Linux-5.15.0-1066-aws-x86_64-with-glibc2.31
 -----
-Session information updated at 2024-07-31 21:10
+Session information updated at 2024-08-06 15:56
 </pre>
 </div>
 </div>
@@ -16118,10 +16111,10 @@ Session information updated at 2024-07-31 21:10
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Hyndman, R.J., &amp; Athanasopoulos, G. (2021) Forecasting: principles and practice, 3rd edition, OTexts: Melbourne, Australia. <a href="https://otexts.com/fpp3/">book</a></p>
-<p>Time Series Analysis and Forecasting with ADAM Ivan Svetunkov <a href="https://openforecast.org/adam/">book</a></p>
-<p>Python for Finance: Mastering Data-Driven Finance <a href="https://www.amazon.es/gp/product/1492024333/ref=as_li_qf_asin_il_tl?ie=UTF8&amp;tag=cienciadedato-21&amp;creative=24630&amp;linkCode=as2&amp;creativeASIN=1492024333&amp;linkId=70c3175ad015970cd1c2328b7a40a055">book</a></p>
-<p>Forecasting: theory and practice <a href="https://arxiv.org/pdf/2012.03854.pdf">PDF</a></p>
+<p>Hyndman, R.J., &amp; Athanasopoulos, G. (2021) Forecasting: principles and practice, 3rd edition, OTexts: Melbourne, Australia.</p>
+<p>Time Series Analysis and Forecasting with ADAM Ivan Svetunkov</p>
+<p>Python for Finance: Mastering Data-Driven Finance</p>
+<p>Forecasting: theory and practice</p>
 
 </div>
 </div>
@@ -16304,7 +16297,7 @@ div.inner_cell {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons Licence" style="border-width:0" src="https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by-nc-sa.svg" /></a><br />This work by  Joaquín Amat Rodrigo is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Attribution-NonCommercial-ShareAlike 4.0 International</a>.</p>
+<p><a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons Licence" style="border-width:0" src="https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by-nc-sa.svg" /></a><br />This work by Joaquín Amat Rodrigo and Javier Escobar Ortiz is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Attribution-NonCommercial-ShareAlike 4.0 International</a>.</p>
 
 <!-- anuncio_themoneytizer_MEGABANNER_INFERIOR -->
 <p><br><br></p>
