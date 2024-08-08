@@ -13114,15 +13114,6 @@ $( document ).ready(function(){
 </div>
 <!-- banner github -->
 
-<!-- banner github -->
-<div style= "background-color: #001633; color: #ffffff; height: 2.4rem; position: relative; width: 100%;">
-  <p style= "color: #ffffff; align-items: center; display: flex; height: 100%; justify-content: center;">
-    If you like&nbsp; <b> Skforecast </b>,&nbsp; help us giving a star on &nbsp;
-    <a style= "color: #ffffff;" href="https://github.com/JoaquinAmatRodrigo/skforecast/" rel="noopener noreferrer" target="_blank"><u>GitHub</u></a>! ⭐️
-  </p>
-</div>
-<!-- banner github -->
- 
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13157,8 +13148,12 @@ $( document ).ready(function(){
 <li><a href="https://www.cienciadedatos.net/documentos/py41-forecasting-cryptocurrency-bitcoin-machine-learning-python.html">Bitcoin price prediction with Python</a></li>
 <li><a href="https://cienciadedatos.net/documentos/py52-stacking-ensemble-models-forecasting.html">Stacking ensemble of machine learning models to improve forecasting</a></li>
 <li><a href="https://cienciadedatos.net/documentos/py57-interpretable-forecasting-models.html">Interpretable forecasting models</a></li>
+<li><a href="https://cienciadedatos.net/documentos/py45-weighted-time-series-forecasting.html">Mitigating the Impact of Covid on forecasting Models</a></li>
+<li><a href="https://cienciadedatos.net/documentos/py46-forecasting-time-series-missing-values.html">Forecasting time series with missing values</a></li>
 </ul>
-<p align="center"><img src='https://github.com/JoaquinAmatRodrigo/skforecast/raw/master/docs/img/banner-landing-page-skforecast.png' align="center"></p>
+<div style="text-align: center;">
+    <img src="https://github.com/JoaquinAmatRodrigo/skforecast/raw/master/docs/img/banner-landing-page-skforecast.png" alt="Banner" style="display: block; margin: 0 auto;">
+</div>
 </div>
 </div>
 </div>
@@ -13951,18 +13946,6 @@ Religious worship
 <div class="output_wrapper">
 <div class="output">
 
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>tsfresh.feature_extraction.settings WARNING Dependency not available for matrix_profile, this feature will be disabled!
-</pre>
-</div>
-</div>
-
 <div class="output_area">
 
     <div class="prompt"></div>
@@ -14165,18 +14148,6 @@ mean_n_absolute_max
 
 <div class="output_wrapper">
 <div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>Feature Extraction:   0%|          | 0/20 [00:00&lt;?, ?it/s]Feature Extraction: 100%|██████████| 20/20 [01:39&lt;00:00,  4.97s/it]
-</pre>
-</div>
-</div>
 
 <div class="output_area">
 
@@ -16502,18 +16473,6 @@ div.sk-label-container:hover .sk-estimator-doc-link.fitted:hover,
     <div class="prompt"></div>
 
 
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>/home/ubuntu/anaconda3/envs/skforecast_13_py12/lib/python3.12/site-packages/tslearn/utils/utils.py:90: UserWarning: 2-Dimensional data passed. Assuming these are 1214 1-dimensional timeseries
-  warnings.warn(
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Size of each cluster:
 </pre>
@@ -16771,7 +16730,7 @@ For more information about calendar features and cyclical encoding visit <a href
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[50]:</div>
+<div class="prompt input_prompt">In&nbsp;[29]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Load data for modelling</span>
@@ -16848,7 +16807,7 @@ Although 1214 buildings are available for modeling, to keep model training withi
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[51]:</div>
+<div class="prompt input_prompt">In&nbsp;[30]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Sample 600 buildings</span>
@@ -16874,7 +16833,7 @@ Although 1214 buildings are available for modeling, to keep model training withi
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[52]:</div>
+<div class="prompt input_prompt">In&nbsp;[31]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Table of results for all models</span>
@@ -16891,7 +16850,7 @@ Although 1214 buildings are available for modeling, to keep model training withi
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[53]:</div>
+<div class="prompt input_prompt">In&nbsp;[32]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Function to add calendar features to a DataFrame</span>
@@ -16915,7 +16874,7 @@ Although 1214 buildings are available for modeling, to keep model training withi
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[54]:</div>
+<div class="prompt input_prompt">In&nbsp;[33]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Exogenous variables included in the model</span>
@@ -16945,7 +16904,7 @@ Although 1214 buildings are available for modeling, to keep model training withi
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[55]:</div>
+<div class="prompt input_prompt">In&nbsp;[34]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Train and test a model for each building</span>
@@ -17038,13 +16997,13 @@ Although 1214 buildings are available for modeling, to keep model training withi
 
  
  
-<div id="566872b4-8ada-4bbf-af3a-583978d55cf0"></div>
+<div id="62664212-f723-4a76-b11e-ea2f41695a56"></div>
 <div class="output_subarea output_widget_view ">
 <script type="text/javascript">
-var element = $('#566872b4-8ada-4bbf-af3a-583978d55cf0');
+var element = $('#62664212-f723-4a76-b11e-ea2f41695a56');
 </script>
 <script type="application/vnd.jupyter.widget-view+json">
-{"model_id": "3a76d86f1e5241bcb7576460fc1bb232", "version_major": 2, "version_minor": 0}
+{"model_id": "4241177c07814e0ca752734c1f39ffda", "version_major": 2, "version_minor": 0}
 </script>
 </div>
 
@@ -17070,7 +17029,7 @@ Bias (x 10,000): 947
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[56]:</div>
+<div class="prompt input_prompt">In&nbsp;[35]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Plot predictions vs real value for 2 random buildings</span>
@@ -17135,7 +17094,7 @@ Bias (x 10,000): 947
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[57]:</div>
+<div class="prompt input_prompt">In&nbsp;[36]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Reshape data to have one column per building</span>
@@ -17174,7 +17133,7 @@ Bias (x 10,000): 947
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[57]:</div>
+    <div class="prompt output_prompt">Out[36]:</div>
 
 
 
@@ -17331,7 +17290,7 @@ Bias (x 10,000): 947
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[58]:</div>
+<div class="prompt input_prompt">In&nbsp;[37]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Forecaster multi-series to model all buildings at the same time</span>
@@ -17402,13 +17361,13 @@ Bias (x 10,000): 947
 
  
  
-<div id="328f95c2-9e39-4e37-8ef5-ac7ae72e0b44"></div>
+<div id="d39a1775-c38d-430b-8847-46015c79968c"></div>
 <div class="output_subarea output_widget_view ">
 <script type="text/javascript">
-var element = $('#328f95c2-9e39-4e37-8ef5-ac7ae72e0b44');
+var element = $('#d39a1775-c38d-430b-8847-46015c79968c');
 </script>
 <script type="application/vnd.jupyter.widget-view+json">
-{"model_id": "59d0f3d0af564e848b5bc8368b6251f9", "version_major": 2, "version_minor": 0}
+{"model_id": "68be17a768c24c52b7582168c3a333b9", "version_major": 2, "version_minor": 0}
 </script>
 </div>
 
@@ -17434,7 +17393,7 @@ Bias (x 10,000): 334
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[59]:</div>
+<div class="prompt input_prompt">In&nbsp;[38]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Add predictions to the already existing plot (not showing the plot yet)</span>
@@ -17458,7 +17417,7 @@ Bias (x 10,000): 334
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[60]:</div>
+<div class="prompt input_prompt">In&nbsp;[39]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Forecaster multi-series models for buildings grouped by primary usage</span>
@@ -17580,7 +17539,7 @@ Bias (x 10,000): 732
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[61]:</div>
+<div class="prompt input_prompt">In&nbsp;[40]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Add predictions to the already existing plot (not showing the plot yet)</span>
@@ -17612,7 +17571,7 @@ Bias (x 10,000): 732
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[62]:</div>
+<div class="prompt input_prompt">In&nbsp;[41]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Forecaster multi-series models for buildings grouped by time series features</span>
@@ -17732,7 +17691,7 @@ Bias (x 10,000): 768
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[63]:</div>
+<div class="prompt input_prompt">In&nbsp;[42]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Add predictions to the already existing plot (not showing the plot yet)</span>
@@ -17764,7 +17723,7 @@ Bias (x 10,000): 768
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[64]:</div>
+<div class="prompt input_prompt">In&nbsp;[43]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Forecaster multi-series models for buildings grouped by DTW</span>
@@ -17884,7 +17843,7 @@ Bias (x 10,000): 778
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[65]:</div>
+<div class="prompt input_prompt">In&nbsp;[44]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Add predictions to the already existing plot (not showing the plot yet)</span>
@@ -17908,7 +17867,7 @@ Bias (x 10,000): 778
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[66]:</div>
+<div class="prompt input_prompt">In&nbsp;[45]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Table of results</span>
@@ -17927,24 +17886,24 @@ Bias (x 10,000): 778
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[66]:</div>
+    <div class="prompt output_prompt">Out[45]:</div>
 
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <style type="text/css">
-#T_dfb36_row1_col2, #T_dfb36_row1_col3, #T_dfb36_row4_col0, #T_dfb36_row4_col1, #T_dfb36_row4_col3 {
+#T_9e732_row1_col2, #T_9e732_row1_col3, #T_9e732_row4_col0, #T_9e732_row4_col1 {
   background-color: green;
 }
 </style>
-<table id="T_dfb36">
+<table id="T_9e732">
   <thead>
     <tr>
       <th class="blank level0" >&nbsp;</th>
-      <th id="T_dfb36_level0_col0" class="col_heading level0 col0" >mae</th>
-      <th id="T_dfb36_level0_col1" class="col_heading level0 col1" >abs_error</th>
-      <th id="T_dfb36_level0_col2" class="col_heading level0 col2" >bias</th>
-      <th id="T_dfb36_level0_col3" class="col_heading level0 col3" >elapsed_time</th>
+      <th id="T_9e732_level0_col0" class="col_heading level0 col0" >mae</th>
+      <th id="T_9e732_level0_col1" class="col_heading level0 col1" >abs_error</th>
+      <th id="T_9e732_level0_col2" class="col_heading level0 col2" >bias</th>
+      <th id="T_9e732_level0_col3" class="col_heading level0 col3" >elapsed_time</th>
     </tr>
     <tr>
       <th class="index_name level0" >model</th>
@@ -17956,39 +17915,39 @@ Bias (x 10,000): 778
   </thead>
   <tbody>
     <tr>
-      <th id="T_dfb36_level0_row0" class="row_heading level0 row0" >One model per building</th>
-      <td id="T_dfb36_row0_col0" class="data row0 col0" >433</td>
-      <td id="T_dfb36_row0_col1" class="data row0 col1" >48307435</td>
-      <td id="T_dfb36_row0_col2" class="data row0 col2" >9469976</td>
-      <td id="T_dfb36_row0_col3" class="data row0 col3" >0:06:37</td>
+      <th id="T_9e732_level0_row0" class="row_heading level0 row0" >One model per building</th>
+      <td id="T_9e732_row0_col0" class="data row0 col0" >433</td>
+      <td id="T_9e732_row0_col1" class="data row0 col1" >48307435</td>
+      <td id="T_9e732_row0_col2" class="data row0 col2" >9469976</td>
+      <td id="T_9e732_row0_col3" class="data row0 col3" >0:05:59</td>
     </tr>
     <tr>
-      <th id="T_dfb36_level0_row1" class="row_heading level0 row1" >Global model</th>
-      <td id="T_dfb36_row1_col0" class="data row1 col0" >393</td>
-      <td id="T_dfb36_row1_col1" class="data row1 col1" >43843666</td>
-      <td id="T_dfb36_row1_col2" class="data row1 col2" >3338412</td>
-      <td id="T_dfb36_row1_col3" class="data row1 col3" >0:02:39</td>
+      <th id="T_9e732_level0_row1" class="row_heading level0 row1" >Global model</th>
+      <td id="T_9e732_row1_col0" class="data row1 col0" >393</td>
+      <td id="T_9e732_row1_col1" class="data row1 col1" >43843666</td>
+      <td id="T_9e732_row1_col2" class="data row1 col2" >3338412</td>
+      <td id="T_9e732_row1_col3" class="data row1 col3" >0:02:38</td>
     </tr>
     <tr>
-      <th id="T_dfb36_level0_row2" class="row_heading level0 row2" >Global model per primary usage</th>
-      <td id="T_dfb36_row2_col0" class="data row2 col0" >389</td>
-      <td id="T_dfb36_row2_col1" class="data row2 col1" >43404107</td>
-      <td id="T_dfb36_row2_col2" class="data row2 col2" >7318115</td>
-      <td id="T_dfb36_row2_col3" class="data row2 col3" >0:02:42</td>
+      <th id="T_9e732_level0_row2" class="row_heading level0 row2" >Global model per primary usage</th>
+      <td id="T_9e732_row2_col0" class="data row2 col0" >389</td>
+      <td id="T_9e732_row2_col1" class="data row2 col1" >43404107</td>
+      <td id="T_9e732_row2_col2" class="data row2 col2" >7318115</td>
+      <td id="T_9e732_row2_col3" class="data row2 col3" >0:02:45</td>
     </tr>
     <tr>
-      <th id="T_dfb36_level0_row3" class="row_heading level0 row3" >Global model per cluster (features)</th>
-      <td id="T_dfb36_row3_col0" class="data row3 col0" >391</td>
-      <td id="T_dfb36_row3_col1" class="data row3 col1" >43694416</td>
-      <td id="T_dfb36_row3_col2" class="data row3 col2" >7677039</td>
-      <td id="T_dfb36_row3_col3" class="data row3 col3" >0:02:40</td>
+      <th id="T_9e732_level0_row3" class="row_heading level0 row3" >Global model per cluster (features)</th>
+      <td id="T_9e732_row3_col0" class="data row3 col0" >391</td>
+      <td id="T_9e732_row3_col1" class="data row3 col1" >43694416</td>
+      <td id="T_9e732_row3_col2" class="data row3 col2" >7677039</td>
+      <td id="T_9e732_row3_col3" class="data row3 col3" >0:02:41</td>
     </tr>
     <tr>
-      <th id="T_dfb36_level0_row4" class="row_heading level0 row4" >Global model per cluster (DTW)</th>
-      <td id="T_dfb36_row4_col0" class="data row4 col0" >384</td>
-      <td id="T_dfb36_row4_col1" class="data row4 col1" >42897222</td>
-      <td id="T_dfb36_row4_col2" class="data row4 col2" >7781815</td>
-      <td id="T_dfb36_row4_col3" class="data row4 col3" >0:02:39</td>
+      <th id="T_9e732_level0_row4" class="row_heading level0 row4" >Global model per cluster (DTW)</th>
+      <td id="T_9e732_row4_col0" class="data row4 col0" >384</td>
+      <td id="T_9e732_row4_col1" class="data row4 col1" >42897222</td>
+      <td id="T_9e732_row4_col2" class="data row4 col2" >7781815</td>
+      <td id="T_9e732_row4_col3" class="data row4 col3" >0:02:40</td>
     </tr>
   </tbody>
 </table>
@@ -18003,7 +17962,7 @@ Bias (x 10,000): 778
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[67]:</div>
+<div class="prompt input_prompt">In&nbsp;[46]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Plot predictions vs real value for 2 random buildings for all models</span>
@@ -18025,7 +17984,7 @@ Bias (x 10,000): 778
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[67]:</div>
+    <div class="prompt output_prompt">Out[46]:</div>
 
 
 
@@ -18286,7 +18245,7 @@ Bias (x 10,000): 778
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[70]:</div>
+<div class="prompt input_prompt">In&nbsp;[48]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">session_info</span>
@@ -18322,12 +18281,12 @@ tslearn             0.6.3
 IPython             8.26.0
 jupyter_client      8.6.2
 jupyter_core        5.7.2
-notebook            6.0.0
+notebook            6.4.12
 -----
 Python 3.12.4 | packaged by Anaconda, Inc. | (main, Jun 18 2024, 15:12:24) [GCC 11.2.0]
-Linux-5.15.0-1065-aws-x86_64-with-glibc2.31
+Linux-5.15.0-1066-aws-x86_64-with-glibc2.31
 -----
-Session information updated at 2024-08-01 09:13
+Session information updated at 2024-08-07 18:38
 </pre>
 </div>
 </div>
@@ -18534,7 +18493,6 @@ div.inner_cell {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons Licence" style="border-width:0" src="https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by-nc-sa.svg" /></a><br />This work by Joaquín Amat Rodrigo and Javier Escobar Ortiz is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.</p>
-
 
 <!-- anuncio_themoneytizer_MEGABANNER_INFERIOR -->
 <p><br><br></p>
