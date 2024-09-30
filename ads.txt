@@ -1492,3 +1492,7 @@ resetdigital.co,279,RESELLER
 Yahoo.com,59906,RESELLER,e1a5b5b6e3255540
 pubmatic.com,163462,RESELLER,5d62403b186f2ace
 pubmatic.com,163944,RESELLER,5d62403b186f2ace
+video.unrulymedia.com,2444764291,RESELLER
+krushmedia.com,AJxF6R572a9M6CaTvK,RESELLER
+motorik.io,100463,RESELLER
+viously.com,1e13c189-44d7-5aaa-be2c-c33960bb6c1c,RESELLER
