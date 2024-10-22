@@ -1496,3 +1496,7 @@ video.unrulymedia.com,2444764291,RESELLER
 krushmedia.com,AJxF6R572a9M6CaTvK,RESELLER
 motorik.io,100463,RESELLER
 viously.com,1e13c189-44d7-5aaa-be2c-c33960bb6c1c,RESELLER
+rubiconproject.com,26800,RESELLER,0bfd66d529a55807
+adform.com,2926,RESELLER
+improvedigital.com,2106,RESELLER
+smartadserver.com,4288,RESELLER
