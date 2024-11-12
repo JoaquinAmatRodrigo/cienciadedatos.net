@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html>
-<head><meta charset="utf-8" />
 
-<title>py58-forecasting-series-temporales-con-lightgbm</title>
+<!-- anuncio_themoneytizer_FOOTER O SLIDE-IN -->
+<div id="73746-6"><script src="//ads.themoneytizer.com/s/gen.js?type=6"></script><script src="//ads.themoneytizer.com/s/requestform.js?siteId=73746&formatId=6"></script></div>
+<!-- anuncio_themoneytizer_FOOTER O SLIDE-IN -->
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-
-
+<head>
+<meta charset="utf-8" />
+<title>Forecasting series temporales con LightGBM</title>
+<meta name="description" content="Forecasting con modelos de gradient boosting usando python y LightGBM." />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 
 <style type="text/css">
     /*!
@@ -13101,6 +13105,15 @@ $( document ).ready(function(){
   <div tabindex="-1" id="notebook" class="border-box-sizing">
     <div class="container" id="notebook-container">
 
+<!-- banner github -->
+<div style= "background-color: #001633; color: #ffffff; height: 2.4rem; position: relative; width: 100%;">
+	<p style= "color: #ffffff; align-items: center; display: flex; height: 100%; justify-content: center;">
+		Si te gusta&nbsp; <b> Skforecast </b>,&nbsp;ayúdanos dándonos una estrella en&nbsp;
+		<a style= "color: #ffffff;" href="https://github.com/JoaquinAmatRodrigo/skforecast/" rel="noopener noreferrer" target="_blank"><u>GitHub</u></a>! ⭐️
+	</p>
+</div>
+<!-- banner github -->
+ 
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -16173,10 +16186,67 @@ div.inner_cell {
 </div>
 
 </div>
+
+<!-- donacion -->
+<div class="cell border-box-sizing text_cell rendered">
+  <div class="prompt input_prompt"></div>
+  <div class="inner_cell">
+      <div class="text_cell_render border-box-sizing rendered_html">
+          <p><br></p>
+          <p><strong>¿Te ha gustado el artículo? Tu ayuda es importante</strong></p>
+          <p style="text-align:left">
+              <font size="3" color="#555">
+                Mantener un sitio web tiene unos costes elevados, tu contribución me ayudará a seguir generando contenido divulgativo gratuito. ¡Muchísimas gracias! &#128522;
+              </font>
+              <form action="https://www.paypal.com/donate" method="post" target="_top">
+                  <input type="hidden" name="hosted_button_id" value="6NULYFYDKFTQL" />
+                  <input type="image" src="https://www.paypalobjects.com/en_US/ES/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
+                  <img alt="" border="0" src="https://www.paypal.com/en_ES/i/scr/pixel.gif" width="1" height="1" />
+              </form>	
+          </p>
+          <p><br></p>
+      </div>
+  </div>
+</div>
+<!-- donation -->
+
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons Licence" style="border-width:0" src="https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by-nc-sa.svg" /></a><br />Este documento creado por Joaquín Amat Rodrigo y Javier Escobar Ortiz tiene licencia <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Attribution-NonCommercial-ShareAlike 4.0 International</a>.</p>
+<p><a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons Licence" style="border-width:0" src="https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by-nc-sa.svg" /></a><br />Este documento creado por Joaquín Amat Rodrigo y Javier Escobar Ortiz tiene licencia <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Attribution-NonCommercial-ShareAlike 4.0 International</a>.</p>
+
+<p>Se permite:</p>
+
+<ul>
+<li>
+  <p>Compartir: copiar y redistribuir el material en cualquier medio o formato.</p>
+</li>
+<li>
+  <p>Adaptar: remezclar, transformar y crear a partir del material.</p>
+</li>
+</ul>
+
+<p>Bajo los siguientes términos:</p>
+
+<ul>
+<li>
+  <p>Atribución: Debes otorgar <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.es#ref-appropriate-credit">el crédito adecuado</a>, proporcionar un enlace a la licencia e <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.es#ref-indicate-changes">indicar si se realizaron cambios</a>. Puedes hacerlo de cualquier manera razonable, pero no de una forma que sugiera que el licenciante te respalda o respalda tu uso.</p>
+</li>
+
+<li>
+  <p>NoComercial: No puedes utilizar el material para <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.es#ref-commercial-purposes">fines comerciales</a>.</p>
+</li>
+
+<li>
+  <p>CompartirIgual: Si remezclas, transformas o creas a partir del material, debes distribuir tus contribuciones bajo la <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.es#ref-same-license">misma licencia</a> que el original.</p>
+</li>
+</ul>
+
+<!-- anuncio_themoneytizer_MEGABANNER_INFERIOR -->
+<p><br><br></p>
+
+<div id="73746-28"><script src="//ads.themoneytizer.com/s/gen.js?type=28"></script><script src="//ads.themoneytizer.com/s/requestform.js?siteId=73746&formatId=28"></script></div>
+<!-- anuncio_themoneytizer_MEGABANNER_INFERIOR -->
 
 </div>
 </div>
