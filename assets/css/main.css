@@ -3320,6 +3320,19 @@ input, select, textarea {
 			font-size: 1.125em;
 		}
 
+		#header .flags {
+			display: flex;
+			align-items: center;
+			gap: 10px;
+		}
+		
+		#header .flags .flag-icon {
+			width: 35px;
+			height: 30px;
+			vertical-align: middle;
+			cursor: pointer;
+		}
+
 		#header .icons {
 			text-align: right;
 		}
