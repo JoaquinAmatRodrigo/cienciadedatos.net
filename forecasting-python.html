@@ -3,329 +3,507 @@
 <html>
 
 <!-- anuncio_themoneytizer_FOOTER O SLIDE-IN -->
-<div id="73746-6"><script src="//ads.themoneytizer.com/s/gen.js?type=6"></script><script src="//ads.themoneytizer.com/s/requestform.js?siteId=73746&formatId=6"></script></div>
+<div id="73746-6">
+	<script src="//ads.themoneytizer.com/s/gen.js?type=6"></script>
+	<script src="//ads.themoneytizer.com/s/requestform.js?siteId=73746&formatId=6"></script>
+</div>
 <!-- anuncio_themoneytizer_FOOTER O SLIDE-IN -->
 
-	<head>
+<head>
 
-		<title>Forecasting con Python</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<meta name="description" content="Cursos, tutoriales, teoría y ejemplos para aprender forecasting con Python" />
-		<link rel="stylesheet" href="assets/css/main.css" />
+	<title>Forecasting con Python</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<meta name="description" content="Cursos, tutoriales, teoría y ejemplos para aprender forecasting con Python" />
+	<link rel="stylesheet" href="assets/css/main.css" />
 
 
-	</head>
-	<body class="is-preload" onload="showPopup()">
+</head>
 
-		<!--Pop up-->
-		<div class="popup" id="myPopup">
-			<span class="close" onclick="hidePopup()">&times;</span>
-			<p id="popupText">
-			Si nuestros artículos te han ayudado, apreciaríamos enormemente tu apoyo. Tu contribución nos permite mantener esta plataforma
-			accesible para todos y crear nuevos contenidos. Puedes hacerlo a través de 
-			<a href="https://www.paypal.com/donate/?hosted_button_id=6NULYFYDKFTQL" target="_blank" rel="noopener noreferrer"><b>PayPal</b></a>
-			o <a href="https://github.com/sponsors/JoaquinAmatRodrigo" target="_blank" rel="noopener noreferrer"><b>Github Sponsors</b></a>
+<body class="is-preload" onload="showPopup()">
+
+	<!--Pop up-->
+	<div class="popup" id="myPopup">
+		<span class="close" onclick="hidePopup()">&times;</span>
+		<p id="popupText">
+			Si nuestros artículos te han ayudado, apreciaríamos enormemente tu apoyo. Tu contribución nos permite
+			mantener esta plataforma
+			accesible para todos y crear nuevos contenidos. Puedes hacerlo a través de
+			<a href="https://www.paypal.com/donate/?hosted_button_id=6NULYFYDKFTQL" target="_blank"
+				rel="noopener noreferrer"><b>PayPal</b></a>
+			o <a href="https://github.com/sponsors/JoaquinAmatRodrigo" target="_blank"
+				rel="noopener noreferrer"><b>Github Sponsors</b></a>
 		</p>
-		</div>
-		<script>
-			function showPopup() {
-				var popup = document.getElementById("myPopup");
-				var popupText = document.getElementById("popupText");
-				if (window.innerWidth > 768) {
-					popup.style.display = "block";
-				} else {
-					popupText.innerHTML = "Apóyanos en <a href='https://www.paypal.com/donate/?hosted_button_id=6NULYFYDKFTQL' target='_blank' rel='noopener noreferrer'><b>PayPal</b></a> o <a href='https://github.com/sponsors/JoaquinAmatRodrigo' target='_blank' rel='noopener noreferrer'><b>Github Sponsors</b></a>";
-					popup.style.display = "block";
-				}
+	</div>
+	<script>
+		function showPopup() {
+			var popup = document.getElementById("myPopup");
+			var popupText = document.getElementById("popupText");
+			if (window.innerWidth > 768) {
+				popup.style.display = "block";
+			} else {
+				popupText.innerHTML = "Apóyanos en <a href='https://www.paypal.com/donate/?hosted_button_id=6NULYFYDKFTQL' target='_blank' rel='noopener noreferrer'><b>PayPal</b></a> o <a href='https://github.com/sponsors/JoaquinAmatRodrigo' target='_blank' rel='noopener noreferrer'><b>Github Sponsors</b></a>";
+				popup.style.display = "block";
 			}
+		}
 
-			function hidePopup() {
-				var popup = document.getElementById("myPopup");
-				popup.style.display = "none";
-			}
-			window.addEventListener("resize", showPopup);
-		</script>
-		<!--Pop up-->
+		function hidePopup() {
+			var popup = document.getElementById("myPopup");
+			popup.style.display = "none";
+		}
+		window.addEventListener("resize", showPopup);
+	</script>
+	<!--Pop up-->
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+	<!-- Wrapper -->
+	<div id="wrapper">
 
-				<!-- Main -->
-					<div id="main">
-						<div class="inner">
+		<!-- Main -->
+		<div id="main">
+			<div class="inner">
 
-							<!-- Header -->
-							<header id="header">
-								<a href="index.html" class="logo"><strong>CIENCIADEDATOS.NET</strong></a>
-								<div class="flags">
-									<a href="./forecasting-python.html" title="Spanish">
-										<img src="./images/spain-flag.png" alt="Spanish Flag" class="flag-icon">
-									</a>
-									<a href="./en/forecasting-python.html" title="English">
-										<img src="./images/english-flag.png" alt="English Flag" class="flag-icon">
-									</a>
-								</div>
-							</header>
-
-							<!-- Banner -->
-								<section id="banner">
-									<div class="content">
-										<header>
-											<h1>Forecasting con Python</h1>
-										</header>
-									</div>
-								</section>
-
-							
-							<!-- Section -->
-								<section>
-
-									<div class="posts">
-
-										<article>
-											<a href="./documentos/py27-forecasting-series-temporales-python-scikitlearn.html" target="_blank" rel="noopener noreferrer" class="image"><img src="images/logo-skforecast.jpg" alt="" /></a>
-											<h3>Skforecast: forecasting de series temporales con machine learning</h3>
-											<p>Skforecast, librería de Python que facilita el uso de modelos scikit-learn para problemas de forecasting y series temporales.</p>
-											<ul class="actions">
-												<li><a href="./documentos/py27-forecasting-series-temporales-python-scikitlearn.html" target="_blank" rel="noopener noreferrer" class="button">Leer</a></li>
-											</ul>
-										</article>
-
-										<article>
-											<a href="./documentos/py51-modelos-arima-sarimax-python.html" target="_blank" rel="noopener noreferrer" class="image"><img src="images/arima-sarimax-python.jpg" alt="" /></a>
-											<h3>Modelos ARIMA y SARIMAX con Python</h3>
-											<p>Modelos ARIMA y SARIMAX para la predicción de series temporales.</p>
-											<ul class="actions">
-												<li><a href="./documentos/py51-modelos-arima-sarimax-python.html" target="_blank" rel="noopener noreferrer" class="button">Leer</a></li>
-											</ul>
-										</article>
-
-										<article>
-											<a href="./documentos/py39-forecasting-series-temporales-con-skforecast-xgboost-lightgbm-catboost.html" target="_blank" rel="noopener noreferrer" class="image"><img src="images/forecasting-skforecast-xgboost-catboost.jpg" alt="" /></a>
-											<h3>Forecasting series temporales con gradient boosting: Skforecast, XGBoost, LightGBM y CatBoost</h3>
-											<p>Ejemplo de cómo predecir el número de usuarios del sistema de alquier de bibicletas urbanas utilizando modelos de gradient boosting en python.</p>
-											<ul class="actions">
-												<li><a href="./documentos/py39-forecasting-series-temporales-con-skforecast-xgboost-lightgbm-catboost.html" target="_blank" rel="noopener noreferrer" class="button">Leer</a></li>
-											</ul>
-										</article>
-
-										<article>
-											<a href="./documentos/py29-forecasting-demanda-energia-electrica-python.html" target="_blank" rel="noopener noreferrer" class="image"><img src="images/forecasting-demanda-electrica.jpg" alt="" /></a>
-											<h3>Forecasting de la demanda eléctrica con machine learning</h3>
-											<p>Ejemplo de cómo predecir la demanda de energía eléctrica con modelos de machine learning.</p>
-											<ul class="actions">
-												<li><a href="./documentos/py29-forecasting-demanda-energia-electrica-python.html" target="_blank" rel="noopener noreferrer" class="button">Leer</a></li>
-											</ul>
-										</article>
-
-										<article>
-											<a href="./documentos/py44-multi-series-forecasting-skforecast-español.html" target="_blank" rel="noopener noreferrer" class="image"><img src="images/multi-series-forecasting-logo.jpg" alt="" /></a>
-											<h3>Multi-series forecasting con Python y Skforecast</h3>
-											<p>Modelos de forecasting para predecir múltiples series temporales de forma simultánea.</p>
-											<ul class="actions">
-												<li><a href="./documentos/py44-multi-series-forecasting-skforecast-español.html" target="_blank" rel="noopener noreferrer" class="button">Leer</a></li>
-											</ul>
-										</article>
-
-										<article>
-											<a href="./documentos/py53-modelos-forecasting-globales.html" target="_blank" rel="noopener noreferrer" class="image"><img src="images/modelos-forecasting-globales.jpg" alt="" /></a>
-											<h3>Modelos de forecasting globales</h3>
-											<p>Modelos de forecasting globales para predecir múltiples series temporales.</p>
-											<ul class="actions">
-												<li><a href="./documentos/py53-modelos-forecasting-globales.html" target="_blank" rel="noopener noreferrer" class="button">Leer</a></li>
-											</ul>
-										</article>
-
-										<article>
-											<a href="./documentos/py54-forecasting-con-deep-learning.html" target="_blank" rel="noopener noreferrer" class="image"><img src="images/forecasting-deep-learning.jpg" alt="" /></a>
-											<h3>Forecasting con modelos de deep learning</h3>
-											<p>Forecasting utilizando modelos basados redes neuronales RNN y LSTM</p>
-											<ul class="actions">
-												<li><a href="./documentos/py54-forecasting-con-deep-learning.html" target="_blank" rel="noopener noreferrer" class="button">Leer</a></li>
-											</ul>
-										</article>
-
-										<article>
-											<a href="./documentos/py42-forecasting-probabilistico.html" target="_blank" rel="noopener noreferrer" class="image"><img src="images/forecasting-probabilistico.jpg" alt="" /></a>
-											<h3>Forecasting probabilístico</h3>
-											<p>Métodos con los que estimar intervalos de predicción para modelos de machine learning aplicados a problemas de forecasting.</p>
-											<ul class="actions">
-												<li><a href="./documentos/py42-forecasting-probabilistico.html" target="_blank" rel="noopener noreferrer" class="button">Leer</a></li>
-											</ul>
-										</article>
-
-										<article>
-											<a href="./documentos/py60-forecasting-probabilistico-intervalos-prediccion-forecasting-multi-step.html" target="_blank" rel="noopener noreferrer" class="image"><img src="images/intervalos-prediccion-multi-step-forecasting.jpg" alt="" /></a>
-											<h3>Intervalos de predicción para forecasting multi-step</h3>
-											<p>Forecasting probabilístico: intervalos de predicción para forecasting multi-step</p>
-											<ul class="actions">
-												<li><a href="./documentos/py60-forecasting-probabilistico-intervalos-prediccion-forecasting-multi-step.html" target="_blank" rel="noopener noreferrer" class="button">Leer</a></li>
-											</ul>
-										</article>
-
-										<article>
-											<a href="./documentos/py46-forecasting-series-temporales-incompletas.html" target="_blank" rel="noopener noreferrer" class="image"><img src="images/forecasting-series-incompletas.jpg" alt="" /></a>
-											<h3>Forecasting de series temporales incompletas</h3>
-											<p>Modelado y predicción de series temporales incompletas con datos faltantes</p>
-											<ul class="actions">
-												<li><a href="./documentos/py46-forecasting-series-temporales-incompletas.html" target="_blank" rel="noopener noreferrer" class="button">Leer</a></li>
-											</ul>
-										</article>
-
-										<article>
-											<a href="./documentos/py48-forecasting-demanda-intermitente.html" target="_blank" rel="noopener noreferrer" class="image"><img src="images/forecasting-demanda-intermitente.jpg" alt="" /></a>
-											<h3>Forecasting de demanda intermitente con Python y Skforecast</h3>
-											<p>Predicción de demanda intermitente con modelos de machine learning y skforecast.</p>
-											<ul class="actions">
-												<li><a href="./documentos/py48-forecasting-demanda-intermitente.html" target="_blank" rel="noopener noreferrer" class="button">Leer</a></li>
-											</ul>
-										</article>
-
-										<article>
-											<a href="./documentos/py37-forecasting-visitas-web-machine-learning.html" target="_blank" rel="noopener noreferrer" class="image"><img src="images/forecasting-trafico-web.jpg" alt="" /></a>
-											<h3>Forecasting de las visitas a una página web</h3>
-											<p>Ejemplo de cómo predecir el tráfico de una web utilizando modelos de machine learning con Python.</p>
-											<ul class="actions">
-												<li><a href="./documentos/py37-forecasting-visitas-web-machine-learning.html" target="_blank" rel="noopener noreferrer" class="button">Leer</a></li>
-											</ul>
-										</article>
-										
-
-										<article>
-											<a href="./documentos/py41-forecasting-criptomoneda-bitcoin-machine-learning-python.html" target="_blank" rel="noopener noreferrer" class="image"><img src="images/forecasting-bitcoin.jpg" alt="" /></a>
-											<h3>Predicción del precio de Bitcoin con Python</h3>
-											<p>Ejemplo de cómo utilizar modelos de forecasting para predecir el precio de la criptomoneda Bitcoin y estudio de las implicaciones que aparecen cuando una serie temporal no tenga ningún patrón.</p>
-											<ul class="actions">
-												<li><a href="./documentos/py41-forecasting-criptomoneda-bitcoin-machine-learning-python.html" target="_blank" rel="noopener noreferrer" class="button">Leer</a></li>
-											</ul>
-										</article>
-
-										<article>
-											<a href="./documentos/py45-weighted-time-series-forecasting-es.html" target="_blank" rel="noopener noreferrer" class="image"><img src="images/reducir-impacto-covid-forecasting.jpg" alt="" /></a>
-											<h3>Reducir el impacto del covid-19 en modelos de forecasting</h3>
-											<p>Ejemplo de cómo atenuar el impacto del covid y otros periodos anomalos en series temporales a la hora de entrenar modelos de forecasting</p>
-											<ul class="actions">
-												<li><a href="./documentos/py45-weighted-time-series-forecasting-es.html" target="_blank" rel="noopener noreferrer" class="button">Leer</a></li>
-											</ul>
-										</article>
-
-										<article>
-											<a href="./documentos/py57-modelos-forecasting-interpretables.html" target="_blank" rel="noopener noreferrer" class="image"><img src="images/interpretabilidad-modelos-forecasting.jpg" alt="" /></a>
-											<h3>Interpretabilidad en modelos de forecasting</h3>
-											<p>Interpretabilidad de modelos de forecasting utilizando shape values, gráficos de dependecia parcial e importancia de predictores</p>
-											<ul class="actions">
-												<li><a href="./documentos/py57-modelos-forecasting-interpretables.html" target="_blank" rel="noopener noreferrer" class="button">Leer</a></li>
-											</ul>
-										</article>
-
-									
-									</div>
-								</section>
-
-
-								<!-- Section donation -->
-								<section style="padding-top: 35px;">
-
-									<header class="major">
-										<h2>Hacer una donación</h2>
-									</header>
-
-									<p>
-									¡Colabora en mantener las puertas del conocimiento abiertas! Si nuestros artículos te han ayudado a progresar en tu formación o carrera profesional,
-									apreciaríamos enormemente tu apoyo. Tu contribución nos permite mantener esta plataforma accesible para todos y crear nuevos contenidos.  Puedes hacerlo a través de <a href="https://www.paypal.com/donate/?hosted_button_id=6NULYFYDKFTQL" target="_blank" rel="noopener noreferrer" class="button"><b>PayPal</b></a> 
-									o <a href="https://github.com/sponsors/JoaquinAmatRodrigo" target="_blank" rel="noopener noreferrer" class="button"><b>Github Sponsors</b></a> ¡Son solo un par de clicks &#128522;&#128522;!
-									</p>
-										
-								</section>
-
-								<!-- Section contact info -->
-								<section>
-									<header class="major">
-										<h2>Información de contacto</h2>
-									</header>
-									<ul class="contact">
-										<li class="fa-envelope-o"><a href="#">j.amatrodrigo@gmail.com</a></li>
-									</ul>
-	
-									<ul class="icons">
-											<li><a href="https://www.linkedin.com/in/joaquin-amat-rodrigo" class="icon fa-linkedin-square"><span class="label">Linkedin</span></a></li>
-											<li><a href="https://github.com/JoaquinAmatRodrigo" class="icon fa-github"><span class="label">Git Hub</span></a></li>
-											<li>
-												<form action="https://www.paypal.com/donate" method="post" target="_top">
-												<input type="hidden" name="hosted_button_id" value="6NULYFYDKFTQL" />
-												<input type="image" src="https://www.paypalobjects.com/en_US/ES/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
-												<img alt="" border="0" src="https://www.paypal.com/en_ES/i/scr/pixel.gif" width="1" height="1" />
-												</form>																									
-											</li>
-											<li><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener noreferrer"><img src="https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by-nc-sa.svg" alt="Licencia de Creative Commons"></a></li>
-										</ul>
-										
-								</section>
-
-						</div>
+				<!-- Header -->
+				<header id="header">
+					<a href="index.html" class="logo"><strong>CIENCIADEDATOS.NET</strong></a>
+					<div class="flags">
+						<a href="./forecasting-python.html" title="Spanish">
+							<img src="./images/spain-flag.png" alt="Spanish Flag" class="flag-icon">
+						</a>
+						<a href="./en/forecasting-python.html" title="English">
+							<img src="./images/english-flag.png" alt="English Flag" class="flag-icon">
+						</a>
 					</div>
+				</header>
 
-				<!-- Sidebar -->
-					<div id="sidebar">
-						<div class="inner">
-
-							<!-- Search -->
-								<section id="search" class="alt">
-									<form method="post" action="#">
-										<input type="text" name="query" id="query" placeholder="Search" />
-									</form>
-								</section>
-
-							<!-- Menu -->
-								<nav id="menu">
-									<header class="major">
-										<h2>Contenidos</h2>
-									</header>
-									<ul>
-										<li><a href="index.html">Inicio</a></li>
-
-										<li>
-											<span class="opener">Forecasting</span>
-											<ul>
-												<li><a href="./documentos/py27-forecasting-series-temporales-python-scikitlearn.html" target="_blank" rel="noopener noreferrer">Forecasting con Python y Scikitlearn</a></li>
-												<li><a href="./documentos/py51-modelos-arima-sarimax-python.html" target="_blank" rel="noopener noreferrer">ARIMA y SARIMAX</a></li>
-												<li><a href="./documentos/py39-forecasting-series-temporales-con-skforecast-xgboost-lightgbm-catboost.html" target="_blank" rel="noopener noreferrer">Forecasting series temporales con gradient boosting: Skforecast, XGBoost, LightGBM y CatBoost</a></li>
-												<li><a href="./documentos/py44-multi-series-forecasting-skforecast-español.html" target="_blank" rel="noopener noreferrer">Multi-series forecasting</a></li>
-												<li><a href="./documentos/py53-modelos-forecasting-globales.html" target="_blank" rel="noopener noreferrer">Modelos de forecasting globales</a></li>
-												<li><a href="./documentos/py29-forecasting-demanda-energia-electrica-python.html" target="_blank" rel="noopener noreferrer">Forecasting de la demanda eléctrica</a></li>
-												<li><a href="./documentos/py37-forecasting-visitas-web-machine-learning.html" target="_blank" rel="noopener noreferrer">Predicción de las visitas a una web</a></li>
-												<li><a href="./documentos/py41-forecasting-criptomoneda-bitcoin-machine-learning-python.html" target="_blank" rel="noopener noreferrer">Predicción del precio de Bitcoin con Python</a></li>
-												<li><a href="./documentos/py42-forecasting-probabilistico.html" target="_blank" rel="noopener noreferrer">Forecasting probabilístico</a></li>
-												<li><a href="./documentos/py60-forecasting-probabilistico-intervalos-prediccion-forecasting-multi-step.html" target="_blank" rel="noopener noreferrer">Intervalos de predicción en forecasting multi-step</a></li>
-												<li><a href="./documentos/py46-forecasting-series-temporales-incompletas.html" target="_blank" rel="noopener noreferrer">Forecasting de series incompletas</a></li>
-												<li><a href="./documentos/py48-forecasting-demanda-intermitente.html" target="_blank" rel="noopener noreferrer">Forecasting de demanda intermitente</a></li>
-												<li><a href="./documentos/py54-forecasting-con-deep-learning.html" target="_blank" rel="noopener noreferrer">Forecasting con modelos de deep learning</a></li>	
-												<li><a href="./documentos/py45-weighted-time-series-forecasting-es.html" target="_blank" rel="noopener noreferrer">Reducir el impacto del covid-19 en modelos de forecasting</a></li>
-												<li><a href="./documentos/py57-modelos-forecasting-interpretables.html" target="_blank" rel="noopener noreferrer">Interpretabilidad en modelos de forecasting</a></li>	
-												<li><a href="https://github.com/JoaquinAmatRodrigo/skforecast" target="_blank" rel="noopener noreferrer">Skforecast</a></li>
-											</ul>
-										</li>
-
-									</ul>
-								</nav>
-
-							<!-- Footer -->
-								<footer id="footer">
-									<p class="copyright">&copy; Este material, creado por Joaquín Amat Rodrigo, tiene licencia Attribution-NonCommercial-ShareAlike 4.0 International</a>.</p>
-								</footer>
-
-						</div>
+				<!-- Banner -->
+				<section id="banner">
+					<div class="content">
+						<header>
+							<h1>Forecasting con Python</h1>
+						</header>
 					</div>
+				</section>
+
+
+				<!-- Section -->
+				<section>
+
+					<div class="posts">
+
+						<article>
+							<a href="./documentos/py27-forecasting-series-temporales-python-scikitlearn.html"
+								target="_blank" rel="noopener noreferrer" class="image"><img
+									src="images/logo-skforecast.jpg" alt="" /></a>
+							<h3>Forecasting de series temporales con machine learning</h3>
+							<p>Skforecast, librería de Python que facilita el uso de modelos scikit-learn para problemas
+								de forecasting y series temporales</p>
+							<ul class="actions">
+								<li><a href="./documentos/py27-forecasting-series-temporales-python-scikitlearn.html"
+										target="_blank" rel="noopener noreferrer" class="button">Leer</a></li>
+							</ul>
+						</article>
+
+						<article>
+							<a href="./documentos/py51-modelos-arima-sarimax-python.html" target="_blank"
+								rel="noopener noreferrer" class="image"><img src="images/arima-sarimax-python.jpg"
+									alt="" /></a>
+							<h3>Modelos ARIMA y SARIMAX con Python</h3>
+							<p>Modelos ARIMA y SARIMAX para la predicción de series temporales</p>
+							<ul class="actions">
+								<li><a href="./documentos/py51-modelos-arima-sarimax-python.html" target="_blank"
+										rel="noopener noreferrer" class="button">Leer</a></li>
+							</ul>
+						</article>
+
+						<article>
+							<a href="./documentos/py39-forecasting-series-temporales-con-skforecast-xgboost-lightgbm-catboost.html"
+								target="_blank" rel="noopener noreferrer" class="image"><img
+									src="images/forecasting-skforecast-xgboost-catboost.jpg" alt="" /></a>
+							<h3>Forecasting series temporales con gradient boosting: XGBoost, LightGBM y CatBoost</h3>
+							<p>Ejemplo de cómo predecir el número de usuarios del sistema de alquier de bibicletas
+								urbanas utilizando modelos de gradient boosting</p>
+							<ul class="actions">
+								<li><a href="./documentos/py39-forecasting-series-temporales-con-skforecast-xgboost-lightgbm-catboost.html"
+										target="_blank" rel="noopener noreferrer" class="button">Leer</a></li>
+							</ul>
+						</article>
+
+						<article>
+							<a href="./documentos/py29-forecasting-demanda-energia-electrica-python.html"
+								target="_blank" rel="noopener noreferrer" class="image"><img
+									src="images/forecasting-demanda-electrica.jpg" alt="" /></a>
+							<h3>Forecasting de la demanda eléctrica con machine learning</h3>
+							<p>Ejemplo de cómo predecir la demanda de energía eléctrica con modelos de machine learning
+							</p>
+							<ul class="actions">
+								<li><a href="./documentos/py29-forecasting-demanda-energia-electrica-python.html"
+										target="_blank" rel="noopener noreferrer" class="button">Leer</a></li>
+							</ul>
+						</article>
+
+						<article>
+							<a href="./documentos/py44-multi-series-forecasting-skforecast-español.html" target="_blank"
+								rel="noopener noreferrer" class="image"><img
+									src="images/multi-series-forecasting-logo.jpg" alt="" /></a>
+							<h3>Modelos de forecasting globales I: predecir multiples series temporales con machine
+								learning</h3>
+							<p>Modelos de forecasting para predecir múltiples series temporales de forma simultánea</p>
+							<ul class="actions">
+								<li><a href="./documentos/py44-multi-series-forecasting-skforecast-español.html"
+										target="_blank" rel="noopener noreferrer" class="button">Leer</a></li>
+							</ul>
+						</article>
+
+						<article>
+							<a href="./documentos/py53-modelos-forecasting-globales.html" target="_blank"
+								rel="noopener noreferrer" class="image"><img
+									src="images/modelos-forecasting-globales.jpg" alt="" /></a>
+							<h3>Modelos de forecasting globales II: Comparación de modelos globales vs modelos individuales</h3>
+							<p>Comparación de los resultados de predicción de los modelos globales con los modelos de
+								series individuales</p>
+							<ul class="actions">
+								<li><a href="./documentos/py53-modelos-forecasting-globales.html" target="_blank"
+										rel="noopener noreferrer" class="button">Leer</a></li>
+							</ul>
+						</article>
+
+
+						<article>
+							<a href="../documentos/py59-modelos-forecasting-escalables.html" target="_blank"
+								rel="noopener noreferrer" class="image"><img
+									src="../images/modelos-forecasting-globales.jpg" alt="" /></a>
+							<h3>Modelos de forecasting globales III: Forecasting escalable</h3>
+							<p>Modelado de miles de series temporales con un único modelo global</p>
+							<ul class="actions">
+								<li><a href="../documentos/py59-modelos-forecasting-escalables.html" target="_blank"
+										rel="noopener noreferrer" class="button">Read</a></li>
+							</ul>
+						</article>
+
+
+						<article>
+							<a href="../documentos/py61-m5-forecasting-competition.html" target="_blank"
+								rel="noopener noreferrer" class="image"><img
+								src="../images/modelos-forecasting-globales.jpg" alt="" /></a>
+							<h3>Modelos de forecasting globales IV: Competición M5 Accuracy</h3>
+							<p>El éxito de los modelos globales en las competiciones de forecasting</p>
+							<ul class="actions">
+								<li><a href="../documentos/py61-m5-forecasting-competition.html" target="_blank"
+										rel="noopener noreferrer" class="button">Read</a></li>
+							</ul>
+						</article>
+
+						<article>
+							<a href="./documentos/py54-forecasting-con-deep-learning.html" target="_blank"
+								rel="noopener noreferrer" class="image"><img src="images/forecasting-deep-learning.jpg"
+									alt="" /></a>
+							<h3>Forecasting con modelos de deep learning</h3>
+							<p>Forecasting utilizando modelos basados redes neuronales RNN y LSTM</p>
+							<ul class="actions">
+								<li><a href="./documentos/py54-forecasting-con-deep-learning.html" target="_blank"
+										rel="noopener noreferrer" class="button">Leer</a></li>
+							</ul>
+						</article>
+
+						<article>
+							<a href="./documentos/py42-forecasting-probabilistico.html" target="_blank"
+								rel="noopener noreferrer" class="image"><img src="images/forecasting-probabilistico.jpg"
+									alt="" /></a>
+							<h3>Forecasting probabilístico I: intervalos de predicción</h3>
+							<p>Métodos con los que estimar intervalos de predicción para modelos de machine learning
+								aplicados a problemas de forecasting</p>
+							<ul class="actions">
+								<li><a href="./documentos/py42-forecasting-probabilistico.html" target="_blank"
+										rel="noopener noreferrer" class="button">Leer</a></li>
+							</ul>
+						</article>
+
+						<article>
+							<a href="./documentos/py60-forecasting-probabilistico-intervalos-prediccion-forecasting-multi-step.html"
+								target="_blank" rel="noopener noreferrer" class="image"><img
+									src="images/forecasting-probabilistico.jpg" alt="" /></a>
+							<h3>Forecasting probabilístico II: intervalos de predicción para forecasting multi-step</h3>
+							<p>Intervalos de predicción para modelos de forecasting multi-step</p>
+							<ul class="actions">
+								<li><a href="./documentos/py60-forecasting-probabilistico-intervalos-prediccion-forecasting-multi-step.html"
+										target="_blank" rel="noopener noreferrer" class="button">Leer</a></li>
+							</ul>
+						</article>
+
+						<article>
+							<a href="./documentos/py46-forecasting-series-temporales-incompletas.html" target="_blank"
+								rel="noopener noreferrer" class="image"><img
+									src="images/forecasting-series-incompletas.jpg" alt="" /></a>
+							<h3>Forecasting de series temporales incompletas</h3>
+							<p>Modelado y predicción de series temporales incompletas con datos faltantes</p>
+							<ul class="actions">
+								<li><a href="./documentos/py46-forecasting-series-temporales-incompletas.html"
+										target="_blank" rel="noopener noreferrer" class="button">Leer</a></li>
+							</ul>
+						</article>
+
+						<article>
+							<a href="./documentos/py48-forecasting-demanda-intermitente.html" target="_blank"
+								rel="noopener noreferrer" class="image"><img
+									src="images/forecasting-demanda-intermitente.jpg" alt="" /></a>
+							<h3>Forecasting de demanda intermitente</h3>
+							<p>Predicción de demanda intermitente con modelos de machine learning</p>
+							<ul class="actions">
+								<li><a href="./documentos/py48-forecasting-demanda-intermitente.html" target="_blank"
+										rel="noopener noreferrer" class="button">Leer</a></li>
+							</ul>
+						</article>
+
+						<article>
+							<a href="./documentos/py37-forecasting-visitas-web-machine-learning.html" target="_blank"
+								rel="noopener noreferrer" class="image"><img src="images/forecasting-trafico-web.jpg"
+									alt="" /></a>
+							<h3>Forecasting de las visitas a una página web</h3>
+							<p>Ejemplo de cómo predecir el tráfico de una web utilizando modelos de machine learning</p>
+							<ul class="actions">
+								<li><a href="./documentos/py37-forecasting-visitas-web-machine-learning.html"
+										target="_blank" rel="noopener noreferrer" class="button">Leer</a></li>
+							</ul>
+						</article>
+
+
+						<article>
+							<a href="./documentos/py41-forecasting-criptomoneda-bitcoin-machine-learning-python.html"
+								target="_blank" rel="noopener noreferrer" class="image"><img
+									src="images/forecasting-bitcoin.jpg" alt="" /></a>
+							<h3>Predicción del precio de Bitcoin</h3>
+							<p>Ejemplo de cómo utilizar modelos de forecasting para predecir el precio de la
+								criptomoneda Bitcoin y estudio de las implicaciones que aparecen cuando una serie
+								temporal no tenga ningún patrón</p>
+							<ul class="actions">
+								<li><a href="./documentos/py41-forecasting-criptomoneda-bitcoin-machine-learning-python.html"
+										target="_blank" rel="noopener noreferrer" class="button">Leer</a></li>
+							</ul>
+						</article>
+
+						<article>
+							<a href="./documentos/py45-weighted-time-series-forecasting-es.html" target="_blank"
+								rel="noopener noreferrer" class="image"><img
+									src="images/reducir-impacto-covid-forecasting.jpg" alt="" /></a>
+							<h3>Reducir el impacto del covid-19 en modelos de forecasting</h3>
+							<p>Ejemplo de cómo atenuar el impacto del covid y otros periodos anomalos en series
+								temporales a la hora de entrenar modelos de forecasting</p>
+							<ul class="actions">
+								<li><a href="./documentos/py45-weighted-time-series-forecasting-es.html" target="_blank"
+										rel="noopener noreferrer" class="button">Leer</a></li>
+							</ul>
+						</article>
+
+						<article>
+							<a href="./documentos/py57-modelos-forecasting-interpretables.html" target="_blank"
+								rel="noopener noreferrer" class="image"><img
+									src="images/interpretabilidad-modelos-forecasting.jpg" alt="" /></a>
+							<h3>Interpretabilidad y explicabilidad en modelos de forecasting</h3>
+							<p>Interpretabilidad de modelos de forecasting utilizando SHAP values, gráficos de
+								dependecia parcial e importancia de predictores</p>
+							<ul class="actions">
+								<li><a href="./documentos/py57-modelos-forecasting-interpretables.html" target="_blank"
+										rel="noopener noreferrer" class="button">Leer</a></li>
+							</ul>
+						</article>
+
+						<!-- raducir a español!! -->
+						<article>
+							<a href="../documentos/py49-modelling-time-series-trend-with-tree-based-models.html" target="_blank"
+								rel="noopener noreferrer" class="image"><img
+								src="../images/forecasting-trend-tree-based-models.jpg" alt="" /></a>
+							<h3>Forecasting tendencia con modelos de árboles</h3>
+							<p>Modelar series temporales con tendencia utilizándo modelos basados en árboles</p>
+							<ul class="actions">
+								<li><a href="../documentos/py49-modelling-time-series-trend-with-tree-based-models.html" target="_blank"
+										rel="noopener noreferrer" class="button">Read</a></li>
+							</ul>
+						</article>
+
+						<article>
+							<a href="../documentos/py52-stacking-ensemble-models-forecasting.html" target="_blank"
+								rel="noopener noreferrer" class="image"><img
+								src="../images/stacking-ensemble-forecasting-models.jpg" alt="" /></a>
+							<h3>Stacking ensemble de modelos de forecasting</h3>
+							<p>Stacking ensemble de modelos de machine learning para mejorar las predicciones</p>
+							<ul class="actions">
+								<li><a href="../documentos/py52-stacking-ensemble-models-forecasting.html" target="_blank"
+										rel="noopener noreferrer" class="button">Read</a></li>
+							</ul>
+						</article>
+
+						<article>
+							<a href="../documentos/py62-time-series-anomaly-detection.html" target="_blank"
+								rel="noopener noreferrer" class="image"><img
+								src="../images/anomaly-detection-time-series.jpg" alt="" /></a>
+							<h3>Detección de anomalías en series temporales</h3>
+							<p>Detección de anomalías y valores atípicos en series temporales mediante modelos de forecasting</p>
+							<ul class="actions">
+								<li><a href="../documentos/py62-time-series-anomaly-detection.html" target="_blank"
+										rel="noopener noreferrer" class="button">Read</a></li>
+							</ul>
+						</article>
+
+						<article>
+							<a href="../documentos/py63-data-leakage-pre-trained-forecasting-models.html" target="_blank"
+								rel="noopener noreferrer" class="image"><img
+								src="../images/data-leakage-forecasting-models.jpg" alt="" /></a>
+							<h3>Data leakage en modelos de forecasting preentrenados</h3>
+							<p>Data leakage y problemas de sobreajuste en modelos de forecasting preentrenados.</p>
+							<ul class="actions">
+								<li><a href="../documentos/py63-data-leakage-pre-trained-forecasting-models.html" target="_blank"
+										rel="noopener noreferrer" class="button">Read</a></li>
+							</ul>
+						</article>
+
+
+					</div>
+				</section>
+
+
+				<!-- Section donation -->
+				<section style="padding-top: 35px;">
+
+					<header class="major">
+						<h2>Hacer una donación</h2>
+					</header>
+
+					<p>
+						¡Colabora en mantener las puertas del conocimiento abiertas! Si nuestros artículos te han
+						ayudado a progresar en tu formación o carrera profesional,
+						apreciaríamos enormemente tu apoyo. Tu contribución nos permite mantener esta plataforma
+						accesible para todos y crear nuevos contenidos. Puedes hacerlo a través de <a
+							href="https://www.paypal.com/donate/?hosted_button_id=6NULYFYDKFTQL" target="_blank"
+							rel="noopener noreferrer" class="button"><b>PayPal</b></a>
+						o <a href="https://github.com/sponsors/JoaquinAmatRodrigo" target="_blank"
+							rel="noopener noreferrer" class="button"><b>Github Sponsors</b></a> ¡Son solo un par de
+						clicks &#128522;&#128522;!
+					</p>
+
+				</section>
+
+				<!-- Section contact info -->
+				<section>
+					<header class="major">
+						<h2>Información de contacto</h2>
+					</header>
+					<ul class="contact">
+						<li class="fa-envelope-o"><a href="#">j.amatrodrigo@gmail.com</a></li>
+					</ul>
+
+					<ul class="icons">
+						<li><a href="https://www.linkedin.com/in/joaquin-amat-rodrigo"
+								class="icon fa-linkedin-square"><span class="label">Linkedin</span></a></li>
+						<li><a href="https://github.com/JoaquinAmatRodrigo" class="icon fa-github"><span
+									class="label">Git Hub</span></a></li>
+						<li>
+							<form action="https://www.paypal.com/donate" method="post" target="_top">
+								<input type="hidden" name="hosted_button_id" value="6NULYFYDKFTQL" />
+								<input type="image"
+									src="https://www.paypalobjects.com/en_US/ES/i/btn/btn_donateCC_LG.gif" border="0"
+									name="submit" title="PayPal - The safer, easier way to pay online!"
+									alt="Donate with PayPal button" />
+								<img alt="" border="0" src="https://www.paypal.com/en_ES/i/scr/pixel.gif" width="1"
+									height="1" />
+							</form>
+						</li>
+						<li><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank"
+								rel="noopener noreferrer"><img
+									src="https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by-nc-sa.svg"
+									alt="Licencia de Creative Commons"></a></li>
+					</ul>
+
+				</section>
 
 			</div>
+		</div>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+		<!-- Sidebar -->
+		<div id="sidebar">
+			<div class="inner">
 
-	</body>
+				<!-- Search -->
+				<section id="search" class="alt">
+					<form method="post" action="#">
+						<input type="text" name="query" id="query" placeholder="Search" />
+					</form>
+				</section>
+
+				<!-- Menu -->
+				<nav id="menu">
+					<header class="major">
+						<h2>Contenidos</h2>
+					</header>
+					<ul>
+						<li><a href="index.html">Inicio</a></li>
+
+						<li>
+							<span class="opener">Forecasting</span>
+							<ul>
+								<li><a href="./documentos/py27-forecasting-series-temporales-python-scikitlearn.html"
+										target="_blank" rel="noopener noreferrer">Forecasting con Python y
+										Scikitlearn</a></li>
+								<li><a href="./documentos/py51-modelos-arima-sarimax-python.html" target="_blank"
+										rel="noopener noreferrer">ARIMA y SARIMAX</a></li>
+								<li><a href="./documentos/py39-forecasting-series-temporales-con-skforecast-xgboost-lightgbm-catboost.html"
+										target="_blank" rel="noopener noreferrer">Forecasting series temporales con
+										gradient boosting: Skforecast, XGBoost, LightGBM y CatBoost</a></li>
+								<li><a href="./documentos/py44-multi-series-forecasting-skforecast-español.html"
+										target="_blank" rel="noopener noreferrer">Multi-series forecasting</a></li>
+								<li><a href="./documentos/py53-modelos-forecasting-globales.html" target="_blank"
+										rel="noopener noreferrer">Modelos de forecasting globales</a></li>
+								<li><a href="./documentos/py29-forecasting-demanda-energia-electrica-python.html"
+										target="_blank" rel="noopener noreferrer">Forecasting de la demanda
+										eléctrica</a></li>
+								<li><a href="./documentos/py37-forecasting-visitas-web-machine-learning.html"
+										target="_blank" rel="noopener noreferrer">Predicción de las visitas a una
+										web</a></li>
+								<li><a href="./documentos/py41-forecasting-criptomoneda-bitcoin-machine-learning-python.html"
+										target="_blank" rel="noopener noreferrer">Predicción del precio de Bitcoin con
+										Python</a></li>
+								<li><a href="./documentos/py42-forecasting-probabilistico.html" target="_blank"
+										rel="noopener noreferrer">Forecasting probabilístico</a></li>
+								<li><a href="./documentos/py60-forecasting-probabilistico-intervalos-prediccion-forecasting-multi-step.html"
+										target="_blank" rel="noopener noreferrer">Intervalos de predicción en
+										forecasting multi-step</a></li>
+								<li><a href="./documentos/py46-forecasting-series-temporales-incompletas.html"
+										target="_blank" rel="noopener noreferrer">Forecasting de series incompletas</a>
+								</li>
+								<li><a href="./documentos/py48-forecasting-demanda-intermitente.html" target="_blank"
+										rel="noopener noreferrer">Forecasting de demanda intermitente</a></li>
+								<li><a href="./documentos/py54-forecasting-con-deep-learning.html" target="_blank"
+										rel="noopener noreferrer">Forecasting con modelos de deep learning</a></li>
+								<li><a href="./documentos/py45-weighted-time-series-forecasting-es.html" target="_blank"
+										rel="noopener noreferrer">Reducir el impacto del covid-19 en modelos de
+										forecasting</a></li>
+								<li><a href="./documentos/py57-modelos-forecasting-interpretables.html" target="_blank"
+										rel="noopener noreferrer">Interpretabilidad en modelos de forecasting</a></li>
+								<li><a href="https://github.com/JoaquinAmatRodrigo/skforecast" target="_blank"
+										rel="noopener noreferrer">Skforecast</a></li>
+							</ul>
+						</li>
+
+					</ul>
+				</nav>
+
+				<!-- Footer -->
+				<footer id="footer">
+					<p class="copyright">&copy; Este material, creado por Joaquín Amat Rodrigo, tiene licencia
+						Attribution-NonCommercial-ShareAlike 4.0 International</a>.</p>
+				</footer>
+
+			</div>
+		</div>
+
+	</div>
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+
+</body>
+
 </html>
