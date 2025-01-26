@@ -4,7 +4,7 @@
 cff-version: 1.2.0
 title: cienciadedatos.net
 message: >-
-  If you use this website, please cite it using the metadata from this file.
+  If you use content of this website, please cite it using the metadata from this file.
 type: website
 authors:
   - given-names: Joaquin
@@ -21,6 +21,6 @@ keywords:
   - r
   - ciencia de datos
 doi: 
-license: CC-BY-4.0
+license: CC BY-NC-SA 4.0 Attribution-NonCommercial-ShareAlike 4.0 International
 version: 1.0.1
 date-released: '2023-10-16'
