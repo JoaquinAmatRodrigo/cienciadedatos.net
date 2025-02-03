@@ -5,19 +5,15 @@
 <div id="73746-6"><script src="//ads.themoneytizer.com/s/gen.js?type=6"></script><script src="//ads.themoneytizer.com/s/requestform.js?siteId=73746&formatId=6"></script></div>
 <!-- anuncio_themoneytizer_FOOTER O SLIDE-IN -->
 
+<head>
+<meta charset="utf-8" />
 
-<head><meta charset="utf-8" />
+<title>Stacking ensemble de modelos de forecasting</title>
+<meta name="description" content="Mejorar modelos de forecasting con stacking ensemble" />
 
-
-
-<title>Stacking ensemble of machine learning models to improve forecasting</title>
-<meta name="description" content="Combine múltiple machine learning models to improve forecasting using skforecast and scikit-learn" />
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-
-
-
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 
 <style type="text/css">
     /*!
@@ -13099,7 +13095,7 @@ div#notebook {
 <script>
 $( document ).ready(function(){
 
-            var cfg = {"base_numbering": 1, "nav_menu": {}, "number_sections": false, "sideBar": true, "skip_h1_title": true, "title_cell": "Table of contents", "title_sidebar": "Table of contents", "toc_cell": false, "toc_position": {"height": "calc(100% - 180px)", "left": "10px", "top": "150px", "width": "213px"}, "toc_section_display": true, "toc_window_display": true};
+            var cfg = {"base_numbering": 1, "nav_menu": {}, "number_sections": false, "sideBar": true, "skip_h1_title": true, "title_cell": "Tabla de contenidos", "title_sidebar": "Tabla de contenidos", "toc_cell": false, "toc_position": {"height": "calc(100% - 180px)", "left": "10px", "top": "150px", "width": "213px"}, "toc_section_display": true, "toc_window_display": true};
 
             // fire the main function with these parameters
             require(['nbextensions/toc2/toc2'], function (toc2) {
@@ -13113,49 +13109,44 @@ $( document ).ready(function(){
 
 <!-- banner github -->
 <div style= "background-color: #001633; color: #ffffff; height: 2.4rem; position: relative; width: 100%;">
-  <p style= "color: #ffffff; align-items: center; display: flex; height: 100%; justify-content: center;">
-    If you like&nbsp; <b> Skforecast </b>,&nbsp; help us giving a star on &nbsp;
-    <a style= "color: #ffffff;" href="https://github.com/skforecast/skforecast" rel="noopener noreferrer" target="_blank"><u>GitHub</u></a>! ⭐️
-  </p>
+	<p style= "color: #ffffff; align-items: center; display: flex; height: 100%; justify-content: center;">
+		Si te gusta&nbsp; <b> Skforecast </b>,&nbsp;ayúdanos dándonos una estrella en&nbsp;
+		<a style= "color: #ffffff;" href="https://github.com/skforecast/skforecast" rel="noopener noreferrer" target="_blank"><u>GitHub</u></a>! ⭐️
+	</p>
 </div>
 <!-- banner github -->
-
+ 
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1><center><font size="25">Stacking ensemble of machine learning models to improve forecasting</font></center></h1>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<center><b>Joaquín Amat Rodrigo, Javier Escobar Ortiz</b></center><center><i>November, 2023 (last update January 2025)</i></center>
+<h1><center><font size="25">Stacking ensemble de modelos de forecasting</font></center></h1>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong><a href="https://cienciadedatos.net/en/forecasting-python">More about forecasting</a></strong></p>
+<center><b>Joaquín Amat Rodrigo, Javier Escobar Ortiz</b></center><center><i>Noviembre, 2024 (última actualización Enero 2025)</i></center>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Más sobre forecasting en: <a href="https://cienciadedatos.net"><strong>cienciadedatos.net</strong></a></p>
 <ul>
-<li><a href="https://cienciadedatos.net/documentos/py51-arima-sarimax-models-python.html">ARIMA and SARIMAX models with python</a></li>
-<li><a href="https://cienciadedatos.net/documentos/py27-time-series-forecasting-python-scikitlearn.html">Time series forecasting with machine learning</a></li>
-<li><a href="https://www.cienciadedatos.net/documentos/py39-forecasting-time-series-with-skforecast-xgboost-lightgbm-catboost.html">Forecasting time series with gradient boosting: XGBoost, LightGBM and CatBoost</a></li>
-<li><a href="https://cienciadedatos.net/documentos/py56-forecasting-time-series-with-xgboost.html">Forecasting time series with XGBoost</a></li>
-<li><a href="https://www.cienciadedatos.net/documentos/py44-multi-series-forecasting-skforecast.html">Global Forecasting Models: Multi-series forecasting</a></li>
-<li><a href="https://cienciadedatos.net/documentos/py53-global-forecasting-models.html">Global Forecasting Models: Comparative Analysis of Single and Multi-Series Forecasting Modeling</a></li>
-<li><a href="https://www.cienciadedatos.net/documentos/py42-probabilistic-forecasting.html">Probabilistic forecasting</a></li>
-<li><a href="https://www.cienciadedatos.net/documentos/py54-forecasting-with-deep-learning.html">Forecasting with deep learning</a></li>
-<li><a href="https://www.cienciadedatos.net/documentos/py29-forecasting-electricity-power-demand-python.html">Forecasting energy demand with machine learning</a></li>
-<li><a href="https://www.cienciadedatos.net/documentos/py37-forecasting-web-traffic-machine-learning.html">Forecasting web traffic with machine learning</a></li>
-<li><a href="https://www.cienciadedatos.net/documentos/py48-intermittent-demand-forecasting">Intermittent demand forecasting</a></li>
-<li><a href="https://www.cienciadedatos.net/documentos/py49-modelling-time-series-trend-with-tree-based-models.html">Modelling time series trend with tree-based models</a></li>
-<li><a href="https://www.cienciadedatos.net/documentos/py41-forecasting-cryptocurrency-bitcoin-machine-learning-python.html">Bitcoin price prediction with Python</a></li>
-<li><a href="https://cienciadedatos.net/documentos/py52-stacking-ensemble-models-forecasting.html">Stacking ensemble of machine learning models to improve forecasting</a></li>
-<li><a href="https://cienciadedatos.net/documentos/py57-interpretable-forecasting-models.html">Interpretable forecasting models</a></li>
-<li><a href="https://cienciadedatos.net/documentos/py45-weighted-time-series-forecasting.html">Mitigating the Impact of Covid on Forecasting Models</a></li>
-<li><a href="https://cienciadedatos.net/documentos/py46-forecasting-time-series-missing-values.html">Forecasting time series with missing values</a></li>
+<li><a href="https://www.cienciadedatos.net/documentos/py27-forecasting-series-temporales-python-scikitlearn.html">Forecasting series temporales con machine learning</a></li>
+<li><a href="https://cienciadedatos.net/documentos/py51-modelos-arima-sarimax-python.html">Modelos ARIMA y SARIMAX</a></li>
+<li><a href="https://www.cienciadedatos.net/documentos/py39-forecasting-series-temporales-con-skforecast-xgboost-lightgbm-catboost.html">Forecasting series temporales con gradient boosting: XGBoost, LightGBM y CatBoost</a></li>
+<li><a href="https://www.cienciadedatos.net/documentos/py44-multi-series-forecasting-skforecast-espa%C3%B1ol.html">Global Forecasting: Multi-series forecasting</a></li>
+<li><a href="https://www.cienciadedatos.net/documentos/py29-forecasting-demanda-energia-electrica-python.html">Forecasting de la demanda eléctrica con machine learning</a></li>
+<li><a href="https://cienciadedatos.net/documentos/py54-forecasting-con-deep-learning">Forecasting con deep learning</a></li>
+<li><a href="https://www.cienciadedatos.net/documentos/py37-forecasting-visitas-web-machine-learning.html">Forecasting de visitas a página web con machine learning</a></li>
+<li><a href="https://www.cienciadedatos.net/documentos/py41-forecasting-criptomoneda-bitcoin-machine-learning-python.html">Forecasting del precio de Bitcoin</a></li>
+<li><a href="https://cienciadedatos.net/documentos/py42-forecasting-probabilistico.html">Forecasting probabilístico</a></li>
+<li><a href="https://www.cienciadedatos.net/documentos/py48-forecasting-demanda-intermitente.html">Forecasting de demanda intermitente</a></li>
+<li><a href="https://www.cienciadedatos.net/documentos/py45-weighted-time-series-forecasting-es.html">Reducir el impacto del Covid en modelos de forecasting</a></li>
+<li><a href="https://www.cienciadedatos.net/documentos/py49-modelar-tendencia-en-series-temporales-modelos-de-arboles.html">Modelar series temporales con tendencia utilizando modelos de árboles</a></li>
 </ul>
 <div style="text-align: center;">
     <img src="../images/banner-landing-page-skforecast.png" style="display: block; margin: 0 auto;">
@@ -13166,10 +13157,16 @@ $( document ).ready(function(){
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Introduction">Introduction<a class="anchor-link" href="#Introduction">&#182;</a></h2><p>In machine learning, stacking is an ensemble technique that combines multiple models to reduce their biases and improve predictive performance. More specifically, the predictions of each model (base models) are stacked and used as input to a final model (meta model) to compute the prediction.</p>
-<p>Stacking is effective because it leverages the strengths of different algorithms and attempts to mitigate their individual weaknesses. By combining several models, it can capture complex patterns in the data and improve prediction accuracy.</p>
-<p>However, stacking can be computationally expensive and requires careful tuning to avoid overfitting. To this end, it is highly recommended to train the final estimator through cross-validation. In addition, obtaining diverse and well-performing base models is critical to the success of the stacking technique.</p>
-<p>The following example shows how to use scikit-learn and skforecast to create a forecasting model that combines several individual regressors to achieve better results.</p>
+<h2 id="Introducci&#243;n">Introducci&#243;n<a class="anchor-link" href="#Introducci&#243;n">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>En el machine learning, el <em>ensemble-stacking</em> es una técnica que combina múltiples modelos para reducir sus sesgos y mejorar el rendimiento predictivo. Más específicamente, las predicciones de cada modelo (modelos base) se apilan y se utilizan como entrada para un modelo final (meta-modelo) para calcular la predicción.</p>
+<p>El <em>stacking</em> es efectivo porque aprovecha las fortalezas de diferentes algoritmos e intenta mitigar sus debilidades individuales. Al combinar varios modelos, puede capturar patrones complejos en los datos y mejorar la precisión de las predicciones. Sin embargo, el <em>stacking</em> puede ser costoso desde el punto de vista computacional y requiere un ajuste cuidadoso para evitar el sobreajuste. Con este fin, se recomienda encarecidamente entrenar el estimador final mediante validación cruzada. Además, utilizar modelos base diversos y con buen rendimiento es clave para el éxito de la técnica de <em>stacking</em>.</p>
+<p>Este documento muestra cómo utilizar scikit-learn y skforecast para crear un modelo de pronóstico que combine varios regresores individuales para lograr mejores resultados.</p>
 
 </div>
 </div>
@@ -13177,14 +13174,21 @@ $( document ).ready(function(){
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Libraries">Libraries<a class="anchor-link" href="#Libraries">&#182;</a></h2><p>Libraries used in this document.</p>
+<h2 id="Librer&#237;as">Librer&#237;as<a class="anchor-link" href="#Librer&#237;as">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Librerías utilizadas en este documento:</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[36]:</div>
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Data processing</span>
@@ -13278,17 +13282,24 @@ $( document ).ready(function(){
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Data">Data<a class="anchor-link" href="#Data">&#182;</a></h2><p>The data in this document represent monthly fuel consumption in Spain from 1969-01-01 to 2022-08-01. The goal is to create a model capable of forecasting the consumption over the next 12 month.</p>
+<h2 id="Datos">Datos<a class="anchor-link" href="#Datos">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Los datos en este documento representan el consumo mensual de combustible en España desde el 01 de enero de 1969 hasta el 01 de agosto de 2022. El objetivo es crear un modelo capaz de pronosticar el consumo durante los próximos 12 meses.</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[37]:</div>
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Downloading data</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Descarga de datos</span>
 <span class="c1"># ==============================================================================</span>
 <span class="n">data</span> <span class="o">=</span> <span class="n">fetch_dataset</span><span class="p">(</span><span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;fuel_consumption&#39;</span><span class="p">)</span>
 <span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">loc</span><span class="p">[:</span><span class="s2">&quot;2019-01-01&quot;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;Gasolinas&#39;</span><span class="p">]]</span>
@@ -13325,7 +13336,7 @@ Shape of the dataset: (644, 5)
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[37]:</div>
+    <div class="prompt output_prompt">Out[23]:</div>
 
 
 
@@ -13382,17 +13393,17 @@ Shape of the dataset: (644, 5)
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>In addition to the past values of the series (lags), an additional variable indicating the month of the year is added. This variable is included in the model to capture the seasonality of the series.</p>
+<p>Además de los valores pasados de la serie (lags), se añade una variable adicional que indica el mes del año. Esta variable se incluye en el modelo para capturar la estacionalidad de la serie.</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[38]:</div>
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Calendar features</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Variables de calendario</span>
 <span class="c1"># ==============================================================================</span>
 <span class="n">data</span><span class="p">[</span><span class="s1">&#39;month_of_year&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">month</span>
 <span class="n">data</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
@@ -13408,7 +13419,7 @@ Shape of the dataset: (644, 5)
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[38]:</div>
+    <div class="prompt output_prompt">Out[24]:</div>
 
 
 
@@ -13470,17 +13481,17 @@ Shape of the dataset: (644, 5)
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>To facilitate the training of the models, the search for optimal hyperparameters, and the evaluation of their predictive accuracy, the data are divided into three separate sets: training, validation, and test.</p>
+<p>Para facilitar el entrenamiento de los modelos, la bsqueda de los hiperparámetros óptimos y la evaluación de su precisión predictiva, los datos se dividen en tres conjuntos separados: entrenamiento, validación y prueba.</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[39]:</div>
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Split train-validation-test</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Partición train-validation-test</span>
 <span class="c1"># ==============================================================================</span>
 <span class="n">end_train</span> <span class="o">=</span> <span class="s1">&#39;2007-12-01 23:59:00&#39;</span>
 <span class="n">end_validation</span> <span class="o">=</span> <span class="s1">&#39;2012-12-01 23:59:00&#39;</span>
@@ -13520,10 +13531,10 @@ Dates test       : 2013-01-01 00:00:00 --- 2019-01-01 00:00:00  (n=73)
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[40]:</div>
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Interactive plot of time series</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Gráfico de la serie</span>
 <span class="c1"># ==============================================================================</span>
 <span class="n">data</span><span class="o">.</span><span class="n">loc</span><span class="p">[:</span><span class="n">end_train</span><span class="p">,</span> <span class="s1">&#39;partition&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;train&#39;</span>
 <span class="n">data</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">end_train</span><span class="p">:</span><span class="n">end_validation</span><span class="p">,</span> <span class="s1">&#39;partition&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;validation&#39;</span>
@@ -13569,9 +13580,9 @@ Dates test       : 2013-01-01 00:00:00 --- 2019-01-01 00:00:00  (n=73)
 
 
 <div class="output_html rendered_html output_subarea ">
-<div>                            <div id="8da72bda-1d3e-47d0-959d-0e94614dcd9f" class="plotly-graph-div" style="height:350px; width:700px;"></div>            <script type="text/javascript">                require(["plotly"], function(Plotly) {                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("8da72bda-1d3e-47d0-959d-0e94614dcd9f")) {                    Plotly.newPlot(                        "8da72bda-1d3e-47d0-959d-0e94614dcd9f",                        [{"hovertemplate":"partition=train\u003cbr\u003edate=%{x}\u003cbr\u003econsumption=%{y}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"train","line":{"color":"rgb(76,114,176)","dash":"solid"},"marker":{"symbol":"circle"},"mode":"lines","name":"train","orientation":"v","showlegend":true,"x":["1969-01-01T00:00:00","1969-02-01T00:00:00","1969-03-01T00:00:00","1969-04-01T00:00:00","1969-05-01T00:00:00","1969-06-01T00:00:00","1969-07-01T00:00:00","1969-08-01T00:00:00","1969-09-01T00:00:00","1969-10-01T00:00:00","1969-11-01T00:00:00","1969-12-01T00:00:00","1970-01-01T00:00:00","1970-02-01T00:00:00","1970-03-01T00:00:00","1970-04-01T00:00:00","1970-05-01T00:00:00","1970-06-01T00:00:00","1970-07-01T00:00:00","1970-08-01T00:00:00","1970-09-01T00:00:00","1970-10-01T00:00:00","1970-11-01T00:00:00","1970-12-01T00:00:00","1971-01-01T00:00:00","1971-02-01T00:00:00","1971-03-01T00:00:00","1971-04-01T00:00:00","1971-05-01T00:00:00","1971-06-01T00:00:00","1971-07-01T00:00:00","1971-08-01T00:00:00","1971-09-01T00:00:00","1971-10-01T00:00:00","1971-11-01T00:00:00","1971-12-01T00:00:00","1972-01-01T00:00:00","1972-02-01T00:00:00","1972-03-01T00:00:00","1972-04-01T00:00:00","1972-05-01T00:00:00","1972-06-01T00:00:00","1972-07-01T00:00:00","1972-08-01T00:00:00","1972-09-01T00:00:00","1972-10-01T00:00:00","1972-11-01T00:00:00","1972-12-01T00:00:00","1973-01-01T00:00:00","1973-02-01T00:00:00","1973-03-01T00:00:00","1973-04-01T00:00:00","1973-05-01T00:00:00","1973-06-01T00:00:00","1973-07-01T00:00:00","1973-08-01T00:00:00","1973-09-01T00:00:00","1973-10-01T00:00:00","1973-11-01T00:00:00","1973-12-01T00:00:00","1974-01-01T00:00:00","1974-02-01T00:00:00","1974-03-01T00:00:00","1974-04-01T00:00:00","1974-05-01T00:00:00","1974-06-01T00:00:00","1974-07-01T00:00:00","1974-08-01T00:00:00","1974-09-01T00:00:00","1974-10-01T00:00:00","1974-11-01T00:00:00","1974-12-01T00:00:00","1975-01-01T00:00:00","1975-02-01T00:00:00","1975-03-01T00:00:00","1975-04-01T00:00:00","1975-05-01T00:00:00","1975-06-01T00:00:00","1975-07-01T00:00:00","1975-08-01T00:00:00","1975-09-01T00:00:00","1975-10-01T00:00:00","1975-11-01T00:00:00","1975-12-01T00:00:00","1976-01-01T00:00:00","1976-02-01T00:00:00","1976-03-01T00:00:00","1976-04-01T00:00:00","1976-05-01T00:00:00","1976-06-01T00:00:00","1976-07-01T00:00:00","1976-08-01T00:00:00","1976-09-01T00:00:00","1976-10-01T00:00:00","1976-11-01T00:00:00","1976-12-01T00:00:00","1977-01-01T00:00:00","1977-02-01T00:00:00","1977-03-01T00:00:00","1977-04-01T00:00:00","1977-05-01T00:00:00","1977-06-01T00:00:00","1977-07-01T00:00:00","1977-08-01T00:00:00","1977-09-01T00:00:00","1977-10-01T00:00:00","1977-11-01T00:00:00","1977-12-01T00:00:00","1978-01-01T00:00:00","1978-02-01T00:00:00","1978-03-01T00:00:00","1978-04-01T00:00:00","1978-05-01T00:00:00","1978-06-01T00:00:00","1978-07-01T00:00:00","1978-08-01T00:00:00","1978-09-01T00:00:00","1978-10-01T00:00:00","1978-11-01T00:00:00","1978-12-01T00:00:00","1979-01-01T00:00:00","1979-02-01T00:00:00","1979-03-01T00:00:00","1979-04-01T00:00:00","1979-05-01T00:00:00","1979-06-01T00:00:00","1979-07-01T00:00:00","1979-08-01T00:00:00","1979-09-01T00:00:00","1979-10-01T00:00:00","1979-11-01T00:00:00","1979-12-01T00:00:00","1980-01-01T00:00:00","1980-02-01T00:00:00","1980-03-01T00:00:00","1980-04-01T00:00:00","1980-05-01T00:00:00","1980-06-01T00:00:00","1980-07-01T00:00:00","1980-08-01T00:00:00","1980-09-01T00:00:00","1980-10-01T00:00:00","1980-11-01T00:00:00","1980-12-01T00:00:00","1981-01-01T00:00:00","1981-02-01T00:00:00","1981-03-01T00:00:00","1981-04-01T00:00:00","1981-05-01T00:00:00","1981-06-01T00:00:00","1981-07-01T00:00:00","1981-08-01T00:00:00","1981-09-01T00:00:00","1981-10-01T00:00:00","1981-11-01T00:00:00","1981-12-01T00:00:00","1982-01-01T00:00:00","1982-02-01T00:00:00","1982-03-01T00:00:00","1982-04-01T00:00:00","1982-05-01T00:00:00","1982-06-01T00:00:00","1982-07-01T00:00:00","1982-08-01T00:00:00","1982-09-01T00:00:00","1982-10-01T00:00:00","1982-11-01T00:00:00","1982-12-01T00:00:00","1983-01-01T00:00:00","1983-02-01T00:00:00","1983-03-01T00:00:00","1983-04-01T00:00:00","1983-05-01T00:00:00","1983-06-01T00:00:00","1983-07-01T00:00:00","1983-08-01T00:00:00","1983-09-01T00:00:00","1983-10-01T00:00:00","1983-11-01T00:00:00","1983-12-01T00:00:00","1984-01-01T00:00:00","1984-02-01T00:00:00","1984-03-01T00:00:00","1984-04-01T00:00:00","1984-05-01T00:00:00","1984-06-01T00:00:00","1984-07-01T00:00:00","1984-08-01T00:00:00","1984-09-01T00:00:00","1984-10-01T00:00:00","1984-11-01T00:00:00","1984-12-01T00:00:00","1985-01-01T00:00:00","1985-02-01T00:00:00","1985-03-01T00:00:00","1985-04-01T00:00:00","1985-05-01T00:00:00","1985-06-01T00:00:00","1985-07-01T00:00:00","1985-08-01T00:00:00","1985-09-01T00:00:00","1985-10-01T00:00:00","1985-11-01T00:00:00","1985-12-01T00:00:00","1986-01-01T00:00:00","1986-02-01T00:00:00","1986-03-01T00:00:00","1986-04-01T00:00:00","1986-05-01T00:00:00","1986-06-01T00:00:00","1986-07-01T00:00:00","1986-08-01T00:00:00","1986-09-01T00:00:00","1986-10-01T00:00:00","1986-11-01T00:00:00","1986-12-01T00:00:00","1987-01-01T00:00:00","1987-02-01T00:00:00","1987-03-01T00:00:00","1987-04-01T00:00:00","1987-05-01T00:00:00","1987-06-01T00:00:00","1987-07-01T00:00:00","1987-08-01T00:00:00","1987-09-01T00:00:00","1987-10-01T00:00:00","1987-11-01T00:00:00","1987-12-01T00:00:00","1988-01-01T00:00:00","1988-02-01T00:00:00","1988-03-01T00:00:00","1988-04-01T00:00:00","1988-05-01T00:00:00","1988-06-01T00:00:00","1988-07-01T00:00:00","1988-08-01T00:00:00","1988-09-01T00:00:00","1988-10-01T00:00:00","1988-11-01T00:00:00","1988-12-01T00:00:00","1989-01-01T00:00:00","1989-02-01T00:00:00","1989-03-01T00:00:00","1989-04-01T00:00:00","1989-05-01T00:00:00","1989-06-01T00:00:00","1989-07-01T00:00:00","1989-08-01T00:00:00","1989-09-01T00:00:00","1989-10-01T00:00:00","1989-11-01T00:00:00","1989-12-01T00:00:00","1990-01-01T00:00:00","1990-02-01T00:00:00","1990-03-01T00:00:00","1990-04-01T00:00:00","1990-05-01T00:00:00","1990-06-01T00:00:00","1990-07-01T00:00:00","1990-08-01T00:00:00","1990-09-01T00:00:00","1990-10-01T00:00:00","1990-11-01T00:00:00","1990-12-01T00:00:00","1991-01-01T00:00:00","1991-02-01T00:00:00","1991-03-01T00:00:00","1991-04-01T00:00:00","1991-05-01T00:00:00","1991-06-01T00:00:00","1991-07-01T00:00:00","1991-08-01T00:00:00","1991-09-01T00:00:00","1991-10-01T00:00:00","1991-11-01T00:00:00","1991-12-01T00:00:00","1992-01-01T00:00:00","1992-02-01T00:00:00","1992-03-01T00:00:00","1992-04-01T00:00:00","1992-05-01T00:00:00","1992-06-01T00:00:00","1992-07-01T00:00:00","1992-08-01T00:00:00","1992-09-01T00:00:00","1992-10-01T00:00:00","1992-11-01T00:00:00","1992-12-01T00:00:00","1993-01-01T00:00:00","1993-02-01T00:00:00","1993-03-01T00:00:00","1993-04-01T00:00:00","1993-05-01T00:00:00","1993-06-01T00:00:00","1993-07-01T00:00:00","1993-08-01T00:00:00","1993-09-01T00:00:00","1993-10-01T00:00:00","1993-11-01T00:00:00","1993-12-01T00:00:00","1994-01-01T00:00:00","1994-02-01T00:00:00","1994-03-01T00:00:00","1994-04-01T00:00:00","1994-05-01T00:00:00","1994-06-01T00:00:00","1994-07-01T00:00:00","1994-08-01T00:00:00","1994-09-01T00:00:00","1994-10-01T00:00:00","1994-11-01T00:00:00","1994-12-01T00:00:00","1995-01-01T00:00:00","1995-02-01T00:00:00","1995-03-01T00:00:00","1995-04-01T00:00:00","1995-05-01T00:00:00","1995-06-01T00:00:00","1995-07-01T00:00:00","1995-08-01T00:00:00","1995-09-01T00:00:00","1995-10-01T00:00:00","1995-11-01T00:00:00","1995-12-01T00:00:00","1996-01-01T00:00:00","1996-02-01T00:00:00","1996-03-01T00:00:00","1996-04-01T00:00:00","1996-05-01T00:00:00","1996-06-01T00:00:00","1996-07-01T00:00:00","1996-08-01T00:00:00","1996-09-01T00:00:00","1996-10-01T00:00:00","1996-11-01T00:00:00","1996-12-01T00:00:00","1997-01-01T00:00:00","1997-02-01T00:00:00","1997-03-01T00:00:00","1997-04-01T00:00:00","1997-05-01T00:00:00","1997-06-01T00:00:00","1997-07-01T00:00:00","1997-08-01T00:00:00","1997-09-01T00:00:00","1997-10-01T00:00:00","1997-11-01T00:00:00","1997-12-01T00:00:00","1998-01-01T00:00:00","1998-02-01T00:00:00","1998-03-01T00:00:00","1998-04-01T00:00:00","1998-05-01T00:00:00","1998-06-01T00:00:00","1998-07-01T00:00:00","1998-08-01T00:00:00","1998-09-01T00:00:00","1998-10-01T00:00:00","1998-11-01T00:00:00","1998-12-01T00:00:00","1999-01-01T00:00:00","1999-02-01T00:00:00","1999-03-01T00:00:00","1999-04-01T00:00:00","1999-05-01T00:00:00","1999-06-01T00:00:00","1999-07-01T00:00:00","1999-08-01T00:00:00","1999-09-01T00:00:00","1999-10-01T00:00:00","1999-11-01T00:00:00","1999-12-01T00:00:00","2000-01-01T00:00:00","2000-02-01T00:00:00","2000-03-01T00:00:00","2000-04-01T00:00:00","2000-05-01T00:00:00","2000-06-01T00:00:00","2000-07-01T00:00:00","2000-08-01T00:00:00","2000-09-01T00:00:00","2000-10-01T00:00:00","2000-11-01T00:00:00","2000-12-01T00:00:00","2001-01-01T00:00:00","2001-02-01T00:00:00","2001-03-01T00:00:00","2001-04-01T00:00:00","2001-05-01T00:00:00","2001-06-01T00:00:00","2001-07-01T00:00:00","2001-08-01T00:00:00","2001-09-01T00:00:00","2001-10-01T00:00:00","2001-11-01T00:00:00","2001-12-01T00:00:00","2002-01-01T00:00:00","2002-02-01T00:00:00","2002-03-01T00:00:00","2002-04-01T00:00:00","2002-05-01T00:00:00","2002-06-01T00:00:00","2002-07-01T00:00:00","2002-08-01T00:00:00","2002-09-01T00:00:00","2002-10-01T00:00:00","2002-11-01T00:00:00","2002-12-01T00:00:00","2003-01-01T00:00:00","2003-02-01T00:00:00","2003-03-01T00:00:00","2003-04-01T00:00:00","2003-05-01T00:00:00","2003-06-01T00:00:00","2003-07-01T00:00:00","2003-08-01T00:00:00","2003-09-01T00:00:00","2003-10-01T00:00:00","2003-11-01T00:00:00","2003-12-01T00:00:00","2004-01-01T00:00:00","2004-02-01T00:00:00","2004-03-01T00:00:00","2004-04-01T00:00:00","2004-05-01T00:00:00","2004-06-01T00:00:00","2004-07-01T00:00:00","2004-08-01T00:00:00","2004-09-01T00:00:00","2004-10-01T00:00:00","2004-11-01T00:00:00","2004-12-01T00:00:00","2005-01-01T00:00:00","2005-02-01T00:00:00","2005-03-01T00:00:00","2005-04-01T00:00:00","2005-05-01T00:00:00","2005-06-01T00:00:00","2005-07-01T00:00:00","2005-08-01T00:00:00","2005-09-01T00:00:00","2005-10-01T00:00:00","2005-11-01T00:00:00","2005-12-01T00:00:00","2006-01-01T00:00:00","2006-02-01T00:00:00","2006-03-01T00:00:00","2006-04-01T00:00:00","2006-05-01T00:00:00","2006-06-01T00:00:00","2006-07-01T00:00:00","2006-08-01T00:00:00","2006-09-01T00:00:00","2006-10-01T00:00:00","2006-11-01T00:00:00","2006-12-01T00:00:00","2007-01-01T00:00:00","2007-02-01T00:00:00","2007-03-01T00:00:00","2007-04-01T00:00:00","2007-05-01T00:00:00","2007-06-01T00:00:00","2007-07-01T00:00:00","2007-08-01T00:00:00","2007-09-01T00:00:00","2007-10-01T00:00:00","2007-11-01T00:00:00","2007-12-01T00:00:00"],"xaxis":"x","y":[1.668752129,1.554668105,1.8498366990000001,2.023198164,2.062591523,2.084118379,2.657367207,2.8228701760000003,2.3222593160000002,2.1713393549999997,1.842760498,2.107677012,1.91248418,1.8634060159999999,2.241180117,2.238217656,2.317137871,2.448195547,3.0776408980000003,3.267583379,2.651597734,2.48866125,2.15043625,2.364827344,2.0568849609999997,2.0036733979999997,2.490359023,2.6251869919999997,2.491959414,2.7219367190000003,3.344419609,3.4768998239999998,2.8998793160000003,2.712961895,2.44961709,2.629625391,2.361770091,2.371904681,2.7740998369999996,2.843921654,3.036677591,2.95782679,3.7468956180000004,3.9858511070000002,3.259823333,3.0445340360000004,2.7325954820000002,3.0336443099999997,2.799979622,2.6739271419999997,3.2423111259999997,3.395745775,3.274265951,3.653198001,4.154901654,4.631837336999999,3.687078704,3.652692376,3.171736712,3.570616224,3.008190013,3.189276556,3.046785111,3.467314876,3.3820181180000004,3.492889915,4.348309935,4.662838001,3.650982786,3.650352865,3.263896849,3.5328864,3.2936374479999997,3.0958979749999997,3.756820885,3.624021589,3.847804284,3.836787331,4.84431444,4.976937799,4.179969889,3.8948896740000003,3.409091628,3.9727802409999997,3.638831263,3.468364915,3.856053685,4.101909076,3.989112728,4.293264818,5.0487968290000005,5.247295599,4.235750208,4.040934349,3.81265806,4.120864349,3.7518850390000003,3.550766641,3.979512363,4.348525,4.16230873,4.400079414,5.508222695000001,5.4058446479999995,4.488030801,4.311757578,3.8906117190000002,4.28030332,3.9050981709999997,3.65550276,4.661943073,4.212178581,4.654984616,4.6416911,5.881020339,5.923089401,4.975525924,4.7181574280000005,4.258113796,4.6555283659999995,4.31605278,4.050464303,4.794374792,5.04671776,4.902798932,5.129792448,5.603058737,6.050730143,4.766775163,4.878800221,4.621393874,4.856468776,4.138862617,4.165759766,4.544166016,4.889649219,4.903726406,4.571647676,5.779414688,5.924919804999999,5.093906094,4.901709102,4.262420391,4.915429316,4.433917773,4.067101758000001,4.37449084,5.007097695,4.474493926,4.883541563,5.971695,5.77960125,4.876948359,4.828574141,4.300209688,4.772497715,4.3355292379999995,4.10839791,4.7866786910000005,5.175501992,4.630736328,5.039780586,5.95668375,6.019843008,5.126423203,4.938163359,4.502746269999999,4.737476074,4.325542871000001,3.9072675,5.0636581640000005,4.548854491999999,4.803975508000001,4.992125117,5.821141992,6.174079570000001,5.1713575,4.878987813,3.987692734,5.18077082,4.41163668,4.207411738,4.748961855,4.924730625,4.784065313,4.9312113669999995,5.811595508,6.2207447270000005,4.881032109,5.151168047,4.491400977,4.867768086,4.300460566,4.089100996,4.71035043,5.1282716409999995,4.930060039,4.780703203,6.147610195,6.327140586,5.126298672,5.164555469,4.620908867,5.145432969,4.668019876,4.204629427,5.298167160999999,5.172728020999999,5.354550794000001,5.237489818,6.519821068,6.639221849,5.722565599,5.6727460679999995,4.904657122,5.839384388,4.872161582,4.668820293,5.397731289,5.957003945,5.458945858999999,5.937548398,6.938328711,7.081926289,5.963893125,5.908729179999999,5.384715977000001,5.997177227000001,5.13657916,5.3474602540000005,6.158281563,6.046726133,5.831471016000001,6.199267617,7.2489414839999995,7.76778418,6.513675233999999,6.244401875,5.849553945,6.339533203,5.863768672,5.4261281640000005,6.750308711,6.067811328,6.7718746880000005,6.74071875,7.642238555,8.056825,6.876492852,6.698891602000001,6.014138867000001,6.635681054999999,6.102412461,5.859330078,6.705291483999999,6.900781602,6.822476836,6.817124647999999,7.8415846479999995,8.337164258,6.752296563000001,6.821457929999999,6.399880820000001,6.9651875,6.068581992,5.641022617,6.8801484770000005,6.910496133,6.818178867,6.732232617,8.089612852,8.370029805,7.0169926170000005,7.059850078,6.623336406000001,7.246170586,6.86,6.04,7.95,6.8,8.01,7.19,8.21,9.21,7.49,7.53,6.66,7.3,6.49,6.4,8.21,8.03,6.7,7.72,8.64,8.07,7.33,7.14,6.78,7.09,6.85,6.6,7.55,7.53,7.37,8.17,8.46,9.66,7.88,6.6,6.64,7.31,6.67,6.5,7.53,7.63,7.79,8.0,8.35,9.13,7.76,7.54,6.9,7.9,6.563002929,6.785625014,7.442165401,7.681872951,7.460800442,7.370751855,8.615748475,8.79439586,7.328867462000001,7.718861694999999,6.985768095,7.598050166,6.592365350000001,6.502804009999999,7.60366129,7.19401589,7.47808916,7.23270948,8.4770901,8.58253888,7.44701799,7.58423262,6.669165230000001,7.82760841,6.66936844,6.41844887,7.2315223699999995,7.570861829999999,7.14184603,7.48650507,8.58259816,8.57232247,7.410784919999999,7.70843613,6.86458422,7.83157346,6.38617806,6.46729252,7.75202203,7.2459760499999994,7.27571431,7.49611539,8.60206852,8.26319338,7.35499086,7.30181541,6.84784344,7.623018149999999,6.25428348,6.5511567500000005,7.08088051,7.128292340000001,7.11040468,7.19252452,7.76890928,8.15743749,7.74849147,6.4282123,6.22546332,6.93690289,6.3283676,6.09841794,6.9059068,7.11727961,6.82730721,7.17000915,7.69892571,8.18602792,6.72652988,7.15335064,6.56014579,7.28992227,6.008506239999999,5.91130917,6.894294159999999,6.68750983,6.87408158,6.687695949999999,7.80526753,7.956616169999999,6.63042235,6.98030707,6.35737459,6.74829485,6.1259359600000005,5.75149407,6.460881530000001,6.93010924,6.88967233,6.7712256900000005,7.66983754,7.66618364,6.700918710000001,6.74489406,5.94249758,6.833346679999999,6.034635209999999,5.69317867,6.413825749999999,6.6218451,6.27488162,6.670133249999999,7.389207959999999,7.10695215,6.38428451,6.27183282,5.92772014,6.41909697,5.50740415,5.28612784,6.28384423,6.008612950000001,6.192280330000001,6.31673159,6.83861611,6.89311644,6.0060321,5.9050812100000005,5.49730287,5.95522622,5.32616474,5.0721926,5.84416591,5.83372407,5.9797508200000005,5.96298344,6.3232843999999995,6.43231079,5.8332586300000004,5.745221750000001,5.3313215099999995,5.71539809,5.2229763,4.8565558,5.7757035,5.5079501,5.6599876,5.8019272,6.1894025,6.332647199999999,5.3729554,5.7401864,5.1833271000000005,5.3280626],"yaxis":"y","type":"scatter"},{"hovertemplate":"partition=validation\u003cbr\u003edate=%{x}\u003cbr\u003econsumption=%{y}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"validation","line":{"color":"rgb(221,132,82)","dash":"solid"},"marker":{"symbol":"circle"},"mode":"lines","name":"validation","orientation":"v","showlegend":true,"x":["2008-01-01T00:00:00","2008-02-01T00:00:00","2008-03-01T00:00:00","2008-04-01T00:00:00","2008-05-01T00:00:00","2008-06-01T00:00:00","2008-07-01T00:00:00","2008-08-01T00:00:00","2008-09-01T00:00:00","2008-10-01T00:00:00","2008-11-01T00:00:00","2008-12-01T00:00:00","2009-01-01T00:00:00","2009-02-01T00:00:00","2009-03-01T00:00:00","2009-04-01T00:00:00","2009-05-01T00:00:00","2009-06-01T00:00:00","2009-07-01T00:00:00","2009-08-01T00:00:00","2009-09-01T00:00:00","2009-10-01T00:00:00","2009-11-01T00:00:00","2009-12-01T00:00:00","2010-01-01T00:00:00","2010-02-01T00:00:00","2010-03-01T00:00:00","2010-04-01T00:00:00","2010-05-01T00:00:00","2010-06-01T00:00:00","2010-07-01T00:00:00","2010-08-01T00:00:00","2010-09-01T00:00:00","2010-10-01T00:00:00","2010-11-01T00:00:00","2010-12-01T00:00:00","2011-01-01T00:00:00","2011-02-01T00:00:00","2011-03-01T00:00:00","2011-04-01T00:00:00","2011-05-01T00:00:00","2011-06-01T00:00:00","2011-07-01T00:00:00","2011-08-01T00:00:00","2011-09-01T00:00:00","2011-10-01T00:00:00","2011-11-01T00:00:00","2011-12-01T00:00:00","2012-01-01T00:00:00","2012-02-01T00:00:00","2012-03-01T00:00:00","2012-04-01T00:00:00","2012-05-01T00:00:00","2012-06-01T00:00:00","2012-07-01T00:00:00","2012-08-01T00:00:00","2012-09-01T00:00:00","2012-10-01T00:00:00","2012-11-01T00:00:00","2012-12-01T00:00:00"],"xaxis":"x","y":[4.9384948,4.8825465999999995,5.2562022,5.2071043,5.2890673999999995,5.2082883,5.8997321,5.7717054,5.2015342,5.2847128,4.7681122,5.2507926000000005,4.621737899999999,4.4529426,4.9582634,5.1111879,4.9727112,5.2201726,5.8125535,5.521359,4.9848844,5.0748263,4.4978207,4.8999601,4.1640532,4.1480084,4.9516659,4.6913062,4.7130621,4.9011081,5.4173082,5.2455876,4.8386965,4.6688713,4.3560986,4.6704003,4.0377522,3.9923552,4.3301704,4.5008656,4.285175300000001,4.569814500000001,4.9376631,5.0760873,4.5121999,4.3909611,4.005529,4.3559678,3.8590098999999998,3.7702928000000004,4.2082748,3.9218579,4.1087839,4.4402436,4.5252258,4.7788012,3.880072,4.0419597,3.6918996999999996,4.0022747999999995],"yaxis":"y","type":"scatter"},{"hovertemplate":"partition=test\u003cbr\u003edate=%{x}\u003cbr\u003econsumption=%{y}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"test","line":{"color":"rgb(85,168,104)","dash":"solid"},"marker":{"symbol":"circle"},"mode":"lines","name":"test","orientation":"v","showlegend":true,"x":["2013-01-01T00:00:00","2013-02-01T00:00:00","2013-03-01T00:00:00","2013-04-01T00:00:00","2013-05-01T00:00:00","2013-06-01T00:00:00","2013-07-01T00:00:00","2013-08-01T00:00:00","2013-09-01T00:00:00","2013-10-01T00:00:00","2013-11-01T00:00:00","2013-12-01T00:00:00","2014-01-01T00:00:00","2014-02-01T00:00:00","2014-03-01T00:00:00","2014-04-01T00:00:00","2014-05-01T00:00:00","2014-06-01T00:00:00","2014-07-01T00:00:00","2014-08-01T00:00:00","2014-09-01T00:00:00","2014-10-01T00:00:00","2014-11-01T00:00:00","2014-12-01T00:00:00","2015-01-01T00:00:00","2015-02-01T00:00:00","2015-03-01T00:00:00","2015-04-01T00:00:00","2015-05-01T00:00:00","2015-06-01T00:00:00","2015-07-01T00:00:00","2015-08-01T00:00:00","2015-09-01T00:00:00","2015-10-01T00:00:00","2015-11-01T00:00:00","2015-12-01T00:00:00","2016-01-01T00:00:00","2016-02-01T00:00:00","2016-03-01T00:00:00","2016-04-01T00:00:00","2016-05-01T00:00:00","2016-06-01T00:00:00","2016-07-01T00:00:00","2016-08-01T00:00:00","2016-09-01T00:00:00","2016-10-01T00:00:00","2016-11-01T00:00:00","2016-12-01T00:00:00","2017-01-01T00:00:00","2017-02-01T00:00:00","2017-03-01T00:00:00","2017-04-01T00:00:00","2017-05-01T00:00:00","2017-06-01T00:00:00","2017-07-01T00:00:00","2017-08-01T00:00:00","2017-09-01T00:00:00","2017-10-01T00:00:00","2017-11-01T00:00:00","2017-12-01T00:00:00","2018-01-01T00:00:00","2018-02-01T00:00:00","2018-03-01T00:00:00","2018-04-01T00:00:00","2018-05-01T00:00:00","2018-06-01T00:00:00","2018-07-01T00:00:00","2018-08-01T00:00:00","2018-09-01T00:00:00","2018-10-01T00:00:00","2018-11-01T00:00:00","2018-12-01T00:00:00","2019-01-01T00:00:00"],"xaxis":"x","y":[3.4832642,3.3141434999999997,3.7722813,3.8841755,3.9164969,3.8375851,4.5332916999999995,4.5132746,3.8239634999999996,4.0200854999999995,3.6253688,3.8348032,3.4903701000000003,3.2921694,3.7382961999999997,3.856973,3.9003407,3.8597689,4.3831808,4.29923,3.9555719,3.9841672999999997,3.4530789,3.9369986,3.5386509999999998,3.2500221999999996,3.7345315,3.8438893,3.8365274,4.0231401,4.5702225,4.3188958,3.8947879,3.9591489,3.5565682,3.9828017,3.4200331,3.5324283000000003,3.9012808000000003,3.8294129999999997,3.9272671999999997,4.1793347,4.550445900000001,4.5987083,4.1162213,3.9231756,3.6781764000000003,3.9287515999999996,3.4893782,3.3892122,3.995239,3.9714953000000004,4.0809525,4.3845920000000005,4.5513634000000005,4.6697783,4.160283300000001,4.1303655,3.7764699,3.9869940999999995,3.6848066999999998,3.522588,4.1049732,4.0138973,4.2940422,4.4147008,4.8159838,5.0275975,4.2961697999999995,4.4244294,4.0317594,4.2925474,3.9147887],"yaxis":"y","type":"scatter"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"tickcolor":"rgb(36,36,36)","ticklen":8,"ticks":"outside","tickwidth":2},"colorscale":[[0.0,"rgb(2,4,25)"],[0.06274509803921569,"rgb(24,15,41)"],[0.12549019607843137,"rgb(47,23,57)"],[0.18823529411764706,"rgb(71,28,72)"],[0.25098039215686274,"rgb(97,30,82)"],[0.3137254901960784,"rgb(123,30,89)"],[0.3764705882352941,"rgb(150,27,91)"],[0.4392156862745098,"rgb(177,22,88)"],[0.5019607843137255,"rgb(203,26,79)"],[0.5647058823529412,"rgb(223,47,67)"],[0.6274509803921569,"rgb(236,76,61)"],[0.6901960784313725,"rgb(242,107,73)"],[0.7529411764705882,"rgb(244,135,95)"],[0.8156862745098039,"rgb(245,162,122)"],[0.8784313725490196,"rgb(246,188,153)"],[0.9411764705882353,"rgb(247,212,187)"],[1.0,"rgb(250,234,220)"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"tickcolor":"rgb(36,36,36)","ticklen":8,"ticks":"outside","tickwidth":2}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"tickcolor":"rgb(36,36,36)","ticklen":8,"ticks":"outside","tickwidth":2},"colorscale":[[0.0,"rgb(2,4,25)"],[0.06274509803921569,"rgb(24,15,41)"],[0.12549019607843137,"rgb(47,23,57)"],[0.18823529411764706,"rgb(71,28,72)"],[0.25098039215686274,"rgb(97,30,82)"],[0.3137254901960784,"rgb(123,30,89)"],[0.3764705882352941,"rgb(150,27,91)"],[0.4392156862745098,"rgb(177,22,88)"],[0.5019607843137255,"rgb(203,26,79)"],[0.5647058823529412,"rgb(223,47,67)"],[0.6274509803921569,"rgb(236,76,61)"],[0.6901960784313725,"rgb(242,107,73)"],[0.7529411764705882,"rgb(244,135,95)"],[0.8156862745098039,"rgb(245,162,122)"],[0.8784313725490196,"rgb(246,188,153)"],[0.9411764705882353,"rgb(247,212,187)"],[1.0,"rgb(250,234,220)"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"tickcolor":"rgb(36,36,36)","ticklen":8,"ticks":"outside","tickwidth":2},"colorscale":[[0.0,"rgb(2,4,25)"],[0.06274509803921569,"rgb(24,15,41)"],[0.12549019607843137,"rgb(47,23,57)"],[0.18823529411764706,"rgb(71,28,72)"],[0.25098039215686274,"rgb(97,30,82)"],[0.3137254901960784,"rgb(123,30,89)"],[0.3764705882352941,"rgb(150,27,91)"],[0.4392156862745098,"rgb(177,22,88)"],[0.5019607843137255,"rgb(203,26,79)"],[0.5647058823529412,"rgb(223,47,67)"],[0.6274509803921569,"rgb(236,76,61)"],[0.6901960784313725,"rgb(242,107,73)"],[0.7529411764705882,"rgb(244,135,95)"],[0.8156862745098039,"rgb(245,162,122)"],[0.8784313725490196,"rgb(246,188,153)"],[0.9411764705882353,"rgb(247,212,187)"],[1.0,"rgb(250,234,220)"]]}],"heatmapgl":[{"type":"heatmapgl","colorbar":{"outlinewidth":0,"tickcolor":"rgb(36,36,36)","ticklen":8,"ticks":"outside","tickwidth":2},"colorscale":[[0.0,"rgb(2,4,25)"],[0.06274509803921569,"rgb(24,15,41)"],[0.12549019607843137,"rgb(47,23,57)"],[0.18823529411764706,"rgb(71,28,72)"],[0.25098039215686274,"rgb(97,30,82)"],[0.3137254901960784,"rgb(123,30,89)"],[0.3764705882352941,"rgb(150,27,91)"],[0.4392156862745098,"rgb(177,22,88)"],[0.5019607843137255,"rgb(203,26,79)"],[0.5647058823529412,"rgb(223,47,67)"],[0.6274509803921569,"rgb(236,76,61)"],[0.6901960784313725,"rgb(242,107,73)"],[0.7529411764705882,"rgb(244,135,95)"],[0.8156862745098039,"rgb(245,162,122)"],[0.8784313725490196,"rgb(246,188,153)"],[0.9411764705882353,"rgb(247,212,187)"],[1.0,"rgb(250,234,220)"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"tickcolor":"rgb(36,36,36)","ticklen":8,"ticks":"outside","tickwidth":2}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"tickcolor":"rgb(36,36,36)","ticklen":8,"ticks":"outside","tickwidth":2},"colorscale":[[0.0,"rgb(2,4,25)"],[0.06274509803921569,"rgb(24,15,41)"],[0.12549019607843137,"rgb(47,23,57)"],[0.18823529411764706,"rgb(71,28,72)"],[0.25098039215686274,"rgb(97,30,82)"],[0.3137254901960784,"rgb(123,30,89)"],[0.3764705882352941,"rgb(150,27,91)"],[0.4392156862745098,"rgb(177,22,88)"],[0.5019607843137255,"rgb(203,26,79)"],[0.5647058823529412,"rgb(223,47,67)"],[0.6274509803921569,"rgb(236,76,61)"],[0.6901960784313725,"rgb(242,107,73)"],[0.7529411764705882,"rgb(244,135,95)"],[0.8156862745098039,"rgb(245,162,122)"],[0.8784313725490196,"rgb(246,188,153)"],[0.9411764705882353,"rgb(247,212,187)"],[1.0,"rgb(250,234,220)"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"tickcolor":"rgb(36,36,36)","ticklen":8,"ticks":"outside","tickwidth":2},"colorscale":[[0.0,"rgb(2,4,25)"],[0.06274509803921569,"rgb(24,15,41)"],[0.12549019607843137,"rgb(47,23,57)"],[0.18823529411764706,"rgb(71,28,72)"],[0.25098039215686274,"rgb(97,30,82)"],[0.3137254901960784,"rgb(123,30,89)"],[0.3764705882352941,"rgb(150,27,91)"],[0.4392156862745098,"rgb(177,22,88)"],[0.5019607843137255,"rgb(203,26,79)"],[0.5647058823529412,"rgb(223,47,67)"],[0.6274509803921569,"rgb(236,76,61)"],[0.6901960784313725,"rgb(242,107,73)"],[0.7529411764705882,"rgb(244,135,95)"],[0.8156862745098039,"rgb(245,162,122)"],[0.8784313725490196,"rgb(246,188,153)"],[0.9411764705882353,"rgb(247,212,187)"],[1.0,"rgb(250,234,220)"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"tickcolor":"rgb(36,36,36)","ticklen":8,"ticks":"outside","tickwidth":2}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"tickcolor":"rgb(36,36,36)","ticklen":8,"ticks":"outside","tickwidth":2}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"tickcolor":"rgb(36,36,36)","ticklen":8,"ticks":"outside","tickwidth":2}}}],"bar":[{"error_x":{"color":"rgb(36,36,36)"},"error_y":{"color":"rgb(36,36,36)"},"marker":{"line":{"color":"rgb(234,234,242)","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"tickcolor":"rgb(36,36,36)","ticklen":8,"ticks":"outside","tickwidth":2}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"tickcolor":"rgb(36,36,36)","ticklen":8,"ticks":"outside","tickwidth":2}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"tickcolor":"rgb(36,36,36)","ticklen":8,"ticks":"outside","tickwidth":2}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"tickcolor":"rgb(36,36,36)","ticklen":8,"ticks":"outside","tickwidth":2}},"marker":{"colorbar":{"outlinewidth":0,"tickcolor":"rgb(36,36,36)","ticklen":8,"ticks":"outside","tickwidth":2}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"tickcolor":"rgb(36,36,36)","ticklen":8,"ticks":"outside","tickwidth":2}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"tickcolor":"rgb(36,36,36)","ticklen":8,"ticks":"outside","tickwidth":2}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"tickcolor":"rgb(36,36,36)","ticklen":8,"ticks":"outside","tickwidth":2}}}],"carpet":[{"aaxis":{"endlinecolor":"rgb(36,36,36)","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"rgb(36,36,36)"},"baxis":{"endlinecolor":"rgb(36,36,36)","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"rgb(36,36,36)"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"rgb(231,231,240)"},"line":{"color":"white"}},"header":{"fill":{"color":"rgb(183,183,191)"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"rgb(234,234,242)","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["rgb(76,114,176)","rgb(221,132,82)","rgb(85,168,104)","rgb(196,78,82)","rgb(129,114,179)","rgb(147,120,96)","rgb(218,139,195)","rgb(140,140,140)","rgb(204,185,116)","rgb(100,181,205)"],"font":{"color":"rgb(36,36,36)"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"rgb(234,234,242)","polar":{"bgcolor":"rgb(234,234,242)","angularaxis":{"gridcolor":"white","linecolor":"white","showgrid":true,"ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","showgrid":true,"ticks":""}},"ternary":{"bgcolor":"rgb(234,234,242)","aaxis":{"gridcolor":"white","linecolor":"white","showgrid":true,"ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","showgrid":true,"ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","showgrid":true,"ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"tickcolor":"rgb(36,36,36)","ticklen":8,"ticks":"outside","tickwidth":2}},"colorscale":{"sequential":[[0.0,"rgb(2,4,25)"],[0.06274509803921569,"rgb(24,15,41)"],[0.12549019607843137,"rgb(47,23,57)"],[0.18823529411764706,"rgb(71,28,72)"],[0.25098039215686274,"rgb(97,30,82)"],[0.3137254901960784,"rgb(123,30,89)"],[0.3764705882352941,"rgb(150,27,91)"],[0.4392156862745098,"rgb(177,22,88)"],[0.5019607843137255,"rgb(203,26,79)"],[0.5647058823529412,"rgb(223,47,67)"],[0.6274509803921569,"rgb(236,76,61)"],[0.6901960784313725,"rgb(242,107,73)"],[0.7529411764705882,"rgb(244,135,95)"],[0.8156862745098039,"rgb(245,162,122)"],[0.8784313725490196,"rgb(246,188,153)"],[0.9411764705882353,"rgb(247,212,187)"],[1.0,"rgb(250,234,220)"]],"sequentialminus":[[0.0,"rgb(2,4,25)"],[0.06274509803921569,"rgb(24,15,41)"],[0.12549019607843137,"rgb(47,23,57)"],[0.18823529411764706,"rgb(71,28,72)"],[0.25098039215686274,"rgb(97,30,82)"],[0.3137254901960784,"rgb(123,30,89)"],[0.3764705882352941,"rgb(150,27,91)"],[0.4392156862745098,"rgb(177,22,88)"],[0.5019607843137255,"rgb(203,26,79)"],[0.5647058823529412,"rgb(223,47,67)"],[0.6274509803921569,"rgb(236,76,61)"],[0.6901960784313725,"rgb(242,107,73)"],[0.7529411764705882,"rgb(244,135,95)"],[0.8156862745098039,"rgb(245,162,122)"],[0.8784313725490196,"rgb(246,188,153)"],[0.9411764705882353,"rgb(247,212,187)"],[1.0,"rgb(250,234,220)"]]},"xaxis":{"gridcolor":"white","linecolor":"white","showgrid":true,"ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true},"yaxis":{"gridcolor":"white","linecolor":"white","showgrid":true,"ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true},"scene":{"xaxis":{"backgroundcolor":"rgb(234,234,242)","gridcolor":"white","linecolor":"white","showbackground":true,"showgrid":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"rgb(234,234,242)","gridcolor":"white","linecolor":"white","showbackground":true,"showgrid":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"rgb(234,234,242)","gridcolor":"white","linecolor":"white","showbackground":true,"showgrid":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"fillcolor":"rgb(67,103,167)","line":{"width":0},"opacity":0.5},"annotationdefaults":{"arrowcolor":"rgb(67,103,167)"},"geo":{"bgcolor":"white","landcolor":"rgb(234,234,242)","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"}}},"xaxis":{"anchor":"y","domain":[0.0,1.0],"title":{"text":"date"}},"yaxis":{"anchor":"x","domain":[0.0,1.0],"title":{"text":"consumption"}},"legend":{"title":{"text":"partition"},"tracegroupgap":0,"orientation":"h","yanchor":"top","y":1,"xanchor":"left","x":0.001},"title":{"text":"Fuel consumption"},"height":350,"width":700,"margin":{"l":20,"r":20,"t":35,"b":20}},                        {"responsive": true}                    ).then(function(){
+<div>                            <div id="da8ff4ab-474f-4bd1-a0d7-278c96fef006" class="plotly-graph-div" style="height:350px; width:700px;"></div>            <script type="text/javascript">                require(["plotly"], function(Plotly) {                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("da8ff4ab-474f-4bd1-a0d7-278c96fef006")) {                    Plotly.newPlot(                        "da8ff4ab-474f-4bd1-a0d7-278c96fef006",                        [{"hovertemplate":"partition=train\u003cbr\u003edate=%{x}\u003cbr\u003econsumption=%{y}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"train","line":{"color":"rgb(76,114,176)","dash":"solid"},"marker":{"symbol":"circle"},"mode":"lines","name":"train","orientation":"v","showlegend":true,"x":["1969-01-01T00:00:00","1969-02-01T00:00:00","1969-03-01T00:00:00","1969-04-01T00:00:00","1969-05-01T00:00:00","1969-06-01T00:00:00","1969-07-01T00:00:00","1969-08-01T00:00:00","1969-09-01T00:00:00","1969-10-01T00:00:00","1969-11-01T00:00:00","1969-12-01T00:00:00","1970-01-01T00:00:00","1970-02-01T00:00:00","1970-03-01T00:00:00","1970-04-01T00:00:00","1970-05-01T00:00:00","1970-06-01T00:00:00","1970-07-01T00:00:00","1970-08-01T00:00:00","1970-09-01T00:00:00","1970-10-01T00:00:00","1970-11-01T00:00:00","1970-12-01T00:00:00","1971-01-01T00:00:00","1971-02-01T00:00:00","1971-03-01T00:00:00","1971-04-01T00:00:00","1971-05-01T00:00:00","1971-06-01T00:00:00","1971-07-01T00:00:00","1971-08-01T00:00:00","1971-09-01T00:00:00","1971-10-01T00:00:00","1971-11-01T00:00:00","1971-12-01T00:00:00","1972-01-01T00:00:00","1972-02-01T00:00:00","1972-03-01T00:00:00","1972-04-01T00:00:00","1972-05-01T00:00:00","1972-06-01T00:00:00","1972-07-01T00:00:00","1972-08-01T00:00:00","1972-09-01T00:00:00","1972-10-01T00:00:00","1972-11-01T00:00:00","1972-12-01T00:00:00","1973-01-01T00:00:00","1973-02-01T00:00:00","1973-03-01T00:00:00","1973-04-01T00:00:00","1973-05-01T00:00:00","1973-06-01T00:00:00","1973-07-01T00:00:00","1973-08-01T00:00:00","1973-09-01T00:00:00","1973-10-01T00:00:00","1973-11-01T00:00:00","1973-12-01T00:00:00","1974-01-01T00:00:00","1974-02-01T00:00:00","1974-03-01T00:00:00","1974-04-01T00:00:00","1974-05-01T00:00:00","1974-06-01T00:00:00","1974-07-01T00:00:00","1974-08-01T00:00:00","1974-09-01T00:00:00","1974-10-01T00:00:00","1974-11-01T00:00:00","1974-12-01T00:00:00","1975-01-01T00:00:00","1975-02-01T00:00:00","1975-03-01T00:00:00","1975-04-01T00:00:00","1975-05-01T00:00:00","1975-06-01T00:00:00","1975-07-01T00:00:00","1975-08-01T00:00:00","1975-09-01T00:00:00","1975-10-01T00:00:00","1975-11-01T00:00:00","1975-12-01T00:00:00","1976-01-01T00:00:00","1976-02-01T00:00:00","1976-03-01T00:00:00","1976-04-01T00:00:00","1976-05-01T00:00:00","1976-06-01T00:00:00","1976-07-01T00:00:00","1976-08-01T00:00:00","1976-09-01T00:00:00","1976-10-01T00:00:00","1976-11-01T00:00:00","1976-12-01T00:00:00","1977-01-01T00:00:00","1977-02-01T00:00:00","1977-03-01T00:00:00","1977-04-01T00:00:00","1977-05-01T00:00:00","1977-06-01T00:00:00","1977-07-01T00:00:00","1977-08-01T00:00:00","1977-09-01T00:00:00","1977-10-01T00:00:00","1977-11-01T00:00:00","1977-12-01T00:00:00","1978-01-01T00:00:00","1978-02-01T00:00:00","1978-03-01T00:00:00","1978-04-01T00:00:00","1978-05-01T00:00:00","1978-06-01T00:00:00","1978-07-01T00:00:00","1978-08-01T00:00:00","1978-09-01T00:00:00","1978-10-01T00:00:00","1978-11-01T00:00:00","1978-12-01T00:00:00","1979-01-01T00:00:00","1979-02-01T00:00:00","1979-03-01T00:00:00","1979-04-01T00:00:00","1979-05-01T00:00:00","1979-06-01T00:00:00","1979-07-01T00:00:00","1979-08-01T00:00:00","1979-09-01T00:00:00","1979-10-01T00:00:00","1979-11-01T00:00:00","1979-12-01T00:00:00","1980-01-01T00:00:00","1980-02-01T00:00:00","1980-03-01T00:00:00","1980-04-01T00:00:00","1980-05-01T00:00:00","1980-06-01T00:00:00","1980-07-01T00:00:00","1980-08-01T00:00:00","1980-09-01T00:00:00","1980-10-01T00:00:00","1980-11-01T00:00:00","1980-12-01T00:00:00","1981-01-01T00:00:00","1981-02-01T00:00:00","1981-03-01T00:00:00","1981-04-01T00:00:00","1981-05-01T00:00:00","1981-06-01T00:00:00","1981-07-01T00:00:00","1981-08-01T00:00:00","1981-09-01T00:00:00","1981-10-01T00:00:00","1981-11-01T00:00:00","1981-12-01T00:00:00","1982-01-01T00:00:00","1982-02-01T00:00:00","1982-03-01T00:00:00","1982-04-01T00:00:00","1982-05-01T00:00:00","1982-06-01T00:00:00","1982-07-01T00:00:00","1982-08-01T00:00:00","1982-09-01T00:00:00","1982-10-01T00:00:00","1982-11-01T00:00:00","1982-12-01T00:00:00","1983-01-01T00:00:00","1983-02-01T00:00:00","1983-03-01T00:00:00","1983-04-01T00:00:00","1983-05-01T00:00:00","1983-06-01T00:00:00","1983-07-01T00:00:00","1983-08-01T00:00:00","1983-09-01T00:00:00","1983-10-01T00:00:00","1983-11-01T00:00:00","1983-12-01T00:00:00","1984-01-01T00:00:00","1984-02-01T00:00:00","1984-03-01T00:00:00","1984-04-01T00:00:00","1984-05-01T00:00:00","1984-06-01T00:00:00","1984-07-01T00:00:00","1984-08-01T00:00:00","1984-09-01T00:00:00","1984-10-01T00:00:00","1984-11-01T00:00:00","1984-12-01T00:00:00","1985-01-01T00:00:00","1985-02-01T00:00:00","1985-03-01T00:00:00","1985-04-01T00:00:00","1985-05-01T00:00:00","1985-06-01T00:00:00","1985-07-01T00:00:00","1985-08-01T00:00:00","1985-09-01T00:00:00","1985-10-01T00:00:00","1985-11-01T00:00:00","1985-12-01T00:00:00","1986-01-01T00:00:00","1986-02-01T00:00:00","1986-03-01T00:00:00","1986-04-01T00:00:00","1986-05-01T00:00:00","1986-06-01T00:00:00","1986-07-01T00:00:00","1986-08-01T00:00:00","1986-09-01T00:00:00","1986-10-01T00:00:00","1986-11-01T00:00:00","1986-12-01T00:00:00","1987-01-01T00:00:00","1987-02-01T00:00:00","1987-03-01T00:00:00","1987-04-01T00:00:00","1987-05-01T00:00:00","1987-06-01T00:00:00","1987-07-01T00:00:00","1987-08-01T00:00:00","1987-09-01T00:00:00","1987-10-01T00:00:00","1987-11-01T00:00:00","1987-12-01T00:00:00","1988-01-01T00:00:00","1988-02-01T00:00:00","1988-03-01T00:00:00","1988-04-01T00:00:00","1988-05-01T00:00:00","1988-06-01T00:00:00","1988-07-01T00:00:00","1988-08-01T00:00:00","1988-09-01T00:00:00","1988-10-01T00:00:00","1988-11-01T00:00:00","1988-12-01T00:00:00","1989-01-01T00:00:00","1989-02-01T00:00:00","1989-03-01T00:00:00","1989-04-01T00:00:00","1989-05-01T00:00:00","1989-06-01T00:00:00","1989-07-01T00:00:00","1989-08-01T00:00:00","1989-09-01T00:00:00","1989-10-01T00:00:00","1989-11-01T00:00:00","1989-12-01T00:00:00","1990-01-01T00:00:00","1990-02-01T00:00:00","1990-03-01T00:00:00","1990-04-01T00:00:00","1990-05-01T00:00:00","1990-06-01T00:00:00","1990-07-01T00:00:00","1990-08-01T00:00:00","1990-09-01T00:00:00","1990-10-01T00:00:00","1990-11-01T00:00:00","1990-12-01T00:00:00","1991-01-01T00:00:00","1991-02-01T00:00:00","1991-03-01T00:00:00","1991-04-01T00:00:00","1991-05-01T00:00:00","1991-06-01T00:00:00","1991-07-01T00:00:00","1991-08-01T00:00:00","1991-09-01T00:00:00","1991-10-01T00:00:00","1991-11-01T00:00:00","1991-12-01T00:00:00","1992-01-01T00:00:00","1992-02-01T00:00:00","1992-03-01T00:00:00","1992-04-01T00:00:00","1992-05-01T00:00:00","1992-06-01T00:00:00","1992-07-01T00:00:00","1992-08-01T00:00:00","1992-09-01T00:00:00","1992-10-01T00:00:00","1992-11-01T00:00:00","1992-12-01T00:00:00","1993-01-01T00:00:00","1993-02-01T00:00:00","1993-03-01T00:00:00","1993-04-01T00:00:00","1993-05-01T00:00:00","1993-06-01T00:00:00","1993-07-01T00:00:00","1993-08-01T00:00:00","1993-09-01T00:00:00","1993-10-01T00:00:00","1993-11-01T00:00:00","1993-12-01T00:00:00","1994-01-01T00:00:00","1994-02-01T00:00:00","1994-03-01T00:00:00","1994-04-01T00:00:00","1994-05-01T00:00:00","1994-06-01T00:00:00","1994-07-01T00:00:00","1994-08-01T00:00:00","1994-09-01T00:00:00","1994-10-01T00:00:00","1994-11-01T00:00:00","1994-12-01T00:00:00","1995-01-01T00:00:00","1995-02-01T00:00:00","1995-03-01T00:00:00","1995-04-01T00:00:00","1995-05-01T00:00:00","1995-06-01T00:00:00","1995-07-01T00:00:00","1995-08-01T00:00:00","1995-09-01T00:00:00","1995-10-01T00:00:00","1995-11-01T00:00:00","1995-12-01T00:00:00","1996-01-01T00:00:00","1996-02-01T00:00:00","1996-03-01T00:00:00","1996-04-01T00:00:00","1996-05-01T00:00:00","1996-06-01T00:00:00","1996-07-01T00:00:00","1996-08-01T00:00:00","1996-09-01T00:00:00","1996-10-01T00:00:00","1996-11-01T00:00:00","1996-12-01T00:00:00","1997-01-01T00:00:00","1997-02-01T00:00:00","1997-03-01T00:00:00","1997-04-01T00:00:00","1997-05-01T00:00:00","1997-06-01T00:00:00","1997-07-01T00:00:00","1997-08-01T00:00:00","1997-09-01T00:00:00","1997-10-01T00:00:00","1997-11-01T00:00:00","1997-12-01T00:00:00","1998-01-01T00:00:00","1998-02-01T00:00:00","1998-03-01T00:00:00","1998-04-01T00:00:00","1998-05-01T00:00:00","1998-06-01T00:00:00","1998-07-01T00:00:00","1998-08-01T00:00:00","1998-09-01T00:00:00","1998-10-01T00:00:00","1998-11-01T00:00:00","1998-12-01T00:00:00","1999-01-01T00:00:00","1999-02-01T00:00:00","1999-03-01T00:00:00","1999-04-01T00:00:00","1999-05-01T00:00:00","1999-06-01T00:00:00","1999-07-01T00:00:00","1999-08-01T00:00:00","1999-09-01T00:00:00","1999-10-01T00:00:00","1999-11-01T00:00:00","1999-12-01T00:00:00","2000-01-01T00:00:00","2000-02-01T00:00:00","2000-03-01T00:00:00","2000-04-01T00:00:00","2000-05-01T00:00:00","2000-06-01T00:00:00","2000-07-01T00:00:00","2000-08-01T00:00:00","2000-09-01T00:00:00","2000-10-01T00:00:00","2000-11-01T00:00:00","2000-12-01T00:00:00","2001-01-01T00:00:00","2001-02-01T00:00:00","2001-03-01T00:00:00","2001-04-01T00:00:00","2001-05-01T00:00:00","2001-06-01T00:00:00","2001-07-01T00:00:00","2001-08-01T00:00:00","2001-09-01T00:00:00","2001-10-01T00:00:00","2001-11-01T00:00:00","2001-12-01T00:00:00","2002-01-01T00:00:00","2002-02-01T00:00:00","2002-03-01T00:00:00","2002-04-01T00:00:00","2002-05-01T00:00:00","2002-06-01T00:00:00","2002-07-01T00:00:00","2002-08-01T00:00:00","2002-09-01T00:00:00","2002-10-01T00:00:00","2002-11-01T00:00:00","2002-12-01T00:00:00","2003-01-01T00:00:00","2003-02-01T00:00:00","2003-03-01T00:00:00","2003-04-01T00:00:00","2003-05-01T00:00:00","2003-06-01T00:00:00","2003-07-01T00:00:00","2003-08-01T00:00:00","2003-09-01T00:00:00","2003-10-01T00:00:00","2003-11-01T00:00:00","2003-12-01T00:00:00","2004-01-01T00:00:00","2004-02-01T00:00:00","2004-03-01T00:00:00","2004-04-01T00:00:00","2004-05-01T00:00:00","2004-06-01T00:00:00","2004-07-01T00:00:00","2004-08-01T00:00:00","2004-09-01T00:00:00","2004-10-01T00:00:00","2004-11-01T00:00:00","2004-12-01T00:00:00","2005-01-01T00:00:00","2005-02-01T00:00:00","2005-03-01T00:00:00","2005-04-01T00:00:00","2005-05-01T00:00:00","2005-06-01T00:00:00","2005-07-01T00:00:00","2005-08-01T00:00:00","2005-09-01T00:00:00","2005-10-01T00:00:00","2005-11-01T00:00:00","2005-12-01T00:00:00","2006-01-01T00:00:00","2006-02-01T00:00:00","2006-03-01T00:00:00","2006-04-01T00:00:00","2006-05-01T00:00:00","2006-06-01T00:00:00","2006-07-01T00:00:00","2006-08-01T00:00:00","2006-09-01T00:00:00","2006-10-01T00:00:00","2006-11-01T00:00:00","2006-12-01T00:00:00","2007-01-01T00:00:00","2007-02-01T00:00:00","2007-03-01T00:00:00","2007-04-01T00:00:00","2007-05-01T00:00:00","2007-06-01T00:00:00","2007-07-01T00:00:00","2007-08-01T00:00:00","2007-09-01T00:00:00","2007-10-01T00:00:00","2007-11-01T00:00:00","2007-12-01T00:00:00"],"xaxis":"x","y":[1.668752129,1.554668105,1.8498366990000001,2.023198164,2.062591523,2.084118379,2.657367207,2.8228701760000003,2.3222593160000002,2.1713393549999997,1.842760498,2.107677012,1.91248418,1.8634060159999999,2.241180117,2.238217656,2.317137871,2.448195547,3.0776408980000003,3.267583379,2.651597734,2.48866125,2.15043625,2.364827344,2.0568849609999997,2.0036733979999997,2.490359023,2.6251869919999997,2.491959414,2.7219367190000003,3.344419609,3.4768998239999998,2.8998793160000003,2.712961895,2.44961709,2.629625391,2.361770091,2.371904681,2.7740998369999996,2.843921654,3.036677591,2.95782679,3.7468956180000004,3.9858511070000002,3.259823333,3.0445340360000004,2.7325954820000002,3.0336443099999997,2.799979622,2.6739271419999997,3.2423111259999997,3.395745775,3.274265951,3.653198001,4.154901654,4.631837336999999,3.687078704,3.652692376,3.171736712,3.570616224,3.008190013,3.189276556,3.046785111,3.467314876,3.3820181180000004,3.492889915,4.348309935,4.662838001,3.650982786,3.650352865,3.263896849,3.5328864,3.2936374479999997,3.0958979749999997,3.756820885,3.624021589,3.847804284,3.836787331,4.84431444,4.976937799,4.179969889,3.8948896740000003,3.409091628,3.9727802409999997,3.638831263,3.468364915,3.856053685,4.101909076,3.989112728,4.293264818,5.0487968290000005,5.247295599,4.235750208,4.040934349,3.81265806,4.120864349,3.7518850390000003,3.550766641,3.979512363,4.348525,4.16230873,4.400079414,5.508222695000001,5.4058446479999995,4.488030801,4.311757578,3.8906117190000002,4.28030332,3.9050981709999997,3.65550276,4.661943073,4.212178581,4.654984616,4.6416911,5.881020339,5.923089401,4.975525924,4.7181574280000005,4.258113796,4.6555283659999995,4.31605278,4.050464303,4.794374792,5.04671776,4.902798932,5.129792448,5.603058737,6.050730143,4.766775163,4.878800221,4.621393874,4.856468776,4.138862617,4.165759766,4.544166016,4.889649219,4.903726406,4.571647676,5.779414688,5.924919804999999,5.093906094,4.901709102,4.262420391,4.915429316,4.433917773,4.067101758000001,4.37449084,5.007097695,4.474493926,4.883541563,5.971695,5.77960125,4.876948359,4.828574141,4.300209688,4.772497715,4.3355292379999995,4.10839791,4.7866786910000005,5.175501992,4.630736328,5.039780586,5.95668375,6.019843008,5.126423203,4.938163359,4.502746269999999,4.737476074,4.325542871000001,3.9072675,5.0636581640000005,4.548854491999999,4.803975508000001,4.992125117,5.821141992,6.174079570000001,5.1713575,4.878987813,3.987692734,5.18077082,4.41163668,4.207411738,4.748961855,4.924730625,4.784065313,4.9312113669999995,5.811595508,6.2207447270000005,4.881032109,5.151168047,4.491400977,4.867768086,4.300460566,4.089100996,4.71035043,5.1282716409999995,4.930060039,4.780703203,6.147610195,6.327140586,5.126298672,5.164555469,4.620908867,5.145432969,4.668019876,4.204629427,5.298167160999999,5.172728020999999,5.354550794000001,5.237489818,6.519821068,6.639221849,5.722565599,5.6727460679999995,4.904657122,5.839384388,4.872161582,4.668820293,5.397731289,5.957003945,5.458945858999999,5.937548398,6.938328711,7.081926289,5.963893125,5.908729179999999,5.384715977000001,5.997177227000001,5.13657916,5.3474602540000005,6.158281563,6.046726133,5.831471016000001,6.199267617,7.2489414839999995,7.76778418,6.513675233999999,6.244401875,5.849553945,6.339533203,5.863768672,5.4261281640000005,6.750308711,6.067811328,6.7718746880000005,6.74071875,7.642238555,8.056825,6.876492852,6.698891602000001,6.014138867000001,6.635681054999999,6.102412461,5.859330078,6.705291483999999,6.900781602,6.822476836,6.817124647999999,7.8415846479999995,8.337164258,6.752296563000001,6.821457929999999,6.399880820000001,6.9651875,6.068581992,5.641022617,6.8801484770000005,6.910496133,6.818178867,6.732232617,8.089612852,8.370029805,7.0169926170000005,7.059850078,6.623336406000001,7.246170586,6.86,6.04,7.95,6.8,8.01,7.19,8.21,9.21,7.49,7.53,6.66,7.3,6.49,6.4,8.21,8.03,6.7,7.72,8.64,8.07,7.33,7.14,6.78,7.09,6.85,6.6,7.55,7.53,7.37,8.17,8.46,9.66,7.88,6.6,6.64,7.31,6.67,6.5,7.53,7.63,7.79,8.0,8.35,9.13,7.76,7.54,6.9,7.9,6.563002929,6.785625014,7.442165401,7.681872951,7.460800442,7.370751855,8.615748475,8.79439586,7.328867462000001,7.718861694999999,6.985768095,7.598050166,6.592365350000001,6.502804009999999,7.60366129,7.19401589,7.47808916,7.23270948,8.4770901,8.58253888,7.44701799,7.58423262,6.669165230000001,7.82760841,6.66936844,6.41844887,7.2315223699999995,7.570861829999999,7.14184603,7.48650507,8.58259816,8.57232247,7.410784919999999,7.70843613,6.86458422,7.83157346,6.38617806,6.46729252,7.75202203,7.2459760499999994,7.27571431,7.49611539,8.60206852,8.26319338,7.35499086,7.30181541,6.84784344,7.623018149999999,6.25428348,6.5511567500000005,7.08088051,7.128292340000001,7.11040468,7.19252452,7.76890928,8.15743749,7.74849147,6.4282123,6.22546332,6.93690289,6.3283676,6.09841794,6.9059068,7.11727961,6.82730721,7.17000915,7.69892571,8.18602792,6.72652988,7.15335064,6.56014579,7.28992227,6.008506239999999,5.91130917,6.894294159999999,6.68750983,6.87408158,6.687695949999999,7.80526753,7.956616169999999,6.63042235,6.98030707,6.35737459,6.74829485,6.1259359600000005,5.75149407,6.460881530000001,6.93010924,6.88967233,6.7712256900000005,7.66983754,7.66618364,6.700918710000001,6.74489406,5.94249758,6.833346679999999,6.034635209999999,5.69317867,6.413825749999999,6.6218451,6.27488162,6.670133249999999,7.389207959999999,7.10695215,6.38428451,6.27183282,5.92772014,6.41909697,5.50740415,5.28612784,6.28384423,6.008612950000001,6.192280330000001,6.31673159,6.83861611,6.89311644,6.0060321,5.9050812100000005,5.49730287,5.95522622,5.32616474,5.0721926,5.84416591,5.83372407,5.9797508200000005,5.96298344,6.3232843999999995,6.43231079,5.8332586300000004,5.745221750000001,5.3313215099999995,5.71539809,5.2229763,4.8565558,5.7757035,5.5079501,5.6599876,5.8019272,6.1894025,6.332647199999999,5.3729554,5.7401864,5.1833271000000005,5.3280626],"yaxis":"y","type":"scatter"},{"hovertemplate":"partition=validation\u003cbr\u003edate=%{x}\u003cbr\u003econsumption=%{y}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"validation","line":{"color":"rgb(221,132,82)","dash":"solid"},"marker":{"symbol":"circle"},"mode":"lines","name":"validation","orientation":"v","showlegend":true,"x":["2008-01-01T00:00:00","2008-02-01T00:00:00","2008-03-01T00:00:00","2008-04-01T00:00:00","2008-05-01T00:00:00","2008-06-01T00:00:00","2008-07-01T00:00:00","2008-08-01T00:00:00","2008-09-01T00:00:00","2008-10-01T00:00:00","2008-11-01T00:00:00","2008-12-01T00:00:00","2009-01-01T00:00:00","2009-02-01T00:00:00","2009-03-01T00:00:00","2009-04-01T00:00:00","2009-05-01T00:00:00","2009-06-01T00:00:00","2009-07-01T00:00:00","2009-08-01T00:00:00","2009-09-01T00:00:00","2009-10-01T00:00:00","2009-11-01T00:00:00","2009-12-01T00:00:00","2010-01-01T00:00:00","2010-02-01T00:00:00","2010-03-01T00:00:00","2010-04-01T00:00:00","2010-05-01T00:00:00","2010-06-01T00:00:00","2010-07-01T00:00:00","2010-08-01T00:00:00","2010-09-01T00:00:00","2010-10-01T00:00:00","2010-11-01T00:00:00","2010-12-01T00:00:00","2011-01-01T00:00:00","2011-02-01T00:00:00","2011-03-01T00:00:00","2011-04-01T00:00:00","2011-05-01T00:00:00","2011-06-01T00:00:00","2011-07-01T00:00:00","2011-08-01T00:00:00","2011-09-01T00:00:00","2011-10-01T00:00:00","2011-11-01T00:00:00","2011-12-01T00:00:00","2012-01-01T00:00:00","2012-02-01T00:00:00","2012-03-01T00:00:00","2012-04-01T00:00:00","2012-05-01T00:00:00","2012-06-01T00:00:00","2012-07-01T00:00:00","2012-08-01T00:00:00","2012-09-01T00:00:00","2012-10-01T00:00:00","2012-11-01T00:00:00","2012-12-01T00:00:00"],"xaxis":"x","y":[4.9384948,4.8825465999999995,5.2562022,5.2071043,5.2890673999999995,5.2082883,5.8997321,5.7717054,5.2015342,5.2847128,4.7681122,5.2507926000000005,4.621737899999999,4.4529426,4.9582634,5.1111879,4.9727112,5.2201726,5.8125535,5.521359,4.9848844,5.0748263,4.4978207,4.8999601,4.1640532,4.1480084,4.9516659,4.6913062,4.7130621,4.9011081,5.4173082,5.2455876,4.8386965,4.6688713,4.3560986,4.6704003,4.0377522,3.9923552,4.3301704,4.5008656,4.285175300000001,4.569814500000001,4.9376631,5.0760873,4.5121999,4.3909611,4.005529,4.3559678,3.8590098999999998,3.7702928000000004,4.2082748,3.9218579,4.1087839,4.4402436,4.5252258,4.7788012,3.880072,4.0419597,3.6918996999999996,4.0022747999999995],"yaxis":"y","type":"scatter"},{"hovertemplate":"partition=test\u003cbr\u003edate=%{x}\u003cbr\u003econsumption=%{y}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"test","line":{"color":"rgb(85,168,104)","dash":"solid"},"marker":{"symbol":"circle"},"mode":"lines","name":"test","orientation":"v","showlegend":true,"x":["2013-01-01T00:00:00","2013-02-01T00:00:00","2013-03-01T00:00:00","2013-04-01T00:00:00","2013-05-01T00:00:00","2013-06-01T00:00:00","2013-07-01T00:00:00","2013-08-01T00:00:00","2013-09-01T00:00:00","2013-10-01T00:00:00","2013-11-01T00:00:00","2013-12-01T00:00:00","2014-01-01T00:00:00","2014-02-01T00:00:00","2014-03-01T00:00:00","2014-04-01T00:00:00","2014-05-01T00:00:00","2014-06-01T00:00:00","2014-07-01T00:00:00","2014-08-01T00:00:00","2014-09-01T00:00:00","2014-10-01T00:00:00","2014-11-01T00:00:00","2014-12-01T00:00:00","2015-01-01T00:00:00","2015-02-01T00:00:00","2015-03-01T00:00:00","2015-04-01T00:00:00","2015-05-01T00:00:00","2015-06-01T00:00:00","2015-07-01T00:00:00","2015-08-01T00:00:00","2015-09-01T00:00:00","2015-10-01T00:00:00","2015-11-01T00:00:00","2015-12-01T00:00:00","2016-01-01T00:00:00","2016-02-01T00:00:00","2016-03-01T00:00:00","2016-04-01T00:00:00","2016-05-01T00:00:00","2016-06-01T00:00:00","2016-07-01T00:00:00","2016-08-01T00:00:00","2016-09-01T00:00:00","2016-10-01T00:00:00","2016-11-01T00:00:00","2016-12-01T00:00:00","2017-01-01T00:00:00","2017-02-01T00:00:00","2017-03-01T00:00:00","2017-04-01T00:00:00","2017-05-01T00:00:00","2017-06-01T00:00:00","2017-07-01T00:00:00","2017-08-01T00:00:00","2017-09-01T00:00:00","2017-10-01T00:00:00","2017-11-01T00:00:00","2017-12-01T00:00:00","2018-01-01T00:00:00","2018-02-01T00:00:00","2018-03-01T00:00:00","2018-04-01T00:00:00","2018-05-01T00:00:00","2018-06-01T00:00:00","2018-07-01T00:00:00","2018-08-01T00:00:00","2018-09-01T00:00:00","2018-10-01T00:00:00","2018-11-01T00:00:00","2018-12-01T00:00:00","2019-01-01T00:00:00"],"xaxis":"x","y":[3.4832642,3.3141434999999997,3.7722813,3.8841755,3.9164969,3.8375851,4.5332916999999995,4.5132746,3.8239634999999996,4.0200854999999995,3.6253688,3.8348032,3.4903701000000003,3.2921694,3.7382961999999997,3.856973,3.9003407,3.8597689,4.3831808,4.29923,3.9555719,3.9841672999999997,3.4530789,3.9369986,3.5386509999999998,3.2500221999999996,3.7345315,3.8438893,3.8365274,4.0231401,4.5702225,4.3188958,3.8947879,3.9591489,3.5565682,3.9828017,3.4200331,3.5324283000000003,3.9012808000000003,3.8294129999999997,3.9272671999999997,4.1793347,4.550445900000001,4.5987083,4.1162213,3.9231756,3.6781764000000003,3.9287515999999996,3.4893782,3.3892122,3.995239,3.9714953000000004,4.0809525,4.3845920000000005,4.5513634000000005,4.6697783,4.160283300000001,4.1303655,3.7764699,3.9869940999999995,3.6848066999999998,3.522588,4.1049732,4.0138973,4.2940422,4.4147008,4.8159838,5.0275975,4.2961697999999995,4.4244294,4.0317594,4.2925474,3.9147887],"yaxis":"y","type":"scatter"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"tickcolor":"rgb(36,36,36)","ticklen":8,"ticks":"outside","tickwidth":2},"colorscale":[[0.0,"rgb(2,4,25)"],[0.06274509803921569,"rgb(24,15,41)"],[0.12549019607843137,"rgb(47,23,57)"],[0.18823529411764706,"rgb(71,28,72)"],[0.25098039215686274,"rgb(97,30,82)"],[0.3137254901960784,"rgb(123,30,89)"],[0.3764705882352941,"rgb(150,27,91)"],[0.4392156862745098,"rgb(177,22,88)"],[0.5019607843137255,"rgb(203,26,79)"],[0.5647058823529412,"rgb(223,47,67)"],[0.6274509803921569,"rgb(236,76,61)"],[0.6901960784313725,"rgb(242,107,73)"],[0.7529411764705882,"rgb(244,135,95)"],[0.8156862745098039,"rgb(245,162,122)"],[0.8784313725490196,"rgb(246,188,153)"],[0.9411764705882353,"rgb(247,212,187)"],[1.0,"rgb(250,234,220)"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"tickcolor":"rgb(36,36,36)","ticklen":8,"ticks":"outside","tickwidth":2}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"tickcolor":"rgb(36,36,36)","ticklen":8,"ticks":"outside","tickwidth":2},"colorscale":[[0.0,"rgb(2,4,25)"],[0.06274509803921569,"rgb(24,15,41)"],[0.12549019607843137,"rgb(47,23,57)"],[0.18823529411764706,"rgb(71,28,72)"],[0.25098039215686274,"rgb(97,30,82)"],[0.3137254901960784,"rgb(123,30,89)"],[0.3764705882352941,"rgb(150,27,91)"],[0.4392156862745098,"rgb(177,22,88)"],[0.5019607843137255,"rgb(203,26,79)"],[0.5647058823529412,"rgb(223,47,67)"],[0.6274509803921569,"rgb(236,76,61)"],[0.6901960784313725,"rgb(242,107,73)"],[0.7529411764705882,"rgb(244,135,95)"],[0.8156862745098039,"rgb(245,162,122)"],[0.8784313725490196,"rgb(246,188,153)"],[0.9411764705882353,"rgb(247,212,187)"],[1.0,"rgb(250,234,220)"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"tickcolor":"rgb(36,36,36)","ticklen":8,"ticks":"outside","tickwidth":2},"colorscale":[[0.0,"rgb(2,4,25)"],[0.06274509803921569,"rgb(24,15,41)"],[0.12549019607843137,"rgb(47,23,57)"],[0.18823529411764706,"rgb(71,28,72)"],[0.25098039215686274,"rgb(97,30,82)"],[0.3137254901960784,"rgb(123,30,89)"],[0.3764705882352941,"rgb(150,27,91)"],[0.4392156862745098,"rgb(177,22,88)"],[0.5019607843137255,"rgb(203,26,79)"],[0.5647058823529412,"rgb(223,47,67)"],[0.6274509803921569,"rgb(236,76,61)"],[0.6901960784313725,"rgb(242,107,73)"],[0.7529411764705882,"rgb(244,135,95)"],[0.8156862745098039,"rgb(245,162,122)"],[0.8784313725490196,"rgb(246,188,153)"],[0.9411764705882353,"rgb(247,212,187)"],[1.0,"rgb(250,234,220)"]]}],"heatmapgl":[{"type":"heatmapgl","colorbar":{"outlinewidth":0,"tickcolor":"rgb(36,36,36)","ticklen":8,"ticks":"outside","tickwidth":2},"colorscale":[[0.0,"rgb(2,4,25)"],[0.06274509803921569,"rgb(24,15,41)"],[0.12549019607843137,"rgb(47,23,57)"],[0.18823529411764706,"rgb(71,28,72)"],[0.25098039215686274,"rgb(97,30,82)"],[0.3137254901960784,"rgb(123,30,89)"],[0.3764705882352941,"rgb(150,27,91)"],[0.4392156862745098,"rgb(177,22,88)"],[0.5019607843137255,"rgb(203,26,79)"],[0.5647058823529412,"rgb(223,47,67)"],[0.6274509803921569,"rgb(236,76,61)"],[0.6901960784313725,"rgb(242,107,73)"],[0.7529411764705882,"rgb(244,135,95)"],[0.8156862745098039,"rgb(245,162,122)"],[0.8784313725490196,"rgb(246,188,153)"],[0.9411764705882353,"rgb(247,212,187)"],[1.0,"rgb(250,234,220)"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"tickcolor":"rgb(36,36,36)","ticklen":8,"ticks":"outside","tickwidth":2}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"tickcolor":"rgb(36,36,36)","ticklen":8,"ticks":"outside","tickwidth":2},"colorscale":[[0.0,"rgb(2,4,25)"],[0.06274509803921569,"rgb(24,15,41)"],[0.12549019607843137,"rgb(47,23,57)"],[0.18823529411764706,"rgb(71,28,72)"],[0.25098039215686274,"rgb(97,30,82)"],[0.3137254901960784,"rgb(123,30,89)"],[0.3764705882352941,"rgb(150,27,91)"],[0.4392156862745098,"rgb(177,22,88)"],[0.5019607843137255,"rgb(203,26,79)"],[0.5647058823529412,"rgb(223,47,67)"],[0.6274509803921569,"rgb(236,76,61)"],[0.6901960784313725,"rgb(242,107,73)"],[0.7529411764705882,"rgb(244,135,95)"],[0.8156862745098039,"rgb(245,162,122)"],[0.8784313725490196,"rgb(246,188,153)"],[0.9411764705882353,"rgb(247,212,187)"],[1.0,"rgb(250,234,220)"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"tickcolor":"rgb(36,36,36)","ticklen":8,"ticks":"outside","tickwidth":2},"colorscale":[[0.0,"rgb(2,4,25)"],[0.06274509803921569,"rgb(24,15,41)"],[0.12549019607843137,"rgb(47,23,57)"],[0.18823529411764706,"rgb(71,28,72)"],[0.25098039215686274,"rgb(97,30,82)"],[0.3137254901960784,"rgb(123,30,89)"],[0.3764705882352941,"rgb(150,27,91)"],[0.4392156862745098,"rgb(177,22,88)"],[0.5019607843137255,"rgb(203,26,79)"],[0.5647058823529412,"rgb(223,47,67)"],[0.6274509803921569,"rgb(236,76,61)"],[0.6901960784313725,"rgb(242,107,73)"],[0.7529411764705882,"rgb(244,135,95)"],[0.8156862745098039,"rgb(245,162,122)"],[0.8784313725490196,"rgb(246,188,153)"],[0.9411764705882353,"rgb(247,212,187)"],[1.0,"rgb(250,234,220)"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"tickcolor":"rgb(36,36,36)","ticklen":8,"ticks":"outside","tickwidth":2}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"tickcolor":"rgb(36,36,36)","ticklen":8,"ticks":"outside","tickwidth":2}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"tickcolor":"rgb(36,36,36)","ticklen":8,"ticks":"outside","tickwidth":2}}}],"bar":[{"error_x":{"color":"rgb(36,36,36)"},"error_y":{"color":"rgb(36,36,36)"},"marker":{"line":{"color":"rgb(234,234,242)","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"tickcolor":"rgb(36,36,36)","ticklen":8,"ticks":"outside","tickwidth":2}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"tickcolor":"rgb(36,36,36)","ticklen":8,"ticks":"outside","tickwidth":2}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"tickcolor":"rgb(36,36,36)","ticklen":8,"ticks":"outside","tickwidth":2}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"tickcolor":"rgb(36,36,36)","ticklen":8,"ticks":"outside","tickwidth":2}},"marker":{"colorbar":{"outlinewidth":0,"tickcolor":"rgb(36,36,36)","ticklen":8,"ticks":"outside","tickwidth":2}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"tickcolor":"rgb(36,36,36)","ticklen":8,"ticks":"outside","tickwidth":2}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"tickcolor":"rgb(36,36,36)","ticklen":8,"ticks":"outside","tickwidth":2}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"tickcolor":"rgb(36,36,36)","ticklen":8,"ticks":"outside","tickwidth":2}}}],"carpet":[{"aaxis":{"endlinecolor":"rgb(36,36,36)","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"rgb(36,36,36)"},"baxis":{"endlinecolor":"rgb(36,36,36)","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"rgb(36,36,36)"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"rgb(231,231,240)"},"line":{"color":"white"}},"header":{"fill":{"color":"rgb(183,183,191)"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"rgb(234,234,242)","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["rgb(76,114,176)","rgb(221,132,82)","rgb(85,168,104)","rgb(196,78,82)","rgb(129,114,179)","rgb(147,120,96)","rgb(218,139,195)","rgb(140,140,140)","rgb(204,185,116)","rgb(100,181,205)"],"font":{"color":"rgb(36,36,36)"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"rgb(234,234,242)","polar":{"bgcolor":"rgb(234,234,242)","angularaxis":{"gridcolor":"white","linecolor":"white","showgrid":true,"ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","showgrid":true,"ticks":""}},"ternary":{"bgcolor":"rgb(234,234,242)","aaxis":{"gridcolor":"white","linecolor":"white","showgrid":true,"ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","showgrid":true,"ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","showgrid":true,"ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"tickcolor":"rgb(36,36,36)","ticklen":8,"ticks":"outside","tickwidth":2}},"colorscale":{"sequential":[[0.0,"rgb(2,4,25)"],[0.06274509803921569,"rgb(24,15,41)"],[0.12549019607843137,"rgb(47,23,57)"],[0.18823529411764706,"rgb(71,28,72)"],[0.25098039215686274,"rgb(97,30,82)"],[0.3137254901960784,"rgb(123,30,89)"],[0.3764705882352941,"rgb(150,27,91)"],[0.4392156862745098,"rgb(177,22,88)"],[0.5019607843137255,"rgb(203,26,79)"],[0.5647058823529412,"rgb(223,47,67)"],[0.6274509803921569,"rgb(236,76,61)"],[0.6901960784313725,"rgb(242,107,73)"],[0.7529411764705882,"rgb(244,135,95)"],[0.8156862745098039,"rgb(245,162,122)"],[0.8784313725490196,"rgb(246,188,153)"],[0.9411764705882353,"rgb(247,212,187)"],[1.0,"rgb(250,234,220)"]],"sequentialminus":[[0.0,"rgb(2,4,25)"],[0.06274509803921569,"rgb(24,15,41)"],[0.12549019607843137,"rgb(47,23,57)"],[0.18823529411764706,"rgb(71,28,72)"],[0.25098039215686274,"rgb(97,30,82)"],[0.3137254901960784,"rgb(123,30,89)"],[0.3764705882352941,"rgb(150,27,91)"],[0.4392156862745098,"rgb(177,22,88)"],[0.5019607843137255,"rgb(203,26,79)"],[0.5647058823529412,"rgb(223,47,67)"],[0.6274509803921569,"rgb(236,76,61)"],[0.6901960784313725,"rgb(242,107,73)"],[0.7529411764705882,"rgb(244,135,95)"],[0.8156862745098039,"rgb(245,162,122)"],[0.8784313725490196,"rgb(246,188,153)"],[0.9411764705882353,"rgb(247,212,187)"],[1.0,"rgb(250,234,220)"]]},"xaxis":{"gridcolor":"white","linecolor":"white","showgrid":true,"ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true},"yaxis":{"gridcolor":"white","linecolor":"white","showgrid":true,"ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true},"scene":{"xaxis":{"backgroundcolor":"rgb(234,234,242)","gridcolor":"white","linecolor":"white","showbackground":true,"showgrid":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"rgb(234,234,242)","gridcolor":"white","linecolor":"white","showbackground":true,"showgrid":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"rgb(234,234,242)","gridcolor":"white","linecolor":"white","showbackground":true,"showgrid":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"fillcolor":"rgb(67,103,167)","line":{"width":0},"opacity":0.5},"annotationdefaults":{"arrowcolor":"rgb(67,103,167)"},"geo":{"bgcolor":"white","landcolor":"rgb(234,234,242)","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"}}},"xaxis":{"anchor":"y","domain":[0.0,1.0],"title":{"text":"date"}},"yaxis":{"anchor":"x","domain":[0.0,1.0],"title":{"text":"consumption"}},"legend":{"title":{"text":"partition"},"tracegroupgap":0,"orientation":"h","yanchor":"top","y":1,"xanchor":"left","x":0.001},"title":{"text":"Fuel consumption"},"height":350,"width":700,"margin":{"l":20,"r":20,"t":35,"b":20}},                        {"responsive": true}                    ).then(function(){
                             
-var gd = document.getElementById('8da72bda-1d3e-47d0-959d-0e94614dcd9f');
+var gd = document.getElementById('da8ff4ab-474f-4bd1-a0d7-278c96fef006');
 var x = new MutationObserver(function (mutations, observer) {{
         var display = window.getComputedStyle(gd).display;
         if (!display || display === 'none') {{
@@ -13605,14 +13616,14 @@ if (outputEl) {{
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Individual-models">Individual models<a class="anchor-link" href="#Individual-models">&#182;</a></h2>
+<h2 id="Modelos-individuales">Modelos individuales<a class="anchor-link" href="#Modelos-individuales">&#182;</a></h2>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>First, two individual models are trained separately - a linear regression model and a gradient boosting model - and their performance is evaluated on the test set.</p>
+<p>Primero, se entrenan por separado dos modelos individuales: un modelo de regresión lineal y un modelo de <em>gradient boosting</em>, y se evalúa su rendimiento en el conjunto de prueba.</p>
 
 </div>
 </div>
@@ -13626,10 +13637,10 @@ if (outputEl) {{
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[41]:</div>
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Create forecaster</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Forecaster</span>
 <span class="c1"># ==============================================================================</span>
 <span class="n">params_lgbm</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;learning_rate&#39;</span><span class="p">:</span> <span class="mf">0.1</span><span class="p">,</span> <span class="s1">&#39;max_depth&#39;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span> <span class="s1">&#39;n_estimators&#39;</span><span class="p">:</span> <span class="mi">500</span><span class="p">,</span> <span class="s1">&#39;verbose&#39;</span><span class="p">:</span> <span class="o">-</span><span class="mi">1</span><span class="p">}</span>
 <span class="n">forecaster</span> <span class="o">=</span> <span class="n">ForecasterRecursive</span><span class="p">(</span>
@@ -13645,10 +13656,10 @@ if (outputEl) {{
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[42]:</div>
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Backtesting on test data</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Backtesting con datos de test</span>
 <span class="c1"># ==============================================================================</span>
 <span class="n">cv</span> <span class="o">=</span> <span class="n">TimeSeriesFold</span><span class="p">(</span>
       <span class="n">steps</span>              <span class="o">=</span> <span class="mi">12</span><span class="p">,</span>
@@ -13686,13 +13697,13 @@ if (outputEl) {{
 
  
  
-<div id="45efc4f7-a6df-4559-be47-4a10d7440e09"></div>
+<div id="65931036-e36e-4fb0-9b88-2b04beafbc52"></div>
 <div class="output_subarea output_widget_view ">
 <script type="text/javascript">
-var element = $('#45efc4f7-a6df-4559-be47-4a10d7440e09');
+var element = $('#65931036-e36e-4fb0-9b88-2b04beafbc52');
 </script>
 <script type="application/vnd.jupyter.widget-view+json">
-{"model_id": "e2cdec4a4beb4f5fbebf8101e8bb8c04", "version_major": 2, "version_minor": 0}
+{"model_id": "28b02ea2dada458299f8696dbfe66fe6", "version_major": 2, "version_minor": 0}
 </script>
 </div>
 
@@ -13700,7 +13711,7 @@ var element = $('#45efc4f7-a6df-4559-be47-4a10d7440e09');
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[42]:</div>
+    <div class="prompt output_prompt">Out[28]:</div>
 
 
 
@@ -13745,16 +13756,16 @@ var element = $('#45efc4f7-a6df-4559-be47-4a10d7440e09');
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Linear-model">Linear model<a class="anchor-link" href="#Linear-model">&#182;</a></h3>
+<h3 id="Modelo-lineal">Modelo lineal<a class="anchor-link" href="#Modelo-lineal">&#182;</a></h3>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[43]:</div>
+<div class="prompt input_prompt">In&nbsp;[29]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Create forecaster</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Forecaster</span>
 <span class="c1"># ==============================================================================</span>
 <span class="n">params_ridge</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;alpha&#39;</span><span class="p">:</span> <span class="mf">0.001</span><span class="p">}</span>
 <span class="n">forecaster</span> <span class="o">=</span> <span class="n">ForecasterRecursive</span><span class="p">(</span>
@@ -13771,10 +13782,10 @@ var element = $('#45efc4f7-a6df-4559-be47-4a10d7440e09');
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[44]:</div>
+<div class="prompt input_prompt">In&nbsp;[30]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Backtesting on test data</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Backtesting con datos de test</span>
 <span class="c1"># ==============================================================================</span>
 <span class="n">metric</span><span class="p">,</span> <span class="n">predictions</span> <span class="o">=</span> <span class="n">backtesting_forecaster</span><span class="p">(</span>
                             <span class="n">forecaster</span> <span class="o">=</span> <span class="n">forecaster</span><span class="p">,</span>
@@ -13806,13 +13817,13 @@ var element = $('#45efc4f7-a6df-4559-be47-4a10d7440e09');
 
  
  
-<div id="2208318d-3e3b-4855-a263-2725afec62ba"></div>
+<div id="3bf281c3-8869-4959-8189-7798d6f26a11"></div>
 <div class="output_subarea output_widget_view ">
 <script type="text/javascript">
-var element = $('#2208318d-3e3b-4855-a263-2725afec62ba');
+var element = $('#3bf281c3-8869-4959-8189-7798d6f26a11');
 </script>
 <script type="application/vnd.jupyter.widget-view+json">
-{"model_id": "01c544f002a84ea093c37c1d506942f3", "version_major": 2, "version_minor": 0}
+{"model_id": "2e97d13711f041788c302f94cdc79395", "version_major": 2, "version_minor": 0}
 </script>
 </div>
 
@@ -13820,7 +13831,7 @@ var element = $('#2208318d-3e3b-4855-a263-2725afec62ba');
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[44]:</div>
+    <div class="prompt output_prompt">Out[30]:</div>
 
 
 
@@ -13872,18 +13883,17 @@ var element = $('#2208318d-3e3b-4855-a263-2725afec62ba');
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>With scikit-learn it is very easy to combine multiple regressors thanks to its <a href="https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.StackingRegressor.html#sklearn.ensemble.StackingRegressor">StackingRegressor</a> class.</p>
-<p>The <code>estimators</code> parameter corresponds to the list of the estimators (base learners) which are stacked together in parallel on the input data. It should be given as a list of names and estimators. The <code>final_estimator</code> (meta model) will use the predictions of the estimators as input.</p>
+<p>Con scikit-learn, es muy fácil combinar múltiples regresores gracias a la clase <a href="https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.StackingRegressor.html#sklearn.ensemble.StackingRegressor">StackingRegressor</a>. El parámetro <code>estimators</code> corresponde a la lista de modelos base que se apilan en paralelo sobre los datos de entrada. Debe proporcionarse como una lista de nombres y estimadores. El <code>final_estimator</code> (meta-modelo) utilizará las predicciones de los estimadores como entrada.</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[45]:</div>
+<div class="prompt input_prompt">In&nbsp;[31]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Create stacking regressor</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Stacking regressor</span>
 <span class="c1"># ==============================================================================</span>
 <span class="n">estimators</span> <span class="o">=</span> <span class="p">[</span>
     <span class="p">(</span><span class="s1">&#39;ridge&#39;</span><span class="p">,</span> <span class="n">Ridge</span><span class="p">(</span><span class="n">random_state</span><span class="o">=</span><span class="mi">123</span><span class="p">,</span> <span class="o">**</span><span class="n">params_ridge</span><span class="p">)),</span>
@@ -13907,7 +13917,7 @@ var element = $('#2208318d-3e3b-4855-a263-2725afec62ba');
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[45]:</div>
+    <div class="prompt output_prompt">Out[31]:</div>
 
 
 
@@ -14337,10 +14347,10 @@ div.sk-label-container:hover .sk-estimator-doc-link.fitted:hover,
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[46]:</div>
+<div class="prompt input_prompt">In&nbsp;[32]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Create forecaster</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Forecaster</span>
 <span class="c1"># ==============================================================================</span>
 <span class="n">forecaster</span> <span class="o">=</span> <span class="n">ForecasterRecursive</span><span class="p">(</span>
                  <span class="n">regressor</span> <span class="o">=</span> <span class="n">stacking_regressor</span><span class="p">,</span>
@@ -14355,10 +14365,10 @@ div.sk-label-container:hover .sk-estimator-doc-link.fitted:hover,
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[47]:</div>
+<div class="prompt input_prompt">In&nbsp;[33]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Backtesting on test data</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Backtesting con datos de test</span>
 <span class="c1"># ==============================================================================</span>
 <span class="n">metric</span><span class="p">,</span> <span class="n">predictions</span> <span class="o">=</span> <span class="n">backtesting_forecaster</span><span class="p">(</span>
                             <span class="n">forecaster</span> <span class="o">=</span> <span class="n">forecaster</span><span class="p">,</span>
@@ -14390,13 +14400,13 @@ div.sk-label-container:hover .sk-estimator-doc-link.fitted:hover,
 
  
  
-<div id="2f4134bb-c9dd-40c6-95a6-4b9e90633b77"></div>
+<div id="84c29b53-e04f-45e0-8468-a336c688a73f"></div>
 <div class="output_subarea output_widget_view ">
 <script type="text/javascript">
-var element = $('#2f4134bb-c9dd-40c6-95a6-4b9e90633b77');
+var element = $('#84c29b53-e04f-45e0-8468-a336c688a73f');
 </script>
 <script type="application/vnd.jupyter.widget-view+json">
-{"model_id": "288774b9a9da41a5a24bc8614d469f01", "version_major": 2, "version_minor": 0}
+{"model_id": "f9c34bba89924225a5b7eb3b01db9a65", "version_major": 2, "version_minor": 0}
 </script>
 </div>
 
@@ -14404,7 +14414,7 @@ var element = $('#2f4134bb-c9dd-40c6-95a6-4b9e90633b77');
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[47]:</div>
+    <div class="prompt output_prompt">Out[33]:</div>
 
 
 
@@ -14449,7 +14459,7 @@ var element = $('#2f4134bb-c9dd-40c6-95a6-4b9e90633b77');
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>The results obtained by stacking the two models - the linear model and the gradient boosting model - are better than the results obtained by each model separately.</p>
+<p>Los resultados obtenidos al apilar los dos modelos: el modelo lineal y el modelo de <em>gradient boosting</em>, son mejores que los resultados obtenidos por cada modelo por separado.</p>
 
 </div>
 </div>
@@ -14457,24 +14467,24 @@ var element = $('#2f4134bb-c9dd-40c6-95a6-4b9e90633b77');
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Hiperparameters-search-of-StackingRegressor">Hiperparameters search of StackingRegressor<a class="anchor-link" href="#Hiperparameters-search-of-StackingRegressor">&#182;</a></h2>
+<h2 id="B&#250;squeda-de-hiperpar&#225;metros-con-StackingRegressor">B&#250;squeda de hiperpar&#225;metros con StackingRegressor<a class="anchor-link" href="#B&#250;squeda-de-hiperpar&#225;metros-con-StackingRegressor">&#182;</a></h2>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>When using <code>StackingRegressor</code>, the hyperparameters of individual regressors must be prefixed with the name of the regressor followed by two underlines. For example, the hyperparameter <code>alpha</code> of the Ridge regressor must be specified as <code>ridge__alpha</code>. The hyperparameter of the final estimator must be specified with the <code>final_estimator__</code> prefix.</p>
+<p>Al utilizar <code>StackingRegressor</code>, los hiperparámetros de los regresores individuales deben ir precedidos por el nombre del regresor seguido de dos guiones bajos. Por ejemplo, el hiperparámetro <code>alpha</code> del regresor Ridge debe especificarse como <code>ridge__alpha</code>. El hiperparámetro del estimador final debe especificarse con el prefijo <code>final_estimator__</code>.</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[48]:</div>
+<div class="prompt input_prompt">In&nbsp;[34]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Grid search of hyperparameters and lags</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Grid search</span>
 <span class="c1"># ==============================================================================</span>
 <span class="n">param_grid</span> <span class="o">=</span> <span class="p">{</span>
     <span class="s1">&#39;ridge__alpha&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mf">0.001</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">],</span>
@@ -14526,13 +14536,13 @@ var element = $('#2f4134bb-c9dd-40c6-95a6-4b9e90633b77');
 
  
  
-<div id="d3e7199c-7c8a-4c9c-8c28-05fada511165"></div>
+<div id="b9d3bcfc-2f8d-4832-a3e8-eac59071b9ae"></div>
 <div class="output_subarea output_widget_view ">
 <script type="text/javascript">
-var element = $('#d3e7199c-7c8a-4c9c-8c28-05fada511165');
+var element = $('#b9d3bcfc-2f8d-4832-a3e8-eac59071b9ae');
 </script>
 <script type="application/vnd.jupyter.widget-view+json">
-{"model_id": "59a19ba818d249dea9c8cc172569b8f2", "version_major": 2, "version_minor": 0}
+{"model_id": "3aa3a41bdf044a6799d9ef89ab487aac", "version_major": 2, "version_minor": 0}
 </script>
 </div>
 
@@ -14548,13 +14558,13 @@ var element = $('#d3e7199c-7c8a-4c9c-8c28-05fada511165');
 
  
  
-<div id="a40b8d2a-438e-4bd7-9401-dca8897bec65"></div>
+<div id="ea8e6c0e-0e24-4cd0-922b-3bbe9e7e8b5b"></div>
 <div class="output_subarea output_widget_view ">
 <script type="text/javascript">
-var element = $('#a40b8d2a-438e-4bd7-9401-dca8897bec65');
+var element = $('#ea8e6c0e-0e24-4cd0-922b-3bbe9e7e8b5b');
 </script>
 <script type="application/vnd.jupyter.widget-view+json">
-{"model_id": "17697c0ee97e4820a26528fd24e339b7", "version_major": 2, "version_minor": 0}
+{"model_id": "83cc67f8a3b748ca9180ff27fbb05bfe", "version_major": 2, "version_minor": 0}
 </script>
 </div>
 
@@ -14576,7 +14586,7 @@ var element = $('#a40b8d2a-438e-4bd7-9401-dca8897bec65');
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[48]:</div>
+    <div class="prompt output_prompt">Out[34]:</div>
 
 
 
@@ -14679,17 +14689,17 @@ var element = $('#a40b8d2a-438e-4bd7-9401-dca8897bec65');
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Once the best hyperparameters have been determined for each regressor in the ensemble, the test error is computed through back-testing.</p>
+<p>Una vez que se han determinado los mejores hiperparámetros para cada regresor en el ensamblaje, se calcula el error de prueba mediante <em>back-testing</em>.</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[49]:</div>
+<div class="prompt input_prompt">In&nbsp;[35]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Backtesting the best model on test data</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Backtesting el mejor modelo con los datos de test</span>
 <span class="c1"># ==============================================================================</span>
 <span class="n">metric</span><span class="p">,</span> <span class="n">predictions</span> <span class="o">=</span> <span class="n">backtesting_forecaster</span><span class="p">(</span>
                             <span class="n">forecaster</span> <span class="o">=</span> <span class="n">forecaster</span><span class="p">,</span>
@@ -14721,13 +14731,13 @@ var element = $('#a40b8d2a-438e-4bd7-9401-dca8897bec65');
 
  
  
-<div id="a8f319e8-de15-420d-9733-977586293fd1"></div>
+<div id="e0340487-509a-424f-846e-3220d3f57e0e"></div>
 <div class="output_subarea output_widget_view ">
 <script type="text/javascript">
-var element = $('#a8f319e8-de15-420d-9733-977586293fd1');
+var element = $('#e0340487-509a-424f-846e-3220d3f57e0e');
 </script>
 <script type="application/vnd.jupyter.widget-view+json">
-{"model_id": "7b00695b529d4cc99d0af4cae8482cf5", "version_major": 2, "version_minor": 0}
+{"model_id": "b7f83ad5c00a48db9d05fa65931c9a8e", "version_major": 2, "version_minor": 0}
 </script>
 </div>
 
@@ -14735,7 +14745,7 @@ var element = $('#a8f319e8-de15-420d-9733-977586293fd1');
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[49]:</div>
+    <div class="prompt output_prompt">Out[35]:</div>
 
 
 
@@ -14780,24 +14790,24 @@ var element = $('#a8f319e8-de15-420d-9733-977586293fd1');
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Feature-importance-in-StackingRegressor">Feature importance in StackingRegressor<a class="anchor-link" href="#Feature-importance-in-StackingRegressor">&#182;</a></h2>
+<h2 id="Importancia-de-predictores">Importancia de predictores<a class="anchor-link" href="#Importancia-de-predictores">&#182;</a></h2>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>When a regressor of type <code>StackingRegressor</code> is used as a regressor in a predictor, its <code>get_feature_importances</code> method will not work. This is because objects of type <code>StackingRegressor</code> do not have either the <code>feature_importances</code> or <code>coef_</code> attribute. Instead, it is necessary to inspect each of the regressors that are part of the stacking.</p>
+<p>Cuando se utiliza un regresor de tipo <code>StackingRegressor</code> como regresor en un predictor, su método <code>get_feature_importances</code> no funcionará. Esto se debe a que los objetos de tipo <code>StackingRegressor</code> no tienen ni el atributo <code>feature_importances</code> ni el atributo <code>coef_</code>. En su lugar, es necesario inspeccionar cada uno de los regresores que forman parte del <em>stacking</em>.</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[50]:</div>
+<div class="prompt input_prompt">In&nbsp;[36]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Feature importances for each regressor in the stacking</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Importancia de predictores en cada regresor del stacking</span>
 <span class="c1"># ==============================================================================</span>
 <span class="k">if</span> <span class="n">forecaster</span><span class="o">.</span><span class="n">regressor</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;StackingRegressor&#39;</span><span class="p">:</span>
     <span class="n">importancia_pred</span> <span class="o">=</span> <span class="p">[]</span>
@@ -14840,7 +14850,7 @@ var element = $('#a8f319e8-de15-420d-9733-977586293fd1');
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[50]:</div>
+    <div class="prompt output_prompt">Out[36]:</div>
 
 
 
@@ -14926,13 +14936,13 @@ var element = $('#a8f319e8-de15-420d-9733-977586293fd1');
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Session-information">Session information<a class="anchor-link" href="#Session-information">&#182;</a></h2>
+<h2 id="Informaci&#243;n-de-sesi&#243;n">Informaci&#243;n de sesi&#243;n<a class="anchor-link" href="#Informaci&#243;n-de-sesi&#243;n">&#182;</a></h2>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[51]:</div>
+<div class="prompt input_prompt">In&nbsp;[37]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">session_info</span>
@@ -14983,18 +14993,19 @@ Session information updated at 2025-02-03 14:52
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Citation">Citation<a class="anchor-link" href="#Citation">&#182;</a></h2>
+<h2 id="Instrucciones-para-citar">Instrucciones para citar<a class="anchor-link" href="#Instrucciones-para-citar">&#182;</a></h2>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>How to cite this document</strong></p>
-<p>If you use this document or any part of it, please acknowledge the source, thank you!</p>
+<p><strong>¿Cómo citar este documento?</strong></p>
+<p>Si utilizas este documento o alguna parte de él, te agradecemos que lo cites. ¡Muchas gracias!</p>
 <p style="text-align:left"><font size="3" color="#555">
-Stacking ensemble of machine learning models to improve forecasting by Joaquín Amat Rodrigo and Javier Escobar Ortiz, available under Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0 DEED) at https://www.cienciadedatos.net/documentos/py52-stacking-ensemble-models-forecasting.html</font></p><p><strong>How to cite skforecast</strong></p>
-<p>If you use skforecast for a publication, we would appreciate it if you cite the published software.</p>
+Stacking ensemble de modelos de forecasting por Joaquín Amat Rodrigo y Javier Escobar Ortiz, disponible bajo una licencia Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0 DEED) en https://www.cienciadedatos.net/documentos/py52-stacking-ensemble-modelos-forecasting.html
+</font></p><p><strong>¿Cómo citar skforecast?</strong></p>
+<p>Si utilizas skforecast en tu investigación o publicación, te lo agradeceríamos mucho que lo cites. ¡Muchas gracias!</p>
 <p>Zenodo:</p>
 <p style="text-align:left"><font size="3" color="#555">
 Amat Rodrigo, Joaquin, & Escobar Ortiz, Javier. (2024). skforecast (v0.14.0). Zenodo. https://doi.org/10.5281/zenodo.8382788
@@ -15004,14 +15015,14 @@ Amat Rodrigo, J., & Escobar Ortiz, J. (2024). skforecast (Version 0.14.0) [Compu
 </font></p><p>BibTeX:</p>
 <p style="text-align:left"><font size="3" color="#555">
 @software{skforecast,
-author = {Amat Rodrigo, Joaquin and Escobar Ortiz, Javier},
-title = {skforecast},
-version = {0.14.0},
-month = {11},
-year = {2024},
-license = {BSD-3-Clause},
-url = {https://skforecast.org/},
-doi = {10.5281/zenodo.8382788}
+    author = {Amat Rodrigo, Joaquin and Escobar Ortiz, Javier},
+    title = {skforecast},
+    version = {0.14.0},
+    month = {11},
+    year = {2024},
+    license = {BSD-3-Clause},
+    url = {https://skforecast.org/},
+    doi = {10.5281/zenodo.8382788}
 }
 </font></p>
 </div>
@@ -15020,8 +15031,8 @@ doi = {10.5281/zenodo.8382788}
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><br></p><p><strong>Did you like the article? Your support is important</strong></p>
-<p>Your contribution will help me to continue generating free educational content. Many thanks! &#128522;</p>
+<p><strong>¿Te ha gustado el artículo? Tu ayuda es importante</strong></p>
+<p>Tu contribución me ayudará a seguir generando contenido divulgativo gratuito. ¡Muchísimas gracias! &#128522;</p>
 <p><a href="https://www.paypal.com/donate/?hosted_button_id=D2JZSWRLTZDL6"><img src="https://www.paypalobjects.com/en_US/ES/i/btn/btn_donateCC_LG.gif" style="text-align: center"/></a></p>
 <p><a href="https://www.buymeacoffee.com/skforecast"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=skforecast&button_colour=f79939&font_colour=000000&font_family=Poppins&outline_colour=000000&coffee_colour=FFDD00" style="text-align: center"/></a></p>
 <p><a href="https://github.com/sponsors/JoaquinAmatRodrigo" target="_blank" title="Become a GitHub Sponsor">
@@ -15036,25 +15047,25 @@ doi = {10.5281/zenodo.8382788}
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons Licence" style="border-width:0" src="https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by-nc-sa.svg" /></a><br/></p>
-<p>This work by  Joaquín Amat Rodrigo and Javier Escobar Ortiz is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"> Attribution-NonCommercial-ShareAlike 4.0 International</a>.</p>
-<p style="text-align:left"><font size="3" color="#555">Allowed:</font></p><ul>
+<p>Este documento creado por Joaquín Amat Rodrigo y Javier Escobar Ortiz tiene licencia <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Attribution-NonCommercial-ShareAlike 4.0 International</a>.</p>
+<p style="text-align:left"><font size="3" color="#555">Se permite:</font></p><ul>
 <li>
-  <p style="text-align:left"><font size="3" color="#555">Share: copy and redistribute the material in any medium or format.</font></p>
+  <p style="text-align:left"><font size="3" color="#555">Compartir: copiar y redistribuir el material en cualquier medio o formato.</font></p>
 </li>
 <li>
-  <p style="text-align:left"><font size="3" color="#555">Adapt: remix, transform, and build upon the material.</font></p>
+  <p style="text-align:left"><font size="3" color="#555">Adaptar: remezclar, transformar y crear a partir del material.</font></p>
 </li>
-</ul><p style="text-align:left"><font size="3" color="#555">Under the following terms:</font></p><ul>
+</ul><p style="text-align:left"><font size="3" color="#555">Bajo los siguientes términos:</font></p><ul>
 <li>
-  <p style="text-align:left"><font size="3" color="#555">Attribution: You must give <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en#ref-appropriate-credit">appropriate credit</a>, provide a link to the license, and <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en#ref-indicate-changes">indicate if changes were made</a>. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.</font></p>
-</li>
-
-<li>
-  <p style="text-align:left"><font size="3" color="#555">NonCommercial: You may not use the material for <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en#ref-commercial-purposes">commercial purposes</a>.</font></p>
+  <p style="text-align:left"><font size="3" color="#555">Atribución: Debes otorgar <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.es#ref-appropriate-credit">el crédito adecuado</a>, proporcionar un enlace a la licencia e <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.es#ref-indicate-changes">indicar si se realizaron cambios</a>. Puedes hacerlo de cualquier manera razonable, pero no de una forma que sugiera que el licenciante te respalda o respalda tu uso.</font></p>
 </li>
 
 <li>
-  <p style="text-align:left"><font size="3" color="#555">ShareAlike: If you remix, transform, or build upon the material, you must distribute your contributions under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en#ref-same-license">same license</a> as the original.</font></p>
+  <p style="text-align:left"><font size="3" color="#555">No-Comercial: No puedes utilizar el material para <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.es#ref-commercial-purposes">fines comerciales</a>.</font></p>
+</li>
+
+<li>
+  <p style="text-align:left"><font size="3" color="#555">Compartir-Igual: Si remezclas, transformas o creas a partir del material, debes distribuir tus contribuciones bajo la <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.es#ref-same-license">misma licencia</a> que el original.</font></p>
 </li>
 </ul>
 </div>
