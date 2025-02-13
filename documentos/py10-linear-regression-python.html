@@ -13201,7 +13201,7 @@ $$<p>In this case, the equation refers to the value of $y$ for a specific observ
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <div style="text-align: center;">
-    <img src="./images/grafico_residuos.png" alt="Grafico Residuos" width="450">
+    <img src="../images/grafico_residuos.png" alt="Residuals" width="450">
 </div><p><p style="text-align: center; font-size: 0.9em; font-style: italic;">
     Linear regression model and its errors: the gray line represents the regression line (the model) and the red segments show the error between the line and each observation.
 </p>
@@ -15015,17 +15015,17 @@ $$\text{runs = -2367.7028 + 0.5529 hits}$$<p></p>
 <div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Tratamiento de data</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Data management</span>
 <span class="c1"># ==============================================================================</span>
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
-<span class="c1"># Gráficos</span>
+<span class="c1"># Plots</span>
 <span class="c1"># ==============================================================================</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
 
-<span class="c1"># Preprocesado y modelado</span>
+<span class="c1"># Processing and modelling</span>
 <span class="c1"># ==============================================================================</span>
 <span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="n">pearsonr</span>
 <span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
@@ -15035,12 +15035,12 @@ $$\text{runs = -2367.7028 + 0.5529 hits}$$<p></p>
 <span class="kn">from</span> <span class="nn">statsmodels.stats.anova</span> <span class="kn">import</span> <span class="n">anova_lm</span>
 <span class="kn">from</span> <span class="nn">scipy</span> <span class="kn">import</span> <span class="n">stats</span>
 
-<span class="c1"># Configuración matplotlib</span>
+<span class="c1"># Configuration matplotlib</span>
 <span class="c1"># ==============================================================================</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s1">&#39;fivethirtyeight&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s1">&#39;font.size&#39;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span> <span class="s1">&#39;lines.linewidth&#39;</span><span class="p">:</span> <span class="mf">1.5</span><span class="p">})</span>
 
-<span class="c1"># Configuración warnings</span>
+<span class="c1"># Configuration warnings</span>
 <span class="c1"># ==============================================================================</span>
 <span class="kn">import</span> <span class="nn">warnings</span>
 <span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s1">&#39;ignore&#39;</span><span class="p">)</span>
