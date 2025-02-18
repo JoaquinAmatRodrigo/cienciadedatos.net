@@ -3499,12 +3499,13 @@ input, select, textarea {
 
 		#menu ul a, #menu ul span {
 			border-bottom: 0;
-			color: inherit;
+			color: #333333;
 			cursor: pointer;
 			display: block;
-			font-size: 1.1em;
-			font-weight: 600;
+			font-size: 1em;
+			font-weight: normal;
 			padding: 0.5em 0;
+			font-family: sans-serif, "Montserrat", "Roboto Slab";
 		}
 
 			#menu ul a:hover, #menu ul span:hover {
